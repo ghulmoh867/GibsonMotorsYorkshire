@@ -722,3 +722,252 @@ a {
     gap: 35px;
   }
 }
+/* BMW vehicle listing page */
+
+.live-stock-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 760px);
+}
+
+.vehicle-page-header {
+  padding: 70px 0 45px;
+  background: #080808;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: #d4af37;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.vehicle-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.vehicle-title-row h1 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.05;
+}
+
+.vehicle-registration {
+  margin-top: 14px;
+  color: #aaaaaa;
+}
+
+.vehicle-price-box {
+  min-width: 220px;
+  padding: 22px;
+  background: #d4af37;
+  color: #080808;
+}
+
+.vehicle-price-box span {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.vehicle-price-box strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 34px;
+}
+
+.vehicle-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 230px);
+  gap: 12px;
+}
+
+.vehicle-gallery a {
+  display: block;
+  overflow: hidden;
+  background: #111111;
+}
+
+.vehicle-gallery .gallery-main {
+  grid-row: 1 / 3;
+}
+
+.vehicle-gallery img,
+.full-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-gallery a:hover img,
+.full-gallery a:hover img {
+  transform: scale(1.03);
+}
+
+.vehicle-information-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.specification-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+  border-top: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+
+.specification-grid div {
+  padding: 20px;
+  background: #171717;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+}
+
+.specification-grid span {
+  display: block;
+  color: #aaaaaa;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.specification-grid strong {
+  display: block;
+  margin-top: 6px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.vehicle-enquiry-panel {
+  position: sticky;
+  top: 110px;
+  padding: 30px;
+  background: #171717;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.vehicle-enquiry-panel h3 {
+  margin: 0 0 12px;
+  color: #d4af37;
+  font-size: 38px;
+}
+
+.full-button {
+  width: 100%;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.enquiry-benefits {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.enquiry-benefits span {
+  padding-top: 10px;
+  border-top: 1px solid #333333;
+  color: #dddddd;
+  font-size: 13px;
+}
+
+.features-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.features-list-grid span {
+  position: relative;
+  padding: 15px 15px 15px 40px;
+  background: #171717;
+  border: 1px solid #333333;
+  color: #dddddd;
+}
+
+.features-list-grid span::before {
+  content: "✓";
+  position: absolute;
+  left: 15px;
+  color: #d4af37;
+  font-weight: 900;
+}
+
+.full-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.full-gallery a {
+  height: 280px;
+  overflow: hidden;
+  background: #111111;
+}
+
+@media (max-width: 900px) {
+  .vehicle-title-row {
+    display: grid;
+  }
+
+  .vehicle-price-box {
+    width: 100%;
+  }
+
+  .vehicle-information-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-enquiry-panel {
+    position: static;
+  }
+
+  .vehicle-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 340px 200px 200px;
+  }
+
+  .vehicle-gallery .gallery-main {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+
+  .specification-grid,
+  .features-list-grid,
+  .full-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .vehicle-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .vehicle-gallery .gallery-main {
+    grid-column: auto;
+  }
+
+  .vehicle-gallery a,
+  .full-gallery a {
+    height: 240px;
+  }
+
+  .specification-grid,
+  .features-list-grid,
+  .full-gallery {
+    grid-template-columns: 1fr;
+  }
+}
