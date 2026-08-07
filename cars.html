@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,121 +11,125 @@
     content="Browse quality used cars available from Gibson Motors Yorkshire in Huddersfield."
   >
 
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=14">
 
   <style>
-    .live-stock-grid{
-      display:grid;
-      grid-template-columns:minmax(0,760px);
-      gap:24px;
+    .live-stock-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 720px);
+      gap: 24px;
     }
 
-    .live-vehicle-card{
-      background:#181818;
-      border:1px solid rgba(255,255,255,0.1);
-      overflow:hidden;
+    .live-vehicle-card {
+      background: #181818;
+      border: 1px solid rgba(255,255,255,0.1);
+      overflow: hidden;
     }
 
-    .vehicle-image{
-      height:280px;
-      background:#111;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-      position:relative;
+    .vehicle-image {
+      width: 100% !important;
+      height: 210px !important;
+      background: #0f0f0f;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+      position: relative;
     }
 
-    .vehicle-image img{
-      width:90%;
-      height:100%;
-      max-height:260px;
-      object-fit:contain;
-      display:block;
+    .vehicle-image img {
+      width: 62% !important;
+      height: 175px !important;
+      max-width: 430px !important;
+      object-fit: contain !important;
+      display: block !important;
+      margin: auto !important;
     }
 
-    .vehicle-badge{
-      position:absolute;
-      top:16px;
-      left:16px;
-      background:#c8a04a;
-      color:#050505;
-      padding:8px 12px;
-      font-size:12px;
-      font-weight:900;
+    .vehicle-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #c8a04a;
+      color: #050505;
+      padding: 7px 10px;
+      font-size: 11px;
+      font-weight: 900;
+      z-index: 2;
     }
 
-    .vehicle-details{
-      padding:28px;
+    .vehicle-details {
+      padding: 28px;
     }
 
-    .vehicle-category{
-      margin:0 0 8px;
-      color:#c8a04a;
-      font-size:12px;
-      font-weight:900;
-      text-transform:uppercase;
-      letter-spacing:1.5px;
+    .vehicle-category {
+      margin: 0 0 8px;
+      color: #c8a04a;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
-    .vehicle-details h3{
-      margin:0 0 12px;
-      font-size:28px;
-      color:#fff;
+    .vehicle-details h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      color: #ffffff;
     }
 
-    .vehicle-description{
-      color:#b7b7b7;
-      line-height:1.7;
+    .vehicle-description {
+      color: #b7b7b7;
+      line-height: 1.7;
     }
 
-    .vehicle-tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin:22px 0;
+    .vehicle-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 22px 0;
     }
 
-    .vehicle-tags span{
-      background:#292929;
-      color:#ddd;
-      padding:7px 10px;
-      font-size:12px;
-      font-weight:700;
+    .vehicle-tags span {
+      background: #292929;
+      color: #dddddd;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
     }
 
-    .vehicle-bottom{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      padding-top:20px;
-      border-top:1px solid rgba(255,255,255,0.1);
+    .vehicle-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
 
-    .vehicle-bottom strong{
-      color:#e2c471;
-      font-size:24px;
+    .vehicle-bottom strong {
+      color: #e2c471;
+      font-size: 24px;
     }
 
-    .vehicle-bottom a{
-      color:#e2c471;
-      font-weight:900;
+    .vehicle-bottom a {
+      color: #e2c471;
+      font-weight: 900;
     }
 
-    @media(max-width:650px){
-      .vehicle-image{
-        height:220px;
+    @media(max-width:650px) {
+      .vehicle-image {
+        height: 180px !important;
       }
 
-      .vehicle-image img{
-        width:94%;
-        max-height:205px;
+      .vehicle-image img {
+        width: 72% !important;
+        height: 145px !important;
+        max-width: 320px !important;
       }
 
-      .vehicle-bottom{
-        align-items:flex-start;
-        flex-direction:column;
+      .vehicle-bottom {
+        align-items: flex-start;
+        flex-direction: column;
       }
     }
   </style>
@@ -257,42 +260,34 @@
     <div class="three-column-grid">
 
       <article class="information-card">
-
         <span class="card-number">01</span>
 
         <h3>Warranty Included</h3>
 
         <p>
-          This BMW X5 comes with three months warranty for added
-          peace of mind.
+          This BMW X5 comes with three months warranty for added peace of mind.
         </p>
-
       </article>
 
       <article class="information-card">
-
         <span class="card-number">02</span>
 
         <h3>Part Exchange</h3>
 
         <p>
-          Contact us to discuss using your current vehicle towards
-          the purchase of this BMW.
+          Contact us to discuss using your current vehicle towards the purchase
+          of this BMW.
         </p>
-
       </article>
 
       <article class="information-card">
-
         <span class="card-number">03</span>
 
         <h3>Finance Enquiries</h3>
 
         <p>
-          Speak to us directly to discuss finance options for this
-          vehicle.
+          Speak to us directly to discuss finance options for this vehicle.
         </p>
-
       </article>
 
     </div>
@@ -304,7 +299,6 @@
   <div class="container callout-grid">
 
     <div>
-
       <p class="eyebrow dark-eyebrow">
         Appointment only
       </p>
@@ -315,7 +309,6 @@
         Contact Gibson Motors Yorkshire before travelling to confirm
         availability and arrange a suitable appointment.
       </p>
-
     </div>
 
     <div class="callout-buttons">
@@ -340,29 +333,24 @@
   <div class="container footer-grid">
 
     <div class="footer-about">
-
       <img src="logo.png" alt="Gibson Motors Yorkshire">
 
       <p>
-        Quality used cars in Huddersfield with warranty included
-        and appointment-only viewings.
+        Quality used cars in Huddersfield with warranty included and
+        appointment-only viewings.
       </p>
-
     </div>
 
     <div class="footer-column">
-
       <h3>Quick Links</h3>
 
       <a href="index.html">Home</a>
       <a href="finance.html">Finance</a>
       <a href="part-exchange.html">Part Exchange</a>
       <a href="sale-on-return.html">Sale on Return</a>
-
     </div>
 
     <div class="footer-column">
-
       <h3>Contact</h3>
 
       <a href="tel:07394403899">
@@ -376,7 +364,6 @@
       <p>
         Bulay Road, Huddersfield, HD1 3NH
       </p>
-
     </div>
 
   </div>
