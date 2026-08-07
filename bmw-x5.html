@@ -2,17 +2,242 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>2015 BMW X5 M Sport | Gibson Motors Yorkshire</title>
 
   <meta
     name="description"
-    content="2015 BMW X5 M Sport for sale in Huddersfield. 3.0L diesel automatic, 99,331 miles and priced at £17,775."
+    content="2015 BMW X5 M Sport for sale in Huddersfield. 3.0L diesel automatic, 99,331 miles, £17,775, 12 months MOT and 3 months warranty."
   >
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=15">
+
+  <style>
+    .vehicle-page-wrap{
+      padding:70px 0;
+      background:#080808;
+    }
+
+    .vehicle-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:30px;
+      margin-bottom:35px;
+    }
+
+    .vehicle-top h1{
+      margin:0;
+      font-size:clamp(38px,5vw,62px);
+      line-height:1.05;
+    }
+
+    .vehicle-top p{
+      color:#b7b7b7;
+      margin-top:12px;
+    }
+
+    .price-box{
+      background:#c8a04a;
+      color:#050505;
+      padding:20px 24px;
+      min-width:210px;
+    }
+
+    .price-box span{
+      display:block;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+
+    .price-box strong{
+      display:block;
+      font-size:34px;
+      margin-top:4px;
+    }
+
+    .main-gallery{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      grid-template-rows:220px 220px;
+      gap:10px;
+      margin-bottom:50px;
+    }
+
+    .main-gallery a{
+      overflow:hidden;
+      background:#111;
+    }
+
+    .main-gallery a:first-child{
+      grid-row:1 / 3;
+    }
+
+    .main-gallery img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .vehicle-info-grid{
+      display:grid;
+      grid-template-columns:1.4fr .7fr;
+      gap:50px;
+      align-items:start;
+    }
+
+    .spec-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid #333;
+      border-left:1px solid #333;
+      margin-top:30px;
+    }
+
+    .spec-grid div{
+      padding:18px;
+      background:#151515;
+      border-right:1px solid #333;
+      border-bottom:1px solid #333;
+    }
+
+    .spec-grid span{
+      display:block;
+      color:#999;
+      font-size:11px;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+
+    .spec-grid strong{
+      display:block;
+      margin-top:5px;
+      color:#fff;
+    }
+
+    .enquiry-box{
+      background:#151515;
+      border:1px solid rgba(200,160,74,.4);
+      padding:28px;
+      position:sticky;
+      top:110px;
+    }
+
+    .enquiry-box h3{
+      margin:0 0 10px;
+      color:#e2c471;
+      font-size:36px;
+    }
+
+    .enquiry-box p{
+      color:#b7b7b7;
+    }
+
+    .enquiry-box .button{
+      width:100%;
+      margin-top:10px;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-top:25px;
+    }
+
+    .feature-grid span{
+      background:#151515;
+      border:1px solid #333;
+      padding:14px 14px 14px 38px;
+      position:relative;
+      color:#ddd;
+    }
+
+    .feature-grid span:before{
+      content:"✓";
+      position:absolute;
+      left:14px;
+      color:#c8a04a;
+      font-weight:900;
+    }
+
+    .photo-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-top:30px;
+    }
+
+    .photo-grid a{
+      height:250px;
+      overflow:hidden;
+      background:#111;
+    }
+
+    .photo-grid img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    @media(max-width:900px){
+      .vehicle-top,
+      .vehicle-info-grid{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .price-box{
+        width:100%;
+      }
+
+      .main-gallery{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:320px 190px 190px;
+      }
+
+      .main-gallery a:first-child{
+        grid-column:1 / 3;
+        grid-row:auto;
+      }
+
+      .spec-grid,
+      .feature-grid,
+      .photo-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .enquiry-box{
+        position:static;
+      }
+    }
+
+    @media(max-width:600px){
+      .main-gallery{
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+      }
+
+      .main-gallery a:first-child{
+        grid-column:auto;
+      }
+
+      .main-gallery a,
+      .photo-grid a{
+        height:220px;
+      }
+
+      .spec-grid,
+      .feature-grid,
+      .photo-grid{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -42,99 +267,78 @@
 
 <main>
 
-  <section class="vehicle-page-header">
-    <div class="container">
+<section class="vehicle-page-wrap">
+  <div class="container">
 
-      <a href="cars.html" class="back-link">
-        ← Back to current stock
+    <a href="cars.html" class="text-link">← Back to Stock</a>
+
+    <div class="vehicle-top">
+      <div>
+        <p class="eyebrow">Available now</p>
+        <h1>2015 BMW X5 M Sport</h1>
+        <p>3.0L Diesel • Automatic • 99,331 Miles</p>
+      </div>
+
+      <div class="price-box">
+        <span>Our Price</span>
+        <strong>£17,775</strong>
+      </div>
+    </div>
+
+    <div class="main-gallery">
+
+      <a href="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg">
+        <img
+          src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
+          alt="BMW X5 front view"
+        >
       </a>
 
-      <div class="vehicle-title-row">
+      <a href="images/bmw-x5/7f176fb9-b4ad-4016-bcaf-c9a9c4c01b40.jpeg">
+        <img
+          src="images/bmw-x5/7f176fb9-b4ad-4016-bcaf-c9a9c4c01b40.jpeg"
+          alt="BMW X5 exterior"
+        >
+      </a>
 
-        <div>
-          <p class="eyebrow">Available now</p>
+      <a href="images/bmw-x5/748ff82b-2667-429e-9a5b-5ccbcf4569b7.jpeg">
+        <img
+          src="images/bmw-x5/748ff82b-2667-429e-9a5b-5ccbcf4569b7.jpeg"
+          alt="BMW X5 exterior"
+        >
+      </a>
 
-          <h1>2015 BMW X5 M Sport</h1>
+      <a href="images/bmw-x5/2adc55e0-69e4-4540-9b93-a805528df08d.jpeg">
+        <img
+          src="images/bmw-x5/2adc55e0-69e4-4540-9b93-a805528df08d.jpeg"
+          alt="BMW X5 exterior"
+        >
+      </a>
 
-          <p class="vehicle-registration">
-            3.0L diesel automatic
-          </p>
-        </div>
-
-        <div class="vehicle-price-box">
-          <span>Our Price</span>
-          <strong>£17,775</strong>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section section-dark">
-    <div class="container">
-
-      <div class="vehicle-gallery">
-
-        <a href="bmw.jpeg" class="gallery-main">
-          <img
-            src="bmw.jpeg"
-            alt="Black 2015 BMW X5 M Sport"
-          >
-        </a>
-
-        <a href="bmw%20pic%201.jpeg">
-          <img
-            src="bmw%20pic%201.jpeg"
-            alt="BMW X5 exterior"
-          >
-        </a>
-
-        <a href="B2EEC036-0D02-40D5-A9AC-1E17491C0197.jpeg">
-          <img
-            src="B2EEC036-0D02-40D5-A9AC-1E17491C0197.jpeg"
-            alt="BMW X5 exterior view"
-          >
-        </a>
-
-        <a href="1DA7ABAF-BB60-4185-A309-E9567006458B.jpeg">
-          <img
-            src="1DA7ABAF-BB60-4185-A309-E9567006458B.jpeg"
-            alt="BMW X5 exterior"
-          >
-        </a>
-
-        <a href="3B57A12F-F7A4-4377-AD5C-4DBDC49661BC.jpeg">
-          <img
-            src="3B57A12F-F7A4-4377-AD5C-4DBDC49661BC.jpeg"
-            alt="BMW X5 exterior"
-          >
-        </a>
-
-      </div>
+      <a href="images/bmw-x5/ebece904-f3f8-417b-898a-551a1b8c8913.jpeg">
+        <img
+          src="images/bmw-x5/ebece904-f3f8-417b-898a-551a1b8c8913.jpeg"
+          alt="BMW X5 exterior"
+        >
+      </a>
 
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container vehicle-information-layout">
+    <div class="vehicle-info-grid">
 
       <div>
 
-        <div class="section-heading">
-          <p class="eyebrow">Vehicle overview</p>
+        <p class="eyebrow">Vehicle overview</p>
+        <h2>BMW X5 M Sport</h2>
 
-          <h2>BMW X5 M Sport</h2>
+        <p class="large-text">
+          Black BMW X5 M Sport with a 3.0-litre diesel engine and automatic
+          transmission. The vehicle includes black leather interior,
+          panoramic glass roof, electric memory seats, reversing camera,
+          360-degree camera system, satellite navigation and parking sensors.
+        </p>
 
-          <p>
-            A well-equipped BMW X5 M Sport with a powerful 3.0-litre
-            diesel engine and automatic transmission. This vehicle
-            includes a black leather interior, panoramic glass roof,
-            electric memory seats and a camera system.
-          </p>
-        </div>
-
-        <div class="specification-grid">
+        <div class="spec-grid">
 
           <div>
             <span>Year</span>
@@ -148,11 +352,11 @@
 
           <div>
             <span>Engine</span>
-            <strong>3.0 litre</strong>
+            <strong>3.0L</strong>
           </div>
 
           <div>
-            <span>Fuel type</span>
+            <span>Fuel</span>
             <strong>Diesel</strong>
           </div>
 
@@ -162,7 +366,7 @@
           </div>
 
           <div>
-            <span>Previous owners</span>
+            <span>Owners</span>
             <strong>4</strong>
           </div>
 
@@ -180,197 +384,149 @@
 
       </div>
 
-      <aside class="vehicle-enquiry-panel">
+      <aside class="enquiry-box">
 
         <p class="eyebrow">Enquire today</p>
 
         <h3>£17,775</h3>
 
         <p>
-          Contact Gibson Motors Yorkshire to confirm availability and
-          arrange an appointment-only viewing or test drive.
+          Contact us to confirm availability and arrange an
+          appointment-only viewing or test drive.
         </p>
 
-        <a
-          href="tel:07394403899"
-          class="button button-gold full-button"
-        >
+        <a href="tel:07394403899" class="button button-gold">
           Call 07394 403899
         </a>
 
         <a
           href="mailto:GibsonMotorsYorkshire@gmail.com?subject=BMW X5 M Sport Enquiry"
-          class="button button-outline full-button"
+          class="button button-outline"
         >
           Email About This BMW
         </a>
 
-        <div class="enquiry-benefits">
-          <span>3 months warranty</span>
-          <span>12 months MOT</span>
-          <span>Part exchange welcome</span>
-          <span>Finance enquiries welcome</span>
-        </div>
-
       </aside>
 
     </div>
-  </section>
 
-  <section class="section section-dark">
-    <div class="container">
+  </div>
+</section>
 
-      <div class="section-heading centred">
-        <p class="eyebrow">Vehicle specification</p>
-        <h2>Key features</h2>
-      </div>
+<section class="section section-dark">
+  <div class="container">
 
-      <div class="features-list-grid">
+    <div class="section-heading centred">
+      <p class="eyebrow">Key specification</p>
+      <h2>Features</h2>
+    </div>
 
-        <span>M Sport styling</span>
-        <span>3.0-litre diesel engine</span>
-        <span>Automatic transmission</span>
-        <span>Black leather interior</span>
-        <span>Panoramic glass roof</span>
-        <span>Electric memory seats</span>
-        <span>Satellite navigation</span>
-        <span>BMW iDrive system</span>
-        <span>Reversing camera</span>
-        <span>Top-view camera system</span>
-        <span>Front parking sensors</span>
-        <span>Rear parking sensors</span>
-        <span>Electric tailgate</span>
-        <span>Paddle shifters</span>
-        <span>Multifunction steering wheel</span>
-        <span>Drive mode selection</span>
-        <span>Rear privacy glass</span>
-        <span>Alloy wheels</span>
+    <div class="feature-grid">
+      <span>M Sport styling</span>
+      <span>3.0L diesel engine</span>
+      <span>Automatic transmission</span>
+      <span>Black leather interior</span>
+      <span>Panoramic glass roof</span>
+      <span>Electric memory seats</span>
+      <span>Satellite navigation</span>
+      <span>BMW iDrive</span>
+      <span>Reversing camera</span>
+      <span>360-degree camera</span>
+      <span>Front parking sensors</span>
+      <span>Rear parking sensors</span>
+      <span>Electric tailgate</span>
+      <span>Paddle shifters</span>
+      <span>Multifunction steering wheel</span>
+      <span>Drive mode selection</span>
+      <span>Rear privacy glass</span>
+      <span>Alloy wheels</span>
+    </div>
 
-      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="eyebrow">Vehicle gallery</p>
+      <h2>More photographs</h2>
+    </div>
+
+    <div class="photo-grid">
+
+      <a href="images/bmw-x5/8680a129-bc17-4c63-a0ff-599b5d884567.jpeg">
+        <img src="images/bmw-x5/8680a129-bc17-4c63-a0ff-599b5d884567.jpeg" alt="BMW X5">
+      </a>
+
+      <a href="images/bmw-x5/40c3eac5-8c74-43f0-9ffd-9ce879047f76.jpeg">
+        <img src="images/bmw-x5/40c3eac5-8c74-43f0-9ffd-9ce879047f76.jpeg" alt="BMW X5">
+      </a>
+
+      <a href="images/bmw-x5/33a5dcad-1969-4b21-a34b-60956764716d.jpeg">
+        <img src="images/bmw-x5/33a5dcad-1969-4b21-a34b-60956764716d.jpeg" alt="BMW X5">
+      </a>
+
+      <a href="images/bmw-x5/0ebd0458-19ac-4145-8f50-e416f68c480b.jpeg">
+        <img src="images/bmw-x5/0ebd0458-19ac-4145-8f50-e416f68c480b.jpeg" alt="BMW X5">
+      </a>
+
+      <a href="images/bmw-x5/ce5662c6-4915-47a9-8b5b-703315b0a88d.jpeg">
+        <img src="images/bmw-x5/ce5662c6-4915-47a9-8b5b-703315b0a88d.jpeg" alt="BMW X5">
+      </a>
+
+      <a href="images/bmw-x5/e6a96b73-efdb-47f7-8086-b632518591a3.jpeg">
+        <img src="images/bmw-x5/e6a96b73-efdb-47f7-8086-b632518591a3.jpeg" alt="BMW X5">
+      </a>
+
+      <a href="images/bmw-x5/798a208b-8256-4a0f-9d23-8e5eded382dc.jpeg">
+        <img src="images/bmw-x5/798a208b-8256-4a0f-9d23-8e5eded382dc.jpeg" alt="BMW X5">
+      </a>
+
+      <a href="images/bmw-x5/b7bb9f6c-6104-4425-99d0-eaa374f28db2.jpeg">
+        <img src="images/bmw-x5/b7bb9f6c-6104-4425-99d0-eaa374f28db2.jpeg" alt="BMW X5">
+      </a>
+
+      <a href="images/bmw-x5/d765c5b7-a4fb-4799-9d8a-ed8e2576b8ee.jpeg">
+        <img src="images/bmw-x5/d765c5b7-a4fb-4799-9d8a-ed8e2576b8ee.jpeg" alt="BMW X5">
+      </a>
+
+      <a href="images/bmw-x5/2782a978-28d8-4cf1-92eb-59ed9811929a.jpeg">
+        <img src="images/bmw-x5/2782a978-28d8-4cf1-92eb-59ed9811929a.jpeg" alt="BMW X5">
+      </a>
 
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
+  </div>
+</section>
 
-      <div class="section-heading">
-        <p class="eyebrow">Vehicle gallery</p>
-        <h2>More photographs</h2>
-      </div>
+<section class="gold-callout">
+  <div class="container callout-grid">
 
-      <div class="full-gallery">
+    <div>
+      <p class="eyebrow dark-eyebrow">Available now</p>
+      <h2>Interested in this BMW X5?</h2>
 
-        <a href="4C8529B4-89A2-44FF-81A8-DAE71139CCF3.jpeg">
-          <img
-            src="4C8529B4-89A2-44FF-81A8-DAE71139CCF3.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
+      <p>
+        Contact us to arrange a viewing, discuss part exchange or ask
+        about finance.
+      </p>
+    </div>
 
-        <a href="8A9D5BFE-6161-4597-A1D4-7098FB6AEB26.jpeg">
-          <img
-            src="8A9D5BFE-6161-4597-A1D4-7098FB6AEB26.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
+    <div class="callout-buttons">
 
-        <a href="168E301C-A30C-401D-8452-C388A834D075.jpeg">
-          <img
-            src="168E301C-A30C-401D-8452-C388A834D075.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
+      <a href="tel:07394403899" class="button button-black">
+        Call Now
+      </a>
 
-        <a href="384A7227-EC30-4E9C-9E33-CBF18AD42F9B.jpeg">
-          <img
-            src="384A7227-EC30-4E9C-9E33-CBF18AD42F9B.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
-
-        <a href="495C8CFA-071D-4E4F-9FC4-ECB7A9F991CA.jpeg">
-          <img
-            src="495C8CFA-071D-4E4F-9FC4-ECB7A9F991CA.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
-
-        <a href="0581FF1B-A820-4F14-AEE7-151689DF7F77.jpeg">
-          <img
-            src="0581FF1B-A820-4F14-AEE7-151689DF7F77.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
-
-        <a href="946DCD7B-6720-4A73-AB83-A8C971E5D05C.jpeg">
-          <img
-            src="946DCD7B-6720-4A73-AB83-A8C971E5D05C.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
-
-        <a href="04641069-9EB8-4A99-89DF-5F8C27609B93.jpeg">
-          <img
-            src="04641069-9EB8-4A99-89DF-5F8C27609B93.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
-
-        <a href="E592A927-3551-40EB-A450-2FE2CA838F61.jpeg">
-          <img
-            src="E592A927-3551-40EB-A450-2FE2CA838F61.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
-
-        <a href="ED39A715-DDAA-41FE-B8D8-9E2EDCC617E8.jpeg">
-          <img
-            src="ED39A715-DDAA-41FE-B8D8-9E2EDCC617E8.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
-
-        <a href="EF6C879B-A1B6-482B-A53D-8D9DA6ECFDA4.jpeg">
-          <img
-            src="EF6C879B-A1B6-482B-A53D-8D9DA6ECFDA4.jpeg"
-            alt="BMW X5 photograph"
-          >
-        </a>
-
-      </div>
+      <a href="contact.html" class="button button-black-outline">
+        Contact Us
+      </a>
 
     </div>
-  </section>
 
-  <section class="gold-callout">
-    <div class="container callout-grid">
-
-      <div>
-        <p class="eyebrow dark-eyebrow">Available now</p>
-
-        <h2>Interested in this BMW X5?</h2>
-
-        <p>
-          Contact us to arrange your viewing, discuss part exchange or
-          ask about finance.
-        </p>
-      </div>
-
-      <div class="callout-buttons">
-
-        <a href="tel:07394403899" class="button button-black">
-          Call Now
-        </a>
-
-        <a href="contact.html" class="button button-black-outline">
-          Send an Enquiry
-        </a>
-
-      </div>
-
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
@@ -382,8 +538,8 @@
       <img src="logo.png" alt="Gibson Motors Yorkshire">
 
       <p>
-        Quality used cars in Huddersfield with warranty included and
-        appointment-only viewings.
+        Quality used cars in Huddersfield with warranty included
+        and appointment-only viewings.
       </p>
     </div>
 
@@ -398,11 +554,7 @@
     <div class="footer-column">
       <h3>Contact</h3>
       <a href="tel:07394403899">07394 403899</a>
-
-      <a href="mailto:GibsonMotorsYorkshire@gmail.com">
-        GibsonMotorsYorkshire@gmail.com
-      </a>
-
+      <a href="mailto:GibsonMotorsYorkshire@gmail.com">Email Us</a>
       <p>Bulay Road, Huddersfield, HD1 3NH</p>
     </div>
 
