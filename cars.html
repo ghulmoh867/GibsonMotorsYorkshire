@@ -1,380 +1,654 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Current Stock | Gibson Motors Yorkshire</title>
+<title>Current Stock | Gibson Motors Yorkshire</title>
 
-  <meta
-    name="description"
-    content="Browse quality used cars available from Gibson Motors Yorkshire in Huddersfield."
-  >
+<meta
+name="description"
+content="Browse quality used cars available from Gibson Motors Yorkshire in Huddersfield."
+>
 
-  <link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=40">
 
-  <style>
-    .live-stock-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 720px);
-      gap: 24px;
+<style>
+
+.live-stock-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+}
+
+.live-vehicle-card{
+    background:#181818;
+    border:1px solid rgba(255,255,255,0.1);
+    overflow:hidden;
+}
+
+.vehicle-image{
+    height:260px;
+    background:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    position:relative;
+}
+
+.vehicle-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.vehicle-badge{
+    position:absolute;
+    top:14px;
+    left:14px;
+    background:#c8a04a;
+    color:#050505;
+    padding:8px 11px;
+    font-size:11px;
+    font-weight:900;
+    z-index:2;
+}
+
+.vehicle-details{
+    padding:26px;
+}
+
+.vehicle-category{
+    margin:0 0 8px;
+    color:#c8a04a;
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+.vehicle-details h3{
+    margin:0 0 12px;
+    font-size:27px;
+    color:#fff;
+}
+
+.vehicle-description{
+    color:#b7b7b7;
+    line-height:1.7;
+}
+
+.vehicle-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:20px 0;
+}
+
+.vehicle-tags span{
+    background:#292929;
+    color:#ddd;
+    padding:7px 10px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.vehicle-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.vehicle-bottom strong{
+    color:#e2c471;
+    font-size:24px;
+}
+
+.vehicle-bottom a{
+    color:#e2c471;
+    font-weight:900;
+}
+
+@media(max-width:900px){
+
+    .live-stock-grid{
+        grid-template-columns:1fr;
     }
 
-    .live-vehicle-card {
-      background: #181818;
-      border: 1px solid rgba(255,255,255,0.1);
-      overflow: hidden;
+}
+
+@media(max-width:650px){
+
+    .vehicle-image{
+        height:220px;
     }
 
-    .vehicle-image {
-      width: 100% !important;
-      height: 210px !important;
-      background: #0f0f0f;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      overflow: hidden !important;
-      position: relative;
+    .vehicle-bottom{
+        flex-direction:column;
+        align-items:flex-start;
     }
 
-    .vehicle-image img {
-      width: 62% !important;
-      height: 175px !important;
-      max-width: 430px !important;
-      object-fit: contain !important;
-      display: block !important;
-      margin: auto !important;
-    }
+}
 
-    .vehicle-badge {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: #c8a04a;
-      color: #050505;
-      padding: 7px 10px;
-      font-size: 11px;
-      font-weight: 900;
-      z-index: 2;
-    }
+</style>
 
-    .vehicle-details {
-      padding: 28px;
-    }
-
-    .vehicle-category {
-      margin: 0 0 8px;
-      color: #c8a04a;
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .vehicle-details h3 {
-      margin: 0 0 12px;
-      font-size: 28px;
-      color: #ffffff;
-    }
-
-    .vehicle-description {
-      color: #b7b7b7;
-      line-height: 1.7;
-    }
-
-    .vehicle-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 22px 0;
-    }
-
-    .vehicle-tags span {
-      background: #292929;
-      color: #dddddd;
-      padding: 7px 10px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .vehicle-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .vehicle-bottom strong {
-      color: #e2c471;
-      font-size: 24px;
-    }
-
-    .vehicle-bottom a {
-      color: #e2c471;
-      font-weight: 900;
-    }
-
-    @media(max-width:650px) {
-      .vehicle-image {
-        height: 180px !important;
-      }
-
-      .vehicle-image img {
-        width: 72% !important;
-        height: 145px !important;
-        max-width: 320px !important;
-      }
-
-      .vehicle-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
+
 <header class="site-header">
-  <div class="container header-inner">
 
-    <a href="index.html" class="brand">
-      <img src="logo.png" alt="Gibson Motors Yorkshire">
-    </a>
+<div class="container header-inner">
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="cars.html" class="active">Stock</a>
-      <a href="finance.html">Finance</a>
-      <a href="part-exchange.html">Part Exchange</a>
-      <a href="sale-on-return.html">Sale on Return</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+<a href="index.html" class="brand">
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+</a>
 
-    <a href="tel:07394403899" class="header-call">
-      Call 07394 403899
-    </a>
 
-  </div>
+<nav class="main-nav">
+
+<a href="index.html">Home</a>
+
+<a href="cars.html" class="active">
+Stock
+</a>
+
+<a href="finance.html">
+Finance
+</a>
+
+<a href="part-exchange.html">
+Part Exchange
+</a>
+
+<a href="sale-on-return.html">
+Sale on Return
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
+
+
+<a href="tel:07394403899" class="header-call">
+Call 07394 403899
+</a>
+
+</div>
+
 </header>
+
 
 <main>
 
+
 <section class="page-banner">
-  <div class="container">
 
-    <p class="eyebrow">Available vehicles</p>
+<div class="container">
 
-    <h1>Current Stock</h1>
+<p class="eyebrow">
+Available vehicles
+</p>
 
-    <p>
-      Browse our latest vehicles and contact us to arrange an
-      appointment-only viewing or test drive.
-    </p>
+<h1>
+Current Stock
+</h1>
 
-  </div>
+<p>
+Browse our latest vehicles and contact us to arrange an
+appointment-only viewing or test drive.
+</p>
+
+</div>
+
 </section>
+
+
 
 <section class="section section-dark">
-  <div class="container">
 
-    <div class="stock-toolbar">
+<div class="container">
 
-      <div>
-        <p class="eyebrow">Available now</p>
-        <h2>Our Latest Vehicle</h2>
-      </div>
 
-      <a href="tel:07394403899" class="button button-gold">
-        Call About This Car
-      </a>
+<div class="stock-toolbar">
 
-    </div>
+<div>
 
-    <div class="live-stock-grid">
+<p class="eyebrow">
+Available now
+</p>
 
-      <article class="live-vehicle-card">
+<h2>
+Our Current Vehicles
+</h2>
 
-        <a href="bmw-x5.html" class="vehicle-image">
+</div>
 
-          <img
-            src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
-            alt="2015 BMW X5 M Sport"
-          >
 
-          <span class="vehicle-badge">
-            3 Months Warranty
-          </span>
+<a
+href="tel:07394403899"
+class="button button-gold">
 
-        </a>
+Call About Stock
 
-        <div class="vehicle-details">
+</a>
 
-          <p class="vehicle-category">
-            2015 • Diesel • Automatic
-          </p>
+</div>
 
-          <h3>
-            BMW X5 xDrive40d M Sport
-          </h3>
 
-          <p class="vehicle-description">
-            Black BMW X5 M Sport with a 3.0-litre diesel engine,
-            automatic transmission, black leather interior,
-            panoramic roof, reversing camera and 360-degree camera system.
-          </p>
 
-          <div class="vehicle-tags">
-            <span>£17,775</span>
-            <span>99,331 Miles</span>
-            <span>3.0L Diesel</span>
-            <span>Automatic</span>
-            <span>4 Owners</span>
-            <span>12 Months MOT</span>
-          </div>
+<div class="live-stock-grid">
 
-          <div class="vehicle-bottom">
 
-            <strong>£17,775</strong>
+<!-- BMW X5 -->
 
-            <a href="bmw-x5.html">
-              View Vehicle →
-            </a>
+<article class="live-vehicle-card">
 
-          </div>
 
-        </div>
+<a
+href="bmw-x5.html"
+class="vehicle-image">
 
-      </article>
+<img
+src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
+alt="2015 BMW X5 xDrive40d M Sport">
 
-    </div>
+<span class="vehicle-badge">
+3 Months Warranty
+</span>
 
-  </div>
+</a>
+
+
+
+<div class="vehicle-details">
+
+
+<p class="vehicle-category">
+2015 • Diesel • Automatic
+</p>
+
+
+<h3>
+BMW X5 xDrive40d M Sport
+</h3>
+
+
+<p class="vehicle-description">
+
+Black BMW X5 M Sport with a 3.0-litre diesel engine,
+automatic transmission, black leather interior,
+panoramic roof, reversing camera and 360-degree camera system.
+
+</p>
+
+
+
+<div class="vehicle-tags">
+
+<span>99,331 Miles</span>
+
+<span>3.0L Diesel</span>
+
+<span>Automatic</span>
+
+<span>4 Owners</span>
+
+<span>12 Months MOT</span>
+
+</div>
+
+
+
+<div class="vehicle-bottom">
+
+
+<strong>
+£17,775
+</strong>
+
+
+<a href="bmw-x5.html">
+View Vehicle →
+</a>
+
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- AUDI Q5 -->
+
+<article class="live-vehicle-card">
+
+
+<a
+href="audi-q5.html"
+class="vehicle-image">
+
+<img
+src="images/audi-q5/6175d93c-0f76-4cb0-b1bf-b1755be68b7c.jpeg"
+alt="2016 Audi Q5 S line Plus quattro">
+
+<span class="vehicle-badge">
+12 Months Warranty
+</span>
+
+</a>
+
+
+
+<div class="vehicle-details">
+
+
+<p class="vehicle-category">
+2016 • Diesel • Automatic
+</p>
+
+
+<h3>
+Audi Q5 S line Plus quattro
+</h3>
+
+
+<p class="vehicle-description">
+
+Grey Audi Q5 S line Plus quattro with a 2.0-litre diesel engine,
+automatic transmission, full leather interior and heated
+front and rear seats.
+
+</p>
+
+
+
+<div class="vehicle-tags">
+
+<span>79,984 Miles</span>
+
+<span>2.0L Diesel</span>
+
+<span>Automatic</span>
+
+<span>3 Owners</span>
+
+<span>12 Months MOT</span>
+
+</div>
+
+
+
+<div class="vehicle-bottom">
+
+
+<strong>
+£12,995
+</strong>
+
+
+<a href="audi-q5.html">
+View Vehicle →
+</a>
+
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
 </section>
+
+
 
 <section class="section">
-  <div class="container">
 
-    <div class="three-column-grid">
+<div class="container">
 
-      <article class="information-card">
-        <span class="card-number">01</span>
 
-        <h3>Warranty Included</h3>
+<div class="three-column-grid">
 
-        <p>
-          This BMW X5 comes with three months warranty for added peace of mind.
-        </p>
-      </article>
 
-      <article class="information-card">
-        <span class="card-number">02</span>
+<article class="information-card">
 
-        <h3>Part Exchange</h3>
+<span class="card-number">
+01
+</span>
 
-        <p>
-          Contact us to discuss using your current vehicle towards the purchase
-          of this BMW.
-        </p>
-      </article>
+<h3>
+Warranty Included
+</h3>
 
-      <article class="information-card">
-        <span class="card-number">03</span>
+<p>
+Our available vehicles are supplied with warranty for added
+peace of mind. Check each individual listing for the warranty period.
+</p>
 
-        <h3>Finance Enquiries</h3>
+</article>
 
-        <p>
-          Speak to us directly to discuss finance options for this vehicle.
-        </p>
-      </article>
 
-    </div>
 
-  </div>
+<article class="information-card">
+
+<span class="card-number">
+02
+</span>
+
+<h3>
+Part Exchange
+</h3>
+
+<p>
+Contact us to discuss using your current vehicle towards
+your next purchase.
+</p>
+
+</article>
+
+
+
+<article class="information-card">
+
+<span class="card-number">
+03
+</span>
+
+<h3>
+Finance Enquiries
+</h3>
+
+<p>
+Speak to us directly to discuss finance options and the
+next steps.
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
 </section>
+
+
 
 <section class="gold-callout">
-  <div class="container callout-grid">
 
-    <div>
-      <p class="eyebrow dark-eyebrow">
-        Appointment only
-      </p>
+<div class="container callout-grid">
 
-      <h2>Arrange a viewing or test drive</h2>
 
-      <p>
-        Contact Gibson Motors Yorkshire before travelling to confirm
-        availability and arrange a suitable appointment.
-      </p>
-    </div>
+<div>
 
-    <div class="callout-buttons">
 
-      <a href="tel:07394403899" class="button button-black">
-        Call 07394 403899
-      </a>
+<p class="eyebrow dark-eyebrow">
+Appointment only
+</p>
 
-      <a href="contact.html" class="button button-black-outline">
-        Send an Enquiry
-      </a>
 
-    </div>
+<h2>
+Arrange a viewing or test drive
+</h2>
 
-  </div>
+
+<p>
+Contact Gibson Motors Yorkshire before travelling to confirm
+vehicle availability and arrange a suitable appointment.
+</p>
+
+
+</div>
+
+
+
+<div class="callout-buttons">
+
+
+<a
+href="tel:07394403899"
+class="button button-black">
+
+Call 07394 403899
+
+</a>
+
+
+<a
+href="contact.html"
+class="button button-black-outline">
+
+Send an Enquiry
+
+</a>
+
+
+</div>
+
+</div>
+
 </section>
+
 
 </main>
 
+
+
 <footer class="site-footer">
 
-  <div class="container footer-grid">
 
-    <div class="footer-about">
-      <img src="logo.png" alt="Gibson Motors Yorkshire">
+<div class="container footer-grid">
 
-      <p>
-        Quality used cars in Huddersfield with warranty included and
-        appointment-only viewings.
-      </p>
-    </div>
 
-    <div class="footer-column">
-      <h3>Quick Links</h3>
+<div class="footer-about">
 
-      <a href="index.html">Home</a>
-      <a href="finance.html">Finance</a>
-      <a href="part-exchange.html">Part Exchange</a>
-      <a href="sale-on-return.html">Sale on Return</a>
-    </div>
 
-    <div class="footer-column">
-      <h3>Contact</h3>
+<img
+src="logo.png"
+alt="Gibson Motors Yorkshire">
 
-      <a href="tel:07394403899">
-        07394 403899
-      </a>
 
-      <a href="mailto:GibsonMotorsYorkshire@gmail.com">
-        GibsonMotorsYorkshire@gmail.com
-      </a>
+<p>
+Quality used cars in Huddersfield with warranty included
+and appointment-only viewings.
+</p>
 
-      <p>
-        Bulay Road, Huddersfield, HD1 3NH
-      </p>
-    </div>
 
-  </div>
+</div>
 
-  <div class="footer-bottom">
-    <div class="container">
-      © 2026 Gibson Motors Yorkshire. All rights reserved.
-    </div>
-  </div>
+
+
+<div class="footer-column">
+
+
+<h3>
+Quick Links
+</h3>
+
+
+<a href="index.html">
+Home
+</a>
+
+<a href="finance.html">
+Finance
+</a>
+
+<a href="part-exchange.html">
+Part Exchange
+</a>
+
+<a href="sale-on-return.html">
+Sale on Return
+</a>
+
+
+</div>
+
+
+
+<div class="footer-column">
+
+
+<h3>
+Contact
+</h3>
+
+
+<a href="tel:07394403899">
+07394 403899
+</a>
+
+
+<a href="mailto:GibsonMotorsYorkshire@gmail.com">
+GibsonMotorsYorkshire@gmail.com
+</a>
+
+
+<p>
+Bulay Road, Huddersfield, HD1 3NH
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+
+<div class="container">
+
+© 2026 Gibson Motors Yorkshire. All rights reserved.
+
+</div>
+
+
+</div>
+
 
 </footer>
 
+
 </body>
+
 </html>
