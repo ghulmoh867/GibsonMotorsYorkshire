@@ -13,7 +13,7 @@
   content="2016 Audi Q5 S line Plus quattro for sale in Huddersfield. 79,984 miles, 2.0L diesel automatic, £12,995, 12 months MOT and 12 months warranty."
 >
 
-<link rel="stylesheet" href="style.css?v=30">
+<link rel="stylesheet" href="style.css?v=31">
 
 <style>
 
@@ -83,11 +83,19 @@ body{
     font-size:36px;
 }
 
+/* MAIN IMAGE */
+
 .hero-image{
     height:560px;
     overflow:hidden;
     background:#111;
     border:1px solid #222;
+}
+
+.hero-image a{
+    display:block;
+    width:100%;
+    height:100%;
 }
 
 .hero-image img{
@@ -96,6 +104,8 @@ body{
     object-fit:cover;
     display:block;
 }
+
+/* SMALLER GALLERY */
 
 .thumbnail-grid{
     display:grid;
@@ -116,12 +126,14 @@ body{
     height:100%;
     object-fit:cover;
     display:block;
-    transition:.2s ease;
+    transition:transform .2s ease;
 }
 
 .thumbnail-grid a:hover img{
     transform:scale(1.04);
 }
+
+/* INFORMATION */
 
 .vehicle-info{
     display:grid;
@@ -151,6 +163,8 @@ body{
     line-height:1.75;
 }
 
+/* SPECIFICATIONS */
+
 .spec-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -179,6 +193,8 @@ body{
     margin-top:6px;
     font-size:17px;
 }
+
+/* ENQUIRY */
 
 .enquiry-box{
     padding:30px;
@@ -231,6 +247,8 @@ body{
     font-size:14px;
 }
 
+/* FEATURES */
+
 .features-section{
     padding:75px 0;
     background:#0d0d0d;
@@ -268,6 +286,8 @@ body{
     font-weight:900;
 }
 
+/* BOTTOM CTA */
+
 .cta{
     padding:65px 0;
     background:linear-gradient(135deg,#957125,#d4af37);
@@ -301,6 +321,8 @@ body{
     font-weight:900;
     white-space:nowrap;
 }
+
+/* TABLET */
 
 @media(max-width:950px){
 
@@ -342,6 +364,8 @@ body{
     }
 }
 
+/* MOBILE */
+
 @media(max-width:600px){
 
     .hero-image{
@@ -370,7 +394,11 @@ body{
 
 </head>
 
+
 <body>
+
+
+<!-- HEADER -->
 
 <header class="site-header">
 
@@ -402,14 +430,18 @@ Call 07394 403899
 
 <main>
 
+
 <section class="vehicle-shell">
 
 <div class="vehicle-container">
+
 
 <a href="cars.html" class="back-link">
 ← Back to Current Stock
 </a>
 
+
+<!-- TITLE -->
 
 <div class="vehicle-heading">
 
@@ -443,24 +475,29 @@ Available Now
 </div>
 
 
-<!-- MAIN IMAGE -->
+<!-- MAIN STRAIGHT FRONT IMAGE -->
 
 <div class="hero-image">
 
-<a href="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg">
+<a href="images/audi-q5/4f8f88d0-5b6d-4539-b5f2-f1d29419d373.jpeg">
 
 <img
-src="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg"
-alt="2016 Audi Q5 S line Plus quattro">
+src="images/audi-q5/4f8f88d0-5b6d-4539-b5f2-f1d29419d373.jpeg"
+alt="2016 Audi Q5 S line Plus quattro front view">
 
 </a>
 
 </div>
 
 
-<!-- ALL OTHER PHOTOS -->
+<!-- OTHER AUDI PHOTOS -->
 
 <div class="thumbnail-grid">
+
+
+<a href="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg">
+<img src="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg" alt="Audi Q5">
+</a>
 
 
 <a href="images/audi-q5/1e8de9d1-8a1f-4622-be0f-11770f879e48.jpeg">
@@ -480,11 +517,6 @@ alt="2016 Audi Q5 S line Plus quattro">
 
 <a href="images/audi-q5/3e1aaf5b-1d1d-466f-81bb-31b47125e559.jpeg">
 <img src="images/audi-q5/3e1aaf5b-1d1d-466f-81bb-31b47125e559.jpeg" alt="Audi Q5">
-</a>
-
-
-<a href="images/audi-q5/4f8f88d0-5b6d-4539-b5f2-f1d29419d373.jpeg">
-<img src="images/audi-q5/4f8f88d0-5b6d-4539-b5f2-f1d29419d373.jpeg" alt="Audi Q5">
 </a>
 
 
@@ -565,6 +597,7 @@ Vehicle Overview
 Audi Q5 S line Plus quattro
 </h2>
 
+
 <p class="description">
 
 A well-equipped 2016 Audi Q5 S line Plus quattro finished in grey,
@@ -573,12 +606,14 @@ and Audi's quattro four-wheel-drive system.
 
 <br><br>
 
-This Q5 offers a comfortable and premium interior with full leather
-seats, heated front and rear seats, satellite navigation and S line
-styling. A practical premium SUV with excellent everyday usability.
+This Q5 features a premium full leather interior with heated front
+and rear seats. Combining comfort, practicality and quattro
+four-wheel drive, it is an excellent all-round premium SUV.
 
 </p>
 
+
+<!-- SPECS -->
 
 <div class="spec-grid">
 
@@ -648,7 +683,7 @@ styling. A practical premium SUV with excellent everyday usability.
 </div>
 
 
-<!-- ENQUIRY PANEL -->
+<!-- ENQUIRY BOX -->
 
 <aside class="enquiry-box">
 
@@ -669,14 +704,18 @@ an appointment-only viewing or test drive.
 <a
 href="tel:07394403899"
 class="enquiry-button call-button">
+
 Call 07394 403899
+
 </a>
 
 
 <a
 href="mailto:GibsonMotorsYorkshire@gmail.com?subject=2016 Audi Q5 S line Plus quattro Enquiry"
 class="enquiry-button email-button">
+
 Email About This Audi
+
 </a>
 
 
@@ -691,6 +730,7 @@ Email About This Audi
 <div>✓ Finance Enquiries Welcome</div>
 
 </div>
+
 
 </aside>
 
@@ -731,7 +771,7 @@ Key Features
 
 <span>Automatic transmission</span>
 
-<span>Full leather seats</span>
+<span>Full leather interior</span>
 
 <span>Heated front seats</span>
 
@@ -761,12 +801,13 @@ Key Features
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- CTA -->
+<!-- CALL TO ACTION -->
 
 <section class="cta">
 
@@ -793,8 +834,11 @@ Call Now
 
 </section>
 
+
 </main>
 
+
+<!-- FOOTER -->
 
 <footer class="site-footer">
 
@@ -855,7 +899,9 @@ Bulay Road, Huddersfield, HD1 3NH
 
 </div>
 
+
 </footer>
+
 
 </body>
 
