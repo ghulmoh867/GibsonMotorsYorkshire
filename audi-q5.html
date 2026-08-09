@@ -1,1 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2016 Audi Q5 S line Plus quattro | Gibson Motors Yorkshire</title>
+
+<meta
+  name="description"
+  content="2016 Audi Q5 S line Plus quattro for sale in Huddersfield. 79,984 miles, 2.0L diesel automatic, £12,995, 12 months MOT and 12 months warranty."
+>
+
+<link rel="stylesheet" href="style.css?v=30">
+
+<style>
+
+body{
+    margin:0;
+    background:#070707;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.vehicle-shell{
+    padding:55px 0 80px;
+    background:#090909;
+}
+
+.vehicle-container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+.back-link{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:800;
+}
+
+.vehicle-heading{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:35px;
+    align-items:end;
+    margin-bottom:32px;
+}
+
+.vehicle-heading h1{
+    margin:0;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1.05;
+}
+
+.vehicle-subtitle{
+    margin:12px 0 0;
+    color:#bdbdbd;
+    font-size:17px;
+}
+
+.vehicle-price{
+    min-width:220px;
+    padding:20px 24px;
+    background:#d4af37;
+    color:#050505;
+}
+
+.vehicle-price span{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    font-weight:900;
+}
+
+.vehicle-price strong{
+    display:block;
+    margin-top:5px;
+    font-size:36px;
+}
+
+.hero-image{
+    height:560px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #222;
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.thumbnail-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.thumbnail-grid a{
+    height:135px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #242424;
+}
+
+.thumbnail-grid img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.2s ease;
+}
+
+.thumbnail-grid a:hover img{
+    transform:scale(1.04);
+}
+
+.vehicle-info{
+    display:grid;
+    grid-template-columns:1.45fr .7fr;
+    gap:55px;
+    align-items:start;
+    margin-top:65px;
+}
+
+.label{
+    margin:0 0 10px;
+    color:#d4af37;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.vehicle-info h2{
+    margin:0 0 16px;
+    font-size:40px;
+}
+
+.description{
+    color:#bdbdbd;
+    font-size:17px;
+    line-height:1.75;
+}
+
+.spec-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-top:30px;
+    border-top:1px solid #2d2d2d;
+    border-left:1px solid #2d2d2d;
+}
+
+.spec{
+    padding:20px;
+    background:#151515;
+    border-right:1px solid #2d2d2d;
+    border-bottom:1px solid #2d2d2d;
+}
+
+.spec span{
+    display:block;
+    color:#949494;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.spec strong{
+    display:block;
+    margin-top:6px;
+    font-size:17px;
+}
+
+.enquiry-box{
+    padding:30px;
+    background:#151515;
+    border:1px solid rgba(212,175,55,.4);
+    position:sticky;
+    top:110px;
+}
+
+.enquiry-box h3{
+    margin:0 0 12px;
+    color:#d4af37;
+    font-size:40px;
+}
+
+.enquiry-box p{
+    color:#bdbdbd;
+    line-height:1.65;
+}
+
+.enquiry-button{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:15px 18px;
+    margin-top:10px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:900;
+}
+
+.call-button{
+    background:#d4af37;
+    color:#050505;
+}
+
+.email-button{
+    border:1px solid #d4af37;
+    color:#d4af37;
+}
+
+.enquiry-points{
+    margin-top:24px;
+}
+
+.enquiry-points div{
+    padding:11px 0;
+    border-top:1px solid #303030;
+    color:#ddd;
+    font-size:14px;
+}
+
+.features-section{
+    padding:75px 0;
+    background:#0d0d0d;
+}
+
+.features-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.features-heading h2{
+    margin:0;
+    font-size:42px;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.features-grid span{
+    position:relative;
+    padding:16px 16px 16px 42px;
+    background:#171717;
+    border:1px solid #292929;
+    color:#ddd;
+}
+
+.features-grid span::before{
+    content:"✓";
+    position:absolute;
+    left:15px;
+    color:#d4af37;
+    font-weight:900;
+}
+
+.cta{
+    padding:65px 0;
+    background:linear-gradient(135deg,#957125,#d4af37);
+    color:#050505;
+}
+
+.cta-inner{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.cta h2{
+    margin:0 0 10px;
+    font-size:40px;
+}
+
+.cta p{
+    margin:0;
+}
+
+.cta a{
+    padding:15px 24px;
+    background:#050505;
+    color:#fff;
+    text-decoration:none;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+@media(max-width:950px){
+
+    .vehicle-heading{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-price{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    .hero-image{
+        height:430px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .vehicle-info{
+        grid-template-columns:1fr;
+    }
+
+    .enquiry-box{
+        position:static;
+    }
+
+    .spec-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-inner{
+        display:grid;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero-image{
+        height:280px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .thumbnail-grid a{
+        height:110px;
+    }
+
+    .spec-grid,
+    .features-grid{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-heading h1{
+        font-size:38px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="brand">
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+</a>
+
+<nav class="main-nav">
+
+<a href="index.html">Home</a>
+<a href="cars.html" class="active">Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<a href="tel:07394403899" class="header-call">
+Call 07394 403899
+</a>
+
+</div>
+
+</header>
+
+
+<main>
+
+<section class="vehicle-shell">
+
+<div class="vehicle-container">
+
+<a href="cars.html" class="back-link">
+← Back to Current Stock
+</a>
+
+
+<div class="vehicle-heading">
+
+<div>
+
+<p class="label">
+Available Now
+</p>
+
+<h1>
+2016 Audi Q5 S line Plus quattro
+</h1>
+
+<p class="vehicle-subtitle">
+79,984 Miles • 2.0L Diesel • Automatic • quattro
+</p>
+
+</div>
+
+
+<div class="vehicle-price">
+
+<span>Our Price</span>
+
+<strong>
+£12,995
+</strong>
+
+</div>
+
+</div>
+
+
+<!-- MAIN IMAGE -->
+
+<div class="hero-image">
+
+<a href="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg">
+
+<img
+src="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg"
+alt="2016 Audi Q5 S line Plus quattro">
+
+</a>
+
+</div>
+
+
+<!-- ALL OTHER PHOTOS -->
+
+<div class="thumbnail-grid">
+
+
+<a href="images/audi-q5/1e8de9d1-8a1f-4622-be0f-11770f879e48.jpeg">
+<img src="images/audi-q5/1e8de9d1-8a1f-4622-be0f-11770f879e48.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/2bfaaaa9-31af-47b5-91c3-b4a0b9575ee8.jpeg">
+<img src="images/audi-q5/2bfaaaa9-31af-47b5-91c3-b4a0b9575ee8.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/3c5e1404-ea45-498d-b4c0-8f4fe8ea24d2.jpeg">
+<img src="images/audi-q5/3c5e1404-ea45-498d-b4c0-8f4fe8ea24d2.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/3e1aaf5b-1d1d-466f-81bb-31b47125e559.jpeg">
+<img src="images/audi-q5/3e1aaf5b-1d1d-466f-81bb-31b47125e559.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/4f8f88d0-5b6d-4539-b5f2-f1d29419d373.jpeg">
+<img src="images/audi-q5/4f8f88d0-5b6d-4539-b5f2-f1d29419d373.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/51e412b8-959a-4897-8631-300fde06ba3c.jpeg">
+<img src="images/audi-q5/51e412b8-959a-4897-8631-300fde06ba3c.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/6175d93c-0f76-4cb0-b1bf-b1755be68b7c.jpeg">
+<img src="images/audi-q5/6175d93c-0f76-4cb0-b1bf-b1755be68b7c.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/64a35cf1-f864-4efe-8d40-331c67d7f9a6.jpeg">
+<img src="images/audi-q5/64a35cf1-f864-4efe-8d40-331c67d7f9a6.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/805167ca-d5d0-4ff7-88d6-0abbcce2959e.jpeg">
+<img src="images/audi-q5/805167ca-d5d0-4ff7-88d6-0abbcce2959e.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/92f54f38-27a5-48a2-bc95-b6f0899aaed1.jpeg">
+<img src="images/audi-q5/92f54f38-27a5-48a2-bc95-b6f0899aaed1.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/972c2215-0a56-4c9b-bd2b-ccd9f468e49d.jpeg">
+<img src="images/audi-q5/972c2215-0a56-4c9b-bd2b-ccd9f468e49d.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/bae08892-cd84-4695-9daa-07cd4dc2fe9c.jpeg">
+<img src="images/audi-q5/bae08892-cd84-4695-9daa-07cd4dc2fe9c.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/bef38f23-4a8e-4e5d-9383-dcdc13a92eda.jpeg">
+<img src="images/audi-q5/bef38f23-4a8e-4e5d-9383-dcdc13a92eda.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/c09c78d4-e7b6-4c11-97bf-0e83447e433b.jpeg">
+<img src="images/audi-q5/c09c78d4-e7b6-4c11-97bf-0e83447e433b.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/e680eb18-6884-490d-9fdd-911abcdb781c.jpeg">
+<img src="images/audi-q5/e680eb18-6884-490d-9fdd-911abcdb781c.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/ea653f74-1cf7-41b7-bc52-311bdc33e951.jpeg">
+<img src="images/audi-q5/ea653f74-1cf7-41b7-bc52-311bdc33e951.jpeg" alt="Audi Q5">
+</a>
+
+
+<a href="images/audi-q5/ec94a99c-b86c-4d8c-82ed-e1a00a5d2afe.jpeg">
+<img src="images/audi-q5/ec94a99c-b86c-4d8c-82ed-e1a00a5d2afe.jpeg" alt="Audi Q5">
+</a>
+
+
+</div>
+
+
+<!-- VEHICLE INFORMATION -->
+
+<div class="vehicle-info">
+
+<div>
+
+<p class="label">
+Vehicle Overview
+</p>
+
+<h2>
+Audi Q5 S line Plus quattro
+</h2>
+
+<p class="description">
+
+A well-equipped 2016 Audi Q5 S line Plus quattro finished in grey,
+powered by a 2.0-litre diesel engine with automatic transmission
+and Audi's quattro four-wheel-drive system.
+
+<br><br>
+
+This Q5 offers a comfortable and premium interior with full leather
+seats, heated front and rear seats, satellite navigation and S line
+styling. A practical premium SUV with excellent everyday usability.
+
+</p>
+
+
+<div class="spec-grid">
+
+
+<div class="spec">
+<span>Year</span>
+<strong>2016</strong>
+</div>
+
+
+<div class="spec">
+<span>Mileage</span>
+<strong>79,984 Miles</strong>
+</div>
+
+
+<div class="spec">
+<span>Engine</span>
+<strong>2.0L</strong>
+</div>
+
+
+<div class="spec">
+<span>Fuel</span>
+<strong>Diesel</strong>
+</div>
+
+
+<div class="spec">
+<span>Transmission</span>
+<strong>Automatic</strong>
+</div>
+
+
+<div class="spec">
+<span>Drive</span>
+<strong>quattro</strong>
+</div>
+
+
+<div class="spec">
+<span>Owners</span>
+<strong>3</strong>
+</div>
+
+
+<div class="spec">
+<span>Colour</span>
+<strong>Grey</strong>
+</div>
+
+
+<div class="spec">
+<span>MOT</span>
+<strong>12 Months</strong>
+</div>
+
+
+<div class="spec">
+<span>Warranty</span>
+<strong>12 Months</strong>
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- ENQUIRY PANEL -->
+
+<aside class="enquiry-box">
+
+<p class="label">
+Enquire Today
+</p>
+
+<h3>
+£12,995
+</h3>
+
+<p>
+Contact Gibson Motors Yorkshire to confirm availability and arrange
+an appointment-only viewing or test drive.
+</p>
+
+
+<a
+href="tel:07394403899"
+class="enquiry-button call-button">
+Call 07394 403899
+</a>
+
+
+<a
+href="mailto:GibsonMotorsYorkshire@gmail.com?subject=2016 Audi Q5 S line Plus quattro Enquiry"
+class="enquiry-button email-button">
+Email About This Audi
+</a>
+
+
+<div class="enquiry-points">
+
+<div>✓ 12 Months Warranty</div>
+
+<div>✓ 12 Months MOT</div>
+
+<div>✓ Part Exchange Welcome</div>
+
+<div>✓ Finance Enquiries Welcome</div>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features-section">
+
+<div class="vehicle-container">
+
+
+<div class="features-heading">
+
+<p class="label">
+Vehicle Specification
+</p>
+
+<h2>
+Key Features
+</h2>
+
+</div>
+
+
+<div class="features-grid">
+
+<span>S line Plus specification</span>
+
+<span>quattro four-wheel drive</span>
+
+<span>2.0L diesel engine</span>
+
+<span>Automatic transmission</span>
+
+<span>Full leather seats</span>
+
+<span>Heated front seats</span>
+
+<span>Heated rear seats</span>
+
+<span>Satellite navigation</span>
+
+<span>Multifunction steering wheel</span>
+
+<span>Audi multimedia system</span>
+
+<span>Climate control</span>
+
+<span>Rear privacy glass</span>
+
+<span>Parking sensors</span>
+
+<span>Alloy wheels</span>
+
+<span>Electric parking brake</span>
+
+<span>Start/stop system</span>
+
+<span>Roof rails</span>
+
+<span>S line styling</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="cta-inner">
+
+<div>
+
+<h2>
+Interested in this Audi Q5?
+</h2>
+
+<p>
+Arrange a viewing or speak to us about finance and part exchange.
+</p>
+
+</div>
+
+
+<a href="tel:07394403899">
+Call Now
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+<div class="container footer-grid">
+
+
+<div class="footer-about">
+
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+
+<p>
+Quality used cars in Huddersfield with warranty included and
+appointment-only viewings.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<a href="cars.html">Current Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<a href="tel:07394403899">
+07394 403899
+</a>
+
+<a href="mailto:GibsonMotorsYorkshire@gmail.com">
+GibsonMotorsYorkshire@gmail.com
+</a>
+
+<p>
+Bulay Road, Huddersfield, HD1 3NH
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div class="container">
+© 2026 Gibson Motors Yorkshire. All rights reserved.
+</div>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>
