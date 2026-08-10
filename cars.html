@@ -12,128 +12,127 @@ name="description"
 content="Browse quality used cars available from Gibson Motors Yorkshire in Huddersfield."
 >
 
-<link rel="stylesheet" href="style.css?v=41">
+<link rel="stylesheet" href="style.css?v=60">
 
 <style>
 
-.live-stock-grid{
+.stock-grid{
     display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:28px;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:24px;
 }
 
-.live-vehicle-card{
+.stock-card{
     background:#181818;
-    border:1px solid rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,.1);
     overflow:hidden;
-}
-
-.vehicle-image{
-    height:260px;
-    background:#111;
     display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    position:relative;
+    flex-direction:column;
 }
 
-.vehicle-image img{
+.stock-image{
+    height:240px;
+    position:relative;
+    overflow:hidden;
+    background:#111;
+}
+
+.stock-image img{
     width:100%;
     height:100%;
     object-fit:cover;
     display:block;
 }
 
-.vehicle-badge{
+.stock-badge{
     position:absolute;
     top:14px;
     left:14px;
+    padding:8px 11px;
     background:#c8a04a;
     color:#050505;
-    padding:8px 11px;
     font-size:11px;
     font-weight:900;
-    z-index:2;
 }
 
-.vehicle-details{
-    padding:26px;
+.stock-details{
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
 }
 
-.vehicle-category{
+.stock-category{
     margin:0 0 8px;
     color:#c8a04a;
-    font-size:12px;
+    font-size:11px;
     font-weight:900;
     text-transform:uppercase;
-    letter-spacing:1.5px;
+    letter-spacing:1.4px;
 }
 
-.vehicle-details h3{
+.stock-details h3{
     margin:0 0 12px;
-    font-size:27px;
     color:#fff;
+    font-size:24px;
+    line-height:1.25;
 }
 
-.vehicle-description{
+.stock-description{
     color:#b7b7b7;
-    line-height:1.7;
+    line-height:1.65;
+    font-size:14px;
 }
 
-.vehicle-tags{
+.stock-tags{
     display:flex;
     flex-wrap:wrap;
-    gap:8px;
-    margin:20px 0;
+    gap:7px;
+    margin:18px 0 22px;
 }
 
-.vehicle-tags span{
+.stock-tags span{
+    padding:7px 9px;
     background:#292929;
     color:#ddd;
-    padding:7px 10px;
-    font-size:12px;
+    font-size:11px;
     font-weight:700;
 }
 
-.vehicle-bottom{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
+.stock-bottom{
+    margin-top:auto;
     padding-top:18px;
-    border-top:1px solid rgba(255,255,255,0.1);
+    border-top:1px solid rgba(255,255,255,.1);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
 }
 
-.vehicle-bottom strong{
+.stock-bottom strong{
     color:#e2c471;
-    font-size:24px;
+    font-size:23px;
 }
 
-.vehicle-bottom a{
+.stock-bottom a{
     color:#e2c471;
     font-weight:900;
 }
 
-@media(max-width:900px){
+@media(max-width:1050px){
+    .stock-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
 
-    .live-stock-grid{
+@media(max-width:700px){
+    .stock-grid{
         grid-template-columns:1fr;
     }
 
-}
-
-@media(max-width:650px){
-
-    .vehicle-image{
-        height:220px;
+    .stock-image{
+        height:230px;
     }
-
-    .vehicle-bottom{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
 }
 
 </style>
@@ -141,7 +140,6 @@ content="Browse quality used cars available from Gibson Motors Yorkshire in Hudd
 </head>
 
 <body>
-
 
 <header class="site-header">
 
@@ -173,7 +171,6 @@ Call 07394 403899
 
 <main>
 
-
 <section class="page-banner">
 
 <div class="container">
@@ -196,11 +193,9 @@ appointment-only viewing or test drive.
 </section>
 
 
-
 <section class="section section-dark">
 
 <div class="container">
-
 
 <div class="stock-toolbar">
 
@@ -216,44 +211,36 @@ Our Current Vehicles
 
 </div>
 
-
-<a
-href="tel:07394403899"
-class="button button-gold">
-
+<a href="tel:07394403899" class="button button-gold">
 Call About Stock
-
 </a>
 
 </div>
 
 
-
-<div class="live-stock-grid">
+<div class="stock-grid">
 
 
 <!-- BMW X5 -->
 
-<article class="live-vehicle-card">
+<article class="stock-card">
 
-<a
-href="bmw-x5.html"
-class="vehicle-image">
+<a href="bmw-x5.html" class="stock-image">
 
 <img
 src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
 alt="2015 BMW X5 xDrive40d M Sport">
 
-<span class="vehicle-badge">
+<span class="stock-badge">
 3 Months Warranty
 </span>
 
 </a>
 
 
-<div class="vehicle-details">
+<div class="stock-details">
 
-<p class="vehicle-category">
+<p class="stock-category">
 2015 • Diesel • Automatic
 </p>
 
@@ -261,16 +248,13 @@ alt="2015 BMW X5 xDrive40d M Sport">
 BMW X5 xDrive40d M Sport
 </h3>
 
-<p class="vehicle-description">
-
-Black BMW X5 M Sport with a 3.0-litre diesel engine,
-automatic transmission, black leather interior,
-panoramic roof, reversing camera and 360-degree camera system.
-
+<p class="stock-description">
+Black BMW X5 M Sport with a 3.0L diesel engine, automatic transmission,
+black leather interior, panoramic roof, reversing camera and
+360-degree camera system.
 </p>
 
-
-<div class="vehicle-tags">
+<div class="stock-tags">
 
 <span>99,331 Miles</span>
 <span>3.0L Diesel</span>
@@ -281,7 +265,7 @@ panoramic roof, reversing camera and 360-degree camera system.
 </div>
 
 
-<div class="vehicle-bottom">
+<div class="stock-bottom">
 
 <strong>
 £17,775
@@ -301,26 +285,24 @@ View Vehicle →
 
 <!-- AUDI Q5 -->
 
-<article class="live-vehicle-card">
+<article class="stock-card">
 
-<a
-href="audi-q5.html"
-class="vehicle-image">
+<a href="audi-q5.html" class="stock-image">
 
 <img
 src="images/audi-q5/6175d93c-0f76-4cb0-b1bf-b1755be68b7c.jpeg"
 alt="2016 Audi Q5 S line Plus quattro">
 
-<span class="vehicle-badge">
+<span class="stock-badge">
 3 Months Warranty
 </span>
 
 </a>
 
 
-<div class="vehicle-details">
+<div class="stock-details">
 
-<p class="vehicle-category">
+<p class="stock-category">
 2016 • Diesel • Automatic
 </p>
 
@@ -328,16 +310,13 @@ alt="2016 Audi Q5 S line Plus quattro">
 Audi Q5 S line Plus quattro
 </h3>
 
-<p class="vehicle-description">
-
-Grey Audi Q5 S line Plus quattro with a 2.0-litre diesel engine,
+<p class="stock-description">
+Grey Audi Q5 S line Plus quattro with a 2.0L diesel engine,
 automatic transmission, full leather interior and heated
 front and rear seats.
-
 </p>
 
-
-<div class="vehicle-tags">
+<div class="stock-tags">
 
 <span>79,984 Miles</span>
 <span>2.0L Diesel</span>
@@ -348,13 +327,75 @@ front and rear seats.
 </div>
 
 
-<div class="vehicle-bottom">
+<div class="stock-bottom">
 
 <strong>
 £12,995
 </strong>
 
 <a href="audi-q5.html">
+View Vehicle →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- VW GOLF -->
+
+<article class="stock-card">
+
+<a href="vw-golf.html" class="stock-image">
+
+<img
+src="images/images/vw-golf/1c3a4da7-ee22-4801-aee8-2d85a7373f4c.jpeg"
+alt="2013 Volkswagen Golf TSI BlueMotion">
+
+<span class="stock-badge">
+3 Months Warranty
+</span>
+
+</a>
+
+
+<div class="stock-details">
+
+<p class="stock-category">
+2013 • Petrol • Manual
+</p>
+
+<h3>
+Volkswagen Golf TSI BlueMotion
+</h3>
+
+<p class="stock-description">
+Black Volkswagen Golf TSI BlueMotion with a 1.2L petrol engine,
+manual transmission, ULEZ compliance and flat-bottom steering wheel.
+</p>
+
+<div class="stock-tags">
+
+<span>120,000 Miles</span>
+<span>1.2L Petrol</span>
+<span>Manual</span>
+<span>4 Previous Owners</span>
+<span>ULEZ Compliant</span>
+<span>12 Months MOT</span>
+
+</div>
+
+
+<div class="stock-bottom">
+
+<strong>
+£3,995
+</strong>
+
+<a href="vw-golf.html">
 View Vehicle →
 </a>
 
@@ -372,25 +413,24 @@ View Vehicle →
 </section>
 
 
-
 <section class="section">
 
 <div class="container">
 
 <div class="three-column-grid">
 
-
 <article class="information-card">
 
-<span class="card-number">01</span>
+<span class="card-number">
+01
+</span>
 
 <h3>
-Warranty Included
+3 Months Warranty
 </h3>
 
 <p>
-Our available vehicles come with 3 months warranty for added
-peace of mind.
+Our available vehicles come with 3 months warranty for added peace of mind.
 </p>
 
 </article>
@@ -398,15 +438,16 @@ peace of mind.
 
 <article class="information-card">
 
-<span class="card-number">02</span>
+<span class="card-number">
+02
+</span>
 
 <h3>
 Part Exchange
 </h3>
 
 <p>
-Contact us to discuss using your current vehicle towards
-your next purchase.
+Contact us to discuss using your current vehicle towards your next purchase.
 </p>
 
 </article>
@@ -414,19 +455,19 @@ your next purchase.
 
 <article class="information-card">
 
-<span class="card-number">03</span>
+<span class="card-number">
+03
+</span>
 
 <h3>
 Finance Enquiries
 </h3>
 
 <p>
-Speak to us directly to discuss finance options and the
-next steps.
+Speak to us directly to discuss finance options and the next steps.
 </p>
 
 </article>
-
 
 </div>
 
@@ -435,11 +476,9 @@ next steps.
 </section>
 
 
-
 <section class="gold-callout">
 
 <div class="container callout-grid">
-
 
 <div>
 
@@ -452,8 +491,8 @@ Arrange a viewing or test drive
 </h2>
 
 <p>
-Contact Gibson Motors Yorkshire before travelling to confirm
-vehicle availability and arrange a suitable appointment.
+Contact Gibson Motors Yorkshire before travelling to confirm vehicle
+availability and arrange a suitable appointment.
 </p>
 
 </div>
@@ -461,20 +500,12 @@ vehicle availability and arrange a suitable appointment.
 
 <div class="callout-buttons">
 
-<a
-href="tel:07394403899"
-class="button button-black">
-
+<a href="tel:07394403899" class="button button-black">
 Call 07394 403899
-
 </a>
 
-<a
-href="contact.html"
-class="button button-black-outline">
-
+<a href="contact.html" class="button button-black-outline">
 Send an Enquiry
-
 </a>
 
 </div>
@@ -483,25 +514,20 @@ Send an Enquiry
 
 </section>
 
-
 </main>
-
 
 
 <footer class="site-footer">
 
 <div class="container footer-grid">
 
-
 <div class="footer-about">
 
-<img
-src="logo.png"
-alt="Gibson Motors Yorkshire">
+<img src="logo.png" alt="Gibson Motors Yorkshire">
 
 <p>
-Quality used cars in Huddersfield with warranty included
-and appointment-only viewings.
+Quality used cars in Huddersfield with warranty included and
+appointment-only viewings.
 </p>
 
 </div>
@@ -517,6 +543,7 @@ Quick Links
 <a href="finance.html">Finance</a>
 <a href="part-exchange.html">Part Exchange</a>
 <a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
 
 </div>
 
@@ -554,6 +581,6 @@ Bulay Road, Huddersfield, HD1 3NH
 
 </footer>
 
-
 </body>
+
 </html>
