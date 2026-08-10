@@ -1,1 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2013 Volkswagen Golf TSI BlueMotion | Gibson Motors Yorkshire</title>
+
+<meta
+name="description"
+content="2013 Volkswagen Golf TSI BlueMotion for sale in Huddersfield. 120,000 miles, 1.2L petrol manual, £3,995, 12 months MOT and 3 months warranty."
+>
+
+<link rel="stylesheet" href="style.css?v=50">
+
+<style>
+
+body{
+    margin:0;
+    background:#070707;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.vehicle-shell{
+    padding:55px 0 80px;
+    background:#090909;
+}
+
+.vehicle-container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+.back-link{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:800;
+}
+
+.vehicle-heading{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:35px;
+    align-items:end;
+    margin-bottom:32px;
+}
+
+.vehicle-heading h1{
+    margin:0;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1.05;
+}
+
+.vehicle-subtitle{
+    margin:12px 0 0;
+    color:#bdbdbd;
+    font-size:17px;
+}
+
+.vehicle-price{
+    min-width:220px;
+    padding:20px 24px;
+    background:#d4af37;
+    color:#050505;
+}
+
+.vehicle-price span{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    font-weight:900;
+}
+
+.vehicle-price strong{
+    display:block;
+    margin-top:5px;
+    font-size:36px;
+}
+
+.hero-image{
+    height:560px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #222;
+}
+
+.hero-image a{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.thumbnail-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.thumbnail-grid a{
+    height:135px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #242424;
+}
+
+.thumbnail-grid img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .2s ease;
+}
+
+.thumbnail-grid a:hover img{
+    transform:scale(1.04);
+}
+
+.vehicle-info{
+    display:grid;
+    grid-template-columns:1.45fr .7fr;
+    gap:55px;
+    align-items:start;
+    margin-top:65px;
+}
+
+.label{
+    margin:0 0 10px;
+    color:#d4af37;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.vehicle-info h2{
+    margin:0 0 16px;
+    font-size:40px;
+}
+
+.description{
+    color:#bdbdbd;
+    font-size:17px;
+    line-height:1.75;
+}
+
+.spec-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-top:30px;
+    border-top:1px solid #2d2d2d;
+    border-left:1px solid #2d2d2d;
+}
+
+.spec{
+    padding:20px;
+    background:#151515;
+    border-right:1px solid #2d2d2d;
+    border-bottom:1px solid #2d2d2d;
+}
+
+.spec span{
+    display:block;
+    color:#949494;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.spec strong{
+    display:block;
+    margin-top:6px;
+    font-size:17px;
+}
+
+.enquiry-box{
+    padding:30px;
+    background:#151515;
+    border:1px solid rgba(212,175,55,.4);
+    position:sticky;
+    top:110px;
+}
+
+.enquiry-box h3{
+    margin:0 0 12px;
+    color:#d4af37;
+    font-size:40px;
+}
+
+.enquiry-box p{
+    color:#bdbdbd;
+    line-height:1.65;
+}
+
+.enquiry-button{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:15px 18px;
+    margin-top:10px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:900;
+}
+
+.call-button{
+    background:#d4af37;
+    color:#050505;
+}
+
+.email-button{
+    border:1px solid #d4af37;
+    color:#d4af37;
+}
+
+.enquiry-points{
+    margin-top:24px;
+}
+
+.enquiry-points div{
+    padding:11px 0;
+    border-top:1px solid #303030;
+    color:#ddd;
+    font-size:14px;
+}
+
+.features-section{
+    padding:75px 0;
+    background:#0d0d0d;
+}
+
+.features-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.features-heading h2{
+    margin:0;
+    font-size:42px;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.features-grid span{
+    position:relative;
+    padding:16px 16px 16px 42px;
+    background:#171717;
+    border:1px solid #292929;
+    color:#ddd;
+}
+
+.features-grid span::before{
+    content:"✓";
+    position:absolute;
+    left:15px;
+    color:#d4af37;
+    font-weight:900;
+}
+
+.cta{
+    padding:65px 0;
+    background:linear-gradient(135deg,#957125,#d4af37);
+    color:#050505;
+}
+
+.cta-inner{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.cta h2{
+    margin:0 0 10px;
+    font-size:40px;
+}
+
+.cta p{
+    margin:0;
+}
+
+.cta a{
+    padding:15px 24px;
+    background:#050505;
+    color:#fff;
+    text-decoration:none;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+@media(max-width:950px){
+
+    .vehicle-heading{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-price{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    .hero-image{
+        height:430px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .vehicle-info{
+        grid-template-columns:1fr;
+    }
+
+    .enquiry-box{
+        position:static;
+    }
+
+    .spec-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-inner{
+        display:grid;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero-image{
+        height:280px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .thumbnail-grid a{
+        height:110px;
+    }
+
+    .spec-grid,
+    .features-grid{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-heading h1{
+        font-size:38px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="brand">
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+</a>
+
+<nav class="main-nav">
+
+<a href="index.html">Home</a>
+<a href="cars.html" class="active">Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<a href="tel:07394403899" class="header-call">
+Call 07394 403899
+</a>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<section class="vehicle-shell">
+
+<div class="vehicle-container">
+
+
+<a href="cars.html" class="back-link">
+← Back to Current Stock
+</a>
+
+
+<div class="vehicle-heading">
+
+<div>
+
+<p class="label">
+Available Now
+</p>
+
+<h1>
+2013 Volkswagen Golf TSI BlueMotion
+</h1>
+
+<p class="vehicle-subtitle">
+120,000 Miles • 1.2L Petrol • Manual • ULEZ Compliant
+</p>
+
+</div>
+
+
+<div class="vehicle-price">
+
+<span>Our Price</span>
+
+<strong>
+£3,995
+</strong>
+
+</div>
+
+</div>
+
+
+<!-- MAIN IMAGE -->
+
+<div class="hero-image">
+
+<a href="images/images/vw-golf/1c3a4da7-ee22-4801-aee8-2d85a7373f4c.jpeg">
+
+<img
+src="images/images/vw-golf/1c3a4da7-ee22-4801-aee8-2d85a7373f4c.jpeg"
+alt="2013 Volkswagen Golf TSI BlueMotion">
+
+</a>
+
+</div>
+
+
+<!-- PHOTO GALLERY -->
+
+<div class="thumbnail-grid">
+
+<a href="images/images/vw-golf/1f16434d-2ad8-49ed-bccd-e215deef548f.jpeg">
+<img src="images/images/vw-golf/1f16434d-2ad8-49ed-bccd-e215deef548f.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/4728a986-f150-4fab-b19d-21f57da76792.jpeg">
+<img src="images/images/vw-golf/4728a986-f150-4fab-b19d-21f57da76792.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/5ea6316a-a82f-4767-8154-7f0c52ed1dda.jpeg">
+<img src="images/images/vw-golf/5ea6316a-a82f-4767-8154-7f0c52ed1dda.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/853e67c2-19c1-4f90-8d8b-5749dac10c98.jpeg">
+<img src="images/images/vw-golf/853e67c2-19c1-4f90-8d8b-5749dac10c98.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/91e47272-0683-4802-8a2d-d9ef9b297862.jpeg">
+<img src="images/images/vw-golf/91e47272-0683-4802-8a2d-d9ef9b297862.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/bda61a96-f173-4375-bd9c-d06875fa8ed0.jpeg">
+<img src="images/images/vw-golf/bda61a96-f173-4375-bd9c-d06875fa8ed0.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/c1846c8c-c538-42f4-904a-051f70a6521f.jpeg">
+<img src="images/images/vw-golf/c1846c8c-c538-42f4-904a-051f70a6521f.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/c636df8c-9234-476b-a7f2-74694878b60d.jpeg">
+<img src="images/images/vw-golf/c636df8c-9234-476b-a7f2-74694878b60d.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/e60ff352-6e63-4690-a443-a61c845fff97.jpeg">
+<img src="images/images/vw-golf/e60ff352-6e63-4690-a443-a61c845fff97.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/e87a9a15-3028-4dd7-bd27-22c6ec3eeb01.jpeg">
+<img src="images/images/vw-golf/e87a9a15-3028-4dd7-bd27-22c6ec3eeb01.jpeg" alt="Volkswagen Golf">
+</a>
+
+<a href="images/images/vw-golf/fd210b23-029c-4d1f-8e3f-a26da6d2ae30.jpeg">
+<img src="images/images/vw-golf/fd210b23-029c-4d1f-8e3f-a26da6d2ae30.jpeg" alt="Volkswagen Golf">
+</a>
+
+</div>
+
+
+<!-- VEHICLE INFORMATION -->
+
+<div class="vehicle-info">
+
+<div>
+
+<p class="label">
+Vehicle Overview
+</p>
+
+<h2>
+Volkswagen Golf TSI BlueMotion
+</h2>
+
+<p class="description">
+
+A practical and economical 2013 Volkswagen Golf TSI BlueMotion
+finished in black and powered by a 1.2-litre petrol engine with
+manual transmission.
+
+<br><br>
+
+This Golf has covered approximately 120,000 miles and has had
+4 previous owners. It is ULEZ compliant and includes useful
+features such as a flat-bottom steering wheel.
+
+<br><br>
+
+Supplied with 12 months MOT and 3 months warranty.
+
+</p>
+
+
+<div class="spec-grid">
+
+<div class="spec">
+<span>Year</span>
+<strong>2013</strong>
+</div>
+
+<div class="spec">
+<span>Mileage</span>
+<strong>120,000 Miles</strong>
+</div>
+
+<div class="spec">
+<span>Engine</span>
+<strong>1.2L</strong>
+</div>
+
+<div class="spec">
+<span>Fuel</span>
+<strong>Petrol</strong>
+</div>
+
+<div class="spec">
+<span>Transmission</span>
+<strong>Manual</strong>
+</div>
+
+<div class="spec">
+<span>Owners</span>
+<strong>4 Previous</strong>
+</div>
+
+<div class="spec">
+<span>Colour</span>
+<strong>Black</strong>
+</div>
+
+<div class="spec">
+<span>ULEZ</span>
+<strong>Compliant</strong>
+</div>
+
+<div class="spec">
+<span>MOT</span>
+<strong>12 Months</strong>
+</div>
+
+<div class="spec">
+<span>Warranty</span>
+<strong>3 Months</strong>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ENQUIRY BOX -->
+
+<aside class="enquiry-box">
+
+<p class="label">
+Enquire Today
+</p>
+
+<h3>
+£3,995
+</h3>
+
+<p>
+Contact Gibson Motors Yorkshire to confirm availability and arrange
+an appointment-only viewing or test drive.
+</p>
+
+<a
+href="tel:07394403899"
+class="enquiry-button call-button">
+
+Call 07394 403899
+
+</a>
+
+<a
+href="mailto:GibsonMotorsYorkshire@gmail.com?subject=2013 Volkswagen Golf TSI BlueMotion Enquiry"
+class="enquiry-button email-button">
+
+Email About This Golf
+
+</a>
+
+
+<div class="enquiry-points">
+
+<div>✓ 3 Months Warranty</div>
+
+<div>✓ 12 Months MOT</div>
+
+<div>✓ ULEZ Compliant</div>
+
+<div>✓ Part Exchange Welcome</div>
+
+</div>
+
+</aside>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features-section">
+
+<div class="vehicle-container">
+
+
+<div class="features-heading">
+
+<p class="label">
+Vehicle Specification
+</p>
+
+<h2>
+Key Features
+</h2>
+
+</div>
+
+
+<div class="features-grid">
+
+<span>TSI petrol engine</span>
+
+<span>BlueMotion specification</span>
+
+<span>1.2L petrol</span>
+
+<span>Manual transmission</span>
+
+<span>ULEZ compliant</span>
+
+<span>Flat-bottom steering wheel</span>
+
+<span>12 months MOT</span>
+
+<span>3 months warranty</span>
+
+<span>Black exterior</span>
+
+<span>5-door hatchback</span>
+
+<span>Part exchange welcome</span>
+
+<span>Finance enquiries welcome</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="cta-inner">
+
+<div>
+
+<h2>
+Interested in this Volkswagen Golf?
+</h2>
+
+<p>
+Arrange a viewing or speak to us about finance and part exchange.
+</p>
+
+</div>
+
+<a href="tel:07394403899">
+Call Now
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+
+<div class="container footer-grid">
+
+
+<div class="footer-about">
+
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+
+<p>
+Quality used cars in Huddersfield with warranty included and
+appointment-only viewings.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<a href="cars.html">Current Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<a href="tel:07394403899">
+07394 403899
+</a>
+
+<a href="mailto:GibsonMotorsYorkshire@gmail.com">
+GibsonMotorsYorkshire@gmail.com
+</a>
+
+<p>
+Bulay Road, Huddersfield, HD1 3NH
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div class="container">
+© 2026 Gibson Motors Yorkshire. All rights reserved.
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
