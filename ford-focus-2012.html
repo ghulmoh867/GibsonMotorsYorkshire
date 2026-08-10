@@ -1,1 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2012 Ford Focus Zetec Estate | Gibson Motors Yorkshire</title>
+
+<meta
+name="description"
+content="2012 Ford Focus 1.6 TDCi Zetec Estate for sale in Huddersfield. 126,000 miles, diesel manual and priced at £1,650."
+>
+
+<link rel="stylesheet" href="style.css?v=90">
+
+<style>
+
+body{
+    margin:0;
+    background:#070707;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.vehicle-shell{
+    padding:55px 0 80px;
+    background:#090909;
+}
+
+.vehicle-container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+.back-link{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:800;
+}
+
+.vehicle-heading{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:35px;
+    align-items:end;
+    margin-bottom:32px;
+}
+
+.vehicle-heading h1{
+    margin:0;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1.05;
+}
+
+.vehicle-subtitle{
+    margin:12px 0 0;
+    color:#bdbdbd;
+    font-size:17px;
+}
+
+.vehicle-price{
+    min-width:220px;
+    padding:20px 24px;
+    background:#d4af37;
+    color:#050505;
+}
+
+.vehicle-price span{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    font-weight:900;
+}
+
+.vehicle-price strong{
+    display:block;
+    margin-top:5px;
+    font-size:36px;
+}
+
+
+/* MAIN IMAGE */
+
+.hero-image{
+    height:560px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #222;
+}
+
+.hero-image a{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+
+/* GALLERY */
+
+.thumbnail-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.thumbnail-grid a{
+    height:135px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #242424;
+}
+
+.thumbnail-grid img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .2s ease;
+}
+
+.thumbnail-grid a:hover img{
+    transform:scale(1.04);
+}
+
+
+/* INFORMATION */
+
+.vehicle-info{
+    display:grid;
+    grid-template-columns:1.45fr .7fr;
+    gap:55px;
+    align-items:start;
+    margin-top:65px;
+}
+
+.label{
+    margin:0 0 10px;
+    color:#d4af37;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.vehicle-info h2{
+    margin:0 0 16px;
+    font-size:40px;
+}
+
+.description{
+    color:#bdbdbd;
+    font-size:17px;
+    line-height:1.75;
+}
+
+
+/* SPECS */
+
+.spec-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-top:30px;
+    border-top:1px solid #2d2d2d;
+    border-left:1px solid #2d2d2d;
+}
+
+.spec{
+    padding:20px;
+    background:#151515;
+    border-right:1px solid #2d2d2d;
+    border-bottom:1px solid #2d2d2d;
+}
+
+.spec span{
+    display:block;
+    color:#949494;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.spec strong{
+    display:block;
+    margin-top:6px;
+    font-size:17px;
+}
+
+
+/* ENQUIRY */
+
+.enquiry-box{
+    padding:30px;
+    background:#151515;
+    border:1px solid rgba(212,175,55,.4);
+    position:sticky;
+    top:110px;
+}
+
+.enquiry-box h3{
+    margin:0 0 12px;
+    color:#d4af37;
+    font-size:40px;
+}
+
+.enquiry-box p{
+    color:#bdbdbd;
+    line-height:1.65;
+}
+
+.enquiry-button{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:15px 18px;
+    margin-top:10px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:900;
+}
+
+.call-button{
+    background:#d4af37;
+    color:#050505;
+}
+
+.email-button{
+    border:1px solid #d4af37;
+    color:#d4af37;
+}
+
+.enquiry-points{
+    margin-top:24px;
+}
+
+.enquiry-points div{
+    padding:11px 0;
+    border-top:1px solid #303030;
+    color:#ddd;
+    font-size:14px;
+}
+
+
+/* FEATURES */
+
+.features-section{
+    padding:75px 0;
+    background:#0d0d0d;
+}
+
+.features-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.features-heading h2{
+    margin:0;
+    font-size:42px;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.features-grid span{
+    position:relative;
+    padding:16px 16px 16px 42px;
+    background:#171717;
+    border:1px solid #292929;
+    color:#ddd;
+}
+
+.features-grid span::before{
+    content:"✓";
+    position:absolute;
+    left:15px;
+    color:#d4af37;
+    font-weight:900;
+}
+
+
+/* CTA */
+
+.cta{
+    padding:65px 0;
+    background:linear-gradient(135deg,#957125,#d4af37);
+    color:#050505;
+}
+
+.cta-inner{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.cta h2{
+    margin:0 0 10px;
+    font-size:40px;
+}
+
+.cta p{
+    margin:0;
+}
+
+.cta a{
+    padding:15px 24px;
+    background:#050505;
+    color:#fff;
+    text-decoration:none;
+    font-weight:900;
+}
+
+
+/* TABLET */
+
+@media(max-width:950px){
+
+    .vehicle-heading{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-price{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    .hero-image{
+        height:430px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .vehicle-info{
+        grid-template-columns:1fr;
+    }
+
+    .enquiry-box{
+        position:static;
+    }
+
+    .spec-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-inner{
+        display:grid;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .hero-image{
+        height:280px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .thumbnail-grid a{
+        height:110px;
+    }
+
+    .spec-grid,
+    .features-grid{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-heading h1{
+        font-size:38px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="brand">
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+</a>
+
+<nav class="main-nav">
+
+<a href="index.html">Home</a>
+<a href="cars.html" class="active">Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<a href="tel:07394403899" class="header-call">
+Call 07394 403899
+</a>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<section class="vehicle-shell">
+
+<div class="vehicle-container">
+
+
+<a href="cars.html" class="back-link">
+← Back to Current Stock
+</a>
+
+
+<div class="vehicle-heading">
+
+<div>
+
+<p class="label">
+Available Now
+</p>
+
+<h1>
+2012 Ford Focus 1.6 TDCi Zetec Estate
+</h1>
+
+<p class="vehicle-subtitle">
+126,000 Miles • 1.6L Diesel • Manual • 5 Door
+</p>
+
+</div>
+
+
+<div class="vehicle-price">
+
+<span>Our Price</span>
+
+<strong>
+£1,650
+</strong>
+
+</div>
+
+</div>
+
+
+<!-- MAIN IMAGE -->
+
+<div class="hero-image">
+
+<a href="images/ford-focus-2012/5bb07b60-bbaf-4764-881b-1831fbf9f10d.jpeg">
+
+<img
+src="images/ford-focus-2012/5bb07b60-bbaf-4764-881b-1831fbf9f10d.jpeg"
+alt="2012 Ford Focus Zetec Estate">
+
+</a>
+
+</div>
+
+
+<!-- PHOTO GALLERY -->
+
+<div class="thumbnail-grid">
+
+<a href="images/ford-focus-2012/b0df4a98-dfe0-4315-844d-6ebbdeac3399.jpeg">
+<img src="images/ford-focus-2012/b0df4a98-dfe0-4315-844d-6ebbdeac3399.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/3af6dea2-6440-41cc-8f0b-d3a0978640ee.jpeg">
+<img src="images/ford-focus-2012/3af6dea2-6440-41cc-8f0b-d3a0978640ee.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/e0b76e81-43ff-47ce-9907-cc42f7644c8f.jpeg">
+<img src="images/ford-focus-2012/e0b76e81-43ff-47ce-9907-cc42f7644c8f.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/55eb8f53-ad42-4a62-bf8c-aefc7e499d3a.jpeg">
+<img src="images/ford-focus-2012/55eb8f53-ad42-4a62-bf8c-aefc7e499d3a.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/dd2f9479-8613-424a-9a7b-3f42be1ef449.jpeg">
+<img src="images/ford-focus-2012/dd2f9479-8613-424a-9a7b-3f42be1ef449.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/db01ca19-2b92-4c84-b29c-7bcf3a875560.jpeg">
+<img src="images/ford-focus-2012/db01ca19-2b92-4c84-b29c-7bcf3a875560.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/1e9178e2-d6fb-47dd-a208-c9f21cb3d258.jpeg">
+<img src="images/ford-focus-2012/1e9178e2-d6fb-47dd-a208-c9f21cb3d258.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/83b8cafc-0843-4fa4-b67a-905ae3bfba0b.jpeg">
+<img src="images/ford-focus-2012/83b8cafc-0843-4fa4-b67a-905ae3bfba0b.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/6ad7663a-7ae5-4ec2-8c0e-ceaedab2dd81.jpeg">
+<img src="images/ford-focus-2012/6ad7663a-7ae5-4ec2-8c0e-ceaedab2dd81.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/ff3b0549-df66-487c-8cc5-e2c7fa199e48.jpeg">
+<img src="images/ford-focus-2012/ff3b0549-df66-487c-8cc5-e2c7fa199e48.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/f139021c-e29c-44f1-9a95-146fbfbf2f8b.jpeg">
+<img src="images/ford-focus-2012/f139021c-e29c-44f1-9a95-146fbfbf2f8b.jpeg" alt="Ford Focus">
+</a>
+
+<a href="images/ford-focus-2012/8fba46ec-82f1-4aa1-8a08-3a6a40ac7615.jpeg">
+<img src="images/ford-focus-2012/8fba46ec-82f1-4aa1-8a08-3a6a40ac7615.jpeg" alt="Ford Focus">
+</a>
+
+</div>
+
+
+<!-- VEHICLE INFORMATION -->
+
+<div class="vehicle-info">
+
+<div>
+
+<p class="label">
+Vehicle Overview
+</p>
+
+<h2>
+Ford Focus Zetec Estate
+</h2>
+
+<p class="description">
+
+A practical 2012 Ford Focus Zetec Estate powered by a
+1.6-litre diesel engine with manual transmission.
+
+<br><br>
+
+This Focus has covered approximately 126,000 miles and offers
+excellent practicality thanks to its estate body style and
+large luggage area.
+
+<br><br>
+
+Equipment includes front and rear parking sensors, remote central
+locking and two remote keys.
+
+</p>
+
+
+<div class="spec-grid">
+
+<div class="spec">
+<span>Year</span>
+<strong>2012</strong>
+</div>
+
+<div class="spec">
+<span>Mileage</span>
+<strong>126,000 Miles</strong>
+</div>
+
+<div class="spec">
+<span>Engine</span>
+<strong>1.6L</strong>
+</div>
+
+<div class="spec">
+<span>Fuel</span>
+<strong>Diesel</strong>
+</div>
+
+<div class="spec">
+<span>Transmission</span>
+<strong>Manual</strong>
+</div>
+
+<div class="spec">
+<span>Body</span>
+<strong>Estate</strong>
+</div>
+
+<div class="spec">
+<span>Doors</span>
+<strong>5</strong>
+</div>
+
+<div class="spec">
+<span>Seats</span>
+<strong>5</strong>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ENQUIRY -->
+
+<aside class="enquiry-box">
+
+<p class="label">
+Enquire Today
+</p>
+
+<h3>
+£1,650
+</h3>
+
+<p>
+Contact Gibson Motors Yorkshire to confirm availability and arrange
+an appointment-only viewing or test drive.
+</p>
+
+<a
+href="tel:07394403899"
+class="enquiry-button call-button">
+
+Call 07394 403899
+
+</a>
+
+<a
+href="mailto:GibsonMotorsYorkshire@gmail.com?subject=2012 Ford Focus Zetec Estate Enquiry"
+class="enquiry-button email-button">
+
+Email About This Ford
+
+</a>
+
+
+<div class="enquiry-points">
+
+<div>✓ Parking Sensors</div>
+<div>✓ 2 Remote Keys</div>
+<div>✓ Part Exchange Welcome</div>
+<div>✓ Finance Enquiries Welcome</div>
+
+</div>
+
+</aside>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features-section">
+
+<div class="vehicle-container">
+
+<div class="features-heading">
+
+<p class="label">
+Vehicle Specification
+</p>
+
+<h2>
+Key Features
+</h2>
+
+</div>
+
+
+<div class="features-grid">
+
+<span>Zetec specification</span>
+<span>1.6L diesel engine</span>
+<span>Manual transmission</span>
+<span>5-door estate</span>
+<span>Front parking sensors</span>
+<span>Rear parking sensors</span>
+<span>Remote central locking</span>
+<span>2 remote keys</span>
+<span>Multifunction steering wheel</span>
+<span>Air conditioning</span>
+<span>Electric windows</span>
+<span>Large boot space</span>
+<span>Alloy wheels</span>
+<span>Service history</span>
+<span>Part exchange welcome</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+<div class="cta-inner">
+
+<div>
+
+<h2>
+Interested in this Ford Focus?
+</h2>
+
+<p>
+Arrange a viewing or speak to us about finance and part exchange.
+</p>
+
+</div>
+
+<a href="tel:07394403899">
+Call Now
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+
+<div class="container footer-grid">
+
+<div class="footer-about">
+
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+
+<p>
+Quality used cars in Huddersfield with warranty included and
+appointment-only viewings.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<a href="cars.html">Current Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<a href="tel:07394403899">
+07394 403899
+</a>
+
+<a href="mailto:GibsonMotorsYorkshire@gmail.com">
+GibsonMotorsYorkshire@gmail.com
+</a>
+
+<p>
+Bulay Road, Huddersfield, HD1 3NH
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div class="container">
+© 2026 Gibson Motors Yorkshire. All rights reserved.
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
