@@ -1,1 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2012 BMW 116d Sport | Gibson Motors Yorkshire</title>
+
+<meta
+name="description"
+content="2012 BMW 116d Sport for sale in Huddersfield. 86,334 miles, 2.0L diesel manual, £3,495 and 3 months warranty."
+>
+
+<link rel="stylesheet" href="style.css?v=70">
+
+<style>
+
+body{
+    margin:0;
+    background:#070707;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.vehicle-shell{
+    padding:55px 0 80px;
+    background:#090909;
+}
+
+.vehicle-container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+.back-link{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:800;
+}
+
+.vehicle-heading{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:35px;
+    align-items:end;
+    margin-bottom:32px;
+}
+
+.vehicle-heading h1{
+    margin:0;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1.05;
+}
+
+.vehicle-subtitle{
+    margin:12px 0 0;
+    color:#bdbdbd;
+    font-size:17px;
+}
+
+.vehicle-price{
+    min-width:220px;
+    padding:20px 24px;
+    background:#d4af37;
+    color:#050505;
+}
+
+.vehicle-price span{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    font-weight:900;
+}
+
+.vehicle-price strong{
+    display:block;
+    margin-top:5px;
+    font-size:36px;
+}
+
+
+/* MAIN IMAGE */
+
+.hero-image{
+    height:560px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #222;
+}
+
+.hero-image a{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+
+/* GALLERY */
+
+.thumbnail-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.thumbnail-grid a{
+    height:135px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #242424;
+}
+
+.thumbnail-grid img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .2s ease;
+}
+
+.thumbnail-grid a:hover img{
+    transform:scale(1.04);
+}
+
+
+/* INFORMATION */
+
+.vehicle-info{
+    display:grid;
+    grid-template-columns:1.45fr .7fr;
+    gap:55px;
+    align-items:start;
+    margin-top:65px;
+}
+
+.label{
+    margin:0 0 10px;
+    color:#d4af37;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.vehicle-info h2{
+    margin:0 0 16px;
+    font-size:40px;
+}
+
+.description{
+    color:#bdbdbd;
+    font-size:17px;
+    line-height:1.75;
+}
+
+
+/* SPECIFICATIONS */
+
+.spec-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-top:30px;
+    border-top:1px solid #2d2d2d;
+    border-left:1px solid #2d2d2d;
+}
+
+.spec{
+    padding:20px;
+    background:#151515;
+    border-right:1px solid #2d2d2d;
+    border-bottom:1px solid #2d2d2d;
+}
+
+.spec span{
+    display:block;
+    color:#949494;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.spec strong{
+    display:block;
+    margin-top:6px;
+    font-size:17px;
+}
+
+
+/* ENQUIRY BOX */
+
+.enquiry-box{
+    padding:30px;
+    background:#151515;
+    border:1px solid rgba(212,175,55,.4);
+    position:sticky;
+    top:110px;
+}
+
+.enquiry-box h3{
+    margin:0 0 12px;
+    color:#d4af37;
+    font-size:40px;
+}
+
+.enquiry-box p{
+    color:#bdbdbd;
+    line-height:1.65;
+}
+
+.enquiry-button{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:15px 18px;
+    margin-top:10px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:900;
+}
+
+.call-button{
+    background:#d4af37;
+    color:#050505;
+}
+
+.email-button{
+    border:1px solid #d4af37;
+    color:#d4af37;
+}
+
+.enquiry-points{
+    margin-top:24px;
+}
+
+.enquiry-points div{
+    padding:11px 0;
+    border-top:1px solid #303030;
+    color:#ddd;
+    font-size:14px;
+}
+
+
+/* FEATURES */
+
+.features-section{
+    padding:75px 0;
+    background:#0d0d0d;
+}
+
+.features-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.features-heading h2{
+    margin:0;
+    font-size:42px;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.features-grid span{
+    position:relative;
+    padding:16px 16px 16px 42px;
+    background:#171717;
+    border:1px solid #292929;
+    color:#ddd;
+}
+
+.features-grid span::before{
+    content:"✓";
+    position:absolute;
+    left:15px;
+    color:#d4af37;
+    font-weight:900;
+}
+
+
+/* CTA */
+
+.cta{
+    padding:65px 0;
+    background:linear-gradient(135deg,#957125,#d4af37);
+    color:#050505;
+}
+
+.cta-inner{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.cta h2{
+    margin:0 0 10px;
+    font-size:40px;
+}
+
+.cta p{
+    margin:0;
+}
+
+.cta a{
+    padding:15px 24px;
+    background:#050505;
+    color:#fff;
+    text-decoration:none;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+
+@media(max-width:950px){
+
+    .vehicle-heading{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-price{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    .hero-image{
+        height:430px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .vehicle-info{
+        grid-template-columns:1fr;
+    }
+
+    .enquiry-box{
+        position:static;
+    }
+
+    .spec-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-inner{
+        display:grid;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .hero-image{
+        height:280px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .thumbnail-grid a{
+        height:110px;
+    }
+
+    .spec-grid,
+    .features-grid{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-heading h1{
+        font-size:38px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="brand">
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+</a>
+
+<nav class="main-nav">
+
+<a href="index.html">Home</a>
+<a href="cars.html" class="active">Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<a href="tel:07394403899" class="header-call">
+Call 07394 403899
+</a>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<section class="vehicle-shell">
+
+<div class="vehicle-container">
+
+
+<a href="cars.html" class="back-link">
+← Back to Current Stock
+</a>
+
+
+<div class="vehicle-heading">
+
+<div>
+
+<p class="label">
+Available Now
+</p>
+
+<h1>
+2012 BMW 116d Sport
+</h1>
+
+<p class="vehicle-subtitle">
+86,334 Miles • 2.0L Diesel • Manual • 5 Door
+</p>
+
+</div>
+
+
+<div class="vehicle-price">
+
+<span>Our Price</span>
+
+<strong>
+£3,495
+</strong>
+
+</div>
+
+</div>
+
+
+
+<!-- MAIN IMAGE -->
+
+<div class="hero-image">
+
+<a href="bmw-116d/0e199273-4ae7-43c6-8fd4-944ed944b292.jpeg">
+
+<img
+src="bmw-116d/0e199273-4ae7-43c6-8fd4-944ed944b292.jpeg"
+alt="2012 BMW 116d Sport">
+
+</a>
+
+</div>
+
+
+
+<!-- PHOTO GALLERY -->
+
+<div class="thumbnail-grid">
+
+<a href="bmw-116d/15c85b57-3894-4066-bd6d-70e701505a10.jpeg">
+<img src="bmw-116d/15c85b57-3894-4066-bd6d-70e701505a10.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/179d98fd-6525-41bc-878d-ad2fe20dd4aa.jpeg">
+<img src="bmw-116d/179d98fd-6525-41bc-878d-ad2fe20dd4aa.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/1bbf1a9b-fb49-4cb5-b3e8-619ba47aabe7.jpeg">
+<img src="bmw-116d/1bbf1a9b-fb49-4cb5-b3e8-619ba47aabe7.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/1d82bafd-8969-4ace-9b30-38d6d5a8846d.jpeg">
+<img src="bmw-116d/1d82bafd-8969-4ace-9b30-38d6d5a8846d.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/5e62d05b-2c56-471c-a8ea-c09ee8b56117.jpeg">
+<img src="bmw-116d/5e62d05b-2c56-471c-a8ea-c09ee8b56117.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/60775ee2-4a56-42d4-bb89-c6c3200c07c2.jpeg">
+<img src="bmw-116d/60775ee2-4a56-42d4-bb89-c6c3200c07c2.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/746beea8-6bf4-4d5c-aad3-cbf388ed0604.jpeg">
+<img src="bmw-116d/746beea8-6bf4-4d5c-aad3-cbf388ed0604.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/74cbbe6d-7058-4cfa-9903-894281b77524.jpeg">
+<img src="bmw-116d/74cbbe6d-7058-4cfa-9903-894281b77524.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/812c0f58-f2b4-4949-b6bd-704d1631f6e1.jpeg">
+<img src="bmw-116d/812c0f58-f2b4-4949-b6bd-704d1631f6e1.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/8a9969e0-0763-4d2d-b7c0-fe7e8aabb9cf.jpeg">
+<img src="bmw-116d/8a9969e0-0763-4d2d-b7c0-fe7e8aabb9cf.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/98ea765f-9cc1-450f-9446-38e841d7ed86.jpeg">
+<img src="bmw-116d/98ea765f-9cc1-450f-9446-38e841d7ed86.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/adf70d18-fafe-4fc5-b559-0bf702e78608.jpeg">
+<img src="bmw-116d/adf70d18-fafe-4fc5-b559-0bf702e78608.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/be3af040-4fcf-413f-afd7-4d03b3a7ff5d.jpeg">
+<img src="bmw-116d/be3af040-4fcf-413f-afd7-4d03b3a7ff5d.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/c5f7ba33-4682-49c7-8b5e-68757750d954.jpeg">
+<img src="bmw-116d/c5f7ba33-4682-49c7-8b5e-68757750d954.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/cb095e71-cbcd-4816-8529-3adc4d45b014.jpeg">
+<img src="bmw-116d/cb095e71-cbcd-4816-8529-3adc4d45b014.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/d0be22a9-9df2-495c-a366-c8e1ee8db61e.jpeg">
+<img src="bmw-116d/d0be22a9-9df2-495c-a366-c8e1ee8db61e.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/d0c291e0-279a-457c-953f-a15accd2c0fb.jpeg">
+<img src="bmw-116d/d0c291e0-279a-457c-953f-a15accd2c0fb.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/dd9a2fbb-d3c5-41d3-97ab-2bb8f358d2c8.jpeg">
+<img src="bmw-116d/dd9a2fbb-d3c5-41d3-97ab-2bb8f358d2c8.jpeg" alt="BMW 116d">
+</a>
+
+<a href="bmw-116d/f38def96-c998-4be5-8ed8-ac39a861b0b5.jpeg">
+<img src="bmw-116d/f38def96-c998-4be5-8ed8-ac39a861b0b5.jpeg" alt="BMW 116d">
+</a>
+
+</div>
+
+
+
+<!-- VEHICLE INFORMATION -->
+
+<div class="vehicle-info">
+
+<div>
+
+<p class="label">
+Vehicle Overview
+</p>
+
+<h2>
+BMW 116d Sport
+</h2>
+
+<p class="description">
+
+A stylish and economical 2012 BMW 116d Sport finished in black,
+powered by a 2.0-litre diesel engine with a 6-speed manual transmission.
+
+<br><br>
+
+This BMW has covered 86,334 miles and features a light leather interior,
+multifunction steering wheel, BMW iDrive multimedia system,
+push-button start and selectable Sport and ECO PRO driving modes.
+
+<br><br>
+
+A practical 5-door hatchback with BMW driving dynamics and a well-equipped
+interior.
+
+<br><br>
+
+Supplied with 3 months warranty.
+
+</p>
+
+
+<div class="spec-grid">
+
+<div class="spec">
+<span>Year</span>
+<strong>2012</strong>
+</div>
+
+<div class="spec">
+<span>Mileage</span>
+<strong>86,334 Miles</strong>
+</div>
+
+<div class="spec">
+<span>Engine</span>
+<strong>2.0L</strong>
+</div>
+
+<div class="spec">
+<span>Fuel</span>
+<strong>Diesel</strong>
+</div>
+
+<div class="spec">
+<span>Transmission</span>
+<strong>Manual</strong>
+</div>
+
+<div class="spec">
+<span>Doors</span>
+<strong>5 Door</strong>
+</div>
+
+<div class="spec">
+<span>Colour</span>
+<strong>Black</strong>
+</div>
+
+<div class="spec">
+<span>Warranty</span>
+<strong>3 Months</strong>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ENQUIRY -->
+
+<aside class="enquiry-box">
+
+<p class="label">
+Enquire Today
+</p>
+
+<h3>
+£3,495
+</h3>
+
+<p>
+Contact Gibson Motors Yorkshire to confirm availability and arrange
+an appointment-only viewing or test drive.
+</p>
+
+<a
+href="tel:07394403899"
+class="enquiry-button call-button">
+
+Call 07394 403899
+
+</a>
+
+<a
+href="mailto:GibsonMotorsYorkshire@gmail.com?subject=2012 BMW 116d Sport Enquiry"
+class="enquiry-button email-button">
+
+Email About This BMW
+
+</a>
+
+
+<div class="enquiry-points">
+
+<div>✓ 3 Months Warranty</div>
+
+<div>✓ Part Exchange Welcome</div>
+
+<div>✓ Finance Enquiries Welcome</div>
+
+<div>✓ Appointment-Only Viewings</div>
+
+</div>
+
+</aside>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FEATURES -->
+
+<section class="features-section">
+
+<div class="vehicle-container">
+
+<div class="features-heading">
+
+<p class="label">
+Vehicle Specification
+</p>
+
+<h2>
+Key Features
+</h2>
+
+</div>
+
+
+<div class="features-grid">
+
+<span>BMW Sport specification</span>
+
+<span>2.0L diesel engine</span>
+
+<span>6-speed manual gearbox</span>
+
+<span>5-door hatchback</span>
+
+<span>Light leather interior</span>
+
+<span>Multifunction steering wheel</span>
+
+<span>BMW iDrive system</span>
+
+<span>Multimedia system</span>
+
+<span>Push-button start</span>
+
+<span>Sport driving mode</span>
+
+<span>ECO PRO mode</span>
+
+<span>Start/stop technology</span>
+
+<span>Parking sensors</span>
+
+<span>Black alloy wheels</span>
+
+<span>Red interior trim</span>
+
+<span>Air conditioning</span>
+
+<span>Electric windows</span>
+
+<span>3 months warranty</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="cta-inner">
+
+<div>
+
+<h2>
+Interested in this BMW 116d?
+</h2>
+
+<p>
+Arrange a viewing or speak to us about finance and part exchange.
+</p>
+
+</div>
+
+<a href="tel:07394403899">
+Call Now
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer class="site-footer">
+
+<div class="container footer-grid">
+
+
+<div class="footer-about">
+
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+
+<p>
+Quality used cars in Huddersfield with warranty included and
+appointment-only viewings.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<a href="cars.html">Current Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<a href="tel:07394403899">
+07394 403899
+</a>
+
+<a href="mailto:GibsonMotorsYorkshire@gmail.com">
+GibsonMotorsYorkshire@gmail.com
+</a>
+
+<p>
+Bulay Road, Huddersfield, HD1 3NH
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div class="container">
+© 2026 Gibson Motors Yorkshire. All rights reserved.
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
