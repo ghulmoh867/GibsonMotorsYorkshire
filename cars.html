@@ -12,14 +12,14 @@ name="description"
 content="Browse quality used cars available from Gibson Motors Yorkshire in Huddersfield."
 >
 
-<link rel="stylesheet" href="style.css?v=60">
+<link rel="stylesheet" href="style.css?v=80">
 
 <style>
 
 .stock-grid{
     display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:24px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:26px;
 }
 
 .stock-card{
@@ -31,7 +31,7 @@ content="Browse quality used cars available from Gibson Motors Yorkshire in Hudd
 }
 
 .stock-image{
-    height:240px;
+    height:260px;
     position:relative;
     overflow:hidden;
     background:#111;
@@ -119,20 +119,25 @@ content="Browse quality used cars available from Gibson Motors Yorkshire in Hudd
     font-weight:900;
 }
 
-@media(max-width:1050px){
-    .stock-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
+@media(max-width:850px){
 
-@media(max-width:700px){
     .stock-grid{
         grid-template-columns:1fr;
     }
 
+}
+
+@media(max-width:650px){
+
     .stock-image{
-        height:230px;
+        height:220px;
     }
+
+    .stock-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
 }
 
 </style>
@@ -140,6 +145,7 @@ content="Browse quality used cars available from Gibson Motors Yorkshire in Hudd
 </head>
 
 <body>
+
 
 <header class="site-header">
 
@@ -171,6 +177,7 @@ Call 07394 403899
 
 <main>
 
+
 <section class="page-banner">
 
 <div class="container">
@@ -196,6 +203,7 @@ appointment-only viewing or test drive.
 <section class="section section-dark">
 
 <div class="container">
+
 
 <div class="stock-toolbar">
 
@@ -237,7 +245,6 @@ alt="2015 BMW X5 xDrive40d M Sport">
 
 </a>
 
-
 <div class="stock-details">
 
 <p class="stock-category">
@@ -263,7 +270,6 @@ black leather interior, panoramic roof, reversing camera and
 <span>12 Months MOT</span>
 
 </div>
-
 
 <div class="stock-bottom">
 
@@ -299,7 +305,6 @@ alt="2016 Audi Q5 S line Plus quattro">
 
 </a>
 
-
 <div class="stock-details">
 
 <p class="stock-category">
@@ -325,7 +330,6 @@ front and rear seats.
 <span>12 Months MOT</span>
 
 </div>
-
 
 <div class="stock-bottom">
 
@@ -361,7 +365,6 @@ alt="2013 Volkswagen Golf TSI BlueMotion">
 
 </a>
 
-
 <div class="stock-details">
 
 <p class="stock-category">
@@ -388,7 +391,6 @@ manual transmission, ULEZ compliance and flat-bottom steering wheel.
 
 </div>
 
-
 <div class="stock-bottom">
 
 <strong>
@@ -396,6 +398,66 @@ manual transmission, ULEZ compliance and flat-bottom steering wheel.
 </strong>
 
 <a href="vw-golf.html">
+View Vehicle →
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- BMW 116D -->
+
+<article class="stock-card">
+
+<a href="bmw-116d.html" class="stock-image">
+
+<img
+src="bmw-116d/74cbbe6d-7058-4cfa-9903-894281b77524.jpeg"
+alt="2012 BMW 116d Sport">
+
+<span class="stock-badge">
+3 Months Warranty
+</span>
+
+</a>
+
+<div class="stock-details">
+
+<p class="stock-category">
+2012 • Diesel • Manual
+</p>
+
+<h3>
+BMW 116d Sport
+</h3>
+
+<p class="stock-description">
+Black BMW 116d Sport with a 2.0L diesel engine, manual transmission,
+BMW iDrive, Sport and ECO PRO driving modes, parking sensors and
+light leather interior.
+</p>
+
+<div class="stock-tags">
+
+<span>86,334 Miles</span>
+<span>2.0L Diesel</span>
+<span>Manual</span>
+<span>5 Door</span>
+<span>3 Months Warranty</span>
+
+</div>
+
+<div class="stock-bottom">
+
+<strong>
+£3,495
+</strong>
+
+<a href="bmw-116d.html">
 View Vehicle →
 </a>
 
@@ -514,12 +576,14 @@ Send an Enquiry
 
 </section>
 
+
 </main>
 
 
 <footer class="site-footer">
 
 <div class="container footer-grid">
+
 
 <div class="footer-about">
 
@@ -578,6 +642,7 @@ Bulay Road, Huddersfield, HD1 3NH
 </div>
 
 </div>
+
 
 </footer>
 
