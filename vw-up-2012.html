@@ -3,658 +3,796 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2012 Volkswagen up! High up! | Gibson Motors Yorkshire</title>
 
-  <title>
-    2012 Volkswagen up! High up! | Gibson Motors Yorkshire
-  </title>
+<meta
+  name="description"
+  content="2012 Volkswagen up! High up! for sale in Huddersfield. 1.0L petrol manual, 95,000 miles and 3 months warranty."
+>
 
-  <meta
-    name="description"
-    content="2012 Volkswagen up! High up! 1.0 petrol manual for sale at Gibson Motors Yorkshire in Huddersfield."
-  >
+<link rel="stylesheet" href="style.css?v=180">
 
-  <link rel="stylesheet" href="style.css">
+<style>
+
+body{
+    margin:0;
+    background:#070707;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.vehicle-shell{
+    padding:55px 0 80px;
+    background:#090909;
+}
+
+.vehicle-container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+.back-link{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:800;
+}
+
+.vehicle-heading{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:35px;
+    align-items:end;
+    margin-bottom:32px;
+}
+
+.vehicle-heading h1{
+    margin:0;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1.05;
+}
+
+.vehicle-subtitle{
+    margin:12px 0 0;
+    color:#bdbdbd;
+    font-size:17px;
+}
+
+.vehicle-price{
+    min-width:220px;
+    padding:20px 24px;
+    background:#d4af37;
+    color:#050505;
+}
+
+.vehicle-price span{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    font-weight:900;
+}
+
+.vehicle-price strong{
+    display:block;
+    margin-top:5px;
+    font-size:36px;
+}
+
+.hero-image{
+    height:560px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #222;
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.thumbnail-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.thumbnail-grid button{
+    height:135px;
+    overflow:hidden;
+    padding:0;
+    border:1px solid #242424;
+    background:#111;
+    cursor:pointer;
+}
+
+.thumbnail-grid button.active{
+    border:2px solid #d4af37;
+}
+
+.thumbnail-grid img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.2s ease;
+}
+
+.thumbnail-grid button:hover img{
+    transform:scale(1.04);
+}
+
+.vehicle-info{
+    display:grid;
+    grid-template-columns:1.45fr .7fr;
+    gap:55px;
+    align-items:start;
+    margin-top:65px;
+}
+
+.label{
+    margin:0 0 10px;
+    color:#d4af37;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.vehicle-info h2{
+    margin:0 0 16px;
+    font-size:40px;
+}
+
+.description{
+    color:#bdbdbd;
+    font-size:17px;
+    line-height:1.75;
+}
+
+.spec-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-top:30px;
+    border-top:1px solid #2d2d2d;
+    border-left:1px solid #2d2d2d;
+}
+
+.spec{
+    padding:20px;
+    background:#151515;
+    border-right:1px solid #2d2d2d;
+    border-bottom:1px solid #2d2d2d;
+}
+
+.spec span{
+    display:block;
+    color:#949494;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.spec strong{
+    display:block;
+    margin-top:6px;
+    font-size:17px;
+}
+
+.enquiry-box{
+    padding:30px;
+    background:#151515;
+    border:1px solid rgba(212,175,55,.4);
+    position:sticky;
+    top:110px;
+}
+
+.enquiry-box h3{
+    margin:0 0 12px;
+    color:#d4af37;
+    font-size:40px;
+}
+
+.enquiry-box p{
+    color:#bdbdbd;
+    line-height:1.65;
+}
+
+.enquiry-button{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:15px 18px;
+    margin-top:10px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:900;
+}
+
+.call-button{
+    background:#d4af37;
+    color:#050505;
+}
+
+.email-button{
+    border:1px solid #d4af37;
+    color:#d4af37;
+}
+
+.enquiry-points{
+    margin-top:24px;
+}
+
+.enquiry-points div{
+    padding:11px 0;
+    border-top:1px solid #303030;
+    color:#ddd;
+    font-size:14px;
+}
+
+.features-section{
+    padding:75px 0;
+    background:#0d0d0d;
+}
+
+.features-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.features-heading h2{
+    margin:0;
+    font-size:42px;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.features-grid span{
+    position:relative;
+    padding:16px 16px 16px 42px;
+    background:#171717;
+    border:1px solid #292929;
+    color:#ddd;
+}
+
+.features-grid span::before{
+    content:"✓";
+    position:absolute;
+    left:15px;
+    color:#d4af37;
+    font-weight:900;
+}
+
+.cta{
+    padding:65px 0;
+    background:linear-gradient(135deg,#957125,#d4af37);
+    color:#050505;
+}
+
+.cta-inner{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.cta h2{
+    margin:0 0 10px;
+    font-size:40px;
+}
+
+.cta p{
+    margin:0;
+}
+
+.cta a{
+    padding:15px 24px;
+    background:#050505;
+    color:#fff;
+    text-decoration:none;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+@media(max-width:950px){
+
+    .vehicle-heading{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-price{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    .hero-image{
+        height:430px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .vehicle-info{
+        grid-template-columns:1fr;
+    }
+
+    .enquiry-box{
+        position:static;
+    }
+
+    .spec-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-inner{
+        display:grid;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero-image{
+        height:280px;
+    }
+
+    .thumbnail-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .thumbnail-grid button{
+        height:110px;
+    }
+
+    .spec-grid,
+    .features-grid{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-heading h1{
+        font-size:38px;
+    }
+}
+
+</style>
 
 </head>
 
-
 <body>
-
-
-<!-- HEADER -->
 
 <header class="site-header">
 
-  <a href="index.html" class="brand">
+<div class="container header-inner">
 
-    <img
-      src="logo.png"
-      alt="Gibson Motors Yorkshire"
-    >
+<a href="index.html" class="brand">
+<img src="logo.png" alt="Gibson Motors Yorkshire">
+</a>
 
-  </a>
+<nav class="main-nav">
+<a href="index.html">Home</a>
+<a href="cars.html" class="active">Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
+</nav>
 
+<a href="tel:07394403899" class="header-call">
+Call 07394 403899
+</a>
 
-  <nav class="main-nav">
-
-    <a href="index.html">
-      Home
-    </a>
-
-    <a href="cars.html" class="active">
-      Stock
-    </a>
-
-    <a href="finance.html">
-      Finance
-    </a>
-
-    <a href="part-exchange.html">
-      Part Exchange
-    </a>
-
-    <a href="sale-on-return.html">
-      Sale on Return
-    </a>
-
-    <a href="contact.html">
-      Contact
-    </a>
-
-  </nav>
-
-
-  <a
-    href="tel:07394403899"
-    class="header-call"
-  >
-    Call 07394 403899
-  </a>
+</div>
 
 </header>
 
+<main>
+
+<section class="vehicle-shell">
+
+<div class="vehicle-container">
+
+<a href="cars.html" class="back-link">
+← Back to Current Stock
+</a>
+
+<div class="vehicle-heading">
+
+<div>
+
+<p class="label">
+Available Now
+</p>
+
+<h1>
+2012 Volkswagen up! High up!
+</h1>
+
+<p class="vehicle-subtitle">
+95,000 Miles • 1.0L Petrol • Manual • 5 Door
+</p>
+
+</div>
+
+<div class="vehicle-price">
+
+<span>Our Price</span>
+
+<strong>
+£3,495
+</strong>
+
+</div>
+
+</div>
 
 
-<!-- VEHICLE HERO -->
+<div class="hero-image">
 
-<section class="vehicle-page-hero">
+<img
+id="mainVehicleImage"
+src="images/vw-up-2012/03051f90-3fe3-4b91-a0e3-1bd7eef642fe.jpeg"
+alt="2012 Volkswagen up High up"
+>
 
-  <div class="vehicle-page-container">
-
-    <p class="eyebrow">
-      Available Vehicle
-    </p>
-
-
-    <h1>
-      2012 Volkswagen up! High up!
-    </h1>
+</div>
 
 
-    <p class="vehicle-page-subtitle">
-      1.0 Petrol • Manual • Black
-    </p>
+<div class="thumbnail-grid">
 
-  </div>
+<button class="active" onclick="changeVehicleImage(this,'images/vw-up-2012/03051f90-3fe3-4b91-a0e3-1bd7eef642fe.jpeg')">
+<img src="images/vw-up-2012/03051f90-3fe3-4b91-a0e3-1bd7eef642fe.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/1fe3eca7-d7b2-468a-a00e-445ca14c6557.jpeg')">
+<img src="images/vw-up-2012/1fe3eca7-d7b2-468a-a00e-445ca14c6557.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/2ebec1d6-d2fa-4ec2-b835-94f3d39aa6fe.jpeg')">
+<img src="images/vw-up-2012/2ebec1d6-d2fa-4ec2-b835-94f3d39aa6fe.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/4b75b8b8-c48f-423b-a01d-5c08e00c6440.jpeg')">
+<img src="images/vw-up-2012/4b75b8b8-c48f-423b-a01d-5c08e00c6440.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/51908677-4059-4e5d-a1ef-bd5f35822623.jpeg')">
+<img src="images/vw-up-2012/51908677-4059-4e5d-a1ef-bd5f35822623.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/5a41a4a2-dea0-444c-9b36-0a94dd01921d.jpeg')">
+<img src="images/vw-up-2012/5a41a4a2-dea0-444c-9b36-0a94dd01921d.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/67307a2c-d50c-4015-b1e7-1d007fdbaab4.jpeg')">
+<img src="images/vw-up-2012/67307a2c-d50c-4015-b1e7-1d007fdbaab4.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/74218b43-baef-4fbc-8374-410424b631e3.jpeg')">
+<img src="images/vw-up-2012/74218b43-baef-4fbc-8374-410424b631e3.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/8e7caf6d-e20d-4189-8b3c-21b41aa667f3.jpeg')">
+<img src="images/vw-up-2012/8e7caf6d-e20d-4189-8b3c-21b41aa667f3.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/b6ff5ef0-ef6c-4d43-999d-8fbe198c1752.jpeg')">
+<img src="images/vw-up-2012/b6ff5ef0-ef6c-4d43-999d-8fbe198c1752.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/d75869cf-4668-43ee-be92-3f29f9012992.jpeg')">
+<img src="images/vw-up-2012/d75869cf-4668-43ee-be92-3f29f9012992.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/dd2cd713-996a-4923-a00f-cb81dc0229e6.jpeg')">
+<img src="images/vw-up-2012/dd2cd713-996a-4923-a00f-cb81dc0229e6.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/e514cd36-ed05-4011-af91-3158d740eb87.jpeg')">
+<img src="images/vw-up-2012/e514cd36-ed05-4011-af91-3158d740eb87.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/e5c422e7-64a6-46ae-bf60-45fcd10ac159.jpeg')">
+<img src="images/vw-up-2012/e5c422e7-64a6-46ae-bf60-45fcd10ac159.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/f630d38f-8891-4768-873d-f421efa147c5.jpeg')">
+<img src="images/vw-up-2012/f630d38f-8891-4768-873d-f421efa147c5.jpeg" alt="Volkswagen up">
+</button>
+
+<button onclick="changeVehicleImage(this,'images/vw-up-2012/f66dcd0d-43f2-4112-a0f7-e7569ef906a8.jpeg')">
+<img src="images/vw-up-2012/f66dcd0d-43f2-4112-a0f7-e7569ef906a8.jpeg" alt="Volkswagen up">
+</button>
+
+</div>
+
+
+<div class="vehicle-info">
+
+<div>
+
+<p class="label">
+Vehicle Overview
+</p>
+
+<h2>
+Volkswagen up! High up!
+</h2>
+
+<p class="description">
+
+A smart and economical 2012 Volkswagen up! High up! finished
+in black and powered by a 1.0-litre petrol engine with manual
+transmission.
+
+<br><br>
+
+This five-door Volkswagen has covered approximately 95,000 miles
+and offers an excellent combination of low running costs,
+practicality and easy city driving.
+
+<br><br>
+
+High up! specification includes heated front seats, satellite
+navigation, rear parking sensors and air conditioning.
+
+<br><br>
+
+Supplied with 3 months warranty.
+
+</p>
+
+
+<div class="spec-grid">
+
+<div class="spec">
+<span>Year</span>
+<strong>2012</strong>
+</div>
+
+<div class="spec">
+<span>Mileage</span>
+<strong>95,000 Miles</strong>
+</div>
+
+<div class="spec">
+<span>Engine</span>
+<strong>1.0L</strong>
+</div>
+
+<div class="spec">
+<span>Fuel</span>
+<strong>Petrol</strong>
+</div>
+
+<div class="spec">
+<span>Transmission</span>
+<strong>Manual</strong>
+</div>
+
+<div class="spec">
+<span>Doors</span>
+<strong>5 Door</strong>
+</div>
+
+<div class="spec">
+<span>Colour</span>
+<strong>Black</strong>
+</div>
+
+<div class="spec">
+<span>Warranty</span>
+<strong>3 Months</strong>
+</div>
+
+</div>
+
+</div>
+
+
+<aside class="enquiry-box">
+
+<p class="label">
+Enquire Today
+</p>
+
+<h3>
+£3,495
+</h3>
+
+<p>
+Contact Gibson Motors Yorkshire to confirm availability and arrange
+an appointment-only viewing or test drive.
+</p>
+
+<a
+href="tel:07394403899"
+class="enquiry-button call-button">
+Call 07394 403899
+</a>
+
+<a
+href="mailto:GibsonMotorsYorkshire@gmail.com?subject=2012 Volkswagen up High up Enquiry"
+class="enquiry-button email-button">
+Email About This Volkswagen
+</a>
+
+<div class="enquiry-points">
+
+<div>✓ 3 Months Warranty</div>
+<div>✓ Heated Front Seats</div>
+<div>✓ Satellite Navigation</div>
+<div>✓ Rear Parking Sensors</div>
+<div>✓ Part Exchange Welcome</div>
+<div>✓ Finance Enquiries Welcome</div>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
 
 </section>
 
 
-
-<!-- MAIN VEHICLE SECTION -->
-
-<section class="vehicle-page-section">
-
-  <div class="vehicle-page-container">
-
-
-    <!-- GALLERY -->
-
-    <div class="vehicle-gallery">
-
-
-      <div class="main-vehicle-image">
-
-        <img
-          id="mainImage"
-          src="images/vw-up-2012/03051f90-3fe3-4b91-a0e3-1bd7eef642fe.jpeg"
-          alt="2012 Volkswagen up! High up!"
-        >
-
-      </div>
-
-
-
-      <div class="vehicle-thumbnails">
-
-
-        <img
-          src="images/vw-up-2012/03051f90-3fe3-4b91-a0e3-1bd7eef642fe.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up front"
-        >
-
-
-        <img
-          src="images/vw-up-2012/1fe3eca7-d7b2-468a-a00e-445ca14c6557.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/2ebec1d6-d2fa-4ec2-b835-94f3d39aa6fe.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/4b75b8b8-c48f-423b-a01d-5c08e00c6440.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/51908677-4059-4e5d-a1ef-bd5f35822623.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/5a41a4a2-dea0-444c-9b36-0a94dd01921d.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/67307a2c-d50c-4015-b1e7-1d007fdbaab4.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/74218b43-baef-4fbc-8374-410424b631e3.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/8e7caf6d-e20d-4189-8b3c-21b41aa667f3.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/b6ff5ef0-ef6c-4d43-999d-8fbe198c1752.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/d75869cf-4668-43ee-be92-3f29f9012992.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/dd2cd713-996a-4923-a00f-cb81dc0229e6.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/e514cd36-ed05-4011-af91-3158d740eb87.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/e5c422e7-64a6-46ae-bf60-45fcd10ac159.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/f630d38f-8891-4768-873d-f421efa147c5.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-        <img
-          src="images/vw-up-2012/f66dcd0d-43f2-4112-a0f7-e7569ef906a8.jpeg"
-          onclick="changeImage(this.src)"
-          alt="Volkswagen up"
-        >
-
-
-      </div>
-
-    </div>
-
-
-
-    <!-- VEHICLE INFORMATION -->
-
-    <div class="vehicle-page-info">
-
-
-      <div class="vehicle-page-main-info">
-
-
-        <p class="eyebrow">
-          Volkswagen up!
-        </p>
-
-
-        <h2>
-          High up! 1.0 Petrol Manual
-        </h2>
-
-
-        <p class="vehicle-description">
-
-          A smart and economical Volkswagen up! High up! finished
-          in black, with a 1.0-litre petrol engine and manual
-          transmission.
-
-          A practical city car with a comfortable interior,
-          compact dimensions and useful everyday features.
-
-        </p>
-
-
-
-        <div class="vehicle-tags">
-
-          <span>
-            2012
-          </span>
-
-          <span>
-            1.0L Petrol
-          </span>
-
-          <span>
-            Manual
-          </span>
-
-          <span>
-            Black
-          </span>
-
-          <span>
-            5 Door
-          </span>
-
-          <span>
-            3 Months Warranty
-          </span>
-
-        </div>
-
-
-      </div>
-
-
-
-      <div class="vehicle-price-box">
-
-        <p>
-          Interested in this vehicle?
-        </p>
-
-        <a
-          href="tel:07394403899"
-          class="button button-gold"
-        >
-          Call 07394 403899
-        </a>
-
-        <a
-          href="contact.html"
-          class="button button-black-outline"
-        >
-          Send an Enquiry
-        </a>
-
-      </div>
-
-
-    </div>
-
-  </div>
+<section class="features-section">
+
+<div class="vehicle-container">
+
+<div class="features-heading">
+
+<p class="label">
+Vehicle Specification
+</p>
+
+<h2>
+Key Features
+</h2>
+
+</div>
+
+<div class="features-grid">
+
+<span>High up! specification</span>
+<span>1.0L petrol engine</span>
+<span>Manual transmission</span>
+<span>5-door hatchback</span>
+<span>Heated front seats</span>
+<span>Satellite navigation</span>
+<span>Rear parking sensors</span>
+<span>Air conditioning</span>
+<span>Multimedia system</span>
+<span>Electric windows</span>
+<span>Alloy wheels</span>
+<span>Front fog lights</span>
+<span>Compact city car</span>
+<span>3 months warranty</span>
+<span>Part exchange welcome</span>
+<span>Finance enquiries welcome</span>
+
+</div>
+
+</div>
 
 </section>
 
 
+<section class="cta">
 
-<!-- FEATURES -->
+<div class="cta-inner">
 
-<section class="vehicle-features-section">
+<div>
 
-  <div class="vehicle-page-container">
+<h2>
+Interested in this Volkswagen up!?
+</h2>
 
+<p>
+Arrange a viewing or speak to us about finance and part exchange.
+</p>
 
-    <p class="eyebrow">
-      Vehicle Features
-    </p>
+</div>
 
+<a href="tel:07394403899">
+Call Now
+</a>
 
-    <h2>
-      Highlights
-    </h2>
-
-
-    <div class="three-column-grid">
-
-
-      <article class="information-card">
-
-        <span class="card-number">
-          01
-        </span>
-
-        <h3>
-          High up! Specification
-        </h3>
-
-        <p>
-          Well-equipped Volkswagen up! with a smart interior and
-          practical everyday features.
-        </p>
-
-      </article>
-
-
-
-      <article class="information-card">
-
-        <span class="card-number">
-          02
-        </span>
-
-        <h3>
-          Parking Assistance
-        </h3>
-
-        <p>
-          Parking assistance equipment helps make manoeuvring this
-          compact Volkswagen even easier.
-        </p>
-
-      </article>
-
-
-
-      <article class="information-card">
-
-        <span class="card-number">
-          03
-        </span>
-
-        <h3>
-          3 Months Warranty
-        </h3>
-
-        <p>
-          This vehicle is supplied with three months warranty for
-          additional peace of mind.
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
+</main>
 
-<!-- PURCHASE OPTIONS -->
-
-<section class="vehicle-features-section">
-
-  <div class="vehicle-page-container">
-
-
-    <div class="three-column-grid">
-
-
-      <article class="information-card">
-
-        <span class="card-number">
-          01
-        </span>
-
-        <h3>
-          Part Exchange
-        </h3>
-
-        <p>
-          Contact us to discuss using your current vehicle towards
-          the purchase of this Volkswagen up!.
-        </p>
-
-      </article>
-
-
-
-      <article class="information-card">
-
-        <span class="card-number">
-          02
-        </span>
-
-        <h3>
-          Finance Enquiries
-        </h3>
-
-        <p>
-          Speak to Gibson Motors Yorkshire directly to discuss
-          available finance options.
-        </p>
-
-      </article>
-
-
-
-      <article class="information-card">
-
-        <span class="card-number">
-          03
-        </span>
-
-        <h3>
-          Viewing & Test Drive
-        </h3>
-
-        <p>
-          Viewings and test drives are available by appointment.
-          Please contact us before travelling.
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- CALL TO ACTION -->
-
-<section class="vehicle-callout">
-
-  <div class="vehicle-page-container vehicle-callout-inner">
-
-
-    <div>
-
-      <p class="eyebrow dark-eyebrow">
-        Appointment Only
-      </p>
-
-      <h2>
-        Arrange a viewing or test drive
-      </h2>
-
-      <p>
-        Contact Gibson Motors Yorkshire before travelling to
-        confirm availability and arrange a suitable appointment.
-      </p>
-
-    </div>
-
-
-
-    <div class="callout-buttons">
-
-      <a
-        href="tel:07394403899"
-        class="button button-black"
-      >
-        Call 07394 403899
-      </a>
-
-
-      <a
-        href="contact.html"
-        class="button button-black-outline"
-      >
-        Send an Enquiry
-      </a>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- FOOTER -->
 
 <footer class="site-footer">
 
+<div class="container footer-grid">
 
-  <div class="footer-grid">
+<div class="footer-about">
 
+<img src="logo.png" alt="Gibson Motors Yorkshire">
 
-    <div class="footer-about">
+<p>
+Quality used cars in Huddersfield with warranty included and
+appointment-only viewings.
+</p>
 
-      <img
-        src="logo.png"
-        alt="Gibson Motors Yorkshire"
-      >
+</div>
 
-      <p>
-        Quality used cars in Huddersfield with warranty included
-        and appointment-only viewings.
-      </p>
+<div class="footer-column">
 
-    </div>
+<h3>Quick Links</h3>
 
+<a href="cars.html">Current Stock</a>
+<a href="finance.html">Finance</a>
+<a href="part-exchange.html">Part Exchange</a>
+<a href="sale-on-return.html">Sale on Return</a>
+<a href="contact.html">Contact</a>
 
+</div>
 
-    <div class="footer-column">
+<div class="footer-column">
 
-      <h3>
-        Quick Links
-      </h3>
+<h3>Contact</h3>
 
-      <a href="index.html">
-        Home
-      </a>
+<a href="tel:07394403899">
+07394 403899
+</a>
 
-      <a href="cars.html">
-        Stock
-      </a>
+<a href="mailto:GibsonMotorsYorkshire@gmail.com">
+GibsonMotorsYorkshire@gmail.com
+</a>
 
-      <a href="finance.html">
-        Finance
-      </a>
+<p>
+Bulay Road, Huddersfield, HD1 3NH
+</p>
 
-      <a href="part-exchange.html">
-        Part Exchange
-      </a>
+</div>
 
-      <a href="sale-on-return.html">
-        Sale on Return
-      </a>
+</div>
 
-    </div>
+<div class="footer-bottom">
 
+<div class="container">
+© 2026 Gibson Motors Yorkshire. All rights reserved.
+</div>
 
-
-    <div class="footer-column">
-
-      <h3>
-        Contact
-      </h3>
-
-      <a href="tel:07394403899">
-        07394 403899
-      </a>
-
-      <a href="mailto:GibsonMotorsYorkshire@gmail.com">
-        GibsonMotorsYorkshire@gmail.com
-      </a>
-
-      <p>
-        Bulay Road,
-        Huddersfield,
-        HD1 3NH
-      </p>
-
-    </div>
-
-
-  </div>
-
+</div>
 
 </footer>
 
 
-
-<!-- IMAGE GALLERY SCRIPT -->
-
 <script>
 
-function changeImage(image) {
+function changeVehicleImage(button,imagePath){
 
-  document.getElementById("mainImage").src = image;
+    document.getElementById("mainVehicleImage").src = imagePath;
 
-  window.scrollTo({
+    document.querySelectorAll(".thumbnail-grid button").forEach(function(item){
+        item.classList.remove("active");
+    });
 
-    top:
-      document.getElementById("mainImage").offsetTop - 120,
-
-    behavior: "smooth"
-
-  });
-
+    button.classList.add("active");
 }
 
 </script>
