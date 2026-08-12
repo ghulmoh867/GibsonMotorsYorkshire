@@ -1,1 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>2012 Ford Mondeo Titanium X | Gibson Motors Yorkshire</title>
+
+  <meta
+    name="description"
+    content="2012 Ford Mondeo Titanium X diesel manual for sale at Gibson Motors Yorkshire in Huddersfield."
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d0d0d;
+      color: white;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #000;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 18px 5%;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    /* MAIN */
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    .car-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    /* MAIN IMAGE */
+
+    .main-image {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      background: #161616;
+    }
+
+    /* THUMBNAILS */
+
+    .thumbnail-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .thumbnail-grid img {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 7px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: 0.2s;
+    }
+
+    .thumbnail-grid img:hover {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+
+    /* INFORMATION PANEL */
+
+    .info-box {
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 14px;
+      padding: 28px;
+      position: sticky;
+      top: 20px;
+    }
+
+    .car-title {
+      font-size: 30px;
+      margin-bottom: 7px;
+    }
+
+    .car-subtitle {
+      color: #aaa;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .price {
+      font-size: 35px;
+      font-weight: bold;
+      color: #d4af37;
+      margin-bottom: 25px;
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .spec {
+      background: #202020;
+      border-radius: 8px;
+      padding: 15px;
+    }
+
+    .spec-label {
+      display: block;
+      color: #888;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .spec-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    /* BUTTONS */
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 7px;
+      transition: 0.2s;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: black;
+    }
+
+    .btn-gold:hover {
+      background: #f0cb4f;
+    }
+
+    .btn-dark {
+      border: 1px solid #d4af37;
+      color: #d4af37;
+    }
+
+    .btn-dark:hover {
+      background: #d4af37;
+      color: black;
+    }
+
+    /* DETAILS */
+
+    .details-section {
+      margin-top: 50px;
+      background: #151515;
+      border-radius: 14px;
+      padding: 30px;
+    }
+
+    .details-section h2 {
+      color: #d4af37;
+      margin-bottom: 18px;
+    }
+
+    .details-section p {
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    /* FEATURES */
+
+    .features {
+      margin-top: 30px;
+      background: #151515;
+      border-radius: 14px;
+      padding: 30px;
+    }
+
+    .features h2 {
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .feature {
+      background: #202020;
+      padding: 14px;
+      border-radius: 7px;
+      color: #ddd;
+    }
+
+    /* WARRANTY */
+
+    .warranty-box {
+      margin-top: 30px;
+      padding: 25px;
+      border: 1px solid #d4af37;
+      border-radius: 12px;
+      background: #111;
+    }
+
+    .warranty-box h3 {
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .warranty-box p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #050505;
+      margin-top: 60px;
+      padding: 35px 20px;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: #d4af37;
+    }
+
+    footer p {
+      color: #777;
+      margin-top: 20px;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .car-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .main-image {
+        height: 420px;
+      }
+
+      .info-box {
+        position: static;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .thumbnail-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+    }
+
+    @media (max-width: 550px) {
+
+      .main-image {
+        height: 280px;
+      }
+
+      .thumbnail-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .thumbnail-grid img {
+        height: 75px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .specs {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .car-title {
+        font-size: 25px;
+      }
+
+      .price {
+        font-size: 31px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<header>
+
+  <nav>
+
+    <a href="index.html" class="logo">
+      Gibson Motors Yorkshire
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="cars.html">Stock</a>
+
+      <a href="finance.html">Finance</a>
+
+      <a href="part-exchange.html">Part Exchange</a>
+
+      <a href="sale-on-return.html">Sale on Return</a>
+
+      <a href="contact.html">Contact</a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+
+<main class="container">
+
+
+  <a href="cars.html" class="back-link">
+    ← Back to Current Stock
+  </a>
+
+
+  <div class="car-layout">
+
+
+    <!-- LEFT SIDE -->
+
+    <div>
+
+
+      <!-- MAIN PHOTO -->
+
+      <img
+        id="mainImage"
+        class="main-image"
+        src="images/ford-mondeo-2012/07c83850-eb52-4ab9-a78a-7da3737877e7.jpeg"
+        alt="2012 Ford Mondeo Titanium X"
+      >
+
+
+      <!-- THUMBNAILS -->
+
+      <div class="thumbnail-grid">
+
+
+        <img
+          src="images/ford-mondeo-2012/07c83850-eb52-4ab9-a78a-7da3737877e7.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo front"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/30bcf2cc-a662-475f-a2ae-ddba54fbdc4e.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo exterior"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/324dbf5e-6bde-44e0-9acc-8d9dfb83e998.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo rear"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/3624637e-c24c-4864-97f7-cdc52480baf1.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo rear view"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/4b24c1d8-263a-4da1-bc97-00d6bf33dcee.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo interior"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/5091fadb-4e17-4201-8b71-161b566d608a.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo dashboard"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/554fe90f-2a6d-4e44-b389-8eb617e772a3.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo steering wheel"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/56f0fe6c-3523-4dd4-850b-e74cc54d66ec.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo seats"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/80530ab2-0666-4909-a45d-6274956d8ae0.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo instrument cluster"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/ae74fd66-b454-439e-b657-72777a2885b8.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo rear seats"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/c075fd51-b1d5-41f0-ae13-36c8faa72ac2.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo interior"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/c07f4fea-8e19-4583-89fe-6e5c4e12cf84.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo centre console"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/c8c7c99d-9f50-4fdc-be52-319cf29d4157.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo interior controls"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/d8f381da-67e8-4012-a545-2f67a31dd088.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo cabin"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/e28f1410-1aa6-4f59-9924-d20fd42a85e8.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo interior"
+        >
+
+
+        <img
+          src="images/ford-mondeo-2012/f745dbeb-10ed-4d3a-a274-97d1b58ad255.jpeg"
+          onclick="changeImage(this.src)"
+          alt="Ford Mondeo"
+        >
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="info-box">
+
+
+      <h1 class="car-title">
+        Ford Mondeo Titanium X
+      </h1>
+
+
+      <p class="car-subtitle">
+        2012 • Diesel • Manual
+      </p>
+
+
+      <div class="price">
+        £2,995
+      </div>
+
+
+      <div class="specs">
+
+
+        <div class="spec">
+
+          <span class="spec-label">
+            Mileage
+          </span>
+
+          <span class="spec-value">
+            100,371 Miles
+          </span>
+
+        </div>
+
+
+        <div class="spec">
+
+          <span class="spec-label">
+            Fuel
+          </span>
+
+          <span class="spec-value">
+            Diesel
+          </span>
+
+        </div>
+
+
+        <div class="spec">
+
+          <span class="spec-label">
+            Transmission
+          </span>
+
+          <span class="spec-value">
+            Manual
+          </span>
+
+        </div>
+
+
+        <div class="spec">
+
+          <span class="spec-label">
+            Year
+          </span>
+
+          <span class="spec-value">
+            2012
+          </span>
+
+        </div>
+
+
+        <div class="spec">
+
+          <span class="spec-label">
+            Body Style
+          </span>
+
+          <span class="spec-value">
+            Hatchback
+          </span>
+
+        </div>
+
+
+        <div class="spec">
+
+          <span class="spec-label">
+            Colour
+          </span>
+
+          <span class="spec-value">
+            Blue
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="buttons">
+
+        <a
+          href="tel:+447885668687"
+          class="btn btn-gold"
+        >
+          Call About This Car
+        </a>
+
+
+        <a
+          href="contact.html"
+          class="btn btn-dark"
+        >
+          Send an Enquiry
+        </a>
+
+
+        <a
+          href="finance.html"
+          class="btn btn-dark"
+        >
+          Finance Enquiry
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- DESCRIPTION -->
+
+
+  <section class="details-section">
+
+    <h2>
+      Vehicle Description
+    </h2>
+
+    <p>
+      Available now from Gibson Motors Yorkshire is this
+      Ford Mondeo Titanium X.
+      A spacious and comfortable diesel family car with a
+      high level of specification and a practical interior.
+    </p>
+
+    <br>
+
+    <p>
+      The Titanium X specification provides a premium interior
+      with leather and suede-style seats, heated front seats,
+      climate control, cruise control, Bluetooth connectivity,
+      parking sensors and more.
+    </p>
+
+    <br>
+
+    <p>
+      Viewings and test drives are available by appointment.
+      Part exchange and finance enquiries are welcome.
+    </p>
+
+  </section>
+
+
+
+  <!-- FEATURES -->
+
+
+  <section class="features">
+
+    <h2>
+      Vehicle Features
+    </h2>
+
+
+    <div class="features-grid">
+
+
+      <div class="feature">
+        Titanium X Specification
+      </div>
+
+      <div class="feature">
+        Heated Front Seats
+      </div>
+
+      <div class="feature">
+        Leather / Suede Interior
+      </div>
+
+      <div class="feature">
+        Bluetooth Connectivity
+      </div>
+
+      <div class="feature">
+        Cruise Control
+      </div>
+
+      <div class="feature">
+        Climate Control
+      </div>
+
+      <div class="feature">
+        Sony Audio System
+      </div>
+
+      <div class="feature">
+        DAB Radio
+      </div>
+
+      <div class="feature">
+        Parking Sensors
+      </div>
+
+      <div class="feature">
+        Multifunction Steering Wheel
+      </div>
+
+      <div class="feature">
+        Alloy Wheels
+      </div>
+
+      <div class="feature">
+        Electric Windows
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- WARRANTY -->
+
+
+  <div class="warranty-box">
+
+    <h3>
+      Warranty Included
+    </h3>
+
+    <p>
+      All vehicles supplied by Gibson Motors Yorkshire include
+      warranty for additional peace of mind. Please contact us
+      for the exact warranty terms available with this vehicle.
+    </p>
+
+  </div>
+
+
+</main>
+
+
+
+<footer>
+
+  <div>
+
+    <a href="index.html">Home</a>
+
+    <a href="cars.html">Stock</a>
+
+    <a href="finance.html">Finance</a>
+
+    <a href="part-exchange.html">Part Exchange</a>
+
+    <a href="sale-on-return.html">Sale on Return</a>
+
+    <a href="contact.html">Contact</a>
+
+  </div>
+
+
+  <p>
+    © Gibson Motors Yorkshire. All rights reserved.
+  </p>
+
+</footer>
+
+
+
+<script>
+
+  function changeImage(imageSrc) {
+
+    document.getElementById("mainImage").src = imageSrc;
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+
+</script>
+
+
+</body>
+
+</html>
