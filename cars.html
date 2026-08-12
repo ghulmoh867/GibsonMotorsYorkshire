@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,27 +13,97 @@ name="description"
 content="Browse quality used cars available from Gibson Motors Yorkshire in Huddersfield."
 >
 
-<link rel="stylesheet" href="style.css?v=100">
+<link rel="stylesheet" href="style.css?v=150">
 
 <style>
+
+/* =========================
+   STOCK PAGE
+========================= */
+
+.stock-page{
+    padding:60px 0 80px;
+    background:#0a0a0a;
+}
+
+.stock-intro{
+    margin-bottom:40px;
+}
+
+.stock-intro h1{
+    margin:0 0 12px;
+    color:#fff;
+    font-size:clamp(42px,6vw,68px);
+}
+
+.stock-intro p{
+    max-width:720px;
+    color:#bdbdbd;
+    font-size:17px;
+    line-height:1.7;
+}
+
+.eyebrow{
+    margin:0 0 10px;
+    color:#d4af37;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.stock-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:30px;
+    margin-bottom:30px;
+}
+
+.stock-toolbar h2{
+    margin:0;
+    color:#fff;
+    font-size:36px;
+}
+
+.stock-call{
+    display:inline-block;
+    padding:15px 22px;
+    background:#d4af37;
+    color:#050505;
+    text-decoration:none;
+    font-weight:900;
+}
+
+
+/* =========================
+   CAR GRID
+========================= */
 
 .stock-grid{
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:26px;
+    gap:28px;
 }
 
 .stock-card{
-    background:#181818;
-    border:1px solid rgba(255,255,255,.1);
+    position:relative;
     overflow:hidden;
     display:flex;
     flex-direction:column;
+    background:#171717;
+    border:1px solid #2a2a2a;
 }
 
 .stock-image{
-    height:260px;
     position:relative;
+    display:block;
+    height:300px;
     overflow:hidden;
     background:#111;
 }
@@ -42,100 +113,266 @@ content="Browse quality used cars available from Gibson Motors Yorkshire in Hudd
     height:100%;
     object-fit:cover;
     display:block;
+    transition:transform .25s ease;
+}
+
+.stock-card:not(.sold-card) .stock-image:hover img{
+    transform:scale(1.025);
 }
 
 .stock-badge{
     position:absolute;
-    top:14px;
-    left:14px;
-    padding:8px 11px;
-    background:#c8a04a;
+    top:15px;
+    left:15px;
+    z-index:3;
+    padding:8px 12px;
+    background:#d4af37;
     color:#050505;
     font-size:11px;
     font-weight:900;
+    text-transform:uppercase;
 }
 
+
+/* =========================
+   SOLD CAR
+========================= */
+
+.sold-card .stock-image img{
+    filter:brightness(.48) grayscale(.2);
+}
+
+.sold-card .stock-details{
+    opacity:.75;
+}
+
+.sold-ribbon{
+    position:absolute;
+    z-index:10;
+    top:30px;
+    right:-53px;
+    width:210px;
+    padding:12px 0;
+    background:#c51616;
+    color:#fff;
+    text-align:center;
+    font-size:18px;
+    font-weight:900;
+    letter-spacing:3px;
+    transform:rotate(45deg);
+    box-shadow:0 4px 15px rgba(0,0,0,.35);
+}
+
+.sold-price{
+    color:#aaa !important;
+    text-decoration:line-through;
+}
+
+.sold-label{
+    color:#ff5555;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   CAR DETAILS
+========================= */
+
 .stock-details{
-    padding:24px;
     display:flex;
     flex-direction:column;
     flex:1;
+    padding:25px;
 }
 
 .stock-category{
     margin:0 0 8px;
-    color:#c8a04a;
+    color:#d4af37;
     font-size:11px;
     font-weight:900;
+    letter-spacing:1.3px;
     text-transform:uppercase;
-    letter-spacing:1.4px;
 }
 
 .stock-details h3{
-    margin:0 0 12px;
+    margin:0 0 13px;
     color:#fff;
-    font-size:24px;
+    font-size:25px;
     line-height:1.25;
 }
 
 .stock-description{
-    color:#b7b7b7;
-    line-height:1.65;
+    margin:0;
+    color:#b9b9b9;
     font-size:14px;
+    line-height:1.7;
 }
 
 .stock-tags{
     display:flex;
     flex-wrap:wrap;
-    gap:7px;
-    margin:18px 0 22px;
+    gap:8px;
+    margin:20px 0 24px;
 }
 
 .stock-tags span{
-    padding:7px 9px;
-    background:#292929;
+    padding:8px 10px;
+    background:#262626;
     color:#ddd;
     font-size:11px;
     font-weight:700;
 }
 
 .stock-bottom{
-    margin-top:auto;
-    padding-top:18px;
-    border-top:1px solid rgba(255,255,255,.1);
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:15px;
+    align-items:center;
+    gap:18px;
+    margin-top:auto;
+    padding-top:20px;
+    border-top:1px solid #303030;
 }
 
 .stock-bottom strong{
-    color:#e2c471;
-    font-size:23px;
+    color:#d4af37;
+    font-size:25px;
 }
 
 .stock-bottom a{
-    color:#e2c471;
+    color:#d4af37;
+    text-decoration:none;
     font-weight:900;
 }
 
-@media(max-width:850px){
+
+/* =========================
+   INFO SECTION
+========================= */
+
+.stock-info-section{
+    padding:70px 0;
+    background:#111;
+}
+
+.stock-info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.stock-info-card{
+    padding:30px;
+    background:#191919;
+    border:1px solid #2b2b2b;
+}
+
+.stock-info-number{
+    display:block;
+    margin-bottom:20px;
+    color:#d4af37;
+    font-size:13px;
+    font-weight:900;
+}
+
+.stock-info-card h3{
+    margin:0 0 12px;
+    color:#fff;
+    font-size:24px;
+}
+
+.stock-info-card p{
+    margin:0;
+    color:#b8b8b8;
+    line-height:1.7;
+}
+
+
+/* =========================
+   GOLD CTA
+========================= */
+
+.stock-cta{
+    padding:60px 0;
+    background:linear-gradient(135deg,#967126,#d4af37);
+    color:#050505;
+}
+
+.stock-cta-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:35px;
+}
+
+.stock-cta h2{
+    margin:0 0 10px;
+    font-size:40px;
+}
+
+.stock-cta p{
+    margin:0;
+}
+
+.stock-cta-buttons{
+    display:flex;
+    gap:12px;
+}
+
+.stock-cta-buttons a{
+    display:inline-block;
+    padding:15px 20px;
+    background:#050505;
+    color:#fff;
+    text-decoration:none;
+    font-weight:900;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
 
     .stock-grid{
         grid-template-columns:1fr;
     }
 
+    .stock-info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stock-toolbar,
+    .stock-cta-inner{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
 }
 
-@media(max-width:650px){
+@media(max-width:600px){
+
+    .stock-page{
+        padding-top:35px;
+    }
 
     .stock-image{
-        height:220px;
+        height:235px;
     }
 
     .stock-bottom{
-        flex-direction:column;
         align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .stock-cta-buttons{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .stock-cta-buttons a{
+        text-align:center;
     }
 
 }
@@ -144,8 +381,13 @@ content="Browse quality used cars available from Gibson Motors Yorkshire in Hudd
 
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header class="site-header">
 
@@ -178,12 +420,19 @@ Call 07394 403899
 <main>
 
 
-<section class="page-banner">
+<!-- =========================
+     CURRENT STOCK
+========================= -->
+
+<section class="stock-page">
 
 <div class="container">
 
+
+<div class="stock-intro">
+
 <p class="eyebrow">
-Available vehicles
+Available Vehicles
 </p>
 
 <h1>
@@ -191,18 +440,12 @@ Current Stock
 </h1>
 
 <p>
-Browse our latest vehicles and contact us to arrange an
-appointment-only viewing or test drive.
+Browse our latest vehicles below. Contact Gibson Motors Yorkshire
+to confirm availability and arrange an appointment-only viewing
+or test drive.
 </p>
 
 </div>
-
-</section>
-
-
-<section class="section section-dark">
-
-<div class="container">
 
 
 <div class="stock-toolbar">
@@ -210,16 +453,16 @@ appointment-only viewing or test drive.
 <div>
 
 <p class="eyebrow">
-Available now
+Gibson Motors Yorkshire
 </p>
 
 <h2>
-Our Current Vehicles
+Our Vehicles
 </h2>
 
 </div>
 
-<a href="tel:07394403899" class="button button-gold">
+<a href="tel:07394403899" class="stock-call">
 Call About Stock
 </a>
 
@@ -229,7 +472,9 @@ Call About Stock
 <div class="stock-grid">
 
 
-<!-- BMW X5 -->
+<!-- ==================================================
+     BMW X5
+================================================== -->
 
 <article class="stock-card">
 
@@ -237,13 +482,15 @@ Call About Stock
 
 <img
 src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
-alt="2015 BMW X5 xDrive40d M Sport">
+alt="2015 BMW X5 xDrive40d M Sport"
+>
 
 <span class="stock-badge">
 3 Months Warranty
 </span>
 
 </a>
+
 
 <div class="stock-details">
 
@@ -256,10 +503,11 @@ BMW X5 xDrive40d M Sport
 </h3>
 
 <p class="stock-description">
-Black BMW X5 M Sport with a 3.0L diesel engine, automatic transmission,
-black leather interior, panoramic roof, reversing camera and
-360-degree camera system.
+Black BMW X5 M Sport with a 3.0L diesel engine, automatic
+transmission, black leather interior, panoramic roof,
+reversing camera and 360-degree camera system.
 </p>
+
 
 <div class="stock-tags">
 
@@ -268,8 +516,10 @@ black leather interior, panoramic roof, reversing camera and
 <span>Automatic</span>
 <span>4 Owners</span>
 <span>12 Months MOT</span>
+<span>3 Months Warranty</span>
 
 </div>
+
 
 <div class="stock-bottom">
 
@@ -289,7 +539,9 @@ View Vehicle →
 
 
 
-<!-- AUDI Q5 -->
+<!-- ==================================================
+     AUDI Q5
+================================================== -->
 
 <article class="stock-card">
 
@@ -297,13 +549,15 @@ View Vehicle →
 
 <img
 src="images/audi-q5/6175d93c-0f76-4cb0-b1bf-b1755be68b7c.jpeg"
-alt="2016 Audi Q5 S line Plus quattro">
+alt="2016 Audi Q5 S line Plus quattro"
+>
 
 <span class="stock-badge">
 3 Months Warranty
 </span>
 
 </a>
+
 
 <div class="stock-details">
 
@@ -317,19 +571,22 @@ Audi Q5 S line Plus quattro
 
 <p class="stock-description">
 Grey Audi Q5 S line Plus quattro with a 2.0L diesel engine,
-automatic transmission, full leather interior and heated
-front and rear seats.
+automatic transmission, quattro all-wheel drive, full leather
+interior and heated front and rear seats.
 </p>
+
 
 <div class="stock-tags">
 
 <span>79,984 Miles</span>
 <span>2.0L Diesel</span>
 <span>Automatic</span>
+<span>Quattro</span>
 <span>3 Owners</span>
 <span>12 Months MOT</span>
 
 </div>
+
 
 <div class="stock-bottom">
 
@@ -349,7 +606,9 @@ View Vehicle →
 
 
 
-<!-- VW GOLF -->
+<!-- ==================================================
+     VOLKSWAGEN GOLF
+================================================== -->
 
 <article class="stock-card">
 
@@ -357,13 +616,15 @@ View Vehicle →
 
 <img
 src="images/images/vw-golf/1c3a4da7-ee22-4801-aee8-2d85a7373f4c.jpeg"
-alt="2013 Volkswagen Golf TSI BlueMotion">
+alt="2013 Volkswagen Golf TSI BlueMotion"
+>
 
 <span class="stock-badge">
 3 Months Warranty
 </span>
 
 </a>
+
 
 <div class="stock-details">
 
@@ -380,6 +641,7 @@ Black Volkswagen Golf TSI BlueMotion with a 1.2L petrol engine,
 manual transmission, ULEZ compliance and flat-bottom steering wheel.
 </p>
 
+
 <div class="stock-tags">
 
 <span>120,000 Miles</span>
@@ -390,6 +652,7 @@ manual transmission, ULEZ compliance and flat-bottom steering wheel.
 <span>12 Months MOT</span>
 
 </div>
+
 
 <div class="stock-bottom">
 
@@ -409,7 +672,9 @@ View Vehicle →
 
 
 
-<!-- BMW 116D -->
+<!-- ==================================================
+     BMW 116D
+================================================== -->
 
 <article class="stock-card">
 
@@ -417,13 +682,15 @@ View Vehicle →
 
 <img
 src="bmw-116d/74cbbe6d-7058-4cfa-9903-894281b77524.jpeg"
-alt="2012 BMW 116d Sport">
+alt="2012 BMW 116d"
+>
 
 <span class="stock-badge">
 3 Months Warranty
 </span>
 
 </a>
+
 
 <div class="stock-details">
 
@@ -432,14 +699,15 @@ alt="2012 BMW 116d Sport">
 </p>
 
 <h3>
-BMW 116d Sport
+BMW 116d
 </h3>
 
 <p class="stock-description">
-Black BMW 116d Sport with a 2.0L diesel engine, manual transmission,
-BMW iDrive, Sport and ECO PRO driving modes, parking sensors and
+Black BMW 116d with a 2.0L diesel engine, manual transmission,
+BMW iDrive system, Sport and ECO PRO driving modes and
 light leather interior.
 </p>
+
 
 <div class="stock-tags">
 
@@ -450,6 +718,7 @@ light leather interior.
 <span>3 Months Warranty</span>
 
 </div>
+
 
 <div class="stock-bottom">
 
@@ -469,26 +738,35 @@ View Vehicle →
 
 
 
-<!-- FORD FOCUS -->
+<!-- ==================================================
+     2012 FORD FOCUS - SOLD
+================================================== -->
 
-<article class="stock-card">
+<article class="stock-card sold-card">
+
+<div class="sold-ribbon">
+SOLD
+</div>
+
 
 <a href="ford-focus-2012.html" class="stock-image">
 
 <img
 src="images/ford-focus-2012/5bb07b60-bbaf-4764-881b-1831fbf9f10d.jpeg"
-alt="2012 Ford Focus 1.6 TDCi Zetec Estate">
+alt="2012 Ford Focus 1.6 TDCi Zetec Estate"
+>
 
 <span class="stock-badge">
-Available Now
+SOLD
 </span>
 
 </a>
 
+
 <div class="stock-details">
 
-<p class="stock-category">
-2012 • Diesel • Manual
+<p class="stock-category sold-label">
+Sold Vehicle
 </p>
 
 <h3>
@@ -496,10 +774,11 @@ Ford Focus 1.6 TDCi Zetec Estate
 </h3>
 
 <p class="stock-description">
-Practical Ford Focus Zetec Estate powered by a 1.6L diesel engine
-with manual transmission, front and rear parking sensors,
-remote central locking and two remote keys.
+2012 Ford Focus Zetec Estate with a 1.6L diesel engine,
+manual transmission and practical five-door estate body.
+This vehicle has now been sold.
 </p>
+
 
 <div class="stock-tags">
 
@@ -511,13 +790,81 @@ remote central locking and two remote keys.
 
 </div>
 
+
 <div class="stock-bottom">
 
-<strong>
+<strong class="sold-price">
 £1,650
 </strong>
 
-<a href="ford-focus-2012.html">
+<span class="sold-label">
+SOLD
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- ==================================================
+     2015 FORD FOCUS
+================================================== -->
+
+<article class="stock-card">
+
+<a href="ford-focus-2015.html" class="stock-image">
+
+<img
+src="images/ford-focus-2015/23c33bed-4334-471b-8a98-29c2c8fa2d42.jpeg"
+alt="2015 Ford Focus 1.5 TDCi Zetec"
+>
+
+<span class="stock-badge">
+3 Months Warranty
+</span>
+
+</a>
+
+
+<div class="stock-details">
+
+<p class="stock-category">
+2015 • Diesel • Manual
+</p>
+
+<h3>
+Ford Focus 1.5 TDCi Zetec
+</h3>
+
+<p class="stock-description">
+Black Ford Focus Zetec powered by a 1.5L TDCi diesel engine
+with a 6-speed manual gearbox. Euro 6 and ULEZ compliant,
+with rear parking sensors, Bluetooth and multifunction steering wheel.
+</p>
+
+
+<div class="stock-tags">
+
+<span>112,548 Miles</span>
+<span>1.5L Diesel</span>
+<span>6-Speed Manual</span>
+<span>Euro 6</span>
+<span>ULEZ Compliant</span>
+<span>3 Months Warranty</span>
+
+</div>
+
+
+<div class="stock-bottom">
+
+<strong>
+£3,495
+</strong>
+
+<a href="ford-focus-2015.html">
 View Vehicle →
 </a>
 
@@ -535,33 +882,39 @@ View Vehicle →
 </section>
 
 
-<section class="section">
+
+<!-- =========================
+     CUSTOMER INFORMATION
+========================= -->
+
+<section class="stock-info-section">
 
 <div class="container">
 
-<div class="three-column-grid">
+<div class="stock-info-grid">
 
-<article class="information-card">
 
-<span class="card-number">
+<article class="stock-info-card">
+
+<span class="stock-info-number">
 01
 </span>
 
 <h3>
-Warranty Available
+Warranty
 </h3>
 
 <p>
-Selected vehicles come with warranty for added peace of mind.
-Check each individual vehicle listing for full details.
+Our available vehicles include warranty options for added peace
+of mind. Check each individual vehicle listing for details.
 </p>
 
 </article>
 
 
-<article class="information-card">
+<article class="stock-info-card">
 
-<span class="card-number">
+<span class="stock-info-number">
 02
 </span>
 
@@ -570,15 +923,16 @@ Part Exchange
 </h3>
 
 <p>
-Contact us to discuss using your current vehicle towards your next purchase.
+Looking to change your current vehicle? Contact us to discuss
+using your existing car towards your next purchase.
 </p>
 
 </article>
 
 
-<article class="information-card">
+<article class="stock-info-card">
 
-<span class="card-number">
+<span class="stock-info-number">
 03
 </span>
 
@@ -587,10 +941,12 @@ Finance Enquiries
 </h3>
 
 <p>
-Speak to us directly to discuss finance options and the next steps.
+Contact Gibson Motors Yorkshire directly to discuss available
+finance options and the next steps.
 </p>
 
 </article>
+
 
 </div>
 
@@ -599,14 +955,19 @@ Speak to us directly to discuss finance options and the next steps.
 </section>
 
 
-<section class="gold-callout">
 
-<div class="container callout-grid">
+<!-- =========================
+     CALL TO ACTION
+========================= -->
+
+<section class="stock-cta">
+
+<div class="container stock-cta-inner">
 
 <div>
 
-<p class="eyebrow dark-eyebrow">
-Appointment only
+<p class="eyebrow" style="color:#111;">
+Appointment Only
 </p>
 
 <h2>
@@ -614,20 +975,19 @@ Arrange a viewing or test drive
 </h2>
 
 <p>
-Contact Gibson Motors Yorkshire before travelling to confirm vehicle
-availability and arrange a suitable appointment.
+Contact us before travelling to confirm vehicle availability.
 </p>
 
 </div>
 
 
-<div class="callout-buttons">
+<div class="stock-cta-buttons">
 
-<a href="tel:07394403899" class="button button-black">
+<a href="tel:07394403899">
 Call 07394 403899
 </a>
 
-<a href="contact.html" class="button button-black-outline">
+<a href="contact.html">
 Send an Enquiry
 </a>
 
@@ -640,6 +1000,11 @@ Send an Enquiry
 
 </main>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer class="site-footer">
 
@@ -665,6 +1030,7 @@ Quick Links
 </h3>
 
 <a href="index.html">Home</a>
+<a href="cars.html">Current Stock</a>
 <a href="finance.html">Finance</a>
 <a href="part-exchange.html">Part Exchange</a>
 <a href="sale-on-return.html">Sale on Return</a>
@@ -693,13 +1059,16 @@ Bulay Road, Huddersfield, HD1 3NH
 
 </div>
 
+
 </div>
 
 
 <div class="footer-bottom">
 
 <div class="container">
+
 © 2026 Gibson Motors Yorkshire. All rights reserved.
+
 </div>
 
 </div>
@@ -708,4 +1077,5 @@ Bulay Road, Huddersfield, HD1 3NH
 
 
 </body>
+
 </html>
