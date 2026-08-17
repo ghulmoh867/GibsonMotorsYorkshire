@@ -1,1342 +1,651 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Current Stock | Gibson Motors Yorkshire</title>
+  <title>Current Stock | Gibson Motors Yorkshire</title>
 
-<meta
-name="description"
-content="Browse quality used cars available from Gibson Motors Yorkshire in Huddersfield."
->
+  <meta
+    name="description"
+    content="Browse the latest used cars available from Gibson Motors Yorkshire in Huddersfield. Finance, part exchange and warranty available."
+  >
 
-<link rel="stylesheet" href="style.css?v=250">
+  <link rel="stylesheet" href="style.css?v=10">
 
-<style>
-
-/* =========================
-   STOCK PAGE
-========================= */
-
-.stock-page{
-    padding:60px 0 80px;
-    background:#0a0a0a;
-}
-
-.stock-intro{
-    margin-bottom:40px;
-}
-
-.stock-intro h1{
-    margin:0 0 12px;
-    color:#fff;
-    font-size:clamp(42px,6vw,68px);
-}
-
-.stock-intro p{
-    max-width:760px;
-    color:#bdbdbd;
-    font-size:17px;
-    line-height:1.7;
-}
-
-.eyebrow{
-    margin:0 0 10px;
-    color:#d4af37;
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:2px;
-    text-transform:uppercase;
-}
-
-
-/* =========================
-   TOOLBAR
-========================= */
-
-.stock-toolbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    gap:30px;
-    margin-bottom:30px;
-}
-
-.stock-toolbar h2{
-    margin:0;
-    color:#fff;
-    font-size:36px;
-}
-
-.stock-call{
-    display:inline-block;
-    padding:15px 22px;
-    background:#d4af37;
-    color:#050505;
-    text-decoration:none;
-    font-weight:900;
-}
-
-
-/* =========================
-   GRID
-========================= */
-
-.stock-grid{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:28px;
-}
-
-.stock-card{
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    background:#171717;
-    border:1px solid #2a2a2a;
-}
-
-.stock-image{
-    position:relative;
-    display:block;
-    height:300px;
-    overflow:hidden;
-    background:#111;
-}
-
-.stock-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:transform .25s ease;
-}
-
-.stock-card:not(.sold-card) .stock-image:hover img{
-    transform:scale(1.025);
-}
-
-.stock-badge{
-    position:absolute;
-    top:15px;
-    left:15px;
-    z-index:3;
-    padding:8px 12px;
-    background:#d4af37;
-    color:#050505;
-    font-size:11px;
-    font-weight:900;
-    text-transform:uppercase;
-}
-
-
-/* =========================
-   SOLD
-========================= */
-
-.sold-card .stock-image img{
-    filter:brightness(.48) grayscale(.2);
-}
-
-.sold-card .stock-details{
-    opacity:.75;
-}
-
-.sold-ribbon{
-    position:absolute;
-    z-index:10;
-    top:30px;
-    right:-53px;
-    width:210px;
-    padding:12px 0;
-    background:#c51616;
-    color:#fff;
-    text-align:center;
-    font-size:18px;
-    font-weight:900;
-    letter-spacing:3px;
-    transform:rotate(45deg);
-    box-shadow:0 4px 15px rgba(0,0,0,.35);
-}
-
-.sold-price{
-    color:#aaa !important;
-    text-decoration:line-through;
-}
-
-.sold-label{
-    color:#ff5555;
-    font-weight:900;
-    text-transform:uppercase;
-}
-
-
-/* =========================
-   DETAILS
-========================= */
-
-.stock-details{
-    display:flex;
-    flex-direction:column;
-    flex:1;
-    padding:25px;
-}
-
-.stock-category{
-    margin:0 0 8px;
-    color:#d4af37;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1.3px;
-    text-transform:uppercase;
-}
-
-.stock-details h3{
-    margin:0 0 13px;
-    color:#fff;
-    font-size:25px;
-    line-height:1.25;
-}
-
-.stock-description{
-    margin:0;
-    color:#b9b9b9;
-    font-size:14px;
-    line-height:1.7;
-}
-
-.stock-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin:20px 0 24px;
-}
-
-.stock-tags span{
-    padding:8px 10px;
-    background:#262626;
-    color:#ddd;
-    font-size:11px;
-    font-weight:700;
-}
-
-.stock-bottom{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:18px;
-    margin-top:auto;
-    padding-top:20px;
-    border-top:1px solid #303030;
-}
-
-.stock-bottom strong{
-    color:#d4af37;
-    font-size:25px;
-}
-
-.stock-bottom a{
-    color:#d4af37;
-    text-decoration:none;
-    font-weight:900;
-}
-
-
-/* =========================
-   INFORMATION
-========================= */
-
-.stock-info-section{
-    padding:70px 0;
-    background:#111;
-}
-
-.stock-info-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.stock-info-card{
-    padding:30px;
-    background:#191919;
-    border:1px solid #2b2b2b;
-}
-
-.stock-info-number{
-    display:block;
-    margin-bottom:20px;
-    color:#d4af37;
-    font-size:13px;
-    font-weight:900;
-}
-
-.stock-info-card h3{
-    margin:0 0 12px;
-    color:#fff;
-    font-size:24px;
-}
-
-.stock-info-card p{
-    margin:0;
-    color:#b8b8b8;
-    line-height:1.7;
-}
-
-
-/* =========================
-   CTA
-========================= */
-
-.stock-cta{
-    padding:60px 0;
-    background:linear-gradient(135deg,#967126,#d4af37);
-    color:#050505;
-}
-
-.stock-cta-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:35px;
-}
-
-.stock-cta h2{
-    margin:0 0 10px;
-    font-size:40px;
-}
-
-.stock-cta p{
-    margin:0;
-}
-
-.stock-cta-buttons{
-    display:flex;
-    gap:12px;
-}
-
-.stock-cta-buttons a{
-    display:inline-block;
-    padding:15px 20px;
-    background:#050505;
-    color:#fff;
-    text-decoration:none;
-    font-weight:900;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:900px){
-
-    .stock-grid{
-        grid-template-columns:1fr;
+  <style>
+    .stock-page {
+      background: #0b0b0b;
+      min-height: 100vh;
+      color: #fff;
     }
 
-    .stock-info-grid{
-        grid-template-columns:1fr;
+    .stock-hero {
+      background: #050505;
+      text-align: center;
+      padding: 55px 20px 50px;
+      border-bottom: 1px solid #1d1d1d;
     }
 
-    .stock-toolbar,
-    .stock-cta-inner{
-        align-items:flex-start;
-        flex-direction:column;
+    .stock-hero h1 {
+      margin: 0;
+      font-size: 46px;
+      font-weight: 800;
+      color: #fff;
     }
 
-}
-
-@media(max-width:600px){
-
-    .stock-page{
-        padding-top:35px;
+    .stock-hero h1 span {
+      color: #d4af37;
     }
 
-    .stock-image{
-        height:235px;
+    .stock-hero p {
+      color: #b9b9b9;
+      max-width: 700px;
+      margin: 18px auto 0;
+      font-size: 17px;
+      line-height: 1.6;
     }
 
-    .stock-bottom{
-        align-items:flex-start;
-        flex-direction:column;
+    .stock-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 55px 25px 80px;
     }
 
-    .stock-cta-buttons{
-        width:100%;
-        flex-direction:column;
+    .stock-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 32px;
     }
 
-    .stock-cta-buttons a{
-        text-align:center;
+    .stock-heading h2 {
+      margin: 0;
+      font-size: 32px;
+      color: #fff;
     }
 
-}
+    .stock-heading span {
+      color: #d4af37;
+      font-weight: 700;
+      font-size: 16px;
+    }
 
-</style>
+    .cars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
 
+    .car-card {
+      background: #121212;
+      border: 1px solid #262626;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: 0.25s ease;
+      position: relative;
+    }
+
+    .car-card:hover {
+      transform: translateY(-5px);
+      border-color: #d4af37;
+    }
+
+    .car-image-link {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .car-card img {
+      display: block;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .car-card:hover img {
+      transform: scale(1.025);
+    }
+
+    .car-content {
+      padding: 23px;
+    }
+
+    .car-content h3 {
+      font-size: 22px;
+      margin: 0 0 8px;
+      line-height: 1.25;
+      color: #fff;
+    }
+
+    .car-subtitle {
+      margin: 0 0 18px;
+      color: #aaa;
+      font-size: 15px;
+    }
+
+    .car-price {
+      color: #d4af37;
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .car-specs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+      margin-bottom: 22px;
+    }
+
+    .car-specs span {
+      background: #1b1b1b;
+      border: 1px solid #2b2b2b;
+      border-radius: 7px;
+      padding: 11px 12px;
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    .car-button {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      background: #d4af37;
+      color: #000;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 800;
+      padding: 14px;
+      border-radius: 7px;
+      transition: 0.2s ease;
+    }
+
+    .car-button:hover {
+      background: #e3c04b;
+    }
+
+    .sold-card {
+      opacity: 0.82;
+    }
+
+    .sold-ribbon {
+      position: absolute;
+      z-index: 3;
+      top: 18px;
+      left: -38px;
+      width: 150px;
+      padding: 9px 0;
+      background: #d4af37;
+      color: #000;
+      text-align: center;
+      font-weight: 900;
+      transform: rotate(-45deg);
+      letter-spacing: 1px;
+    }
+
+    .sold-price {
+      color: #d4af37;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .sold-button {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 14px;
+      border-radius: 7px;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 1050px) {
+      .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .stock-hero h1 {
+        font-size: 36px;
+      }
+
+      .stock-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .cars-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .car-card img {
+        height: 250px;
+      }
+
+      .stock-section {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
-
 <header class="site-header">
+  <div class="container header-inner">
 
-<div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Gibson Motors Yorkshire logo">
+    </a>
 
-<a href="index.html" class="brand">
-<img src="logo.png" alt="Gibson Motors Yorkshire">
-</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="cars.html" class="active">Stock</a>
+      <a href="finance.html">Finance</a>
+      <a href="part-exchange.html">Part Exchange</a>
+      <a href="sale-on-return.html">Sale on Return</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-<nav class="main-nav">
-
-<a href="index.html">Home</a>
-<a href="cars.html" class="active">Stock</a>
-<a href="finance.html">Finance</a>
-<a href="part-exchange.html">Part Exchange</a>
-<a href="sale-on-return.html">Sale on Return</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-<a href="tel:07394403899" class="header-call">
-Call 07394 403899
-</a>
-
-</div>
-
+  </div>
 </header>
 
+<main class="stock-page">
 
-<main>
+  <section class="stock-hero">
+    <h1>Current <span>Stock</span></h1>
 
+    <p>
+      Browse our latest vehicles and contact us to arrange an
+      appointment-only viewing or test drive.
+    </p>
+  </section>
 
-<section class="stock-page">
+  <section class="stock-section">
 
-<div class="container">
+    <div class="stock-heading">
+      <h2>Available Now</h2>
+      <span>Gibson Motors Yorkshire</span>
+    </div>
 
+    <div class="cars-grid">
 
-<div class="stock-intro">
+      <!-- BMW M140i -->
+      <article class="car-card">
 
-<p class="eyebrow">
-Available Vehicles
-</p>
+        <a href="bmw-m140i-2019.html" class="car-image-link">
+          <img
+            src="images/bmw-m140i-2019/003303bf-39d2-4a2f-8a4c-f513e7ff9fa5.jpeg"
+            alt="2019 BMW M140i Shadow Edition"
+          >
+        </a>
 
-<h1>
-Current Stock
-</h1>
+        <div class="car-content">
 
-<p>
-Browse our latest vehicles below. Contact Gibson Motors Yorkshire
-to confirm availability and arrange an appointment-only viewing
-or test drive.
-</p>
+          <h3>2019 BMW M140i Shadow Edition</h3>
 
-</div>
+          <p class="car-subtitle">
+            Petrol Automatic
+          </p>
 
+          <div class="car-price">
+            £21,995
+          </div>
 
-<div class="stock-toolbar">
+          <div class="car-specs">
+            <span>56,000 Miles</span>
+            <span>Petrol</span>
+            <span>Automatic</span>
+            <span>2 Previous Owners</span>
+          </div>
 
-<div>
+          <a href="bmw-m140i-2019.html" class="car-button">
+            View Vehicle
+          </a>
 
-<p class="eyebrow">
-Gibson Motors Yorkshire
-</p>
+        </div>
 
-<h2>
-Our Vehicles
-</h2>
+      </article>
 
-</div>
 
-<a href="tel:07394403899" class="stock-call">
-Call About Stock
-</a>
+      <!-- TOYOTA AVENSIS -->
+      <article class="car-card">
 
-</div>
+        <a href="toyota-avensis-2014.html" class="car-image-link">
+          <img
+            src="images/toyota-avensis-2014/1387b571-58ec-43ea-96b0-a26a11d77811.jpeg"
+            alt="2014 Toyota Avensis 2.0 D-4D Tourer"
+          >
+        </a>
 
+        <div class="car-content">
 
-<div class="stock-grid">
+          <h3>2014 Toyota Avensis 2.0 D-4D Tourer</h3>
 
+          <p class="car-subtitle">
+            Diesel Manual
+          </p>
 
-<!-- =====================================================
-     NEW BMW M140I
-===================================================== -->
+          <div class="car-price">
+            £4,695
+          </div>
 
-<article class="stock-card">
+          <div class="car-specs">
+            <span>102,700 Miles</span>
+            <span>2.0L Diesel</span>
+            <span>Manual</span>
+            <span>Estate</span>
+          </div>
 
-<a href="bmw-m140i-2019.html" class="stock-image">
+          <a href="toyota-avensis-2014.html" class="car-button">
+            View Vehicle
+          </a>
 
-<img
-src="images/bmw-m140i-2019/003303bf-39d2-4a2f-8a4c-f513e7ff9fa5.jpeg"
-alt="2019 BMW M140i Shadow Edition"
->
+        </div>
 
-<span class="stock-badge">
-3 Months Warranty
-</span>
+      </article>
 
-</a>
 
+      <!-- AUDI Q5 -->
+      <article class="car-card">
 
-<div class="stock-details">
+        <a href="audi-q5.html" class="car-image-link">
+          <img
+            src="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg"
+            alt="2016 Audi Q5 S line Plus quattro"
+          >
+        </a>
 
-<p class="stock-category">
-2019 • Petrol • Automatic
-</p>
+        <div class="car-content">
 
-<h3>
-BMW M140i Shadow Edition
-</h3>
+          <h3>2016 Audi Q5 S line Plus quattro</h3>
 
-<p class="stock-description">
-Grey BMW M140i Shadow Edition powered by a 3.0L petrol engine
-with automatic transmission. High specification including
-Apple CarPlay, Harman Kardon audio, cruise control,
-heated leather seats and front and rear parking sensors.
-</p>
+          <p class="car-subtitle">
+            2.0L Diesel Automatic
+          </p>
 
+          <div class="car-price">
+            £12,995
+          </div>
 
-<div class="stock-tags">
+          <div class="car-specs">
+            <span>79,984 Miles</span>
+            <span>2.0L Diesel</span>
+            <span>Automatic</span>
+            <span>3 Owners</span>
+          </div>
 
-<span>56,000 Miles</span>
-<span>3.0L Petrol</span>
-<span>Automatic</span>
-<span>2 Previous Owners</span>
-<span>Apple CarPlay</span>
-<span>Harman Kardon</span>
-<span>12 Months MOT</span>
-<span>3 Months Warranty</span>
+          <a href="audi-q5.html" class="car-button">
+            View Vehicle
+          </a>
 
-</div>
+        </div>
 
+      </article>
 
-<div class="stock-bottom">
 
-<strong>
-£21,995
-</strong>
+      <!-- VW GOLF -->
+      <article class="car-card">
 
-<a href="bmw-m140i-2019.html">
-View Vehicle →
-</a>
+        <a href="vw-golf.html" class="car-image-link">
+          <img
+            src="images/images/vw-golf/1c3a4da7-ee22-4801-aee8-2d85a7373f4c.jpeg"
+            alt="2013 Volkswagen Golf 1.2 TSI BlueMotion"
+          >
+        </a>
 
-</div>
+        <div class="car-content">
 
-</div>
+          <h3>2013 Volkswagen Golf</h3>
 
-</article>
+          <p class="car-subtitle">
+            1.2 TSI BlueMotion
+          </p>
 
+          <div class="car-price">
+            £3,995
+          </div>
 
+          <div class="car-specs">
+            <span>120,000 Miles</span>
+            <span>1.2L Petrol</span>
+            <span>Manual</span>
+            <span>4 Previous Owners</span>
+          </div>
 
-<!-- =====================================================
-     BMW X5 - AVAILABLE
-===================================================== -->
+          <a href="vw-golf.html" class="car-button">
+            View Vehicle
+          </a>
 
-<article class="stock-card">
+        </div>
 
-<a href="bmw-x5.html" class="stock-image">
+      </article>
 
-<img
-src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
-alt="2015 BMW X5 xDrive40d M Sport"
->
 
-<span class="stock-badge">
-3 Months Warranty
-</span>
+      <!-- FORD MONDEO TITANIUM X -->
+      <article class="car-card">
 
-</a>
+        <a href="ford-mondeo-2012.html" class="car-image-link">
+          <img
+            src="images/ford-mondeo-2012/07c83850-eb52-4ab9-a78a-7da3737877e7.jpeg"
+            alt="2012 Ford Mondeo Titanium X"
+          >
+        </a>
 
+        <div class="car-content">
 
-<div class="stock-details">
+          <h3>2012 Ford Mondeo Titanium X</h3>
 
-<p class="stock-category">
-2015 • Diesel • Automatic
-</p>
+          <p class="car-subtitle">
+            Diesel Manual
+          </p>
 
-<h3>
-BMW X5 xDrive40d M Sport
-</h3>
+          <div class="car-price">
+            £2,995
+          </div>
 
-<p class="stock-description">
-Black BMW X5 M Sport with a 3.0L diesel engine,
-automatic transmission, black leather interior,
-panoramic roof, reversing camera and 360-degree camera system.
-</p>
+          <div class="car-specs">
+            <span>Diesel</span>
+            <span>Manual</span>
+            <span>Titanium X</span>
+            <span>5 Door</span>
+          </div>
 
+          <a href="ford-mondeo-2012.html" class="car-button">
+            View Vehicle
+          </a>
 
-<div class="stock-tags">
+        </div>
 
-<span>99,331 Miles</span>
-<span>3.0L Diesel</span>
-<span>Automatic</span>
-<span>4 Owners</span>
-<span>12 Months MOT</span>
-<span>3 Months Warranty</span>
+      </article>
 
-</div>
 
+      <!-- FORD MONDEO ESTATE -->
+      <article class="car-card">
 
-<div class="stock-bottom">
+        <a href="ford-mondeo-estate-2012.html" class="car-image-link">
+          <img
+            src="images/ford-mondeo-estate-2012/3773871d-6a14-40d2-866e-26104ccc1946.jpeg"
+            alt="2012 Ford Mondeo Titanium Estate"
+          >
+        </a>
 
-<strong>
-£17,775
-</strong>
+        <div class="car-content">
 
-<a href="bmw-x5.html">
-View Vehicle →
-</a>
+          <h3>2012 Ford Mondeo Titanium Estate</h3>
 
-</div>
+          <p class="car-subtitle">
+            Diesel Manual
+          </p>
 
-</div>
+          <div class="car-price">
+            Contact Us
+          </div>
 
-</article>
+          <div class="car-specs">
+            <span>Diesel</span>
+            <span>Manual</span>
+            <span>Estate</span>
+            <span>Silver</span>
+          </div>
 
+          <a href="ford-mondeo-estate-2012.html" class="car-button">
+            View Vehicle
+          </a>
 
+        </div>
 
-<!-- =====================================================
-     AUDI Q5
-===================================================== -->
+      </article>
 
-<article class="stock-card">
 
-<a href="audi-q5.html" class="stock-image">
+      <!-- 2015 FORD FOCUS -->
+      <article class="car-card">
 
-<img
-src="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg"
-alt="2016 Audi Q5 S line Plus quattro"
->
+        <a href="ford-focus-2015.html" class="car-image-link">
+          <img
+            src="images/ford-focus-2015/1.jpg"
+            alt="2015 Ford Focus"
+            onerror="this.src='images/ford-focus-2015/placeholder.jpeg';"
+          >
+        </a>
 
-<span class="stock-badge">
-3 Months Warranty
-</span>
+        <div class="car-content">
 
-</a>
+          <h3>2015 Ford Focus</h3>
 
+          <p class="car-subtitle">
+            Diesel Manual
+          </p>
 
-<div class="stock-details">
+          <div class="car-price">
+            Contact Us
+          </div>
 
-<p class="stock-category">
-2016 • Diesel • Automatic
-</p>
+          <div class="car-specs">
+            <span>Diesel</span>
+            <span>Manual</span>
+            <span>5 Door</span>
+            <span>Black</span>
+          </div>
 
-<h3>
-Audi Q5 S line Plus quattro
-</h3>
+          <a href="ford-focus-2015.html" class="car-button">
+            View Vehicle
+          </a>
 
-<p class="stock-description">
-Grey Audi Q5 S line Plus quattro with a 2.0L diesel engine,
-automatic transmission, quattro all-wheel drive,
-full leather interior and heated front and rear seats.
-</p>
+        </div>
 
+      </article>
 
-<div class="stock-tags">
 
-<span>79,984 Miles</span>
-<span>2.0L Diesel</span>
-<span>Automatic</span>
-<span>Quattro</span>
-<span>3 Owners</span>
-<span>12 Months MOT</span>
-<span>3 Months Warranty</span>
+      <!-- SOLD BMW -->
+      <article class="car-card sold-card">
 
-</div>
+        <div class="sold-ribbon">
+          SOLD
+        </div>
 
+        <a href="bmw-116d.html" class="car-image-link">
+          <img
+            src="bmw-116d/1.jpg"
+            alt="BMW 116d"
+            onerror="this.style.display='none';"
+          >
+        </a>
 
-<div class="stock-bottom">
+        <div class="car-content">
 
-<strong>
-£12,995
-</strong>
+          <h3>BMW 1 Series 116d</h3>
 
-<a href="audi-q5.html">
-View Vehicle →
-</a>
+          <p class="car-subtitle">
+            Diesel
+          </p>
 
-</div>
+          <div class="sold-price">
+            SOLD
+          </div>
 
-</div>
+          <div class="car-specs">
+            <span>BMW</span>
+            <span>Diesel</span>
+            <span>1 Series</span>
+            <span>Sold</span>
+          </div>
 
-</article>
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
 
+        </div>
 
+      </article>
 
-<!-- =====================================================
-     VW GOLF
-===================================================== -->
 
-<article class="stock-card">
+      <!-- SOLD FORD FOCUS 2012 -->
+      <article class="car-card sold-card">
 
-<a href="vw-golf.html" class="stock-image">
+        <div class="sold-ribbon">
+          SOLD
+        </div>
 
-<img
-src="images/images/vw-golf/1c3a4da7-ee22-4801-aee8-2d85a7373f4c.jpeg"
-alt="2013 Volkswagen Golf TSI BlueMotion"
->
+        <a href="ford-focus-2012.html" class="car-image-link">
+          <img
+            src="images/ford-focus-2012/1.jpg"
+            alt="2012 Ford Focus"
+            onerror="this.style.display='none';"
+          >
+        </a>
 
-<span class="stock-badge">
-3 Months Warranty
-</span>
+        <div class="car-content">
 
-</a>
+          <h3>2012 Ford Focus</h3>
 
+          <p class="car-subtitle">
+            2.0L Diesel Manual
+          </p>
 
-<div class="stock-details">
+          <div class="sold-price">
+            SOLD
+          </div>
 
-<p class="stock-category">
-2013 • Petrol • Manual
-</p>
+          <div class="car-specs">
+            <span>86,334 Miles</span>
+            <span>2.0L Diesel</span>
+            <span>Manual</span>
+            <span>5 Door</span>
+          </div>
 
-<h3>
-Volkswagen Golf TSI BlueMotion
-</h3>
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
 
-<p class="stock-description">
-Black Volkswagen Golf TSI BlueMotion with a 1.2L petrol engine,
-manual transmission, ULEZ compliance and flat-bottom steering wheel.
-</p>
+        </div>
 
+      </article>
 
-<div class="stock-tags">
 
-<span>120,000 Miles</span>
-<span>1.2L Petrol</span>
-<span>Manual</span>
-<span>4 Previous Owners</span>
-<span>ULEZ Compliant</span>
-<span>12 Months MOT</span>
-<span>3 Months Warranty</span>
+    </div>
 
-</div>
-
-
-<div class="stock-bottom">
-
-<strong>
-£3,995
-</strong>
-
-<a href="vw-golf.html">
-View Vehicle →
-</a>
-
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- =====================================================
-     BMW 116D - SOLD
-===================================================== -->
-
-<article class="stock-card sold-card">
-
-<div class="sold-ribbon">
-SOLD
-</div>
-
-
-<a href="bmw-116d.html" class="stock-image">
-
-<img
-src="bmw-116d/74cbbe6d-7058-4cfa-9903-894281b77524.jpeg"
-alt="BMW 116d"
->
-
-<span class="stock-badge">
-SOLD
-</span>
-
-</a>
-
-
-<div class="stock-details">
-
-<p class="stock-category sold-label">
-Sold Vehicle
-</p>
-
-<h3>
-BMW 116d
-</h3>
-
-<p class="stock-description">
-This BMW 116d has now been sold by Gibson Motors Yorkshire.
-</p>
-
-
-<div class="stock-tags">
-
-<span>86,334 Miles</span>
-<span>2.0L Diesel</span>
-<span>Manual</span>
-<span>5 Door</span>
-
-</div>
-
-
-<div class="stock-bottom">
-
-<strong class="sold-price">
-£3,495
-</strong>
-
-<span class="sold-label">
-SOLD
-</span>
-
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- =====================================================
-     2012 FORD FOCUS - SOLD
-===================================================== -->
-
-<article class="stock-card sold-card">
-
-<div class="sold-ribbon">
-SOLD
-</div>
-
-
-<a href="ford-focus-2012.html" class="stock-image">
-
-<img
-src="images/ford-focus-2012/5bb07b60-bbaf-4764-881b-1831fbf9f10d.jpeg"
-alt="2012 Ford Focus"
->
-
-<span class="stock-badge">
-SOLD
-</span>
-
-</a>
-
-
-<div class="stock-details">
-
-<p class="stock-category sold-label">
-Sold Vehicle
-</p>
-
-<h3>
-Ford Focus 1.6 TDCi Zetec Estate
-</h3>
-
-<p class="stock-description">
-This Ford Focus has now been sold by Gibson Motors Yorkshire.
-</p>
-
-
-<div class="stock-tags">
-
-<span>126,000 Miles</span>
-<span>1.6L Diesel</span>
-<span>Manual</span>
-<span>5 Door</span>
-<span>Estate</span>
-
-</div>
-
-
-<div class="stock-bottom">
-
-<strong class="sold-price">
-£1,650
-</strong>
-
-<span class="sold-label">
-SOLD
-</span>
-
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- =====================================================
-     2015 FORD FOCUS
-===================================================== -->
-
-<article class="stock-card">
-
-<a href="ford-focus-2015.html" class="stock-image">
-
-<img
-src="images/ford-focus-2015/23c33bed-4334-471b-8a98-29c2c8fa2d42.jpeg"
-alt="2015 Ford Focus"
->
-
-<span class="stock-badge">
-3 Months Warranty
-</span>
-
-</a>
-
-
-<div class="stock-details">
-
-<p class="stock-category">
-2015 • Diesel • Manual
-</p>
-
-<h3>
-Ford Focus 1.5 TDCi Zetec
-</h3>
-
-<p class="stock-description">
-Black Ford Focus Zetec with a 1.5L diesel engine and
-6-speed manual gearbox. Euro 6 and ULEZ compliant with
-rear parking sensors and Bluetooth.
-</p>
-
-
-<div class="stock-tags">
-
-<span>112,548 Miles</span>
-<span>1.5L Diesel</span>
-<span>6-Speed Manual</span>
-<span>Euro 6</span>
-<span>ULEZ Compliant</span>
-<span>3 Months Warranty</span>
-
-</div>
-
-
-<div class="stock-bottom">
-
-<strong>
-£3,495
-</strong>
-
-<a href="ford-focus-2015.html">
-View Vehicle →
-</a>
-
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- =====================================================
-     VW UP
-===================================================== -->
-
-<article class="stock-card">
-
-<a href="vw-up-2012.html" class="stock-image">
-
-<img
-src="images/vw-up-2012/03051f90-3fe3-4b91-a0e3-1bd7eef642fe.jpeg"
-alt="2012 Volkswagen up High up"
->
-
-<span class="stock-badge">
-3 Months Warranty
-</span>
-
-</a>
-
-
-<div class="stock-details">
-
-<p class="stock-category">
-2012 • Petrol • Manual
-</p>
-
-<h3>
-Volkswagen up! High up!
-</h3>
-
-<p class="stock-description">
-Black Volkswagen up! High up! with a 1.0L petrol engine
-and manual gearbox. Compact and well equipped with heated
-front seats, sat nav and rear parking sensors.
-</p>
-
-
-<div class="stock-tags">
-
-<span>95,000 Miles</span>
-<span>1.0L Petrol</span>
-<span>Manual</span>
-<span>5 Door</span>
-<span>Heated Seats</span>
-<span>Sat Nav</span>
-<span>3 Months Warranty</span>
-
-</div>
-
-
-<div class="stock-bottom">
-
-<strong>
-£3,495
-</strong>
-
-<a href="vw-up-2012.html">
-View Vehicle →
-</a>
-
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- =====================================================
-     BLUE FORD MONDEO
-===================================================== -->
-
-<article class="stock-card">
-
-<a href="ford-mondeo-2012.html" class="stock-image">
-
-<img
-src="images/ford-mondeo-2012/07c83850-eb52-4ab9-a78a-7da3737877e7.jpeg"
-alt="2012 Ford Mondeo Titanium X"
->
-
-<span class="stock-badge">
-3 Months Warranty
-</span>
-
-</a>
-
-
-<div class="stock-details">
-
-<p class="stock-category">
-2012 • Diesel • Manual
-</p>
-
-<h3>
-Ford Mondeo Titanium X
-</h3>
-
-<p class="stock-description">
-Blue Ford Mondeo Titanium X with diesel engine and manual
-transmission. High specification with heated front seats,
-climate control, cruise control and parking sensors.
-</p>
-
-
-<div class="stock-tags">
-
-<span>100,371 Miles</span>
-<span>Diesel</span>
-<span>Manual</span>
-<span>Titanium X</span>
-<span>Heated Seats</span>
-<span>Parking Sensors</span>
-<span>3 Months Warranty</span>
-
-</div>
-
-
-<div class="stock-bottom">
-
-<strong>
-£2,995
-</strong>
-
-<a href="ford-mondeo-2012.html">
-View Vehicle →
-</a>
-
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- =====================================================
-     SILVER FORD MONDEO ESTATE
-===================================================== -->
-
-<article class="stock-card">
-
-<a href="ford-mondeo-estate-2012.html" class="stock-image">
-
-<img
-src="images/ford-mondeo-estate-2012/3773871d-6a14-40d2-866e-26104ccc1946.jpeg"
-alt="2012 Ford Mondeo Titanium Estate"
->
-
-<span class="stock-badge">
-3 Months Warranty
-</span>
-
-</a>
-
-
-<div class="stock-details">
-
-<p class="stock-category">
-2012 • Diesel • Manual
-</p>
-
-<h3>
-Ford Mondeo Titanium Estate
-</h3>
-
-<p class="stock-description">
-Silver Ford Mondeo Titanium Estate powered by a 2.0L TDCi
-diesel engine with manual transmission. Spacious and practical
-with front and rear parking sensors.
-</p>
-
-
-<div class="stock-tags">
-
-<span>147,000 Miles</span>
-<span>2.0L Diesel</span>
-<span>Manual</span>
-<span>Estate</span>
-<span>Titanium</span>
-<span>3 Months Warranty</span>
-
-</div>
-
-
-<div class="stock-bottom">
-
-<strong>
-£1,695
-</strong>
-
-<a href="ford-mondeo-estate-2012.html">
-View Vehicle →
-</a>
-
-</div>
-
-</div>
-
-</article>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     INFO SECTION
-========================= -->
-
-<section class="stock-info-section">
-
-<div class="container">
-
-<div class="stock-info-grid">
-
-
-<article class="stock-info-card">
-
-<span class="stock-info-number">
-01
-</span>
-
-<h3>
-Warranty
-</h3>
-
-<p>
-Our available vehicles include warranty options for added
-peace of mind. Check each individual vehicle listing for details.
-</p>
-
-</article>
-
-
-<article class="stock-info-card">
-
-<span class="stock-info-number">
-02
-</span>
-
-<h3>
-Part Exchange
-</h3>
-
-<p>
-Looking to change your current vehicle? Contact us to discuss
-using your existing car towards your next purchase.
-</p>
-
-</article>
-
-
-<article class="stock-info-card">
-
-<span class="stock-info-number">
-03
-</span>
-
-<h3>
-Finance Enquiries
-</h3>
-
-<p>
-Contact Gibson Motors Yorkshire directly to discuss available
-finance options and the next steps.
-</p>
-
-</article>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     CTA
-========================= -->
-
-<section class="stock-cta">
-
-<div class="container stock-cta-inner">
-
-<div>
-
-<p class="eyebrow" style="color:#111;">
-Appointment Only
-</p>
-
-<h2>
-Arrange a viewing or test drive
-</h2>
-
-<p>
-Contact us before travelling to confirm vehicle availability.
-</p>
-
-</div>
-
-
-<div class="stock-cta-buttons">
-
-<a href="tel:07394403899">
-Call 07394 403899
-</a>
-
-<a href="contact.html">
-Send an Enquiry
-</a>
-
-</div>
-
-</div>
-
-</section>
-
+  </section>
 
 </main>
 
-
-
 <footer class="site-footer">
-
-<div class="container footer-grid">
-
-
-<div class="footer-about">
-
-<img src="logo.png" alt="Gibson Motors Yorkshire">
-
-<p>
-Quality used cars in Huddersfield with warranty included and
-appointment-only viewings.
-</p>
-
-</div>
-
-
-<div class="footer-column">
-
-<h3>
-Quick Links
-</h3>
-
-<a href="index.html">Home</a>
-<a href="cars.html">Current Stock</a>
-<a href="finance.html">Finance</a>
-<a href="part-exchange.html">Part Exchange</a>
-<a href="sale-on-return.html">Sale on Return</a>
-<a href="contact.html">Contact</a>
-
-</div>
-
-
-<div class="footer-column">
-
-<h3>
-Contact
-</h3>
-
-<a href="tel:07394403899">
-07394 403899
-</a>
-
-<a href="mailto:GibsonMotorsYorkshire@gmail.com">
-GibsonMotorsYorkshire@gmail.com
-</a>
-
-<p>
-Bulay Road, Huddersfield, HD1 3NH
-</p>
-
-</div>
-
-
-</div>
-
-
-<div class="footer-bottom">
-
-<div class="container">
-© 2026 Gibson Motors Yorkshire. All rights reserved.
-</div>
-
-</div>
-
+  <div class="container">
+    <p>© Gibson Motors Yorkshire. All rights reserved.</p>
+  </div>
 </footer>
 
-
 </body>
-
 </html>
