@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -7,353 +9,1528 @@
 
   <title>Gibson Motors Yorkshire | Used Cars Huddersfield</title>
 
-  <meta name="description" content="Quality used vehicles in Huddersfield with warranty included, finance enquiries, part exchange and sale on return.">
+  <meta
+    name="description"
+    content="Quality used vehicles in Huddersfield with warranty included, finance enquiries, part exchange and sale on return."
+  >
 
-  <link rel="stylesheet" href="style.css?v=10">
+  <style>
+
+    /* =========================
+       RESET
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .site-header {
+      background: rgba(5, 5, 5, 0.98);
+      border-bottom: 1px solid #2b2515;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      width: 170px;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 100%;
+      height: auto;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 29px;
+      flex: 1;
+    }
+
+    .main-nav a {
+      color: #eeeeee;
+      font-size: 15px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: #d4af37;
+    }
+
+    .header-call {
+      background: #d4af37;
+      color: #080808;
+      padding: 15px 22px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+      transition: 0.25s ease;
+    }
+
+    .header-call:hover {
+      background: #e3c158;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.94) 0%,
+          rgba(0, 0, 0, 0.82) 47%,
+          rgba(0, 0, 0, 0.62) 100%
+        ),
+        url("hero.jpg") center / cover no-repeat;
+
+      border-bottom: 1px solid #242424;
+    }
+
+    .hero-inner {
+      width: 100%;
+    }
+
+    .hero-content {
+      max-width: 730px;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: #d4af37;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 6vw, 78px);
+      line-height: 1.04;
+      letter-spacing: -2px;
+      margin-bottom: 23px;
+      max-width: 800px;
+    }
+
+    .hero-text {
+      color: #cfcfcf;
+      font-size: 19px;
+      max-width: 630px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 4px;
+      font-weight: 800;
+      transition: 0.25s ease;
+    }
+
+    .button-gold {
+      background: #d4af37;
+      color: #080808;
+    }
+
+    .button-gold:hover {
+      background: #e4c35b;
+    }
+
+    .button-outline {
+      border: 1px solid #777777;
+      color: white;
+    }
+
+    .button-outline:hover {
+      border-color: #d4af37;
+      color: #d4af37;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      color: #dedede;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero-points span::before {
+      content: "✓";
+      color: #d4af37;
+      margin-right: 7px;
+    }
+
+
+    /* =========================
+       TRUST BAR
+    ========================= */
+
+    .trust-bar {
+      background: #111111;
+      border-bottom: 1px solid #252525;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      padding: 28px 25px;
+      border-right: 1px solid #262626;
+    }
+
+    .trust-item:first-child {
+      border-left: 1px solid #262626;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: white;
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+
+    .trust-item span {
+      color: #999999;
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    .section {
+      padding: 95px 0;
+    }
+
+    .section-dark {
+      background: #0d0d0d;
+      border-top: 1px solid #202020;
+      border-bottom: 1px solid #202020;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-heading > p:not(.eyebrow) {
+      color: #aaaaaa;
+      font-size: 17px;
+    }
+
+    .centred {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .heading-row {
+      max-width: none;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .heading-row h2 {
+      margin-bottom: 0;
+    }
+
+    .text-link {
+      color: #d4af37;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+
+    /* =========================
+       INFORMATION CARDS
+    ========================= */
+
+    .three-column-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      width: 100%;
+    }
+
+    .information-card {
+      min-width: 0;
+      background: #111111;
+      border: 1px solid #252525;
+      padding: 34px;
+      min-height: 255px;
+      border-radius: 5px;
+    }
+
+    .card-number {
+      display: inline-block;
+      color: #d4af37;
+      font-size: 14px;
+      font-weight: 900;
+      margin-bottom: 35px;
+    }
+
+    .information-card h3 {
+      font-size: 22px;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .information-card p {
+      color: #a8a8a8;
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       VEHICLE SECTION
+    ========================= */
+
+    .vehicle-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(290px, 1fr);
+      gap: 28px;
+    }
+
+    .vehicle-card {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      background: #121212;
+      border: 1px solid #292929;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .vehicle-image {
+      position: relative;
+      min-height: 390px;
+      background: #181818;
+    }
+
+    .vehicle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .vehicle-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #d4af37;
+      color: #080808;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 8px 12px;
+      border-radius: 3px;
+    }
+
+    .vehicle-details {
+      padding: 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .vehicle-category {
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .vehicle-details h3 {
+      font-size: 28px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .vehicle-description {
+      color: #aaaaaa;
+      margin-bottom: 22px;
+    }
+
+    .vehicle-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 27px;
+    }
+
+    .vehicle-tags span {
+      border: 1px solid #333333;
+      background: #191919;
+      color: #cccccc;
+      padding: 7px 9px;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+
+    .vehicle-bottom {
+      padding-top: 20px;
+      border-top: 1px solid #2b2b2b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .vehicle-bottom strong {
+      color: #d4af37;
+    }
+
+    .vehicle-bottom a {
+      color: white;
+      font-weight: 800;
+    }
+
+    .stock-message-card {
+      background: #d4af37;
+      color: #090909;
+      padding: 40px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .stock-message-card .eyebrow {
+      color: #332800;
+    }
+
+    .stock-message-card h3 {
+      font-size: 31px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .stock-message-card > p:not(.eyebrow) {
+      color: #322c18;
+      margin-bottom: 26px;
+    }
+
+    .stock-message-card .button-gold {
+      background: #080808;
+      color: white;
+      align-self: flex-start;
+    }
+
+
+    /* =========================
+       SERVICE CARDS
+    ========================= */
+
+    .service-card {
+      min-width: 0;
+      width: 100%;
+      min-height: 310px;
+      padding: 34px;
+      background:
+        linear-gradient(145deg, #181818, #101010);
+
+      border: 1px solid #2a2a2a;
+      border-top: 3px solid #d4af37;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      transition: 0.25s ease;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #d4af37;
+    }
+
+    .service-label {
+      color: #aaa28b;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .service-card h3 {
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 17px;
+      overflow-wrap: anywhere;
+    }
+
+    .service-card > p:not(.service-label) {
+      color: #aaaaaa;
+      font-size: 15px;
+      margin-bottom: 28px;
+      flex-grow: 1;
+      overflow-wrap: anywhere;
+    }
+
+    .service-card strong {
+      color: #d4af37;
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       GOLD CALLOUT
+    ========================= */
+
+    .gold-callout {
+      background: #d4af37;
+      color: #080808;
+      padding: 70px 0;
+    }
+
+    .callout-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .dark-eyebrow {
+      color: #3b3009;
+    }
+
+    .gold-callout h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .gold-callout p:not(.eyebrow) {
+      max-width: 700px;
+      color: #352e18;
+      font-size: 16px;
+    }
+
+    .callout-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button-black {
+      background: #080808;
+      color: white;
+    }
+
+    .button-black:hover {
+      background: #222222;
+    }
+
+    .button-black-outline {
+      border: 2px solid #080808;
+      color: #080808;
+    }
+
+    .button-black-outline:hover {
+      background: #080808;
+      color: white;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .site-footer {
+      background: #050505;
+      border-top: 1px solid #232323;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 70px;
+      padding-top: 65px;
+      padding-bottom: 60px;
+    }
+
+    .footer-about img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .footer-about p {
+      color: #999999;
+      max-width: 420px;
+      font-size: 14px;
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 9px;
+    }
+
+    .footer-column h3 {
+      color: #d4af37;
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+      color: #aaaaaa;
+      font-size: 14px;
+    }
+
+    .footer-column a:hover {
+      color: #d4af37;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #202020;
+      padding: 20px 0;
+      color: #777777;
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 1050px) {
+
+      .header-inner {
+        flex-wrap: wrap;
+        padding: 18px 0;
+      }
+
+      .brand {
+        width: 145px;
+      }
+
+      .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 12px;
+        border-top: 1px solid #222222;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .three-column-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .vehicle-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .callout-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 720px) {
+
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .site-header {
+        position: relative;
+      }
+
+      .header-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand {
+        width: 150px;
+      }
+
+      .header-call {
+        width: 100%;
+      }
+
+      .main-nav {
+        gap: 11px 17px;
+        flex-wrap: wrap;
+      }
+
+      .main-nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+        letter-spacing: -1px;
+      }
+
+      .hero-text {
+        font-size: 17px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .button {
+        width: 100%;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item,
+      .trust-item:first-child {
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #262626;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 32px;
+      }
+
+      .heading-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .three-column-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .information-card,
+      .service-card {
+        width: 100%;
+        min-height: auto;
+      }
+
+      .vehicle-card {
+        grid-template-columns: 1fr;
+      }
+
+      .vehicle-image {
+        min-height: 260px;
+      }
+
+      .vehicle-details {
+        padding: 27px;
+      }
+
+      .vehicle-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .stock-message-card {
+        padding: 30px;
+      }
+
+      .callout-buttons {
+        flex-direction: column;
+      }
+
+      .callout-buttons .button {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+    }
+
+
+    /* =========================
+       SMALL PHONES
+    ========================= */
+
+    @media (max-width: 430px) {
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .section-heading h2 {
+        font-size: 32px;
+      }
+
+      .main-nav {
+        gap: 10px 14px;
+      }
+
+      .information-card,
+      .service-card {
+        padding: 27px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header class="site-header">
+
   <div class="container header-inner">
 
     <a href="index.html" class="brand">
-      <img src="logo.png" alt="Gibson Motors Yorkshire logo">
+
+      <img
+        src="logo.png"
+        alt="Gibson Motors Yorkshire logo"
+      >
+
     </a>
 
+
     <nav class="main-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="cars.html">Stock</a>
-      <a href="finance.html">Finance</a>
-      <a href="part-exchange.html">Part Exchange</a>
-      <a href="sale-on-return.html">Sale on Return</a>
-      <a href="contact.html">Contact</a>
+
+      <a href="index.html" class="active">
+        Home
+      </a>
+
+      <a href="cars.html">
+        Stock
+      </a>
+
+      <a href="finance.html">
+        Finance
+      </a>
+
+      <a href="part-exchange.html">
+        Part Exchange
+      </a>
+
+      <a href="sale-on-return.html">
+        Sale on Return
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
     </nav>
 
-    <a href="tel:07394403899" class="header-call">
+
+    <a
+      href="tel:07394403899"
+      class="header-call"
+    >
       Call 07394 403899
     </a>
 
   </div>
+
 </header>
+
+
 
 <main>
 
-  <section class="hero">
-    <div class="container hero-inner">
 
-      <div class="hero-content">
+<!-- =========================
+     HERO
+========================= -->
 
-        <p class="eyebrow">
-          Used car dealership in Huddersfield
-        </p>
+<section class="hero">
 
-        <h1>
-          Quality Used Cars Across Yorkshire
-        </h1>
+  <div class="container hero-inner">
 
-        <p class="hero-text">
-          Carefully selected vehicles, warranty included and a straightforward
-          buying experience from first enquiry to collection.
-        </p>
+    <div class="hero-content">
 
-        <div class="hero-buttons">
-          <a href="cars.html" class="button button-gold">
-            View Current Stock
-          </a>
+      <p class="eyebrow">
+        Used car dealership in Huddersfield
+      </p>
 
-          <a href="contact.html" class="button button-outline">
-            Book an Appointment
-          </a>
-        </div>
+      <h1>
+        Quality Used Cars Across Yorkshire
+      </h1>
 
-        <div class="hero-points">
-          <span>Warranty Included</span>
-          <span>Finance Enquiries</span>
-          <span>Part Exchange</span>
-          <span>Open 7 Days</span>
-        </div>
+      <p class="hero-text">
+        Carefully selected vehicles, warranty included and a straightforward
+        buying experience from first enquiry to collection.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="cars.html"
+          class="button button-gold"
+        >
+          View Current Stock
+        </a>
+
+        <a
+          href="contact.html"
+          class="button button-outline"
+        >
+          Book an Appointment
+        </a>
+
+      </div>
+
+
+      <div class="hero-points">
+
+        <span>Warranty Included</span>
+
+        <span>Finance Enquiries</span>
+
+        <span>Part Exchange</span>
+
+        <span>Open 7 Days</span>
 
       </div>
 
     </div>
-  </section>
 
-  <section class="trust-bar">
-    <div class="container trust-grid">
+  </div>
 
-      <div class="trust-item">
-        <strong>Warranty Included</strong>
-        <span>Available with every vehicle</span>
-      </div>
+</section>
 
-      <div class="trust-item">
-        <strong>Part Exchange</strong>
-        <span>Use your current vehicle</span>
-      </div>
 
-      <div class="trust-item">
-        <strong>Finance Enquiries</strong>
-        <span>Contact us to discuss options</span>
-      </div>
 
-      <div class="trust-item">
-        <strong>Open 7 Days</strong>
-        <span>Monday to Sunday, 9am–6pm</span>
-      </div>
+<!-- =========================
+     TRUST BAR
+========================= -->
+
+<section class="trust-bar">
+
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+
+      <strong>
+        Warranty Included
+      </strong>
+
+      <span>
+        Available with every vehicle
+      </span>
 
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
 
-      <div class="section-heading">
-        <p class="eyebrow">Why choose us</p>
+    <div class="trust-item">
 
-        <h2>
-          A professional and straightforward car-buying experience
-        </h2>
+      <strong>
+        Part Exchange
+      </strong>
+
+      <span>
+        Use your current vehicle
+      </span>
+
+    </div>
+
+
+    <div class="trust-item">
+
+      <strong>
+        Finance Enquiries
+      </strong>
+
+      <span>
+        Contact us to discuss options
+      </span>
+
+    </div>
+
+
+    <div class="trust-item">
+
+      <strong>
+        Open 7 Days
+      </strong>
+
+      <span>
+        Monday to Sunday, 9am–6pm
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        Why choose us
+      </p>
+
+      <h2>
+        A professional and straightforward car-buying experience
+      </h2>
+
+      <p>
+        Gibson Motors Yorkshire is focused on quality vehicles,
+        honest communication and personal customer service.
+      </p>
+
+    </div>
+
+
+    <div class="three-column-grid">
+
+      <article class="information-card">
+
+        <span class="card-number">
+          01
+        </span>
+
+        <h3>
+          Carefully Selected Stock
+        </h3>
 
         <p>
-          Gibson Motors Yorkshire is focused on quality vehicles, honest
-          communication and personal customer service.
+          Our vehicles are selected with condition, value and
+          customer satisfaction in mind.
         </p>
-      </div>
 
-      <div class="three-column-grid">
+      </article>
 
-        <article class="information-card">
-          <span class="card-number">01</span>
 
-          <h3>Carefully Selected Stock</h3>
+      <article class="information-card">
 
-          <p>
-            Our vehicles are selected with condition, value and customer
-            satisfaction in mind.
-          </p>
-        </article>
+        <span class="card-number">
+          02
+        </span>
 
-        <article class="information-card">
-          <span class="card-number">02</span>
+        <h3>
+          Warranty Included
+        </h3>
 
-          <h3>Warranty Included</h3>
+        <p>
+          Every vehicle comes with warranty included for added
+          confidence and peace of mind.
+        </p>
 
-          <p>
-            Every vehicle comes with warranty included for added confidence
-            and peace of mind.
-          </p>
-        </article>
+      </article>
 
-        <article class="information-card">
-          <span class="card-number">03</span>
 
-          <h3>Appointment-Only Service</h3>
+      <article class="information-card">
 
-          <p>
-            Viewings are arranged by appointment so you receive proper time
-            and attention.
-          </p>
-        </article>
+        <span class="card-number">
+          03
+        </span>
 
-      </div>
+        <h3>
+          Appointment-Only Service
+        </h3>
 
-    </div>
-  </section>
+        <p>
+          Viewings are arranged by appointment so you receive
+          proper time and attention.
+        </p>
 
-  <section class="section section-dark">
-    <div class="container">
-
-      <div class="section-heading heading-row">
-
-        <div>
-          <p class="eyebrow">Our vehicles</p>
-          <h2>Current Stock</h2>
-        </div>
-
-        <a href="cars.html" class="text-link">
-          View all vehicles →
-        </a>
-
-      </div>
-
-      <div class="vehicle-grid">
-
-        <article class="vehicle-card">
-
-          <div class="vehicle-image">
-            <img src="hero.jpg" alt="Vehicle available from Gibson Motors Yorkshire">
-
-            <span class="vehicle-badge">
-              Warranty Included
-            </span>
-          </div>
-
-          <div class="vehicle-details">
-            <p class="vehicle-category">Current stock</p>
-
-            <h3>Vehicle Details Coming Soon</h3>
-
-            <p class="vehicle-description">
-              Our latest stock will be displayed here with full photographs,
-              specifications and pricing.
-            </p>
-
-            <div class="vehicle-tags">
-              <span>Finance Enquiries</span>
-              <span>Part Exchange</span>
-              <span>Appointment Only</span>
-            </div>
-
-            <div class="vehicle-bottom">
-              <strong>Contact for details</strong>
-
-              <a href="tel:07394403899">
-                Enquire
-              </a>
-            </div>
-          </div>
-
-        </article>
-
-        <article class="stock-message-card">
-          <p class="eyebrow">Stock updates</p>
-
-          <h3>More vehicles arriving soon</h3>
-
-          <p>
-            Contact us to ask about vehicles currently being prepared,
-            advertised or arriving shortly.
-          </p>
-
-          <a href="tel:07394403899" class="button button-gold">
-            Call About Stock
-          </a>
-        </article>
-
-      </div>
+      </article>
 
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
+  </div>
 
-      <div class="section-heading centred">
-        <p class="eyebrow">Our services</p>
-        <h2>Support before and after your purchase</h2>
-      </div>
+</section>
 
-      <div class="three-column-grid">
 
-        <a href="finance.html" class="service-card">
-          <p class="service-label">Finance</p>
-          <h3>Finance Enquiries</h3>
 
-          <p>
-            Contact us directly to discuss finance options and the next steps.
-          </p>
+<!-- =========================
+     CURRENT STOCK
+========================= -->
 
-          <strong>Learn more →</strong>
-        </a>
+<section class="section section-dark">
 
-        <a href="part-exchange.html" class="service-card">
-          <p class="service-label">Part Exchange</p>
-          <h3>Upgrade Your Vehicle</h3>
+  <div class="container">
 
-          <p>
-            Discuss using your existing vehicle towards your next purchase.
-          </p>
-
-          <strong>Learn more →</strong>
-        </a>
-
-        <a href="sale-on-return.html" class="service-card">
-          <p class="service-label">Sale on Return</p>
-          <h3>Let Us Sell Your Car</h3>
-
-          <p>
-            We can discuss advertising and selling your vehicle professionally.
-          </p>
-
-          <strong>Learn more →</strong>
-        </a>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="gold-callout">
-    <div class="container callout-grid">
+    <div class="section-heading heading-row">
 
       <div>
-        <p class="eyebrow dark-eyebrow">Appointment only</p>
 
-        <h2>Arrange your vehicle viewing</h2>
-
-        <p>
-          Contact us before visiting so we can arrange a suitable appointment
-          and prepare the vehicle for you.
+        <p class="eyebrow">
+          Our vehicles
         </p>
+
+        <h2>
+          Current Stock
+        </h2>
+
       </div>
 
-      <div class="callout-buttons">
-        <a href="tel:07394403899" class="button button-black">
-          Call 07394 403899
-        </a>
-
-        <a href="contact.html" class="button button-black-outline">
-          Contact Us
-        </a>
-      </div>
+      <a
+        href="cars.html"
+        class="text-link"
+      >
+        View all vehicles →
+      </a>
 
     </div>
-  </section>
+
+
+    <div class="vehicle-grid">
+
+      <article class="vehicle-card">
+
+        <div class="vehicle-image">
+
+          <img
+            src="hero.jpg"
+            alt="Vehicle available from Gibson Motors Yorkshire"
+          >
+
+          <span class="vehicle-badge">
+            Warranty Included
+          </span>
+
+        </div>
+
+
+        <div class="vehicle-details">
+
+          <p class="vehicle-category">
+            Current stock
+          </p>
+
+          <h3>
+            Browse Our Latest Vehicles
+          </h3>
+
+          <p class="vehicle-description">
+            View our current stock with vehicle photographs,
+            specifications, mileage and pricing.
+          </p>
+
+
+          <div class="vehicle-tags">
+
+            <span>
+              Finance Enquiries
+            </span>
+
+            <span>
+              Part Exchange
+            </span>
+
+            <span>
+              Appointment Only
+            </span>
+
+          </div>
+
+
+          <div class="vehicle-bottom">
+
+            <strong>
+              Vehicles available now
+            </strong>
+
+            <a href="cars.html">
+              View Stock →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="stock-message-card">
+
+        <p class="eyebrow">
+          Stock updates
+        </p>
+
+        <h3>
+          More vehicles arriving soon
+        </h3>
+
+        <p>
+          Contact us to ask about vehicles currently being prepared,
+          advertised or arriving shortly.
+        </p>
+
+        <a
+          href="tel:07394403899"
+          class="button button-gold"
+        >
+          Call About Stock
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-heading centred">
+
+      <p class="eyebrow">
+        Our services
+      </p>
+
+      <h2>
+        Support before and after your purchase
+      </h2>
+
+    </div>
+
+
+    <div class="three-column-grid">
+
+
+      <a
+        href="finance.html"
+        class="service-card"
+      >
+
+        <p class="service-label">
+          Finance
+        </p>
+
+        <h3>
+          Finance Enquiries
+        </h3>
+
+        <p>
+          Contact us directly to discuss finance options
+          and the next steps.
+        </p>
+
+        <strong>
+          Learn more →
+        </strong>
+
+      </a>
+
+
+      <a
+        href="part-exchange.html"
+        class="service-card"
+      >
+
+        <p class="service-label">
+          Part Exchange
+        </p>
+
+        <h3>
+          Upgrade Your Vehicle
+        </h3>
+
+        <p>
+          Discuss using your existing vehicle towards
+          your next purchase.
+        </p>
+
+        <strong>
+          Learn more →
+        </strong>
+
+      </a>
+
+
+      <a
+        href="sale-on-return.html"
+        class="service-card"
+      >
+
+        <p class="service-label">
+          Sale on Return
+        </p>
+
+        <h3>
+          Let Us Sell Your Car
+        </h3>
+
+        <p>
+          We can discuss advertising and selling your
+          vehicle professionally.
+        </p>
+
+        <strong>
+          Learn more →
+        </strong>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     APPOINTMENT CALLOUT
+========================= -->
+
+<section class="gold-callout">
+
+  <div class="container callout-grid">
+
+    <div>
+
+      <p class="eyebrow dark-eyebrow">
+        Appointment only
+      </p>
+
+      <h2>
+        Arrange your vehicle viewing
+      </h2>
+
+      <p>
+        Contact us before visiting so we can arrange a suitable
+        appointment and prepare the vehicle for you.
+      </p>
+
+    </div>
+
+
+    <div class="callout-buttons">
+
+      <a
+        href="tel:07394403899"
+        class="button button-black"
+      >
+        Call 07394 403899
+      </a>
+
+      <a
+        href="contact.html"
+        class="button button-black-outline"
+      >
+        Contact Us
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
 
 </main>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer class="site-footer">
+
   <div class="container footer-grid">
 
+
     <div class="footer-about">
-      <img src="logo.png" alt="Gibson Motors Yorkshire">
+
+      <img
+        src="logo.png"
+        alt="Gibson Motors Yorkshire"
+      >
 
       <p>
-        Quality used cars in Huddersfield with warranty included and
-        appointment-only customer service.
+        Quality used cars in Huddersfield with warranty included
+        and appointment-only customer service.
       </p>
+
     </div>
 
-    <div class="footer-column">
-      <h3>Quick Links</h3>
 
-      <a href="cars.html">Current Stock</a>
-      <a href="finance.html">Finance</a>
-      <a href="part-exchange.html">Part Exchange</a>
-      <a href="sale-on-return.html">Sale on Return</a>
+    <div class="footer-column">
+
+      <h3>
+        Quick Links
+      </h3>
+
+      <a href="cars.html">
+        Current Stock
+      </a>
+
+      <a href="finance.html">
+        Finance
+      </a>
+
+      <a href="part-exchange.html">
+        Part Exchange
+      </a>
+
+      <a href="sale-on-return.html">
+        Sale on Return
+      </a>
+
     </div>
 
-    <div class="footer-column">
-      <h3>Contact</h3>
 
-      <a href="tel:07394403899">07394 403899</a>
+    <div class="footer-column">
+
+      <h3>
+        Contact
+      </h3>
+
+      <a href="tel:07394403899">
+        07394 403899
+      </a>
 
       <a href="mailto:GibsonMotorsYorkshire@gmail.com">
         Email Us
       </a>
 
-      <p>Bulay Road, Huddersfield, HD1 3NH</p>
+      <p>
+        Bulay Road, Huddersfield, HD1 3NH
+      </p>
+
     </div>
+
 
   </div>
 
+
   <div class="footer-bottom">
+
     <div class="container">
       © 2026 Gibson Motors Yorkshire. All rights reserved.
     </div>
+
   </div>
+
 </footer>
 
+
 </body>
+
 </html>
+```
