@@ -1,1 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>2014 Toyota Avensis Tourer | Gibson Motors Yorkshire</title>
+
+  <meta
+    name="description"
+    content="2014 Toyota Avensis 2.0 D-4D Tourer for sale at Gibson Motors Yorkshire in Huddersfield. 102,700 miles, diesel, manual, 3 months warranty."
+  >
+
+  <link rel="stylesheet" href="style.css?v=10">
+
+  <style>
+    .vehicle-page {
+      padding: 50px 20px 80px;
+      background: #0b0b0b;
+      color: #fff;
+    }
+
+    .vehicle-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .vehicle-top {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .main-image-box {
+      background: #111;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #262626;
+    }
+
+    .main-image-box img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .thumbnail-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .thumbnail-grid img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .thumbnail-grid img:hover {
+      border-color: #d4af37;
+      transform: translateY(-2px);
+    }
+
+    .vehicle-info {
+      background: #121212;
+      border: 1px solid #272727;
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .vehicle-info h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    .vehicle-subtitle {
+      color: #bbb;
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+
+    .vehicle-price {
+      font-size: 38px;
+      font-weight: 800;
+      color: #d4af37;
+      margin-bottom: 24px;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .spec-item {
+      background: #1b1b1b;
+      border: 1px solid #2c2c2c;
+      padding: 14px;
+      border-radius: 8px;
+    }
+
+    .spec-item strong {
+      display: block;
+      color: #d4af37;
+      font-size: 13px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .spec-item span {
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .vehicle-buttons {
+      display: grid;
+      gap: 10px;
+    }
+
+    .vehicle-btn {
+      text-decoration: none;
+      text-align: center;
+      padding: 15px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .vehicle-btn.primary {
+      background: #d4af37;
+      color: #000;
+    }
+
+    .vehicle-btn.secondary {
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      background: transparent;
+    }
+
+    .vehicle-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .vehicle-section {
+      margin-top: 45px;
+      background: #121212;
+      border: 1px solid #272727;
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .vehicle-section h2 {
+      margin-top: 0;
+      color: #d4af37;
+      font-size: 28px;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .feature {
+      background: #1b1b1b;
+      border: 1px solid #2c2c2c;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .vehicle-section p {
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .back-stock {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .vehicle-top {
+        grid-template-columns: 1fr;
+      }
+
+      .main-image-box img {
+        height: 390px;
+      }
+
+      .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .vehicle-page {
+        padding: 30px 12px 60px;
+      }
+
+      .vehicle-info h1 {
+        font-size: 28px;
+      }
+
+      .vehicle-price {
+        font-size: 32px;
+      }
+
+      .main-image-box img {
+        height: 280px;
+      }
+
+      .thumbnail-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .thumbnail-grid img {
+        height: 78px;
+      }
+
+      .spec-grid,
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Gibson Motors Yorkshire logo">
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="cars.html" class="active">Stock</a>
+      <a href="finance.html">Finance</a>
+      <a href="part-exchange.html">Part Exchange</a>
+      <a href="sale-on-return.html">Sale on Return</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="vehicle-page">
+
+  <div class="vehicle-container">
+
+    <a href="cars.html" class="back-stock">← Back to Stock</a>
+
+    <div class="vehicle-top">
+
+      <div>
+
+        <div class="main-image-box">
+          <img
+            id="mainVehicleImage"
+            src="images/toyota-avensis-2014/1387b571-58ec-43ea-96b0-a26a11d77811.jpeg"
+            alt="2014 Toyota Avensis Tourer"
+          >
+        </div>
+
+        <div class="thumbnail-grid">
+
+          <img
+            src="images/toyota-avensis-2014/1387b571-58ec-43ea-96b0-a26a11d77811.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis front view"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/1473aeb0-6c16-4d6a-aed3-3baa586c9164.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis side view"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/1f0ce201-8e63-4fb0-b93b-7507d8569554.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis side profile"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/24e7e797-e31a-438c-a1ac-9df05b0e5840.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis front"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/278b6059-45a0-4c8e-b6c2-a85b6f0008d3.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis rear"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/2e401875-61b1-4f7c-88b8-4ea0c8da6f81.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis rear angle"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/54f2086b-48a5-4e10-adc3-fa14d0d6bcbe.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis interior"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/5683bf2a-5811-46bc-b49b-a5d1c8f1828f.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis dashboard"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/5cb1bd43-af48-470f-9143-c09fb03c8478.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis front seats"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/60939062-2c6e-4ade-8170-04d287be4b8e.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis rear seats"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/6299d98e-2850-43b2-b4c4-839205cd0c77.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis rear interior"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/71c4aca6-63c1-49da-a792-e626d8d7f293.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis steering wheel"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/a6a6285f-1df3-40a3-a0cc-d32c0076307e.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis centre console"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/cbd63550-e533-4139-8e19-e652d2cf4a29.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis cruise control"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/dc5c8054-5931-4c23-a44d-c1a40161cd7a.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis interior controls"
+          >
+
+          <img
+            src="images/toyota-avensis-2014/e457c657-4c5e-435d-bd88-9b7fd89b678d.jpeg"
+            onclick="changeImage(this.src)"
+            alt="Toyota Avensis multimedia system"
+          >
+
+        </div>
+      </div>
+
+      <aside class="vehicle-info">
+
+        <h1>2014 Toyota Avensis 2.0 D-4D Tourer</h1>
+
+        <div class="vehicle-subtitle">
+          Spacious diesel estate with excellent practicality
+        </div>
+
+        <div class="vehicle-price">
+          £4,695
+        </div>
+
+        <div class="spec-grid">
+
+          <div class="spec-item">
+            <strong>Mileage</strong>
+            <span>102,700 Miles</span>
+          </div>
+
+          <div class="spec-item">
+            <strong>Engine</strong>
+            <span>2.0L Diesel</span>
+          </div>
+
+          <div class="spec-item">
+            <strong>Transmission</strong>
+            <span>Manual</span>
+          </div>
+
+          <div class="spec-item">
+            <strong>Body Style</strong>
+            <span>Estate / Tourer</span>
+          </div>
+
+          <div class="spec-item">
+            <strong>Colour</strong>
+            <span>White</span>
+          </div>
+
+          <div class="spec-item">
+            <strong>Doors</strong>
+            <span>5 Door</span>
+          </div>
+
+          <div class="spec-item">
+            <strong>MOT</strong>
+            <span>Long MOT</span>
+          </div>
+
+          <div class="spec-item">
+            <strong>Warranty</strong>
+            <span>3 Months</span>
+          </div>
+
+        </div>
+
+        <div class="vehicle-buttons">
+
+          <a href="contact.html" class="vehicle-btn primary">
+            Enquire About This Car
+          </a>
+
+          <a href="finance.html" class="vehicle-btn secondary">
+            Finance Enquiry
+          </a>
+
+          <a href="part-exchange.html" class="vehicle-btn secondary">
+            Part Exchange
+          </a>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+    <section class="vehicle-section">
+
+      <h2>Key Features</h2>
+
+      <div class="feature-list">
+
+        <div class="feature">Cruise Control</div>
+
+        <div class="feature">Touchscreen Multimedia System</div>
+
+        <div class="feature">Dual-Zone Climate Control</div>
+
+        <div class="feature">Multifunction Steering Wheel</div>
+
+        <div class="feature">Alloy Wheels</div>
+
+        <div class="feature">Privacy Glass</div>
+
+        <div class="feature">Part Leather / Alcantara Style Interior</div>
+
+        <div class="feature">Electric Mirrors</div>
+
+        <div class="feature">Front Fog Lights</div>
+
+        <div class="feature">6-Speed Manual Gearbox</div>
+
+        <div class="feature">Spacious Estate Boot</div>
+
+        <div class="feature">2 Remote Keys</div>
+
+      </div>
+
+    </section>
+
+    <section class="vehicle-section">
+
+      <h2>Vehicle Description</h2>
+
+      <p>
+        This 2014 Toyota Avensis 2.0 D-4D Tourer is a practical and comfortable
+        diesel estate offering plenty of interior and luggage space. Finished
+        in white, it features a 6-speed manual gearbox, cruise control,
+        touchscreen multimedia system, dual-zone climate control, alloy wheels
+        and a comfortable part-leather and suede-style interior.
+      </p>
+
+      <p>
+        The vehicle has covered approximately 102,700 miles and comes with
+        majority service history, a long MOT, two remote keys and a 3-month
+        warranty. It is well suited to families, motorway driving or anyone
+        requiring a spacious and economical estate vehicle.
+      </p>
+
+      <p>
+        Viewings and test drives are available by appointment only. Finance
+        enquiries and part exchange are welcome.
+      </p>
+
+    </section>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© Gibson Motors Yorkshire. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function changeImage(imageSrc) {
+    document.getElementById("mainVehicleImage").src = imageSrc;
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+</body>
+</html>
