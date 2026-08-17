@@ -12,13 +12,23 @@
     content="Browse the latest used cars available from Gibson Motors Yorkshire in Huddersfield. Finance, part exchange and warranty available."
   >
 
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
     .stock-page {
       background: #0b0b0b;
       min-height: 100vh;
-      color: #fff;
     }
 
     .stock-hero {
@@ -155,7 +165,6 @@
     .car-button {
       display: block;
       width: 100%;
-      box-sizing: border-box;
       background: #d4af37;
       color: #000;
       text-decoration: none;
@@ -167,7 +176,7 @@
     }
 
     .car-button:hover {
-      background: #e3c04b;
+      background: #e4c24c;
     }
 
     .sold-card {
@@ -199,7 +208,6 @@
     .sold-button {
       display: block;
       width: 100%;
-      box-sizing: border-box;
       text-align: center;
       padding: 14px;
       border-radius: 7px;
@@ -262,39 +270,54 @@
   </div>
 </header>
 
+
 <main class="stock-page">
 
   <section class="stock-hero">
-    <h1>Current <span>Stock</span></h1>
+
+    <h1>
+      Current <span>Stock</span>
+    </h1>
 
     <p>
       Browse our latest vehicles and contact us to arrange an
       appointment-only viewing or test drive.
     </p>
+
   </section>
+
 
   <section class="stock-section">
 
     <div class="stock-heading">
+
       <h2>Available Now</h2>
+
       <span>Gibson Motors Yorkshire</span>
+
     </div>
 
+
     <div class="cars-grid">
+
 
       <!-- BMW M140i -->
       <article class="car-card">
 
         <a href="bmw-m140i-2019.html" class="car-image-link">
+
           <img
             src="images/bmw-m140i-2019/003303bf-39d2-4a2f-8a4c-f513e7ff9fa5.jpeg"
             alt="2019 BMW M140i Shadow Edition"
           >
+
         </a>
 
         <div class="car-content">
 
-          <h3>2019 BMW M140i Shadow Edition</h3>
+          <h3>
+            2019 BMW M140i Shadow Edition
+          </h3>
 
           <p class="car-subtitle">
             Petrol Automatic
@@ -305,10 +328,15 @@
           </div>
 
           <div class="car-specs">
+
             <span>56,000 Miles</span>
+
             <span>Petrol</span>
+
             <span>Automatic</span>
+
             <span>2 Previous Owners</span>
+
           </div>
 
           <a href="bmw-m140i-2019.html" class="car-button">
@@ -320,22 +348,27 @@
       </article>
 
 
-      <!-- TOYOTA AVENSIS -->
+
+      <!-- Toyota Avensis -->
       <article class="car-card">
 
         <a href="toyota-avensis-2014.html" class="car-image-link">
+
           <img
             src="images/toyota-avensis-2014/1387b571-58ec-43ea-96b0-a26a11d77811.jpeg"
-            alt="2014 Toyota Avensis 2.0 D-4D Tourer"
+            alt="2014 Toyota Avensis"
           >
+
         </a>
 
         <div class="car-content">
 
-          <h3>2014 Toyota Avensis 2.0 D-4D Tourer</h3>
+          <h3>
+            2014 Toyota Avensis
+          </h3>
 
           <p class="car-subtitle">
-            Diesel Manual
+            Diesel Manual Estate
           </p>
 
           <div class="car-price">
@@ -343,10 +376,15 @@
           </div>
 
           <div class="car-specs">
+
             <span>102,700 Miles</span>
-            <span>2.0L Diesel</span>
+
+            <span>Diesel</span>
+
             <span>Manual</span>
+
             <span>Estate</span>
+
           </div>
 
           <a href="toyota-avensis-2014.html" class="car-button">
@@ -358,19 +396,24 @@
       </article>
 
 
-      <!-- AUDI Q5 -->
+
+      <!-- Audi Q5 -->
       <article class="car-card">
 
         <a href="audi-q5.html" class="car-image-link">
+
           <img
             src="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg"
             alt="2016 Audi Q5 S line Plus quattro"
           >
+
         </a>
 
         <div class="car-content">
 
-          <h3>2016 Audi Q5 S line Plus quattro</h3>
+          <h3>
+            2016 Audi Q5 S line Plus quattro
+          </h3>
 
           <p class="car-subtitle">
             2.0L Diesel Automatic
@@ -381,10 +424,15 @@
           </div>
 
           <div class="car-specs">
+
             <span>79,984 Miles</span>
+
             <span>2.0L Diesel</span>
+
             <span>Automatic</span>
+
             <span>3 Owners</span>
+
           </div>
 
           <a href="audi-q5.html" class="car-button">
@@ -396,19 +444,24 @@
       </article>
 
 
-      <!-- VW GOLF -->
+
+      <!-- Volkswagen Golf -->
       <article class="car-card">
 
         <a href="vw-golf.html" class="car-image-link">
+
           <img
             src="images/images/vw-golf/1c3a4da7-ee22-4801-aee8-2d85a7373f4c.jpeg"
-            alt="2013 Volkswagen Golf 1.2 TSI BlueMotion"
+            alt="2013 Volkswagen Golf"
           >
+
         </a>
 
         <div class="car-content">
 
-          <h3>2013 Volkswagen Golf</h3>
+          <h3>
+            2013 Volkswagen Golf
+          </h3>
 
           <p class="car-subtitle">
             1.2 TSI BlueMotion
@@ -419,10 +472,15 @@
           </div>
 
           <div class="car-specs">
+
             <span>120,000 Miles</span>
+
             <span>1.2L Petrol</span>
+
             <span>Manual</span>
+
             <span>4 Previous Owners</span>
+
           </div>
 
           <a href="vw-golf.html" class="car-button">
@@ -434,96 +492,24 @@
       </article>
 
 
-      <!-- FORD MONDEO TITANIUM X -->
-      <article class="car-card">
 
-        <a href="ford-mondeo-2012.html" class="car-image-link">
-          <img
-            src="images/ford-mondeo-2012/07c83850-eb52-4ab9-a78a-7da3737877e7.jpeg"
-            alt="2012 Ford Mondeo Titanium X"
-          >
-        </a>
-
-        <div class="car-content">
-
-          <h3>2012 Ford Mondeo Titanium X</h3>
-
-          <p class="car-subtitle">
-            Diesel Manual
-          </p>
-
-          <div class="car-price">
-            £2,995
-          </div>
-
-          <div class="car-specs">
-            <span>Diesel</span>
-            <span>Manual</span>
-            <span>Titanium X</span>
-            <span>5 Door</span>
-          </div>
-
-          <a href="ford-mondeo-2012.html" class="car-button">
-            View Vehicle
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- FORD MONDEO ESTATE -->
-      <article class="car-card">
-
-        <a href="ford-mondeo-estate-2012.html" class="car-image-link">
-          <img
-            src="images/ford-mondeo-estate-2012/3773871d-6a14-40d2-866e-26104ccc1946.jpeg"
-            alt="2012 Ford Mondeo Titanium Estate"
-          >
-        </a>
-
-        <div class="car-content">
-
-          <h3>2012 Ford Mondeo Titanium Estate</h3>
-
-          <p class="car-subtitle">
-            Diesel Manual
-          </p>
-
-          <div class="car-price">
-            Contact Us
-          </div>
-
-          <div class="car-specs">
-            <span>Diesel</span>
-            <span>Manual</span>
-            <span>Estate</span>
-            <span>Silver</span>
-          </div>
-
-          <a href="ford-mondeo-estate-2012.html" class="car-button">
-            View Vehicle
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 2015 FORD FOCUS -->
+      <!-- Ford Focus 2015 -->
       <article class="car-card">
 
         <a href="ford-focus-2015.html" class="car-image-link">
+
           <img
-            src="images/ford-focus-2015/1.jpg"
+            src="images/ford-focus-2015/0ce32ac7-a64d-4986-a1af-bff4bc2e320f.jpeg"
             alt="2015 Ford Focus"
-            onerror="this.src='images/ford-focus-2015/placeholder.jpeg';"
           >
+
         </a>
 
         <div class="car-content">
 
-          <h3>2015 Ford Focus</h3>
+          <h3>
+            2015 Ford Focus
+          </h3>
 
           <p class="car-subtitle">
             Diesel Manual
@@ -534,10 +520,15 @@
           </div>
 
           <div class="car-specs">
+
             <span>Diesel</span>
+
             <span>Manual</span>
+
             <span>5 Door</span>
+
             <span>Black</span>
+
           </div>
 
           <a href="ford-focus-2015.html" class="car-button">
@@ -549,24 +540,115 @@
       </article>
 
 
-      <!-- SOLD BMW -->
+
+      <!-- Ford Mondeo Titanium X -->
+      <article class="car-card">
+
+        <a href="ford-mondeo-2012.html" class="car-image-link">
+
+          <img
+            src="images/ford-mondeo-2012/07c83850-eb52-4ab9-a78a-7da3737877e7.jpeg"
+            alt="2012 Ford Mondeo Titanium X"
+          >
+
+        </a>
+
+        <div class="car-content">
+
+          <h3>
+            2012 Ford Mondeo Titanium X
+          </h3>
+
+          <p class="car-subtitle">
+            Diesel Manual
+          </p>
+
+          <div class="car-price">
+            £2,995
+          </div>
+
+          <div class="car-specs">
+
+            <span>Diesel</span>
+
+            <span>Manual</span>
+
+            <span>Titanium X</span>
+
+            <span>5 Door</span>
+
+          </div>
+
+          <a href="ford-mondeo-2012.html" class="car-button">
+            View Vehicle
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- Ford Mondeo Estate -->
+      <article class="car-card">
+
+        <a href="ford-mondeo-estate-2012.html" class="car-image-link">
+
+          <img
+            src="images/ford-mondeo-estate-2012/3773871d-6a14-40d2-866e-26104ccc1946.jpeg"
+            alt="2012 Ford Mondeo Estate"
+          >
+
+        </a>
+
+        <div class="car-content">
+
+          <h3>
+            2012 Ford Mondeo Titanium Estate
+          </h3>
+
+          <p class="car-subtitle">
+            Diesel Manual
+          </p>
+
+          <div class="car-price">
+            Contact Us
+          </div>
+
+          <div class="car-specs">
+
+            <span>Diesel</span>
+
+            <span>Manual</span>
+
+            <span>Estate</span>
+
+            <span>Silver</span>
+
+          </div>
+
+          <a href="ford-mondeo-estate-2012.html" class="car-button">
+            View Vehicle
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- SOLD BMW 116d -->
       <article class="car-card sold-card">
 
         <div class="sold-ribbon">
           SOLD
         </div>
 
-        <a href="bmw-116d.html" class="car-image-link">
-          <img
-            src="bmw-116d/1.jpg"
-            alt="BMW 116d"
-            onerror="this.style.display='none';"
-          >
-        </a>
-
         <div class="car-content">
 
-          <h3>BMW 1 Series 116d</h3>
+          <h3>
+            BMW 1 Series 116d
+          </h3>
 
           <p class="car-subtitle">
             Diesel
@@ -577,10 +659,15 @@
           </div>
 
           <div class="car-specs">
+
             <span>BMW</span>
+
             <span>Diesel</span>
+
             <span>1 Series</span>
+
             <span>Sold</span>
+
           </div>
 
           <a href="contact.html" class="sold-button">
@@ -592,24 +679,19 @@
       </article>
 
 
-      <!-- SOLD FORD FOCUS 2012 -->
+
+      <!-- SOLD Ford Focus 2012 -->
       <article class="car-card sold-card">
 
         <div class="sold-ribbon">
           SOLD
         </div>
 
-        <a href="ford-focus-2012.html" class="car-image-link">
-          <img
-            src="images/ford-focus-2012/1.jpg"
-            alt="2012 Ford Focus"
-            onerror="this.style.display='none';"
-          >
-        </a>
-
         <div class="car-content">
 
-          <h3>2012 Ford Focus</h3>
+          <h3>
+            2012 Ford Focus
+          </h3>
 
           <p class="car-subtitle">
             2.0L Diesel Manual
@@ -620,10 +702,15 @@
           </div>
 
           <div class="car-specs">
+
             <span>86,334 Miles</span>
+
             <span>2.0L Diesel</span>
+
             <span>Manual</span>
+
             <span>5 Door</span>
+
           </div>
 
           <a href="contact.html" class="sold-button">
@@ -641,11 +728,19 @@
 
 </main>
 
+
 <footer class="site-footer">
+
   <div class="container">
-    <p>© Gibson Motors Yorkshire. All rights reserved.</p>
+
+    <p>
+      © Gibson Motors Yorkshire. All rights reserved.
+    </p>
+
   </div>
+
 </footer>
+
 
 </body>
 </html>
