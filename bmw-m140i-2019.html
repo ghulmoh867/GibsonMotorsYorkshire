@@ -1,1 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>2019 BMW M140i Shadow Edition | Gibson Motors Yorkshire</title>
+
+  <meta
+    name="description"
+    content="2019 BMW M140i Shadow Edition automatic petrol for sale at Gibson Motors Yorkshire in Huddersfield. 56,000 miles, £21,995."
+  >
+
+  <link rel="stylesheet" href="style.css?v=20">
+
+  <style>
+
+    .vehicle-page {
+      background: #080808;
+      color: #ffffff;
+      min-height: 100vh;
+      padding-bottom: 70px;
+    }
+
+    .vehicle-container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .vehicle-back {
+      padding-top: 30px;
+      margin-bottom: 24px;
+    }
+
+    .vehicle-back a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .vehicle-back a:hover {
+      color: #ffffff;
+    }
+
+    .vehicle-heading {
+      margin-bottom: 30px;
+    }
+
+    .vehicle-heading h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.05;
+      margin: 0 0 12px;
+      color: #ffffff;
+    }
+
+    .vehicle-heading h1 span {
+      color: #d4af37;
+    }
+
+    .vehicle-subtitle {
+      color: #aaaaaa;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .vehicle-main-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(320px, 0.8fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .vehicle-gallery {
+      min-width: 0;
+    }
+
+    .main-image-wrap {
+      background: #111111;
+      border: 1px solid #222222;
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      position: relative;
+    }
+
+    .main-image-wrap img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      background: #111111;
+    }
+
+    .photo-counter {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      background: rgba(0, 0, 0, 0.78);
+      color: #ffffff;
+      padding: 8px 13px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .thumbnail-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .thumbnail {
+      border: 2px solid transparent;
+      background: #111111;
+      padding: 0;
+      border-radius: 9px;
+      overflow: hidden;
+      cursor: pointer;
+      height: 92px;
+      transition: 0.2s ease;
+    }
+
+    .thumbnail:hover {
+      border-color: #d4af37;
+      transform: translateY(-2px);
+    }
+
+    .thumbnail.active {
+      border-color: #d4af37;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .vehicle-summary {
+      background: #111111;
+      border: 1px solid #242424;
+      border-radius: 18px;
+      padding: 28px;
+      position: sticky;
+      top: 25px;
+    }
+
+    .vehicle-price {
+      color: #d4af37;
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    .vehicle-finance-note {
+      color: #aaaaaa;
+      margin-bottom: 26px;
+      font-size: 14px;
+    }
+
+    .vehicle-spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .vehicle-spec {
+      background: #191919;
+      border: 1px solid #292929;
+      border-radius: 9px;
+      padding: 13px;
+    }
+
+    .vehicle-spec small {
+      display: block;
+      color: #888888;
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+
+    .vehicle-spec strong {
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .vehicle-buttons {
+      display: grid;
+      gap: 11px;
+    }
+
+    .vehicle-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 9px;
+      padding: 15px 18px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+      transition: 0.2s ease;
+    }
+
+    .vehicle-btn-gold {
+      background: #d4af37;
+      color: #000000;
+    }
+
+    .vehicle-btn-gold:hover {
+      background: #f0cb4c;
+    }
+
+    .vehicle-btn-dark {
+      background: #1b1b1b;
+      color: #ffffff;
+      border: 1px solid #333333;
+    }
+
+    .vehicle-btn-dark:hover {
+      border-color: #d4af37;
+      color: #d4af37;
+    }
+
+    .vehicle-details-section {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .vehicle-info-card {
+      background: #111111;
+      border: 1px solid #242424;
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .vehicle-info-card h2 {
+      color: #ffffff;
+      font-size: 25px;
+      margin: 0 0 20px;
+    }
+
+    .vehicle-info-card h2 span {
+      color: #d4af37;
+    }
+
+    .vehicle-description {
+      color: #bbbbbb;
+      line-height: 1.8;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding: 10px 0 10px 22px;
+      color: #dddddd;
+      border-bottom: 1px solid #222222;
+      font-size: 14px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #d4af37;
+      font-weight: 900;
+    }
+
+    .vehicle-confidence {
+      margin-top: 28px;
+      background: linear-gradient(135deg, #151515, #0e0e0e);
+      border: 1px solid #2a2a2a;
+      border-radius: 18px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .confidence-item strong {
+      color: #d4af37;
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .confidence-item span {
+      color: #aaaaaa;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+
+      .vehicle-main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .vehicle-summary {
+        position: static;
+      }
+
+      .vehicle-details-section {
+        grid-template-columns: 1fr;
+      }
+
+      .thumbnail-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .vehicle-confidence {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .vehicle-container {
+        width: 94%;
+      }
+
+      .vehicle-summary {
+        padding: 20px;
+      }
+
+      .vehicle-price {
+        font-size: 35px;
+      }
+
+      .thumbnail-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .thumbnail {
+        height: 76px;
+      }
+
+      .vehicle-spec-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+
+      .vehicle-info-card {
+        padding: 21px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <div class="container header-inner">
+
+    <a href="index.html" class="brand">
+      GIBSON MOTORS YORKSHIRE
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="cars.html" class="active">Stock</a>
+      <a href="finance.html">Finance</a>
+      <a href="part-exchange.html">Part Exchange</a>
+      <a href="sale-on-return.html">Sale on Return</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+
+</header>
+
+<main class="vehicle-page">
+
+  <div class="vehicle-container">
+
+    <div class="vehicle-back">
+      <a href="cars.html">← Back to Current Stock</a>
+    </div>
+
+    <div class="vehicle-heading">
+
+      <h1>
+        2019 BMW M140i
+        <span>Shadow Edition</span>
+      </h1>
+
+      <p class="vehicle-subtitle">
+        3.0L Petrol • Automatic • Grey • 56,000 Miles
+      </p>
+
+    </div>
+
+    <div class="vehicle-main-grid">
+
+      <section class="vehicle-gallery">
+
+        <div class="main-image-wrap">
+
+          <img
+            id="mainVehicleImage"
+            src="images/bmw-m140i-2019/003303bf-39d2-4a2f-8a4c-f513e7ff9fa5.jpeg"
+            alt="2019 BMW M140i Shadow Edition"
+          >
+
+          <div class="photo-counter">
+            <span id="currentPhoto">1</span> / 23
+          </div>
+
+        </div>
+
+        <div class="thumbnail-grid" id="thumbnailGrid">
+
+          <button class="thumbnail active" onclick="changeImage(this, 1)">
+            <img src="images/bmw-m140i-2019/003303bf-39d2-4a2f-8a4c-f513e7ff9fa5.jpeg" alt="BMW M140i photo 1">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 2)">
+            <img src="images/bmw-m140i-2019/0b5de0d7-def2-4798-99ab-2bea5592ac44.jpeg" alt="BMW M140i photo 2">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 3)">
+            <img src="images/bmw-m140i-2019/0bfe57e6-207b-4294-ba3f-8b23b9af3f0e.jpeg" alt="BMW M140i photo 3">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 4)">
+            <img src="images/bmw-m140i-2019/1598f92d-22df-4adc-b95a-ac9b23713d23.jpeg" alt="BMW M140i photo 4">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 5)">
+            <img src="images/bmw-m140i-2019/171261bc-819c-40c5-89b7-4209e4fb0ebe.jpeg" alt="BMW M140i photo 5">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 6)">
+            <img src="images/bmw-m140i-2019/1af13236-7e43-4e11-b866-482c00a5a971.jpeg" alt="BMW M140i photo 6">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 7)">
+            <img src="images/bmw-m140i-2019/1e86f75e-18ae-473f-8744-f7802e6841b4.jpeg" alt="BMW M140i photo 7">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 8)">
+            <img src="images/bmw-m140i-2019/26c92b93-87bb-44f6-ad28-7dab2b8f31ce.jpeg" alt="BMW M140i photo 8">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 9)">
+            <img src="images/bmw-m140i-2019/293fa761-1617-4067-ae47-4eed2c72c63b.jpeg" alt="BMW M140i photo 9">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 10)">
+            <img src="images/bmw-m140i-2019/329ede52-1457-4261-9b78-f971c1dc5e84.jpeg" alt="BMW M140i photo 10">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 11)">
+            <img src="images/bmw-m140i-2019/55a9c63b-dfe8-475c-955f-a1362bfd6c13.jpeg" alt="BMW M140i photo 11">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 12)">
+            <img src="images/bmw-m140i-2019/5e516635-392c-49d8-ba20-6aa45a3023b3.jpeg" alt="BMW M140i photo 12">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 13)">
+            <img src="images/bmw-m140i-2019/610a3f51-dd84-4b81-b0be-e9ded2498b51.jpeg" alt="BMW M140i photo 13">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 14)">
+            <img src="images/bmw-m140i-2019/6bab4e78-d6e3-4ac7-8f76-df3ca72fb328.jpeg" alt="BMW M140i photo 14">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 15)">
+            <img src="images/bmw-m140i-2019/723ad08a-d11c-4219-8efa-c74f7c71c3d7.jpeg" alt="BMW M140i photo 15">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 16)">
+            <img src="images/bmw-m140i-2019/87dd967b-2c41-4120-8ba5-3974e8d4360b.jpeg" alt="BMW M140i photo 16">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 17)">
+            <img src="images/bmw-m140i-2019/90550139-899e-4f2a-ac00-accface21d95.jpeg" alt="BMW M140i photo 17">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 18)">
+            <img src="images/bmw-m140i-2019/9f2f3c04-076f-45da-a674-f00a5e085f16.jpeg" alt="BMW M140i photo 18">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 19)">
+            <img src="images/bmw-m140i-2019/b39fba46-3aaf-48e5-8214-68b9ccf5e28b.jpeg" alt="BMW M140i photo 19">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 20)">
+            <img src="images/bmw-m140i-2019/c930dabf-b7ee-401c-9970-e735f65691fd.jpeg" alt="BMW M140i photo 20">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 21)">
+            <img src="images/bmw-m140i-2019/dd42a4d7-adc4-42c3-8ee4-6f81b20481a6.jpeg" alt="BMW M140i photo 21">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 22)">
+            <img src="images/bmw-m140i-2019/e875f895-3b19-42c1-87e2-94ca1f78fe2d.jpeg" alt="BMW M140i photo 22">
+          </button>
+
+          <button class="thumbnail" onclick="changeImage(this, 23)">
+            <img src="images/bmw-m140i-2019/f46304b2-0a5f-4334-906b-54105456916e.jpeg" alt="BMW M140i photo 23">
+          </button>
+
+        </div>
+
+      </section>
+
+      <aside class="vehicle-summary">
+
+        <div class="vehicle-price">
+          £21,995
+        </div>
+
+        <div class="vehicle-finance-note">
+          Finance enquiries welcome — contact us for further information.
+        </div>
+
+        <div class="vehicle-spec-grid">
+
+          <div class="vehicle-spec">
+            <small>Year</small>
+            <strong>2019</strong>
+          </div>
+
+          <div class="vehicle-spec">
+            <small>Mileage</small>
+            <strong>56,000 Miles</strong>
+          </div>
+
+          <div class="vehicle-spec">
+            <small>Fuel</small>
+            <strong>Petrol</strong>
+          </div>
+
+          <div class="vehicle-spec">
+            <small>Transmission</small>
+            <strong>Automatic</strong>
+          </div>
+
+          <div class="vehicle-spec">
+            <small>Engine</small>
+            <strong>3.0L</strong>
+          </div>
+
+          <div class="vehicle-spec">
+            <small>Colour</small>
+            <strong>Grey</strong>
+          </div>
+
+          <div class="vehicle-spec">
+            <small>Previous Owners</small>
+            <strong>2</strong>
+          </div>
+
+          <div class="vehicle-spec">
+            <small>MOT</small>
+            <strong>12 Months</strong>
+          </div>
+
+        </div>
+
+        <div class="vehicle-buttons">
+
+          <a href="contact.html" class="vehicle-btn vehicle-btn-gold">
+            Enquire About This Car
+          </a>
+
+          <a href="finance.html" class="vehicle-btn vehicle-btn-dark">
+            Finance Enquiry
+          </a>
+
+          <a href="part-exchange.html" class="vehicle-btn vehicle-btn-dark">
+            Part Exchange
+          </a>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+    <div class="vehicle-details-section">
+
+      <section class="vehicle-info-card">
+
+        <h2>
+          Vehicle <span>Overview</span>
+        </h2>
+
+        <p class="vehicle-description">
+
+          Gibson Motors Yorkshire is pleased to offer this
+          2019 BMW M140i Shadow Edition finished in grey.
+
+          <br><br>
+
+          Powered by BMW's 3.0 litre petrol engine and paired
+          with an automatic transmission, the M140i delivers
+          excellent performance while still offering everyday
+          comfort and practicality.
+
+          <br><br>
+
+          This example has covered approximately 56,000 miles
+          and has had 2 previous owners.
+
+          <br><br>
+
+          It comes with an excellent specification including
+          Apple CarPlay, cruise control, Harman Kardon sound,
+          satellite navigation, heated leather seats,
+          paddle-shift automatic transmission and
+          front and rear parking sensors.
+
+          <br><br>
+
+          Supplied with 12 months MOT and 3 months warranty.
+
+          <br><br>
+
+          Viewing and test drives are available by appointment.
+
+        </p>
+
+      </section>
+
+      <section class="vehicle-info-card">
+
+        <h2>
+          Key <span>Features</span>
+        </h2>
+
+        <ul class="feature-list">
+
+          <li>Shadow Edition</li>
+          <li>Apple CarPlay</li>
+          <li>Cruise Control</li>
+          <li>Harman Kardon Sound System</li>
+          <li>Satellite Navigation</li>
+          <li>Heated Front Seats</li>
+          <li>Black Leather Interior</li>
+          <li>Automatic Transmission</li>
+          <li>Paddle Shift</li>
+          <li>M Sport Steering Wheel</li>
+          <li>Front & Rear Parking Sensors</li>
+          <li>Dual-Zone Climate Control</li>
+          <li>Privacy Glass</li>
+          <li>BMW iDrive</li>
+          <li>M Sport Styling</li>
+          <li>Alloy Wheels</li>
+          <li>Bluetooth Connectivity</li>
+          <li>Automatic Headlights</li>
+
+        </ul>
+
+      </section>
+
+    </div>
+
+    <div class="vehicle-confidence">
+
+      <div class="confidence-item">
+        <strong>3 Months Warranty</strong>
+        <span>Warranty included with this vehicle</span>
+      </div>
+
+      <div class="confidence-item">
+        <strong>12 Months MOT</strong>
+        <span>Supplied with a full 12 months MOT</span>
+      </div>
+
+      <div class="confidence-item">
+        <strong>Appointment Only</strong>
+        <span>Contact us to arrange your viewing or test drive</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<script>
+
+  function changeImage(button, number) {
+
+    const thumbnailImage = button.querySelector("img");
+
+    const mainImage =
+      document.getElementById("mainVehicleImage");
+
+    mainImage.src = thumbnailImage.src;
+
+    document
+      .querySelectorAll(".thumbnail")
+      .forEach(function(thumbnail) {
+        thumbnail.classList.remove("active");
+      });
+
+    button.classList.add("active");
+
+    document.getElementById("currentPhoto").textContent = number;
+
+  }
+
+</script>
+
+</body>
+
+</html>
