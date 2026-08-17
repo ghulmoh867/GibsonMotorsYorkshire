@@ -1,1 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>2012 Ford Mondeo Titanium Estate | Gibson Motors Yorkshire</title>
+
+  <meta
+    name="description"
+    content="2012 Ford Mondeo 2.0 TDCi Titanium Estate diesel manual for sale at Gibson Motors Yorkshire in Huddersfield."
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    .header {
+      background: #050505;
+      border-bottom: 1px solid #262626;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #d4af37;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .nav a {
+      color: #ffffff;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      color: #d4af37;
+    }
+
+    /* PAGE */
+
+    .container {
+      max-width: 1250px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    .back {
+      display: inline-block;
+      color: #d4af37;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    /* TITLE */
+
+    .vehicle-heading {
+      margin-bottom: 30px;
+    }
+
+    .vehicle-heading h1 {
+      margin: 0 0 10px;
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    .vehicle-heading p {
+      margin: 0;
+      color: #aaaaaa;
+      font-size: 17px;
+    }
+
+    /* MAIN VEHICLE AREA */
+
+    .vehicle-main {
+      display: grid;
+      grid-template-columns: 1.65fr 1fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    /* GALLERY */
+
+    .gallery {
+      background: #111111;
+      border: 1px solid #252525;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+      background: #151515;
+    }
+
+    .thumbnails {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      padding: 10px;
+      background: #111111;
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: 0.75;
+      border: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    .thumbnail:hover {
+      opacity: 1;
+      border-color: #d4af37;
+    }
+
+    /* VEHICLE INFO */
+
+    .vehicle-info {
+      background: #111111;
+      border: 1px solid #252525;
+      border-radius: 14px;
+      padding: 30px;
+    }
+
+    .price {
+      color: #d4af37;
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .spec {
+      background: #191919;
+      border: 1px solid #292929;
+      border-radius: 9px;
+      padding: 15px;
+    }
+
+    .spec-label {
+      display: block;
+      color: #888888;
+      font-size: 12px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .spec-value {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .warranty {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid #d4af37;
+      color: #ffffff;
+      padding: 17px;
+      border-radius: 9px;
+      margin-bottom: 22px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      text-align: center;
+      border-radius: 7px;
+      font-weight: 800;
+      margin-top: 12px;
+      transition: 0.25s;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: #050505;
+    }
+
+    .btn-gold:hover {
+      background: #e4c251;
+    }
+
+    .btn-outline {
+      border: 1px solid #d4af37;
+      color: #d4af37;
+    }
+
+    .btn-outline:hover {
+      background: #d4af37;
+      color: #000000;
+    }
+
+    /* DETAILS BELOW */
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #111111;
+      border: 1px solid #252525;
+      border-radius: 14px;
+      padding: 30px;
+    }
+
+    .card h2 {
+      color: #d4af37;
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #cccccc;
+      line-height: 1.7;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 20px;
+      padding: 0;
+      margin: 20px 0 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      background: #191919;
+      padding: 12px;
+      border-radius: 7px;
+      color: #dddddd;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: #d4af37;
+      margin-right: 8px;
+      font-weight: bold;
+    }
+
+    /* CONTACT STRIP */
+
+    .contact-strip {
+      margin-top: 40px;
+      background: #d4af37;
+      color: #080808;
+      border-radius: 14px;
+      padding: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .contact-strip h2 {
+      margin: 0 0 8px;
+      font-size: 25px;
+    }
+
+    .contact-strip p {
+      margin: 0;
+    }
+
+    .contact-strip a {
+      background: #080808;
+      color: #ffffff;
+      padding: 15px 25px;
+      border-radius: 7px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid #252525;
+      padding: 35px 20px;
+      text-align: center;
+      color: #888888;
+      background: #050505;
+    }
+
+    footer a {
+      margin: 0 8px;
+      color: #bbbbbb;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .header {
+        flex-direction: column;
+      }
+
+      .vehicle-main,
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-image {
+        height: 430px;
+      }
+
+      .vehicle-heading h1 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        padding: 25px 12px;
+      }
+
+      .main-image {
+        height: 300px;
+      }
+
+      .thumbnails {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .thumbnail {
+        height: 65px;
+      }
+
+      .specs {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-strip {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .vehicle-heading h1 {
+        font-size: 26px;
+      }
+
+      .price {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <a href="index.html" class="logo">
+      GIBSON MOTORS YORKSHIRE
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="cars.html">Stock</a>
+      <a href="finance.html">Finance</a>
+      <a href="part-exchange.html">Part Exchange</a>
+      <a href="sale-on-return.html">Sale on Return</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <main class="container">
+
+    <a href="cars.html" class="back">
+      ← Back to Current Stock
+    </a>
+
+
+    <!-- VEHICLE TITLE -->
+
+    <section class="vehicle-heading">
+
+      <h1>2012 Ford Mondeo Titanium Estate</h1>
+
+      <p>
+        2.0 TDCi Titanium Euro 5 5dr
+      </p>
+
+    </section>
+
+
+    <!-- MAIN AREA -->
+
+    <section class="vehicle-main">
+
+
+      <!-- PHOTO GALLERY -->
+
+      <div class="gallery">
+
+        <img
+          id="mainImage"
+          class="main-image"
+          src="images/ford-mondeo-estate-2012/3773871d-6a14-40d2-866e-26104ccc1946.jpeg"
+          alt="2012 Ford Mondeo Titanium Estate"
+        >
+
+
+        <div class="thumbnails">
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/3773871d-6a14-40d2-866e-26104ccc1946.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo exterior"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/3bc16350-4ac2-463a-afe5-94ed8f4e93ed.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/3de143e6-e0d3-4422-883e-599cb0d9e062.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/4dad8c89-f4f0-4db2-a368-d1150cbf47bd.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/55aaa248-6519-4731-9ba2-2a5771d5af0a.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/8b9d4dde-f6f0-46a5-a29f-d131fdca91e7.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/9a378e66-9325-45a5-92bf-729ed2aea879.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/b636fa1e-4f79-41f7-a98b-8df71d29c926.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/ca0346b2-dc2e-4908-b91f-2eadf23f8ed1.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/cb66ca00-7dda-47dc-bb56-b8584a45bb9c.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/dbd815b3-5090-439b-8c49-03e5f3f83eab.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/f54f1e98-820e-4fd7-8d06-3154d192dd61.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+          <img
+            class="thumbnail"
+            src="images/ford-mondeo-estate-2012/ff87fec3-2b47-4c92-8972-e06144490afc.jpeg"
+            onclick="changeImage(this)"
+            alt="Ford Mondeo"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- CAR INFORMATION -->
+
+      <div class="vehicle-info">
+
+        <div class="price">
+          £1,695
+        </div>
+
+
+        <div class="specs">
+
+          <div class="spec">
+            <span class="spec-label">Year</span>
+            <span class="spec-value">2012</span>
+          </div>
+
+          <div class="spec">
+            <span class="spec-label">Mileage</span>
+            <span class="spec-value">147,000 Miles</span>
+          </div>
+
+          <div class="spec">
+            <span class="spec-label">Engine</span>
+            <span class="spec-value">2.0L Diesel</span>
+          </div>
+
+          <div class="spec">
+            <span class="spec-label">Transmission</span>
+            <span class="spec-value">Manual</span>
+          </div>
+
+          <div class="spec">
+            <span class="spec-label">Body Style</span>
+            <span class="spec-value">Estate</span>
+          </div>
+
+          <div class="spec">
+            <span class="spec-label">Doors</span>
+            <span class="spec-value">5 Doors</span>
+          </div>
+
+          <div class="spec">
+            <span class="spec-label">Fuel</span>
+            <span class="spec-value">Diesel</span>
+          </div>
+
+          <div class="spec">
+            <span class="spec-label">Colour</span>
+            <span class="spec-value">Silver</span>
+          </div>
+
+        </div>
+
+
+        <div class="warranty">
+          3 Months Warranty Available
+        </div>
+
+
+        <a href="tel:07394403899" class="btn btn-gold">
+          Call Us – 07394 403899
+        </a>
+
+        <a href="contact.html" class="btn btn-outline">
+          Enquire About This Vehicle
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- DETAILS -->
+
+    <section class="details-grid">
+
+
+      <div class="card">
+
+        <h2>Vehicle Description</h2>
+
+        <p>
+          2012 Ford Mondeo Titanium Estate finished in silver,
+          powered by a 2.0 litre TDCi diesel engine with a
+          6-speed manual gearbox.
+        </p>
+
+        <p>
+          A spacious and practical estate with a large boot,
+          comfortable interior and excellent specification.
+          Ideal for family use, commuting or longer journeys.
+        </p>
+
+        <p>
+          This vehicle benefits from majority service history,
+          with the timing belt and water pump previously replaced
+          approximately 30,000 miles ago.
+        </p>
+
+        <p>
+          Part exchange is welcome. Please contact Gibson Motors
+          Yorkshire before travelling to arrange an appointment
+          and viewing.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h2>Features & Specification</h2>
+
+        <ul class="feature-list">
+
+          <li>Titanium Specification</li>
+
+          <li>2.0 TDCi Diesel</li>
+
+          <li>6-Speed Manual</li>
+
+          <li>5 Door Estate</li>
+
+          <li>Front Parking Sensors</li>
+
+          <li>Rear Parking Sensors</li>
+
+          <li>Remote Central Locking</li>
+
+          <li>2 Remote Keys</li>
+
+          <li>Cruise Control</li>
+
+          <li>Bluetooth</li>
+
+          <li>Air Conditioning</li>
+
+          <li>Alloy Wheels</li>
+
+          <li>Electric Windows</li>
+
+          <li>Large Boot</li>
+
+          <li>Euro 5</li>
+
+          <li>HPI Clear</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact-strip">
+
+      <div>
+        <h2>Interested in this Ford Mondeo?</h2>
+
+        <p>
+          Contact Gibson Motors Yorkshire to arrange an
+          appointment-only viewing or test drive.
+        </p>
+      </div>
+
+      <a href="tel:07394403899">
+        Call 07394 403899
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Gibson Motors Yorkshire
+    </p>
+
+    <p>
+      <a href="index.html">Home</a>
+      |
+      <a href="cars.html">Stock</a>
+      |
+      <a href="finance.html">Finance</a>
+      |
+      <a href="part-exchange.html">Part Exchange</a>
+      |
+      <a href="sale-on-return.html">Sale on Return</a>
+      |
+      <a href="contact.html">Contact</a>
+    </p>
+
+  </footer>
+
+
+  <!-- PHOTO GALLERY SCRIPT -->
+
+  <script>
+
+    function changeImage(image) {
+      document.getElementById("mainImage").src = image.src;
+
+      window.scrollTo({
+        top: document.getElementById("mainImage").offsetTop - 100,
+        behavior: "smooth"
+      });
+    }
+
+  </script>
+
+</body>
+</html>
