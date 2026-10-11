@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Car Finance Enquiries | Gibson Motors Yorkshire</title>
+  <title>Car Finance Enquiry | Gibson Motors Yorkshire</title>
 
-  <meta name="description" content="Contact Gibson Motors Yorkshire to discuss car finance options for your next vehicle.">
+  <meta name="description" content="Make a simple car finance enquiry with Gibson Motors Yorkshire.">
 
   <link rel="stylesheet" href="style.css?v=10">
 </head>
@@ -27,7 +26,6 @@
       <a href="finance.html" class="active">Finance</a>
       <a href="part-exchange.html">Part Exchange</a>
       <a href="sale-on-return.html">Sale on Return</a>
-      <a href="contact.html">Contact</a>
     </nav>
 
     <a href="tel:07394403899" class="header-call">
@@ -42,187 +40,366 @@
   <section class="page-banner">
     <div class="container">
 
-      <p class="eyebrow">Vehicle finance</p>
+      <p class="eyebrow">Finance your next vehicle</p>
 
-      <h1>Finance Enquiries</h1>
+      <h1>Car Finance</h1>
 
       <p>
-        Speak to us directly to discuss finance options and the next steps
-        towards purchasing your vehicle.
+        Complete our quick finance enquiry and let us know which vehicle
+        you're interested in.
       </p>
 
     </div>
   </section>
 
+
   <section class="section">
-    <div class="container split-layout">
 
-      <div>
-        <p class="eyebrow">Finance support</p>
+    <div class="container form-layout">
 
-        <h2>Helping make your next vehicle more affordable</h2>
+      <div class="form-intro">
+
+        <p class="eyebrow">Simple finance enquiry</p>
+
+        <h2>Interested in financing a vehicle?</h2>
 
         <p class="large-text">
-          We understand that every customer's circumstances are different.
-          Contact us to discuss available finance options and the information
-          required.
+          Complete the short form and one of our team will get back to you
+          to discuss your options.
         </p>
 
         <p class="muted-text">
-          Finance is subject to status, eligibility and approval. Terms and
-          conditions may apply.
+          We keep the initial enquiry simple. Further information may be
+          requested if required during the finance process.
         </p>
 
-        <a href="tel:07394403899" class="button button-gold">
-          Discuss Finance
-        </a>
+        <div class="feature-panel">
+
+          <div class="panel-item">
+            <span>01</span>
+            <div>
+              <h3>Choose Your Vehicle</h3>
+              <p>
+                Tell us which vehicle you're interested in.
+              </p>
+            </div>
+          </div>
+
+          <div class="panel-item">
+            <span>02</span>
+            <div>
+              <h3>Submit Your Enquiry</h3>
+              <p>
+                Send us your basic details and requirements.
+              </p>
+            </div>
+          </div>
+
+          <div class="panel-item">
+            <span>03</span>
+            <div>
+              <h3>We'll Contact You</h3>
+              <p>
+                Our team will discuss the next steps with you.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="feature-panel">
 
-        <div class="panel-item">
-          <span>01</span>
+      <div class="form-card">
 
-          <div>
-            <h3>Choose a Vehicle</h3>
+        <form action="#" method="POST">
 
-            <p>
-              Browse our stock and identify the vehicle you are interested in.
-            </p>
+          <div class="form-section">
+
+            <p class="eyebrow">Your details</p>
+
+            <h3>Contact Information</h3>
+
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="full_name">Full Name *</label>
+                <input
+                  type="text"
+                  id="full_name"
+                  name="full_name"
+                  required
+                  autocomplete="name"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  autocomplete="tel"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="postcode">Postcode *</label>
+                <input
+                  type="text"
+                  id="postcode"
+                  name="postcode"
+                  required
+                  autocomplete="postal-code"
+                >
+              </div>
+
+            </div>
+
           </div>
-        </div>
 
-        <div class="panel-item">
-          <span>02</span>
 
-          <div>
-            <h3>Contact Our Team</h3>
+          <div class="form-section">
 
-            <p>
-              Speak to us about your deposit, budget and preferred vehicle.
-            </p>
+            <p class="eyebrow">Vehicle requirements</p>
+
+            <h3>What are you looking to finance?</h3>
+
+            <div class="form-grid">
+
+              <div class="form-group full-width">
+                <label for="vehicle">Vehicle You're Interested In *</label>
+                <input
+                  type="text"
+                  id="vehicle"
+                  name="vehicle"
+                  placeholder="e.g. 2015 BMW X5 M Sport"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Vehicle Price / Budget</label>
+                <input
+                  type="text"
+                  id="budget"
+                  name="budget"
+                  placeholder="e.g. £15,000"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="deposit">Deposit Available</label>
+                <input
+                  type="text"
+                  id="deposit"
+                  name="deposit"
+                  placeholder="e.g. £2,000"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="term">Preferred Finance Term</label>
+
+                <select id="term" name="term">
+                  <option value="">Please select</option>
+                  <option value="24 months">24 months</option>
+                  <option value="36 months">36 months</option>
+                  <option value="48 months">48 months</option>
+                  <option value="60 months">60 months</option>
+                  <option value="Not sure">Not sure</option>
+                </select>
+
+              </div>
+
+              <div class="form-group">
+                <label for="part_exchange">Part Exchange?</label>
+
+                <select id="part_exchange" name="part_exchange">
+                  <option value="">Please select</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+
+              </div>
+
+            </div>
+
           </div>
-        </div>
 
-        <div class="panel-item">
-          <span>03</span>
 
-          <div>
-            <h3>Discuss the Next Steps</h3>
+          <div class="form-section">
 
-            <p>
-              We will explain the relevant process and information required.
-            </p>
+            <p class="eyebrow">Additional information</p>
+
+            <h3>Anything else?</h3>
+
+            <div class="form-group">
+
+              <label for="message">
+                Additional Information
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us anything else you'd like us to know..."
+              ></textarea>
+
+            </div>
+
           </div>
-        </div>
+
+
+          <div class="form-section">
+
+            <label class="checkbox-label">
+
+              <input
+                type="checkbox"
+                name="consent"
+                value="Yes"
+                required
+              >
+
+              <span>
+                I agree to Gibson Motors Yorkshire contacting me regarding
+                this finance enquiry. *
+              </span>
+
+            </label>
+
+          </div>
+
+
+          <button type="submit" class="button button-gold form-submit">
+            SUBMIT FINANCE ENQUIRY
+          </button>
+
+
+          <p class="form-legal">
+            Submitting this enquiry does not guarantee finance approval and
+            does not constitute an offer of credit. Finance is subject to
+            status, eligibility and lender approval.
+          </p>
+
+        </form>
 
       </div>
 
     </div>
+
   </section>
 
-  <section class="section section-dark">
-    <div class="container">
-
-      <div class="section-heading centred">
-        <p class="eyebrow">Why enquire with us</p>
-        <h2>A straightforward process</h2>
-      </div>
-
-      <div class="three-column-grid">
-
-        <article class="information-card">
-          <h3>Clear Communication</h3>
-
-          <p>
-            We explain the process clearly and answer any questions you may
-            have.
-          </p>
-        </article>
-
-        <article class="information-card">
-          <h3>Vehicle Choice</h3>
-
-          <p>
-            Finance enquiries can be discussed in relation to vehicles
-            available from our current stock.
-          </p>
-        </article>
-
-        <article class="information-card">
-          <h3>Personal Service</h3>
-
-          <p>
-            Contact us directly for individual support rather than dealing
-            with an automated system.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
 
   <section class="gold-callout">
+
     <div class="container callout-grid">
 
       <div>
-        <p class="eyebrow dark-eyebrow">Speak to us</p>
-        <h2>Ready to discuss vehicle finance?</h2>
+
+        <p class="eyebrow dark-eyebrow">
+          Have a question?
+        </p>
+
+        <h2>Speak to Gibson Motors Yorkshire</h2>
 
         <p>
-          Call us or send an enquiry and we will explain the next steps.
+          If you would rather discuss finance over the phone, give our team
+          a call.
         </p>
+
       </div>
 
       <div class="callout-buttons">
+
         <a href="tel:07394403899" class="button button-black">
-          Call 07394 403899
+          Call Us
         </a>
 
-        <a href="contact.html" class="button button-black-outline">
-          Contact Us
-        </a>
       </div>
 
     </div>
+
   </section>
 
 </main>
 
+
 <footer class="site-footer">
+
   <div class="container footer-grid">
 
     <div class="footer-about">
+
       <img src="logo.png" alt="Gibson Motors Yorkshire">
 
       <p>
-        Quality used vehicles with finance enquiries and warranty included.
+        Quality used vehicles with finance, part exchange and Sale on Return
+        services.
       </p>
+
     </div>
 
+
     <div class="footer-column">
+
       <h3>Quick Links</h3>
+
       <a href="cars.html">Current Stock</a>
+      <a href="finance.html">Finance</a>
       <a href="part-exchange.html">Part Exchange</a>
       <a href="sale-on-return.html">Sale on Return</a>
-      <a href="contact.html">Contact</a>
+
     </div>
 
+
     <div class="footer-column">
+
       <h3>Contact</h3>
-      <a href="tel:07394403899">07394 403899</a>
-      <a href="mailto:GibsonMotorsYorkshire@gmail.com">Email Us</a>
-      <p>Monday to Sunday, 9am–6pm</p>
+
+      <a href="tel:07394403899">
+        07394 403899
+      </a>
+
+      <a href="mailto:GibsonMotorsYorkshire@gmail.com">
+        Email Us
+      </a>
+
+      <p>
+        Bulay Road, Huddersfield, HD1 3NH
+      </p>
+
+      <p>
+        Monday to Sunday, 9am–6pm
+      </p>
+
     </div>
 
   </div>
 
+
   <div class="footer-bottom">
+
     <div class="container">
       © 2026 Gibson Motors Yorkshire. All rights reserved.
     </div>
+
   </div>
+
 </footer>
 
 </body>
