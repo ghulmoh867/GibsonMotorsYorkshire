@@ -1,765 +1,751 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>2015 BMW X5 xDrive40d M Sport | Gibson Motors Yorkshire</title>
+  <meta charset="UTF-8">
 
-<meta
-  name="description"
-  content="2015 BMW X5 xDrive40d M Sport for sale in Huddersfield. 99,331 miles, 3.0L diesel automatic, £17,775, 12 months MOT and 3 months warranty."
->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css?v=21">
+  <title>2015 BMW X5 M Sport | Gibson Motors Yorkshire</title>
 
-<style>
+  <meta
+    name="description"
+    content="2015 BMW X5 M Sport for sale at Gibson Motors Yorkshire, Huddersfield. £17,775. 99,331 miles, 3.0L diesel automatic."
+  >
 
-body{
-    margin:0;
-    background:#070707;
-    color:#fff;
-    font-family:Arial,Helvetica,sans-serif;
-}
+  <link rel="stylesheet" href="style.css?v=18">
 
-.vehicle-shell{
-    padding:55px 0 80px;
-    background:#090909;
-}
+  <style>
 
-.vehicle-container{
-    width:90%;
-    max-width:1250px;
-    margin:auto;
-}
-
-.back-link{
-    display:inline-block;
-    margin-bottom:25px;
-    color:#d4af37;
-    text-decoration:none;
-    font-weight:800;
-}
-
-.vehicle-heading{
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:35px;
-    align-items:end;
-    margin-bottom:32px;
-}
-
-.vehicle-heading h1{
-    margin:0;
-    font-size:clamp(38px,5vw,62px);
-    line-height:1.05;
-}
-
-.vehicle-subtitle{
-    margin:12px 0 0;
-    color:#bdbdbd;
-    font-size:17px;
-}
-
-.vehicle-price{
-    min-width:220px;
-    padding:20px 24px;
-    background:#d4af37;
-    color:#050505;
-}
-
-.vehicle-price span{
-    display:block;
-    font-size:11px;
-    text-transform:uppercase;
-    font-weight:900;
-}
-
-.vehicle-price strong{
-    display:block;
-    margin-top:5px;
-    font-size:36px;
-}
-
-.hero-image{
-    height:560px;
-    overflow:hidden;
-    background:#111;
-    border:1px solid #222;
-}
-
-.hero-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
-
-.thumbnail-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:10px;
-    margin-top:10px;
-}
-
-.thumbnail-grid a{
-    height:135px;
-    overflow:hidden;
-    background:#111;
-    border:1px solid #242424;
-}
-
-.thumbnail-grid img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:.2s ease;
-}
-
-.thumbnail-grid a:hover img{
-    transform:scale(1.04);
-}
-
-.vehicle-info{
-    display:grid;
-    grid-template-columns:1.45fr .7fr;
-    gap:55px;
-    align-items:start;
-    margin-top:65px;
-}
-
-.label{
-    margin:0 0 10px;
-    color:#d4af37;
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:2px;
-    text-transform:uppercase;
-}
-
-.vehicle-info h2{
-    margin:0 0 16px;
-    font-size:40px;
-}
-
-.description{
-    color:#bdbdbd;
-    font-size:17px;
-    line-height:1.75;
-}
-
-.spec-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    margin-top:30px;
-    border-top:1px solid #2d2d2d;
-    border-left:1px solid #2d2d2d;
-}
-
-.spec{
-    padding:20px;
-    background:#151515;
-    border-right:1px solid #2d2d2d;
-    border-bottom:1px solid #2d2d2d;
-}
-
-.spec span{
-    display:block;
-    color:#949494;
-    font-size:11px;
-    font-weight:800;
-    text-transform:uppercase;
-}
-
-.spec strong{
-    display:block;
-    margin-top:6px;
-    font-size:17px;
-}
-
-.enquiry-box{
-    padding:30px;
-    background:#151515;
-    border:1px solid rgba(212,175,55,.4);
-    position:sticky;
-    top:110px;
-}
-
-.enquiry-box h3{
-    margin:0 0 12px;
-    color:#d4af37;
-    font-size:40px;
-}
-
-.enquiry-box p{
-    color:#bdbdbd;
-    line-height:1.65;
-}
-
-.enquiry-button{
-    display:block;
-    width:100%;
-    box-sizing:border-box;
-    padding:15px 18px;
-    margin-top:10px;
-    text-align:center;
-    text-decoration:none;
-    font-weight:900;
-}
-
-.call-button{
-    background:#d4af37;
-    color:#050505;
-}
-
-.email-button{
-    border:1px solid #d4af37;
-    color:#d4af37;
-}
-
-.enquiry-points{
-    margin-top:24px;
-}
-
-.enquiry-points div{
-    padding:11px 0;
-    border-top:1px solid #303030;
-    color:#ddd;
-    font-size:14px;
-}
-
-.features-section{
-    padding:75px 0;
-    background:#0d0d0d;
-}
-
-.features-heading{
-    text-align:center;
-    margin-bottom:35px;
-}
-
-.features-heading h2{
-    margin:0;
-    font-size:42px;
-}
-
-.features-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-}
-
-.features-grid span{
-    position:relative;
-    padding:16px 16px 16px 42px;
-    background:#171717;
-    border:1px solid #292929;
-    color:#ddd;
-}
-
-.features-grid span::before{
-    content:"✓";
-    position:absolute;
-    left:15px;
-    color:#d4af37;
-    font-weight:900;
-}
-
-.cta{
-    padding:65px 0;
-    background:linear-gradient(135deg,#957125,#d4af37);
-    color:#050505;
-}
-
-.cta-inner{
-    width:90%;
-    max-width:1250px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
-}
-
-.cta h2{
-    margin:0 0 10px;
-    font-size:40px;
-}
-
-.cta p{
-    margin:0;
-}
-
-.cta a{
-    padding:15px 24px;
-    background:#050505;
-    color:#fff;
-    text-decoration:none;
-    font-weight:900;
-    white-space:nowrap;
-}
-
-@media(max-width:950px){
-
-    .vehicle-heading{
-        grid-template-columns:1fr;
+    * {
+      box-sizing: border-box;
     }
 
-    .vehicle-price{
-        width:100%;
-        box-sizing:border-box;
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #090909;
+      color: #fff;
     }
 
-    .hero-image{
-        height:430px;
+    a {
+      text-decoration: none;
     }
 
-    .thumbnail-grid{
-        grid-template-columns:repeat(3,1fr);
+    /* HEADER */
+
+    .site-header {
+      background: #050505;
+      border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .vehicle-info{
-        grid-template-columns:1fr;
+    .header-container {
+      max-width: 1400px;
+      margin: auto;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
     }
 
-    .enquiry-box{
-        position:static;
+    .brand img {
+      max-height: 70px;
+      width: auto;
+      display: block;
     }
 
-    .spec-grid{
-        grid-template-columns:repeat(2,1fr);
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
     }
 
-    .features-grid{
-        grid-template-columns:repeat(2,1fr);
+    .main-nav a {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
     }
 
-    .cta-inner{
-        display:grid;
-    }
-}
-
-@media(max-width:600px){
-
-    .hero-image{
-        height:280px;
+    .main-nav a:hover {
+      color: #d4af37;
     }
 
-    .thumbnail-grid{
-        grid-template-columns:repeat(2,1fr);
+    /* VEHICLE */
+
+    .vehicle-page {
+      max-width: 1400px;
+      margin: auto;
+      padding: 50px 25px 90px;
     }
 
-    .thumbnail-grid a{
-        height:110px;
+    .back-link {
+      display: inline-block;
+      color: #d4af37;
+      font-weight: 700;
+      margin-bottom: 30px;
     }
 
-    .spec-grid,
-    .features-grid{
-        grid-template-columns:1fr;
+    .vehicle-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 45px;
+      align-items: start;
     }
 
-    .vehicle-heading h1{
-        font-size:38px;
-    }
-}
+    /* IMAGE */
 
-</style>
+    .vehicle-image {
+      background: #111;
+      border: 1px solid #292929;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .vehicle-image img {
+      width: 100%;
+      height: 570px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* DETAILS */
+
+    .vehicle-details {
+      background: #111;
+      border: 1px solid #292929;
+      border-radius: 15px;
+      padding: 35px;
+    }
+
+    .vehicle-details h1 {
+      margin: 0 0 8px;
+      font-size: 42px;
+      line-height: 1.1;
+    }
+
+    .vehicle-subtitle {
+      color: #aaa;
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .vehicle-price {
+      color: #d4af37;
+      font-size: 38px;
+      font-weight: 900;
+      margin-bottom: 30px;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .spec {
+      background: #1a1a1a;
+      border: 1px solid #292929;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .spec-label {
+      display: block;
+      color: #888;
+      font-size: 12px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .spec-value {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .warranty-box {
+      background: #171717;
+      border-left: 4px solid #d4af37;
+      padding: 16px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .warranty-box strong {
+      color: #d4af37;
+    }
+
+    .vehicle-description {
+      color: #bbb;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    /* BUTTONS */
+
+    .vehicle-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .vehicle-button {
+      display: block;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .gold-button {
+      background: #d4af37;
+      color: #050505;
+    }
+
+    .gold-button:hover {
+      background: #e5c34f;
+    }
+
+    .outline-button {
+      border: 1px solid #d4af37;
+      color: #d4af37;
+    }
+
+    .outline-button:hover {
+      background: #d4af37;
+      color: #050505;
+    }
+
+    /* ENQUIRY */
+
+    .enquiry-section {
+      max-width: 900px;
+      margin: 70px auto 0;
+      background: #111;
+      border: 1px solid #292929;
+      border-radius: 15px;
+      padding: 35px;
+    }
+
+    .enquiry-section h2 {
+      margin-top: 0;
+      font-size: 30px;
+    }
+
+    .enquiry-section > p {
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 7px;
+      border: 1px solid #333;
+      background: #090909;
+      color: #fff;
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #d4af37;
+    }
+
+    .submit-button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #d4af37;
+      color: #050505;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: #e5c34f;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      background: #050505;
+      border-top: 1px solid #222;
+      padding: 35px 20px;
+      text-align: center;
+      color: #999;
+    }
+
+    .site-footer strong {
+      color: #d4af37;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .header-container {
+        flex-direction: column;
+      }
+
+      .main-nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .vehicle-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .vehicle-image img {
+        height: 400px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .vehicle-page {
+        padding: 30px 15px 60px;
+      }
+
+      .vehicle-details {
+        padding: 25px 20px;
+      }
+
+      .vehicle-details h1 {
+        font-size: 32px;
+      }
+
+      .vehicle-price {
+        font-size: 32px;
+      }
+
+      .vehicle-image img {
+        height: 300px;
+      }
+
+      .spec-grid,
+      .form-grid,
+      .vehicle-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .enquiry-section {
+        padding: 25px 20px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header class="site-header">
-<div class="container header-inner">
 
-<a href="index.html" class="brand">
-<img src="logo.png" alt="Gibson Motors Yorkshire">
-</a>
+  <div class="header-container">
 
-<nav class="main-nav">
-<a href="index.html">Home</a>
-<a href="cars.html" class="active">Stock</a>
-<a href="finance.html">Finance</a>
-<a href="part-exchange.html">Part Exchange</a>
-<a href="sale-on-return.html">Sale on Return</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <a href="index.html" class="brand">
 
-<a href="tel:07394403899" class="header-call">
-Call 07394 403899
-</a>
+      <img
+        src="logo.png"
+        alt="Gibson Motors Yorkshire"
+      >
 
-</div>
+    </a>
+
+    <nav class="main-nav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="cars.html">
+        Stock
+      </a>
+
+      <a href="finance.html">
+        Finance
+      </a>
+
+      <a href="part-exchange.html">
+        Part Exchange
+      </a>
+
+      <a href="sale-on-return.html">
+        Sale on Return
+      </a>
+
+    </nav>
+
+  </div>
+
 </header>
 
-<main>
 
-<section class="vehicle-shell">
+<!-- VEHICLE -->
 
-<div class="vehicle-container">
+<main class="vehicle-page">
 
-<a href="cars.html" class="back-link">
-← Back to Current Stock
-</a>
+  <a href="cars.html" class="back-link">
+    ← Back to Stock
+  </a>
 
-<div class="vehicle-heading">
 
-<div>
+  <section class="vehicle-layout">
 
-<p class="label">
-Available Now
-</p>
 
-<h1>
-2015 BMW X5 xDrive40d M Sport
-</h1>
+    <!-- IMAGE -->
 
-<p class="vehicle-subtitle">
-99,331 Miles • 3.0L Diesel • Automatic
-</p>
+    <div class="vehicle-image">
 
-</div>
+      <img
+        src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
+        alt="2015 BMW X5 M Sport"
+      >
 
-<div class="vehicle-price">
+    </div>
 
-<span>Our Price</span>
 
-<strong>
-£17,775
-</strong>
+    <!-- DETAILS -->
 
-</div>
+    <div class="vehicle-details">
 
-</div>
+      <h1>
+        2015 BMW X5
+      </h1>
 
+      <div class="vehicle-subtitle">
+        M Sport
+      </div>
 
-<div class="hero-image">
+      <div class="vehicle-price">
+        £17,775
+      </div>
 
-<a href="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg">
 
-<img
-src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
-alt="2015 BMW X5 xDrive40d M Sport">
+      <div class="spec-grid">
 
-</a>
+        <div class="spec">
 
-</div>
+          <span class="spec-label">
+            Mileage
+          </span>
 
+          <span class="spec-value">
+            99,331 Miles
+          </span>
 
-<div class="thumbnail-grid">
+        </div>
 
-<a href="images/bmw-x5/7f176fb9-b4ad-4016-bcaf-c9a9c4c01b40.jpeg">
-<img src="images/bmw-x5/7f176fb9-b4ad-4016-bcaf-c9a9c4c01b40.jpeg" alt="BMW X5">
-</a>
 
-<a href="images/bmw-x5/748ff82b-2667-429e-9a5b-5ccbcf4569b7.jpeg">
-<img src="images/bmw-x5/748ff82b-2667-429e-9a5b-5ccbcf4569b7.jpeg" alt="BMW X5">
-</a>
+        <div class="spec">
 
-<a href="images/bmw-x5/8680a129-bc17-4c63-a0ff-599b5d884567.jpeg">
-<img src="images/bmw-x5/8680a129-bc17-4c63-a0ff-599b5d884567.jpeg" alt="BMW X5">
-</a>
+          <span class="spec-label">
+            Engine
+          </span>
 
-<a href="images/bmw-x5/a177bd74-8618-4241-bff4-5aebd813af69.jpeg">
-<img src="images/bmw-x5/a177bd74-8618-4241-bff4-5aebd813af69.jpeg" alt="BMW X5">
-</a>
+          <span class="spec-value">
+            3.0L Diesel
+          </span>
 
-<a href="images/bmw-x5/ce5662c6-4915-47a9-8b5b-703315b0a88d.jpeg">
-<img src="images/bmw-x5/ce5662c6-4915-47a9-8b5b-703315b0a88d.jpeg" alt="BMW X5">
-</a>
+        </div>
 
-<a href="images/bmw-x5/e6a96b73-efdb-47f7-8086-b632518591a3.jpeg">
-<img src="images/bmw-x5/e6a96b73-efdb-47f7-8086-b632518591a3.jpeg" alt="BMW X5">
-</a>
 
-<a href="images/bmw-x5/ebece904-f3f8-417b-898a-551a1b8c8913.jpeg">
-<img src="images/bmw-x5/ebece904-f3f8-417b-898a-551a1b8c8913.jpeg" alt="BMW X5">
-</a>
+        <div class="spec">
 
-<a href="images/bmw-x5/0ebd0458-19ac-4145-8f50-e416f68c480b.jpeg">
-<img src="images/bmw-x5/0ebd0458-19ac-4145-8f50-e416f68c480b.jpeg" alt="BMW X5">
-</a>
+          <span class="spec-label">
+            Gearbox
+          </span>
 
-<a href="images/bmw-x5/2adc55e0-69e4-4540-9b93-a805528df08d.jpeg">
-<img src="images/bmw-x5/2adc55e0-69e4-4540-9b93-a805528df08d.jpeg" alt="BMW X5">
-</a>
+          <span class="spec-value">
+            Automatic
+          </span>
 
-<a href="images/bmw-x5/2e6201b2-ec08-4c9b-8115-33614b7b77c2.jpeg">
-<img src="images/bmw-x5/2e6201b2-ec08-4c9b-8115-33614b7b77c2.jpeg" alt="BMW X5">
-</a>
+        </div>
 
-<a href="images/bmw-x5/33a5dcad-1969-4b21-a34b-60956764716d.jpeg">
-<img src="images/bmw-x5/33a5dcad-1969-4b21-a34b-60956764716d.jpeg" alt="BMW X5">
-</a>
 
-<a href="images/bmw-x5/40c3eac5-8c74-43f0-9ffd-9ce879047f76.jpeg">
-<img src="images/bmw-x5/40c3eac5-8c74-43f0-9ffd-9ce879047f76.jpeg" alt="BMW X5">
-</a>
+        <div class="spec">
 
-<a href="images/bmw-x5/48ae79f3-b059-4e74-882f-d4b4370f11dd.jpeg">
-<img src="images/bmw-x5/48ae79f3-b059-4e74-882f-d4b4370f11dd.jpeg" alt="BMW X5">
-</a>
+          <span class="spec-label">
+            Owners
+          </span>
 
-<a href="images/bmw-x5/798a208b-8256-4a0f-9d23-8e5eded382dc.jpeg">
-<img src="images/bmw-x5/798a208b-8256-4a0f-9d23-8e5eded382dc.jpeg" alt="BMW X5">
-</a>
+          <span class="spec-value">
+            4 Owners
+          </span>
 
-<a href="images/bmw-x5/da98e72c-fef9-4f93-9ad7-8d4243b78a49.jpeg">
-<img src="images/bmw-x5/da98e72c-fef9-4f93-9ad7-8d4243b78a49.jpeg" alt="BMW X5">
-</a>
+        </div>
 
-</div>
+      </div>
 
 
-<div class="vehicle-info">
+      <div class="warranty-box">
 
-<div>
+        <strong>
+          12 Months MOT
+        </strong>
 
-<p class="label">
-Vehicle Overview
-</p>
+        <br>
 
-<h2>
-BMW X5 M Sport
-</h2>
+        <strong>
+          3 Months Warranty
+        </strong>
 
-<p class="description">
-A high-specification BMW X5 xDrive40d M Sport powered by a 3.0-litre
-diesel engine with automatic transmission. Finished in black with
-black leather interior, this X5 offers a strong combination of
-performance, comfort and practicality.
+      </div>
 
-<br><br>
 
-Equipment includes panoramic glass roof, electric memory seats,
-satellite navigation, BMW iDrive, reversing camera, 360-degree
-camera system, parking sensors, paddle shifters and electric tailgate.
-</p>
+      <div class="vehicle-description">
 
+        <p>
+          Introducing this 2015 BMW X5 M Sport, available now from
+          Gibson Motors Yorkshire.
+        </p>
 
-<div class="spec-grid">
+        <p>
+          Finished in the highly desirable M Sport specification,
+          this X5 combines BMW's premium SUV styling with a powerful
+          3.0L diesel engine and automatic transmission.
+        </p>
 
-<div class="spec">
-<span>Year</span>
-<strong>2015</strong>
-</div>
+        <p>
+          The vehicle has covered 99,331 miles and has had 4 owners.
+        </p>
 
-<div class="spec">
-<span>Mileage</span>
-<strong>99,331 Miles</strong>
-</div>
+        <p>
+          For further information, additional photographs or to
+          arrange a viewing and test drive, please get in touch
+          with our team.
+        </p>
 
-<div class="spec">
-<span>Engine</span>
-<strong>3.0L</strong>
-</div>
+      </div>
 
-<div class="spec">
-<span>Fuel</span>
-<strong>Diesel</strong>
-</div>
 
-<div class="spec">
-<span>Transmission</span>
-<strong>Automatic</strong>
-</div>
+      <div class="vehicle-buttons">
 
-<div class="spec">
-<span>Owners</span>
-<strong>4</strong>
-</div>
+        <a
+          href="finance.html"
+          class="vehicle-button gold-button"
+        >
+          Finance Enquiry
+        </a>
 
-<div class="spec">
-<span>MOT</span>
-<strong>12 Months</strong>
-</div>
+        <a
+          href="part-exchange.html"
+          class="vehicle-button outline-button"
+        >
+          Part Exchange
+        </a>
 
-<div class="spec">
-<span>Warranty</span>
-<strong>3 Months</strong>
-</div>
+        <a
+          href="tel:07394403899"
+          class="vehicle-button outline-button"
+        >
+          Call Us
+        </a>
 
-</div>
+        <a
+          href="#enquire"
+          class="vehicle-button gold-button"
+        >
+          Enquire Now
+        </a>
 
-</div>
+      </div>
 
+    </div>
 
-<aside class="enquiry-box">
+  </section>
 
-<p class="label">
-Enquire Today
-</p>
 
-<h3>
-£17,775
-</h3>
+  <!-- ENQUIRY FORM -->
 
-<p>
-Contact Gibson Motors Yorkshire to confirm availability and arrange
-an appointment-only viewing or test drive.
-</p>
+  <section
+    class="enquiry-section"
+    id="enquire"
+  >
 
-<a
-href="tel:07394403899"
-class="enquiry-button call-button">
-Call 07394 403899
-</a>
+    <h2>
+      Enquire About This BMW X5
+    </h2>
 
-<a
-href="mailto:GibsonMotorsYorkshire@gmail.com?subject=BMW X5 xDrive40d M Sport Enquiry"
-class="enquiry-button email-button">
-Email About This BMW
-</a>
+    <p>
+      Interested in this vehicle? Complete the form below and
+      Gibson Motors Yorkshire will get back to you as soon as possible.
+    </p>
 
 
-<div class="enquiry-points">
+    <form
+      action="https://formspree.io/f/maeqbpqb"
+      method="POST"
+    >
 
-<div>✓ 3 Months Warranty</div>
+      <input
+        type="hidden"
+        name="enquiry_type"
+        value="BMW X5 Vehicle Enquiry"
+      >
 
-<div>✓ 12 Months MOT</div>
+      <input
+        type="hidden"
+        name="_subject"
+        value="BMW X5 Enquiry - Gibson Motors Yorkshire"
+      >
 
-<div>✓ Part Exchange Welcome</div>
+      <input
+        type="hidden"
+        name="vehicle"
+        value="2015 BMW X5 M Sport - £17,775"
+      >
 
-<div>✓ Finance Enquiries Welcome</div>
 
-</div>
+      <div class="form-grid">
 
-</aside>
 
-</div>
+        <div class="form-group">
 
-</div>
+          <label for="name">
+            Full Name *
+          </label>
 
-</section>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          >
 
+        </div>
 
-<section class="features-section">
 
-<div class="vehicle-container">
+        <div class="form-group">
 
-<div class="features-heading">
+          <label for="phone">
+            Phone Number *
+          </label>
 
-<p class="label">
-Vehicle Specification
-</p>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+          >
 
-<h2>
-Key Features
-</h2>
+        </div>
 
-</div>
 
-<div class="features-grid">
+        <div class="form-group full">
 
-<span>M Sport styling</span>
-<span>3.0L diesel engine</span>
-<span>Automatic transmission</span>
-<span>Black leather interior</span>
-<span>Panoramic glass roof</span>
-<span>Electric memory seats</span>
-<span>BMW iDrive</span>
-<span>Satellite navigation</span>
-<span>Reversing camera</span>
-<span>360-degree camera system</span>
-<span>Front parking sensors</span>
-<span>Rear parking sensors</span>
-<span>Electric tailgate</span>
-<span>Paddle shifters</span>
-<span>Multifunction steering wheel</span>
-<span>Drive mode selection</span>
-<span>Rear privacy glass</span>
-<span>Alloy wheels</span>
+          <label for="email">
+            Email Address *
+          </label>
 
-</div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
 
-</div>
+        </div>
 
-</section>
 
+        <div class="form-group full">
 
-<section class="cta">
+          <label for="message">
+            Message
+          </label>
 
-<div class="cta-inner">
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us what you would like to know about the BMW X5..."
+          ></textarea>
 
-<div>
+        </div>
 
-<h2>
-Interested in this BMW X5?
-</h2>
+      </div>
 
-<p>
-Arrange a viewing or speak to us about finance and part exchange.
-</p>
 
-</div>
+      <button
+        type="submit"
+        class="submit-button"
+      >
+        Send Enquiry
+      </button>
 
-<a href="tel:07394403899">
-Call Now
-</a>
+    </form>
 
-</div>
-
-</section>
+  </section>
 
 </main>
 
 
+<!-- FOOTER -->
+
 <footer class="site-footer">
 
-<div class="container footer-grid">
-
-<div class="footer-about">
-
-<img src="logo.png" alt="Gibson Motors Yorkshire">
-
-<p>
-Quality used cars in Huddersfield with warranty included and
-appointment-only viewings.
-</p>
-
-</div>
-
-<div class="footer-column">
-
-<h3>Quick Links</h3>
-
-<a href="cars.html">Current Stock</a>
-<a href="finance.html">Finance</a>
-<a href="part-exchange.html">Part Exchange</a>
-<a href="sale-on-return.html">Sale on Return</a>
-<a href="contact.html">Contact</a>
-
-</div>
-
-<div class="footer-column">
-
-<h3>Contact</h3>
-
-<a href="tel:07394403899">
-07394 403899
-</a>
-
-<a href="mailto:GibsonMotorsYorkshire@gmail.com">
-GibsonMotorsYorkshire@gmail.com
-</a>
-
-<p>
-Bulay Road, Huddersfield, HD1 3NH
-</p>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-<div class="container">
-© 2026 Gibson Motors Yorkshire. All rights reserved.
-</div>
-
-</div>
+  <p>
+    © 2026
+    <strong>Gibson Motors Yorkshire</strong>.
+    All rights reserved.
+  </p>
 
 </footer>
 
+
 </body>
+
 </html>
