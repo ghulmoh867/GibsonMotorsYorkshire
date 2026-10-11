@@ -1,13 +1,16 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sale on Return | Gibson Motors Yorkshire</title>
 
-  <meta name="description" content="Request a Sale on Return valuation from Gibson Motors Yorkshire.">
+  <meta
+    name="description"
+    content="Submit your vehicle details to Gibson Motors Yorkshire to discuss our Sale on Return service."
+  >
 
   <link rel="stylesheet" href="style.css?v=10">
 </head>
@@ -15,7 +18,6 @@
 <body>
 
 <header class="site-header">
-
   <div class="container header-inner">
 
     <a href="index.html" class="brand">
@@ -23,13 +25,11 @@
     </a>
 
     <nav class="main-nav">
-
       <a href="index.html">Home</a>
       <a href="cars.html">Stock</a>
       <a href="finance.html">Finance</a>
       <a href="part-exchange.html">Part Exchange</a>
       <a href="sale-on-return.html" class="active">Sale on Return</a>
-
     </nav>
 
     <a href="tel:07394403899" class="header-call">
@@ -37,153 +37,153 @@
     </a>
 
   </div>
-
 </header>
-
 
 <main>
 
+  <!-- PAGE BANNER -->
   <section class="page-banner">
-
     <div class="container">
 
-      <p class="eyebrow">
-        Sell your vehicle
-      </p>
+      <p class="eyebrow">Sell your vehicle</p>
 
-      <h1>
-        Sale on Return
-      </h1>
+      <h1>Sale on Return</h1>
 
       <p>
-        Let Gibson Motors Yorkshire discuss professionally advertising and
-        selling your vehicle on your behalf.
+        Complete the form below and we'll review your vehicle and get back to
+        you to discuss our Sale on Return service.
       </p>
 
     </div>
-
   </section>
 
 
+  <!-- INTRO -->
   <section class="section">
+    <div class="container split-layout">
 
-    <div class="container form-layout">
+      <div>
 
-      <div class="form-intro">
+        <p class="eyebrow">Professional vehicle sales</p>
 
-        <p class="eyebrow">
-          Professional vehicle sales
-        </p>
-
-        <h2>
-          Let us help market and sell your car
-        </h2>
+        <h2>Let us help market and sell your car</h2>
 
         <p class="large-text">
-          Complete the form below with your vehicle details and our team can
-          review whether your vehicle may be suitable for Sale on Return.
+          Our Sale on Return service may provide an alternative to selling
+          privately or accepting an immediate trade valuation.
         </p>
 
         <p class="muted-text">
-          Suitability, pricing, preparation, fees and the sales process will
-          be discussed before any agreement is made.
+          Send us your vehicle details and we'll review the information before
+          discussing suitability, pricing, fees, preparation and the sales
+          process with you.
         </p>
 
+      </div>
 
-        <div class="feature-panel">
+      <div class="feature-panel">
 
-          <div class="panel-item">
+        <div class="panel-item">
+          <span>01</span>
 
-            <span>01</span>
+          <div>
+            <h3>Vehicle Assessment</h3>
 
-            <div>
-
-              <h3>
-                Vehicle Assessment
-              </h3>
-
-              <p>
-                We review the vehicle's specification, condition and history.
-              </p>
-
-            </div>
-
+            <p>
+              We review your vehicle's condition, specification and history.
+            </p>
           </div>
+        </div>
 
+        <div class="panel-item">
+          <span>02</span>
 
-          <div class="panel-item">
+          <div>
+            <h3>Professional Advertising</h3>
 
-            <span>02</span>
-
-            <div>
-
-              <h3>
-                Professional Advertising
-              </h3>
-
-              <p>
-                Discuss how your vehicle could be prepared and advertised.
-              </p>
-
-            </div>
-
+            <p>
+              Your vehicle can be professionally presented and advertised to
+              potential buyers.
+            </p>
           </div>
+        </div>
 
+        <div class="panel-item">
+          <span>03</span>
 
-          <div class="panel-item">
+          <div>
+            <h3>Sale Completion</h3>
 
-            <span>03</span>
-
-            <div>
-
-              <h3>
-                Agree The Process
-              </h3>
-
-              <p>
-                Terms and next steps are discussed before any agreement is
-                made.
-              </p>
-
-            </div>
-
+            <p>
+              If accepted, the agreed terms and sales process will be discussed
+              before the vehicle is marketed.
+            </p>
           </div>
-
         </div>
 
       </div>
 
+    </div>
+  </section>
 
-      <div class="form-card">
+
+  <!-- FORM -->
+  <section class="section section-dark">
+
+    <div class="container">
+
+      <div class="section-heading centred">
+
+        <p class="eyebrow">Sale on Return Enquiry</p>
+
+        <h2>Tell us about your vehicle</h2>
+
+        <p>
+          Provide as much information as possible so we can properly review
+          your vehicle.
+        </p>
+
+      </div>
+
+
+      <div class="form-wrapper">
 
         <form
-          action="#"
+          action="https://formspree.io/f/maeqbpqb"
           method="POST"
           enctype="multipart/form-data"
         >
 
+          <input
+            type="hidden"
+            name="enquiry_type"
+            value="Sale on Return"
+          >
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Sale on Return Enquiry - Gibson Motors Yorkshire"
+          >
+
+
+          <!-- CUSTOMER DETAILS -->
+
           <div class="form-section">
 
-            <p class="eyebrow">
-              Your details
-            </p>
-
-            <h3>
-              Contact Information
-            </h3>
-
+            <h3>Customer Details</h3>
 
             <div class="form-grid">
 
               <div class="form-group">
 
-                <label for="full_name">
+                <label for="name">
                   Full Name *
                 </label>
 
                 <input
                   type="text"
-                  id="full_name"
+                  id="name"
                   name="full_name"
                   required
                   autocomplete="name"
@@ -247,16 +247,11 @@
           </div>
 
 
+          <!-- VEHICLE DETAILS -->
+
           <div class="form-section">
 
-            <p class="eyebrow">
-              Your vehicle
-            </p>
-
-            <h3>
-              Vehicle Details
-            </h3>
-
+            <h3>Vehicle Details</h3>
 
             <div class="form-grid">
 
@@ -269,8 +264,7 @@
                 <input
                   type="text"
                   id="registration"
-                  name="registration"
-                  placeholder="e.g. AB12 CDE"
+                  name="vehicle_registration"
                   required
                 >
 
@@ -286,7 +280,7 @@
                 <input
                   type="text"
                   id="make"
-                  name="make"
+                  name="vehicle_make"
                   placeholder="e.g. BMW"
                   required
                 >
@@ -303,7 +297,7 @@
                 <input
                   type="text"
                   id="model"
-                  name="model"
+                  name="vehicle_model"
                   placeholder="e.g. X5 M Sport"
                   required
                 >
@@ -320,7 +314,7 @@
                 <input
                   type="number"
                   id="year"
-                  name="year"
+                  name="vehicle_year"
                   min="1900"
                   max="2030"
                   required
@@ -338,7 +332,7 @@
                 <input
                   type="number"
                   id="mileage"
-                  name="mileage"
+                  name="vehicle_mileage"
                   min="0"
                   placeholder="e.g. 85000"
                   required
@@ -355,41 +349,18 @@
 
                 <select
                   id="owners"
-                  name="owners"
+                  name="previous_owners"
                   required
                 >
 
-                  <option value="">
-                    Please select
-                  </option>
-
-                  <option value="1">
-                    1 owner
-                  </option>
-
-                  <option value="2">
-                    2 owners
-                  </option>
-
-                  <option value="3">
-                    3 owners
-                  </option>
-
-                  <option value="4">
-                    4 owners
-                  </option>
-
-                  <option value="5">
-                    5 owners
-                  </option>
-
-                  <option value="6+">
-                    6+ owners
-                  </option>
-
-                  <option value="Not sure">
-                    Not sure
-                  </option>
+                  <option value="">Select</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6+">6+</option>
+                  <option value="Not sure">Not sure</option>
 
                 </select>
 
@@ -402,35 +373,15 @@
                   Fuel Type
                 </label>
 
-                <select id="fuel" name="fuel">
+                <select id="fuel" name="fuel_type">
 
-                  <option value="">
-                    Please select
-                  </option>
-
-                  <option value="Petrol">
-                    Petrol
-                  </option>
-
-                  <option value="Diesel">
-                    Diesel
-                  </option>
-
-                  <option value="Hybrid">
-                    Hybrid
-                  </option>
-
-                  <option value="Plug-in Hybrid">
-                    Plug-in Hybrid
-                  </option>
-
-                  <option value="Electric">
-                    Electric
-                  </option>
-
-                  <option value="Other">
-                    Other
-                  </option>
+                  <option value="">Select</option>
+                  <option value="Petrol">Petrol</option>
+                  <option value="Diesel">Diesel</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Plug-in Hybrid">Plug-in Hybrid</option>
+                  <option value="Electric">Electric</option>
+                  <option value="Other">Other</option>
 
                 </select>
 
@@ -445,25 +396,10 @@
 
                 <select id="gearbox" name="gearbox">
 
-                  <option value="">
-                    Please select
-                  </option>
-
-                  <option value="Manual">
-                    Manual
-                  </option>
-
-                  <option value="Automatic">
-                    Automatic
-                  </option>
-
-                  <option value="Semi-Automatic">
-                    Semi-Automatic
-                  </option>
-
-                  <option value="Other">
-                    Other
-                  </option>
+                  <option value="">Select</option>
+                  <option value="Manual">Manual</option>
+                  <option value="Automatic">Automatic</option>
+                  <option value="Semi-Automatic">Semi-Automatic</option>
 
                 </select>
 
@@ -472,13 +408,13 @@
 
               <div class="form-group">
 
-                <label for="mot_expiry">
+                <label for="mot">
                   MOT Expiry
                 </label>
 
                 <input
                   type="date"
-                  id="mot_expiry"
+                  id="mot"
                   name="mot_expiry"
                 >
 
@@ -487,34 +423,20 @@
 
               <div class="form-group">
 
-                <label for="service_history">
+                <label for="service-history">
                   Service History
                 </label>
 
                 <select
-                  id="service_history"
+                  id="service-history"
                   name="service_history"
                 >
 
-                  <option value="">
-                    Please select
-                  </option>
-
-                  <option value="Full">
-                    Full
-                  </option>
-
-                  <option value="Part">
-                    Part
-                  </option>
-
-                  <option value="None">
-                    None
-                  </option>
-
-                  <option value="Not sure">
-                    Not sure
-                  </option>
+                  <option value="">Select</option>
+                  <option value="Full">Full</option>
+                  <option value="Part">Part</option>
+                  <option value="None">None</option>
+                  <option value="Not sure">Not sure</option>
 
                 </select>
 
@@ -527,29 +449,13 @@
                   Number of Keys
                 </label>
 
-                <select id="keys" name="keys">
-
-                  <option value="">
-                    Please select
-                  </option>
-
-                  <option value="1">
-                    1 key
-                  </option>
-
-                  <option value="2">
-                    2 keys
-                  </option>
-
-                  <option value="3+">
-                    3+ keys
-                  </option>
-
-                  <option value="Not sure">
-                    Not sure
-                  </option>
-
-                </select>
+                <input
+                  type="number"
+                  id="keys"
+                  name="number_of_keys"
+                  min="0"
+                  max="10"
+                >
 
               </div>
 
@@ -560,19 +466,11 @@
                   V5C Available?
                 </label>
 
-                <select id="v5c" name="v5c">
+                <select id="v5c" name="v5c_available">
 
-                  <option value="">
-                    Please select
-                  </option>
-
-                  <option value="Yes">
-                    Yes
-                  </option>
-
-                  <option value="No">
-                    No
-                  </option>
+                  <option value="">Select</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
 
                 </select>
 
@@ -587,20 +485,12 @@
 
                 <select
                   id="finance"
-                  name="finance"
+                  name="outstanding_finance"
                 >
 
-                  <option value="">
-                    Please select
-                  </option>
-
-                  <option value="Yes">
-                    Yes
-                  </option>
-
-                  <option value="No">
-                    No
-                  </option>
+                  <option value="">Select</option>
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
 
                 </select>
 
@@ -614,9 +504,11 @@
                 </label>
 
                 <input
-                  type="text"
+                  type="number"
                   id="settlement"
-                  name="settlement"
+                  name="settlement_amount"
+                  min="0"
+                  step="0.01"
                   placeholder="If applicable"
                 >
 
@@ -627,16 +519,11 @@
           </div>
 
 
+          <!-- CONDITION -->
+
           <div class="form-section">
 
-            <p class="eyebrow">
-              Vehicle condition
-            </p>
-
-            <h3>
-              Tell Us About The Vehicle
-            </h3>
-
+            <h3>Vehicle Condition</h3>
 
             <div class="form-grid">
 
@@ -648,78 +535,61 @@
 
                 <select
                   id="condition"
-                  name="condition"
+                  name="overall_condition"
                 >
 
-                  <option value="">
-                    Please select
-                  </option>
-
-                  <option value="Excellent">
-                    Excellent
-                  </option>
-
-                  <option value="Good">
-                    Good
-                  </option>
-
-                  <option value="Fair">
-                    Fair
-                  </option>
-
-                  <option value="Needs attention">
-                    Needs attention
-                  </option>
+                  <option value="">Select</option>
+                  <option value="Excellent">Excellent</option>
+                  <option value="Good">Good</option>
+                  <option value="Fair">Fair</option>
+                  <option value="Needs attention">Needs attention</option>
 
                 </select>
 
               </div>
 
+            </div>
 
-              <div class="form-group full-width">
 
-                <label for="vehicle_information">
-                  Additional Information
-                </label>
+            <div class="form-group">
 
-                <textarea
-                  id="vehicle_information"
-                  name="vehicle_information"
-                  rows="6"
-                  placeholder="Please tell us about any faults, damage, modifications, previous accident damage or anything else we should know..."
-                ></textarea>
+              <label for="condition-details">
+                Additional Information / Known Faults / Damage / Modifications
+              </label>
 
-              </div>
+              <textarea
+                id="condition-details"
+                name="condition_details"
+                rows="6"
+                placeholder="Please tell us about any damage, faults, warning lights, modifications, cosmetic issues or anything else we should know."
+              ></textarea>
 
             </div>
 
           </div>
 
 
+          <!-- SELLING EXPECTATIONS -->
+
           <div class="form-section">
 
-            <p class="eyebrow">
-              Selling expectations
-            </p>
-
-            <h3>
-              Tell Us What You're Looking For
-            </h3>
-
+            <h3>Selling Expectations</h3>
 
             <div class="form-grid">
 
               <div class="form-group">
 
-                <label for="asking_price">
+                <label for="selling-price">
                   Desired Selling Price
                 </label>
 
                 <input
-                  type="text"
-                  id="asking_price"
-                  name="asking_price"
-                  placeholder="e.g. £15,000"
+                  type="number"
+                  id="selling-price"
+                  name="desired_selling_price"
+                  min="0"
+                  step="0.01"
+                  placeholder="£"
                 >
 
               </div>
@@ -733,13 +603,10 @@
 
                 <select
                   id="timeframe"
-                  name="timeframe"
+                  name="selling_timeframe"
                 >
 
-                  <option value="">
-                    Please select
-                  </option>
-
+                  <option value="">Select</option>
                   <option value="As soon as possible">
                     As soon as possible
                   </option>
@@ -760,41 +627,42 @@
 
               </div>
 
+            </div>
 
-              <div class="form-group full-width">
 
-                <label for="expectations">
-                  Anything Else?
-                </label>
+            <div class="form-group">
 
-                <textarea
-                  id="expectations"
-                  name="expectations"
-                  rows="4"
-                  placeholder="Tell us anything else about your vehicle or what you are looking for..."
-                ></textarea>
+              <label for="anything-else">
+                Anything Else?
+              </label>
 
-              </div>
+              <textarea
+                id="anything-else"
+                name="additional_information"
+                rows="5"
+                placeholder="Tell us anything else you'd like us to know."
+              ></textarea>
 
             </div>
 
           </div>
 
 
+          <!-- PHOTOS -->
+
           <div class="form-section">
 
-            <p class="eyebrow">
-              Vehicle photographs
-            </p>
+            <h3>Vehicle Photos</h3>
 
-            <h3>
-              Upload Photos
-            </h3>
+            <p class="muted-text">
+              Upload photographs of your vehicle if available. Clear photos
+              showing the exterior, interior and any damage are helpful.
+            </p>
 
             <div class="form-group">
 
               <label for="photos">
-                Vehicle Photos
+                Upload Vehicle Photos
               </label>
 
               <input
@@ -805,14 +673,12 @@
                 multiple
               >
 
-              <small class="form-help">
-                Clear exterior and interior photographs are recommended.
-              </small>
-
             </div>
 
           </div>
 
+
+          <!-- CONSENT -->
 
           <div class="form-section">
 
@@ -821,13 +687,13 @@
               <input
                 type="checkbox"
                 name="consent"
-                value="Yes"
+                value="I agree to Gibson Motors Yorkshire contacting me regarding this Sale on Return enquiry."
                 required
               >
 
               <span>
-                I agree to Gibson Motors Yorkshire contacting me regarding
-                this Sale on Return enquiry. *
+                I agree to Gibson Motors Yorkshire contacting me regarding this
+                Sale on Return enquiry. *
               </span>
 
             </label>
@@ -835,19 +701,27 @@
           </div>
 
 
-          <button
-            type="submit"
-            class="button button-gold form-submit"
-          >
-            SUBMIT SALE ON RETURN ENQUIRY
-          </button>
+          <!-- SUBMIT -->
+
+          <div class="form-submit">
+
+            <button
+              type="submit"
+              class="button button-gold"
+            >
+              SUBMIT SALE ON RETURN ENQUIRY
+            </button>
+
+          </div>
 
 
           <p class="form-legal">
-            Submitting this enquiry does not mean that Gibson Motors
-            Yorkshire has agreed to accept the vehicle for Sale on Return.
-            Vehicle suitability, pricing, fees, terms and the sales process
-            will be discussed before any agreement is made.
+
+            Submitting this form does not mean that Gibson Motors Yorkshire has
+            accepted your vehicle for Sale on Return. Vehicle suitability,
+            pricing, fees, terms and the sales process will be discussed before
+            any agreement is made.
+
           </p>
 
         </form>
@@ -859,6 +733,67 @@
   </section>
 
 
+  <!-- WHY SOR -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading centred">
+
+        <p class="eyebrow">Why consider SOR</p>
+
+        <h2>A more professional way to sell</h2>
+
+      </div>
+
+
+      <div class="three-column-grid">
+
+        <article class="information-card">
+
+          <h3>Professional Presentation</h3>
+
+          <p>
+            Your vehicle can be prepared, photographed and advertised
+            professionally.
+          </p>
+
+        </article>
+
+
+        <article class="information-card">
+
+          <h3>Enquiry Management</h3>
+
+          <p>
+            We can discuss handling buyer enquiries and arranging suitable
+            viewings.
+          </p>
+
+        </article>
+
+
+        <article class="information-card">
+
+          <h3>Agreed Process</h3>
+
+          <p>
+            Terms, fees and the target selling price are discussed before the
+            service begins.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GOLD CALLOUT -->
+
   <section class="gold-callout">
 
     <div class="container callout-grid">
@@ -866,16 +801,15 @@
       <div>
 
         <p class="eyebrow dark-eyebrow">
-          Sale on Return
+          Sell your car
         </p>
 
         <h2>
-          Prefer to discuss your vehicle directly?
+          Ready to discuss selling your vehicle?
         </h2>
 
         <p>
-          Give Gibson Motors Yorkshire a call and speak to our team about
-          selling your vehicle.
+          Complete the form above or call Gibson Motors Yorkshire directly.
         </p>
 
       </div>
@@ -883,7 +817,10 @@
 
       <div class="callout-buttons">
 
-        <a href="tel:07394403899" class="button button-black">
+        <a
+          href="tel:07394403899"
+          class="button button-black"
+        >
           Call Us
         </a>
 
@@ -896,17 +833,22 @@
 </main>
 
 
+<!-- FOOTER -->
+
 <footer class="site-footer">
 
   <div class="container footer-grid">
 
     <div class="footer-about">
 
-      <img src="logo.png" alt="Gibson Motors Yorkshire">
+      <img
+        src="logo.png"
+        alt="Gibson Motors Yorkshire"
+      >
 
       <p>
-        Quality used vehicles with finance, part exchange and Sale on Return
-        services.
+        Used vehicles, finance, part exchange and Sale on Return services in
+        Huddersfield.
       </p>
 
     </div>
@@ -914,9 +856,7 @@
 
     <div class="footer-column">
 
-      <h3>
-        Quick Links
-      </h3>
+      <h3>Quick Links</h3>
 
       <a href="cars.html">
         Current Stock
@@ -939,9 +879,7 @@
 
     <div class="footer-column">
 
-      <h3>
-        Contact
-      </h3>
+      <h3>Contact</h3>
 
       <a href="tel:07394403899">
         07394 403899
@@ -952,7 +890,9 @@
       </a>
 
       <p>
-        Bulay Road, Huddersfield, HD1 3NH
+        Bulay Road<br>
+        Huddersfield<br>
+        HD1 3NH
       </p>
 
       <p>
@@ -967,7 +907,9 @@
   <div class="footer-bottom">
 
     <div class="container">
+
       © 2026 Gibson Motors Yorkshire. All rights reserved.
+
     </div>
 
   </div>
@@ -976,3 +918,4 @@
 
 </body>
 </html>
+```
