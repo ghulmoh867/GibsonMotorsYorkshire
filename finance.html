@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +35,7 @@
 
   </div>
 </header>
+
 
 <main>
 
@@ -77,8 +79,10 @@
 
           <div class="panel-item">
             <span>01</span>
+
             <div>
               <h3>Choose Your Vehicle</h3>
+
               <p>
                 Tell us which vehicle you're interested in.
               </p>
@@ -87,8 +91,10 @@
 
           <div class="panel-item">
             <span>02</span>
+
             <div>
               <h3>Submit Your Enquiry</h3>
+
               <p>
                 Send us your basic details and requirements.
               </p>
@@ -97,8 +103,10 @@
 
           <div class="panel-item">
             <span>03</span>
+
             <div>
               <h3>We'll Contact You</h3>
+
               <p>
                 Our team will discuss the next steps with you.
               </p>
@@ -112,7 +120,23 @@
 
       <div class="form-card">
 
-        <form action="#" method="POST">
+        <form
+          action="https://formspree.io/f/maeqbpqb"
+          method="POST"
+        >
+
+          <input
+            type="hidden"
+            name="enquiry_type"
+            value="Finance"
+          >
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Finance Enquiry - Gibson Motors Yorkshire"
+          >
+
 
           <div class="form-section">
 
@@ -124,6 +148,7 @@
 
               <div class="form-group">
                 <label for="full_name">Full Name *</label>
+
                 <input
                   type="text"
                   id="full_name"
@@ -133,8 +158,10 @@
                 >
               </div>
 
+
               <div class="form-group">
                 <label for="phone">Phone Number *</label>
+
                 <input
                   type="tel"
                   id="phone"
@@ -144,8 +171,10 @@
                 >
               </div>
 
+
               <div class="form-group">
                 <label for="email">Email Address *</label>
+
                 <input
                   type="email"
                   id="email"
@@ -155,8 +184,10 @@
                 >
               </div>
 
+
               <div class="form-group">
                 <label for="postcode">Postcode *</label>
+
                 <input
                   type="text"
                   id="postcode"
@@ -180,7 +211,11 @@
             <div class="form-grid">
 
               <div class="form-group full-width">
-                <label for="vehicle">Vehicle You're Interested In *</label>
+
+                <label for="vehicle">
+                  Vehicle You're Interested In *
+                </label>
+
                 <input
                   type="text"
                   id="vehicle"
@@ -188,49 +223,105 @@
                   placeholder="e.g. 2015 BMW X5 M Sport"
                   required
                 >
+
               </div>
 
+
               <div class="form-group">
-                <label for="budget">Vehicle Price / Budget</label>
+
+                <label for="budget">
+                  Vehicle Price / Budget
+                </label>
+
                 <input
                   type="text"
                   id="budget"
                   name="budget"
                   placeholder="e.g. £15,000"
                 >
+
               </div>
 
+
               <div class="form-group">
-                <label for="deposit">Deposit Available</label>
+
+                <label for="deposit">
+                  Deposit Available
+                </label>
+
                 <input
                   type="text"
                   id="deposit"
                   name="deposit"
                   placeholder="e.g. £2,000"
                 >
+
               </div>
 
-              <div class="form-group">
-                <label for="term">Preferred Finance Term</label>
 
-                <select id="term" name="term">
-                  <option value="">Please select</option>
-                  <option value="24 months">24 months</option>
-                  <option value="36 months">36 months</option>
-                  <option value="48 months">48 months</option>
-                  <option value="60 months">60 months</option>
-                  <option value="Not sure">Not sure</option>
+              <div class="form-group">
+
+                <label for="term">
+                  Preferred Finance Term
+                </label>
+
+                <select
+                  id="term"
+                  name="term"
+                >
+
+                  <option value="">
+                    Please select
+                  </option>
+
+                  <option value="24 months">
+                    24 months
+                  </option>
+
+                  <option value="36 months">
+                    36 months
+                  </option>
+
+                  <option value="48 months">
+                    48 months
+                  </option>
+
+                  <option value="60 months">
+                    60 months
+                  </option>
+
+                  <option value="Not sure">
+                    Not sure
+                  </option>
+
                 </select>
 
               </div>
 
-              <div class="form-group">
-                <label for="part_exchange">Part Exchange?</label>
 
-                <select id="part_exchange" name="part_exchange">
-                  <option value="">Please select</option>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
+              <div class="form-group">
+
+                <label for="part_exchange">
+                  Part Exchange?
+                </label>
+
+                <select
+                  id="part_exchange"
+                  name="part_exchange"
+                >
+
+                  <option value="">
+                    Please select
+                  </option>
+
+                  <option value="Yes">
+                    Yes
+                  </option>
+
+                  <option value="No">
+                    No
+                  </option>
+
                 </select>
 
               </div>
@@ -285,7 +376,10 @@
           </div>
 
 
-          <button type="submit" class="button button-gold form-submit">
+          <button
+            type="submit"
+            class="button button-gold form-submit"
+          >
             SUBMIT FINANCE ENQUIRY
           </button>
 
@@ -315,7 +409,9 @@
           Have a question?
         </p>
 
-        <h2>Speak to Gibson Motors Yorkshire</h2>
+        <h2>
+          Speak to Gibson Motors Yorkshire
+        </h2>
 
         <p>
           If you would rather discuss finance over the phone, give our team
@@ -324,9 +420,13 @@
 
       </div>
 
+
       <div class="callout-buttons">
 
-        <a href="tel:07394403899" class="button button-black">
+        <a
+          href="tel:07394403899"
+          class="button button-black"
+        >
           Call Us
         </a>
 
@@ -345,7 +445,10 @@
 
     <div class="footer-about">
 
-      <img src="logo.png" alt="Gibson Motors Yorkshire">
+      <img
+        src="logo.png"
+        alt="Gibson Motors Yorkshire"
+      >
 
       <p>
         Quality used vehicles with finance, part exchange and Sale on Return
@@ -359,10 +462,21 @@
 
       <h3>Quick Links</h3>
 
-      <a href="cars.html">Current Stock</a>
-      <a href="finance.html">Finance</a>
-      <a href="part-exchange.html">Part Exchange</a>
-      <a href="sale-on-return.html">Sale on Return</a>
+      <a href="cars.html">
+        Current Stock
+      </a>
+
+      <a href="finance.html">
+        Finance
+      </a>
+
+      <a href="part-exchange.html">
+        Part Exchange
+      </a>
+
+      <a href="sale-on-return.html">
+        Sale on Return
+      </a>
 
     </div>
 
@@ -395,7 +509,10 @@
   <div class="footer-bottom">
 
     <div class="container">
-      © 2026 Gibson Motors Yorkshire. All rights reserved.
+
+      © 2026 Gibson Motors Yorkshire.
+      All rights reserved.
+
     </div>
 
   </div>
@@ -404,3 +521,4 @@
 
 </body>
 </html>
+```
