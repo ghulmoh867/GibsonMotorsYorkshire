@@ -1,41 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Browse quality used vehicles at Gibson Motors Yorkshire in Huddersfield. Finance, part exchange and warranty options available.">
   <title>Current Stock | Gibson Motors Yorkshire</title>
-
-  <meta
-    name="description"
-    content="Browse current used cars for sale at Gibson Motors Yorkshire in Huddersfield. Finance, part exchange and warranty available."
-  >
-
   <link rel="stylesheet" href="style.css?v=18">
 
   <style>
-
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background: #090909;
-      color: #ffffff;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     a {
       text-decoration: none;
     }
-
-    /* ================================
-       HEADER
-    ================================= */
 
     .site-header {
       background: #050505;
@@ -79,18 +66,10 @@
       color: #d4af37;
     }
 
-    /* ================================
-       HERO
-    ================================= */
-
     .stock-hero {
       text-align: center;
       padding: 65px 20px 55px;
-      background: linear-gradient(
-        180deg,
-        #050505 0%,
-        #0b0b0b 100%
-      );
+      background: linear-gradient(180deg, #050505, #0b0b0b);
       border-bottom: 1px solid #1f1f1f;
     }
 
@@ -112,10 +91,6 @@
       line-height: 1.7;
     }
 
-    /* ================================
-       STOCK SECTION
-    ================================= */
-
     .stock-section {
       max-width: 1400px;
       margin: auto;
@@ -127,6 +102,7 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 32px;
+      gap: 15px;
     }
 
     .stock-heading h2 {
@@ -145,10 +121,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
     }
-
-    /* ================================
-       CAR CARD
-    ================================= */
 
     .car-card {
       position: relative;
@@ -227,6 +199,7 @@
       margin-bottom: 20px;
       color: #ddd;
       font-size: 14px;
+      line-height: 1.6;
     }
 
     .warranty strong {
@@ -247,10 +220,6 @@
     .car-button:hover {
       background: #e5c34f;
     }
-
-    /* ================================
-       SOLD VEHICLES
-    ================================= */
 
     .sold-card {
       opacity: 0.86;
@@ -300,10 +269,6 @@
       color: #000;
     }
 
-    /* ================================
-       FOOTER
-    ================================= */
-
     .site-footer {
       background: #050505;
       border-top: 1px solid #222;
@@ -316,24 +281,13 @@
       color: #d4af37;
     }
 
-    /* ================================
-       TABLET
-    ================================= */
-
     @media (max-width: 1050px) {
-
       .cars-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
     }
 
-    /* ================================
-       MOBILE
-    ================================= */
-
     @media (max-width: 800px) {
-
       .header-container {
         flex-direction: column;
       }
@@ -342,11 +296,9 @@
         justify-content: center;
         gap: 15px;
       }
-
     }
 
     @media (max-width: 650px) {
-
       .stock-hero h1 {
         font-size: 37px;
       }
@@ -369,875 +321,394 @@
         padding-left: 15px;
         padding-right: 15px;
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
-<!-- ================================
-     HEADER
-================================= -->
-
-<header class="site-header">
-
-  <div class="header-container">
-
-    <a href="index.html" class="brand">
-
-      <img
-        src="logo.png"
-        alt="Gibson Motors Yorkshire"
-      >
-
-    </a>
-
-
-    <nav class="main-nav">
-
-      <a href="index.html">
-        Home
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Gibson Motors Yorkshire">
       </a>
 
-      <a href="cars.html" class="active">
-        Stock
-      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="cars.html" class="active">Stock</a>
+        <a href="finance.html">Finance</a>
+        <a href="part-exchange.html">Part Exchange</a>
+        <a href="sale-on-return.html">Sale on Return</a>
+      </nav>
+    </div>
+  </header>
 
-      <a href="finance.html">
-        Finance
-      </a>
-
-      <a href="part-exchange.html">
-        Part Exchange
-      </a>
-
-      <a href="sale-on-return.html">
-        Sale on Return
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
-
-    </nav>
-
-  </div>
-
-</header>
-
-
-<!-- ================================
-     HERO
-================================= -->
-
-<section class="stock-hero">
-
-  <h1>
-    Current <span>Stock</span>
-  </h1>
-
-  <p>
-    Quality used vehicles from Gibson Motors Yorkshire.
-    View our latest available stock below.
-  </p>
-
-</section>
-
-
-<!-- ================================
-     STOCK
-================================= -->
-
-<main class="stock-section">
-
-  <div class="stock-heading">
-
-    <h2>
-      Our Stock
-    </h2>
-
+  <!-- STOCK HERO -->
+  <section class="stock-hero">
+    <h1>Current <span>Stock</span></h1>
     <p>
-      Gibson Motors Yorkshire
+      Quality used vehicles from Gibson Motors Yorkshire.
+      Explore our latest available stock below.
     </p>
+  </section>
 
-  </div>
+  <!-- STOCK LISTINGS -->
+  <main class="stock-section">
+    <div class="stock-heading">
+      <h2>Our Stock</h2>
+      <p>Gibson Motors Yorkshire</p>
+    </div>
 
+    <div class="cars-grid">
 
-  <div class="cars-grid">
-
-
-    <!-- =================================
-         BMW M140i - AVAILABLE
-    ================================== -->
-
-    <article class="car-card">
-
-      <a
-        href="bmw-m140i-2019.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="images/bmw-m140i-2019/0b5de0d7-def2-4798-99ab-2bea5592ac44.jpeg"
-          alt="2019 BMW M140i Shadow Edition"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          2019 BMW M140i
-        </h3>
-
-        <p class="car-subtitle">
-          Shadow Edition
-        </p>
-
-        <div class="car-price">
-          £21,995
-        </div>
-
-
-        <div class="car-specs">
-
-          <span>
-            56,000 Miles
-          </span>
-
-          <span>
-            3.0L Petrol
-          </span>
-
-          <span>
-            Automatic
-          </span>
-
-          <span>
-            2 Owners
-          </span>
-
-        </div>
-
-
-        <div class="warranty">
-
-          <strong>
-            12 Months MOT • 3 Months Warranty
-          </strong>
-
-        </div>
-
-
-        <a
-          href="bmw-m140i-2019.html"
-          class="car-button"
-        >
-          View Vehicle
+      <!-- BMW 520D - AVAILABLE -->
+      <article class="car-card">
+        <a href="bmw-520d-2017.html" class="car-image-link">
+          <img
+            src="images/bmw-520d-2017/cd1adce8-a46b-4ff0-ae90-c4cbcfc854c1.jpeg"
+            alt="2017 BMW 520d xDrive M Sport Touring"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>2017 BMW 520d</h3>
+          <p class="car-subtitle">xDrive M Sport Touring</p>
+          <div class="car-price">£13,995</div>
 
-    </article>
+          <div class="car-specs">
+            <span>106,000 Miles</span>
+            <span>2.0L Diesel</span>
+            <span>Automatic</span>
+            <span>3 Owners</span>
+          </div>
 
+          <div class="warranty">
+            <strong>12 Months MOT • 3 Months Warranty</strong>
+            <p>Full Service History</p>
+          </div>
 
-
-    <!-- =================================
-         BMW X5 - AVAILABLE
-    ================================== -->
-
-    <article class="car-card">
-
-      <a
-        href="bmw-x5.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
-          alt="2015 BMW X5 M Sport"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          2015 BMW X5
-        </h3>
-
-        <p class="car-subtitle">
-          M Sport
-        </p>
-
-        <div class="car-price">
-          £17,775
+          <a href="bmw-520d-2017.html" class="car-button">
+            View Vehicle
+          </a>
         </div>
+      </article>
 
-
-        <div class="car-specs">
-
-          <span>
-            99,331 Miles
-          </span>
-
-          <span>
-            3.0L Diesel
-          </span>
-
-          <span>
-            Automatic
-          </span>
-
-          <span>
-            4 Owners
-          </span>
-
-        </div>
-
-
-        <div class="warranty">
-
-          <strong>
-            12 Months MOT • 3 Months Warranty
-          </strong>
-
-        </div>
-
-
-        <a
-          href="bmw-x5.html"
-          class="car-button"
-        >
-          View Vehicle
+      <!-- BMW M140I - AVAILABLE -->
+      <article class="car-card">
+        <a href="bmw-m140i-2019.html" class="car-image-link">
+          <img
+            src="images/bmw-m140i-2019/0b5de0d7-def2-4798-99ab-2bea5592ac44.jpeg"
+            alt="2019 BMW M140i Shadow Edition"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>2019 BMW M140i</h3>
+          <p class="car-subtitle">Shadow Edition</p>
+          <div class="car-price">£21,995</div>
 
-    </article>
+          <div class="car-specs">
+            <span>56,000 Miles</span>
+            <span>3.0L Petrol</span>
+            <span>Automatic</span>
+            <span>2 Owners</span>
+          </div>
 
+          <div class="warranty">
+            <strong>12 Months MOT • 3 Months Warranty</strong>
+          </div>
 
-
-    <!-- =================================
-         AUDI Q5 - SOLD
-    ================================== -->
-
-    <article class="car-card sold-card">
-
-      <div class="sold-ribbon">
-        SOLD
-      </div>
-
-
-      <a
-        href="audi-q5.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg"
-          alt="2016 Audi Q5 S line Plus quattro"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          2016 Audi Q5
-        </h3>
-
-        <p class="car-subtitle">
-          S line Plus quattro
-        </p>
-
-        <div class="sold-price">
-          SOLD
+          <a href="bmw-m140i-2019.html" class="car-button">
+            View Vehicle
+          </a>
         </div>
+      </article>
 
-
-        <div class="car-specs">
-
-          <span>
-            79,984 Miles
-          </span>
-
-          <span>
-            2.0L Diesel
-          </span>
-
-          <span>
-            Automatic
-          </span>
-
-          <span>
-            3 Owners
-          </span>
-
-        </div>
-
-
-        <a
-          href="contact.html"
-          class="sold-button"
-        >
-          Find Something Similar
+      <!-- BMW X5 - AVAILABLE -->
+      <article class="car-card">
+        <a href="bmw-x5.html" class="car-image-link">
+          <img
+            src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
+            alt="2015 BMW X5 M Sport"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>2015 BMW X5</h3>
+          <p class="car-subtitle">M Sport</p>
+          <div class="car-price">£17,775</div>
 
-    </article>
+          <div class="car-specs">
+            <span>99,331 Miles</span>
+            <span>3.0L Diesel</span>
+            <span>Automatic</span>
+            <span>4 Owners</span>
+          </div>
 
+          <div class="warranty">
+            <strong>12 Months MOT • 3 Months Warranty</strong>
+          </div>
 
-
-    <!-- =================================
-         TOYOTA AVENSIS - SOLD
-    ================================== -->
-
-    <article class="car-card sold-card">
-
-      <div class="sold-ribbon">
-        SOLD
-      </div>
-
-
-      <a
-        href="toyota-avensis-2014.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="images/toyota-avensis-2014/1387b571-58ec-43ea-96b0-a26a11d77811.jpeg"
-          alt="2014 Toyota Avensis"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          2014 Toyota Avensis
-        </h3>
-
-        <p class="car-subtitle">
-          Sold Vehicle
-        </p>
-
-        <div class="sold-price">
-          SOLD
+          <a href="bmw-x5.html" class="car-button">
+            View Vehicle
+          </a>
         </div>
+      </article>
 
+      <!-- AUDI Q5 - SOLD -->
+      <article class="car-card sold-card">
+        <div class="sold-ribbon">SOLD</div>
 
-        <div class="car-specs">
-
-          <span>
-            2014
-          </span>
-
-          <span>
-            Diesel
-          </span>
-
-          <span>
-            Manual
-          </span>
-
-          <span>
-            Tourer
-          </span>
-
-        </div>
-
-
-        <a
-          href="contact.html"
-          class="sold-button"
-        >
-          Find Something Similar
+        <a href="audi-q5.html" class="car-image-link">
+          <img
+            src="images/audi-q5/0a79f244-cc28-4331-8c50-7175dbd1213a.jpeg"
+            alt="2016 Audi Q5 S line Plus quattro"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>2016 Audi Q5</h3>
+          <p class="car-subtitle">S line Plus quattro</p>
+          <div class="sold-price">SOLD</div>
 
-    </article>
+          <div class="car-specs">
+            <span>79,984 Miles</span>
+            <span>2.0L Diesel</span>
+            <span>Automatic</span>
+            <span>3 Owners</span>
+          </div>
 
-
-
-    <!-- =================================
-         VW GOLF - SOLD
-    ================================== -->
-
-    <article class="car-card sold-card">
-
-      <div class="sold-ribbon">
-        SOLD
-      </div>
-
-
-      <a
-        href="vw-golf.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="images/images/vw-golf/1c3a4da7-ee22-4801-aee8-2d85a7373f4c.jpeg"
-          alt="2013 Volkswagen Golf"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          2013 Volkswagen Golf
-        </h3>
-
-        <p class="car-subtitle">
-          1.2 TSI BlueMotion
-        </p>
-
-        <div class="sold-price">
-          SOLD
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
         </div>
+      </article>
 
+      <!-- TOYOTA AVENSIS - SOLD -->
+      <article class="car-card sold-card">
+        <div class="sold-ribbon">SOLD</div>
 
-        <div class="car-specs">
-
-          <span>
-            120,000 Miles
-          </span>
-
-          <span>
-            1.2L Petrol
-          </span>
-
-          <span>
-            Manual
-          </span>
-
-          <span>
-            ULEZ
-          </span>
-
-        </div>
-
-
-        <a
-          href="contact.html"
-          class="sold-button"
-        >
-          Find Something Similar
+        <a href="toyota-avensis-2014.html" class="car-image-link">
+          <img
+            src="images/toyota-avensis-2014/1387b571-58ec-43ea-96b0-a26a11d77811.jpeg"
+            alt="2014 Toyota Avensis"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>2014 Toyota Avensis</h3>
+          <p class="car-subtitle">Sold Vehicle</p>
+          <div class="sold-price">SOLD</div>
 
-    </article>
+          <div class="car-specs">
+            <span>2014</span>
+            <span>Diesel</span>
+            <span>Manual</span>
+            <span>Tourer</span>
+          </div>
 
-
-
-    <!-- =================================
-         BMW 116d - SOLD
-    ================================== -->
-
-    <article class="car-card sold-card">
-
-      <div class="sold-ribbon">
-        SOLD
-      </div>
-
-
-      <a
-        href="bmw-116d.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="bmw-116d/74cbbe6d-7058-4cfa-9903-894281b77524.jpeg"
-          alt="BMW 116d Sport"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          BMW 116d Sport
-        </h3>
-
-        <p class="car-subtitle">
-          Sold Vehicle
-        </p>
-
-        <div class="sold-price">
-          SOLD
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
         </div>
+      </article>
 
+      <!-- VOLKSWAGEN GOLF - SOLD -->
+      <article class="car-card sold-card">
+        <div class="sold-ribbon">SOLD</div>
 
-        <div class="car-specs">
-
-          <span>
-            86,334 Miles
-          </span>
-
-          <span>
-            2.0L Diesel
-          </span>
-
-          <span>
-            Manual
-          </span>
-
-          <span>
-            5 Door
-          </span>
-
-        </div>
-
-
-        <a
-          href="contact.html"
-          class="sold-button"
-        >
-          Find Something Similar
+        <a href="vw-golf.html" class="car-image-link">
+          <img
+            src="images/images/vw-golf/1c3a4da7-ee22-4801-aee8-2d85a7373f4c.jpeg"
+            alt="2013 Volkswagen Golf"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>2013 Volkswagen Golf</h3>
+          <p class="car-subtitle">1.2 TSI BlueMotion</p>
+          <div class="sold-price">SOLD</div>
 
-    </article>
+          <div class="car-specs">
+            <span>120,000 Miles</span>
+            <span>1.2L Petrol</span>
+            <span>Manual</span>
+            <span>ULEZ</span>
+          </div>
 
-
-
-    <!-- =================================
-         FORD FOCUS 2012 - SOLD
-    ================================== -->
-
-    <article class="car-card sold-card">
-
-      <div class="sold-ribbon">
-        SOLD
-      </div>
-
-
-      <a
-        href="ford-focus-2012.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="images/ford-focus-2012/5bb07b60-bbaf-4764-881b-1831fbf9f10d.jpeg"
-          alt="2012 Ford Focus"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          2012 Ford Focus
-        </h3>
-
-        <p class="car-subtitle">
-          Sold Vehicle
-        </p>
-
-        <div class="sold-price">
-          SOLD
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
         </div>
+      </article>
 
+      <!-- BMW 116D - SOLD -->
+      <article class="car-card sold-card">
+        <div class="sold-ribbon">SOLD</div>
 
-        <div class="car-specs">
-
-          <span>
-            2012
-          </span>
-
-          <span>
-            Diesel
-          </span>
-
-          <span>
-            Manual
-          </span>
-
-          <span>
-            5 Door
-          </span>
-
-        </div>
-
-
-        <a
-          href="contact.html"
-          class="sold-button"
-        >
-          Find Something Similar
+        <a href="bmw-116d.html" class="car-image-link">
+          <img
+            src="bmw-116d/74cbbe6d-7058-4cfa-9903-894281b77524.jpeg"
+            alt="BMW 116d Sport"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>BMW 116d Sport</h3>
+          <p class="car-subtitle">Sold Vehicle</p>
+          <div class="sold-price">SOLD</div>
 
-    </article>
+          <div class="car-specs">
+            <span>86,334 Miles</span>
+            <span>2.0L Diesel</span>
+            <span>Manual</span>
+            <span>5 Door</span>
+          </div>
 
-
-
-    <!-- =================================
-         FORD FOCUS 2015 - SOLD
-    ================================== -->
-
-    <article class="car-card sold-card">
-
-      <div class="sold-ribbon">
-        SOLD
-      </div>
-
-
-      <a
-        href="ford-focus-2015.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="images/ford-focus-2015/0ce32ac7-a64d-4986-a1af-bff4bc2e320f.jpeg"
-          alt="2015 Ford Focus"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          2015 Ford Focus
-        </h3>
-
-        <p class="car-subtitle">
-          Sold Vehicle
-        </p>
-
-        <div class="sold-price">
-          SOLD
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
         </div>
+      </article>
 
+      <!-- FORD FOCUS 2012 - SOLD -->
+      <article class="car-card sold-card">
+        <div class="sold-ribbon">SOLD</div>
 
-        <div class="car-specs">
-
-          <span>
-            2015
-          </span>
-
-          <span>
-            Diesel
-          </span>
-
-          <span>
-            Manual
-          </span>
-
-          <span>
-            5 Door
-          </span>
-
-        </div>
-
-
-        <a
-          href="contact.html"
-          class="sold-button"
-        >
-          Find Something Similar
+        <a href="ford-focus-2012.html" class="car-image-link">
+          <img
+            src="images/ford-focus-2012/5bb07b60-bbaf-4764-881b-1831fbf9f10d.jpeg"
+            alt="2012 Ford Focus"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>2012 Ford Focus</h3>
+          <p class="car-subtitle">Sold Vehicle</p>
+          <div class="sold-price">SOLD</div>
 
-    </article>
+          <div class="car-specs">
+            <span>2012</span>
+            <span>Diesel</span>
+            <span>Manual</span>
+            <span>5 Door</span>
+          </div>
 
-
-
-    <!-- =================================
-         FORD MONDEO £2,995 - SOLD
-    ================================== -->
-
-    <article class="car-card sold-card">
-
-      <div class="sold-ribbon">
-        SOLD
-      </div>
-
-
-      <a
-        href="ford-mondeo-2012.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="images/ford-mondeo-2012/07c83850-eb52-4ab9-a78a-7da3737877e7.jpeg"
-          alt="Ford Mondeo Titanium X"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          Ford Mondeo Titanium X
-        </h3>
-
-        <p class="car-subtitle">
-          Previously £2,995
-        </p>
-
-        <div class="sold-price">
-          SOLD
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
         </div>
+      </article>
 
+      <!-- FORD FOCUS 2015 - SOLD -->
+      <article class="car-card sold-card">
+        <div class="sold-ribbon">SOLD</div>
 
-        <div class="car-specs">
-
-          <span>
-            Diesel
-          </span>
-
-          <span>
-            Manual
-          </span>
-
-          <span>
-            Titanium X
-          </span>
-
-          <span>
-            5 Door
-          </span>
-
-        </div>
-
-
-        <a
-          href="contact.html"
-          class="sold-button"
-        >
-          Find Something Similar
+        <a href="ford-focus-2015.html" class="car-image-link">
+          <img
+            src="images/ford-focus-2015/0ce32ac7-a64d-4986-a1af-bff4bc2e320f.jpeg"
+            alt="2015 Ford Focus"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>2015 Ford Focus</h3>
+          <p class="car-subtitle">Sold Vehicle</p>
+          <div class="sold-price">SOLD</div>
 
-    </article>
+          <div class="car-specs">
+            <span>2015</span>
+            <span>Diesel</span>
+            <span>Manual</span>
+            <span>5 Door</span>
+          </div>
 
-
-
-    <!-- =================================
-         FORD MONDEO £1,295 - SOLD
-    ================================== -->
-
-    <article class="car-card sold-card">
-
-      <div class="sold-ribbon">
-        SOLD
-      </div>
-
-
-      <a
-        href="ford-mondeo-estate-2012.html"
-        class="car-image-link"
-      >
-
-        <img
-          src="images/ford-mondeo-estate-2012/3773871d-6a14-40d2-866e-26104ccc1946.jpeg"
-          alt="Ford Mondeo"
-          loading="lazy"
-        >
-
-      </a>
-
-
-      <div class="car-content">
-
-        <h3>
-          Ford Mondeo
-        </h3>
-
-        <p class="car-subtitle">
-          Previously £1,295
-        </p>
-
-        <div class="sold-price">
-          SOLD
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
         </div>
+      </article>
 
+      <!-- FORD MONDEO TITANIUM X - SOLD -->
+      <article class="car-card sold-card">
+        <div class="sold-ribbon">SOLD</div>
 
-        <div class="car-specs">
-
-          <span>
-            Diesel
-          </span>
-
-          <span>
-            Manual
-          </span>
-
-          <span>
-            62 Plate
-          </span>
-
-          <span>
-            Previously £1,295
-          </span>
-
-        </div>
-
-
-        <a
-          href="contact.html"
-          class="sold-button"
-        >
-          Find Something Similar
+        <a href="ford-mondeo-2012.html" class="car-image-link">
+          <img
+            src="images/ford-mondeo-2012/07c83850-eb52-4ab9-a78a-7da3737877e7.jpeg"
+            alt="Ford Mondeo Titanium X"
+            loading="lazy"
+          >
         </a>
 
-      </div>
+        <div class="car-content">
+          <h3>Ford Mondeo Titanium X</h3>
+          <p class="car-subtitle">Previously £2,995</p>
+          <div class="sold-price">SOLD</div>
 
-    </article>
+          <div class="car-specs">
+            <span>Diesel</span>
+            <span>Manual</span>
+            <span>Titanium X</span>
+            <span>5 Door</span>
+          </div>
 
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
+        </div>
+      </article>
 
-  </div>
+      <!-- FORD MONDEO ESTATE - SOLD -->
+      <article class="car-card sold-card">
+        <div class="sold-ribbon">SOLD</div>
 
-</main>
+        <a href="ford-mondeo-estate-2012.html" class="car-image-link">
+          <img
+            src="images/ford-mondeo-estate-2012/3773871d-6a14-40d2-866e-26104ccc1946.jpeg"
+            alt="Ford Mondeo Estate"
+            loading="lazy"
+          >
+        </a>
 
+        <div class="car-content">
+          <h3>Ford Mondeo</h3>
+          <p class="car-subtitle">Previously £1,295</p>
+          <div class="sold-price">SOLD</div>
 
-<!-- ================================
-     FOOTER
-================================= -->
+          <div class="car-specs">
+            <span>Diesel</span>
+            <span>Manual</span>
+            <span>62 Plate</span>
+            <span>Estate</span>
+          </div>
 
-<footer class="site-footer">
+          <a href="contact.html" class="sold-button">
+            Find Something Similar
+          </a>
+        </div>
+      </article>
 
-  <p>
-    © 2026
-    <strong>Gibson Motors Yorkshire</strong>.
-    All rights reserved.
-  </p>
+    </div>
+  </main>
 
-</footer>
-
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      © 2026 <strong>Gibson Motors Yorkshire</strong>.
+      All rights reserved.
+    </p>
+  </footer>
 
 </body>
-
 </html>
