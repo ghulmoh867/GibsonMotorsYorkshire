@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>2019 BMW M140i Shadow Edition | Gibson Motors Yorkshire</title>
-
 <meta name="description" content="2019 BMW M140i Shadow Edition for sale at Gibson Motors Yorkshire. £21,995, 56,000 miles, 3.0 petrol automatic.">
 
 <style>
@@ -61,7 +61,6 @@ header {
 .nav-links a {
     color: white;
     font-weight: 600;
-    transition: 0.2s;
 }
 
 .nav-links a:hover {
@@ -180,7 +179,14 @@ header {
     opacity: 1;
 }
 
-/* INFO */
+.gallery-message {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* VEHICLE DETAILS */
 
 .vehicle-grid {
     display: grid;
@@ -267,7 +273,7 @@ header {
     opacity: 0.85;
 }
 
-/* FORM */
+/* ENQUIRY FORM */
 
 .form-section {
     margin-top: 30px;
@@ -311,7 +317,7 @@ header {
     cursor: pointer;
 }
 
-/* LIGHTBOX */
+/* FULL SCREEN LIGHTBOX */
 
 .lightbox {
     display: none;
@@ -341,6 +347,8 @@ header {
     color: white;
     font-size: 40px;
     cursor: pointer;
+    background: transparent;
+    border: none;
 }
 
 .lightbox-arrow {
@@ -372,6 +380,7 @@ footer {
     padding: 30px 20px;
     text-align: center;
     color: #888;
+    line-height: 1.8;
 }
 
 footer strong {
@@ -381,7 +390,6 @@ footer strong {
 /* MOBILE */
 
 @media (max-width: 800px) {
-
     .navbar {
         flex-direction: column;
     }
@@ -404,14 +412,25 @@ footer strong {
         grid-template-columns: 1fr;
     }
 
-    .specs {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .gallery-arrow {
         width: 42px;
         height: 42px;
         font-size: 22px;
+    }
+}
+
+@media (max-width: 450px) {
+    .specs {
+        grid-template-columns: 1fr;
+    }
+
+    .main-image {
+        height: 270px;
+    }
+
+    .thumbnails img {
+        width: 75px;
+        height: 60px;
     }
 }
 </style>
@@ -421,9 +440,10 @@ footer strong {
 
 <header>
     <div class="navbar">
-
         <a href="index.html">
-            <img src="logo.png" alt="Gibson Motors Yorkshire" class="logo">
+            <img src="logo.png"
+                 alt="Gibson Motors Yorkshire"
+                 class="logo">
         </a>
 
         <nav class="nav-links">
@@ -433,37 +453,52 @@ footer strong {
             <a href="part-exchange.html">Part Exchange</a>
             <a href="sale-on-return.html">Sale on Return</a>
         </nav>
-
     </div>
 </header>
 
 <main class="container">
 
-<a href="cars.html" class="back-link">← Back to Stock</a>
+<a href="cars.html" class="back-link">
+    ← Back to Stock
+</a>
 
 <div class="vehicle-title">
     <h1>2019 BMW M140i Shadow Edition</h1>
     <p>Gibson Motors Yorkshire</p>
 </div>
 
-<!-- GALLERY -->
+<!-- VEHICLE PHOTO GALLERY -->
 
 <section class="gallery">
 
     <div class="main-image-wrapper">
 
-        <button class="gallery-arrow gallery-prev" onclick="changeImage(-1)">‹</button>
+        <button
+            class="gallery-arrow gallery-prev"
+            type="button"
+            onclick="changeImage(-1)"
+            aria-label="Previous photo">
+            ‹
+        </button>
 
-        <img id="mainImage"
-             class="main-image"
-             src="images/bmw-m140i-2019/0b5de0d7-def2-4798-99ab-2bea5592ac44.jpeg"
-             alt="2019 BMW M140i">
+        <img
+            id="mainImage"
+            class="main-image"
+            src="images/bmw-m140i-2019/0b5de0d7-def2-4798-99ab-2bea5592ac44.jpeg"
+            alt="2019 BMW M140i Shadow Edition">
 
-        <button class="gallery-arrow gallery-next" onclick="changeImage(1)">›</button>
+        <button
+            class="gallery-arrow gallery-next"
+            type="button"
+            onclick="changeImage(1)"
+            aria-label="Next photo">
+            ›
+        </button>
 
     </div>
 
     <div class="thumbnails" id="thumbnails"></div>
+    <div class="gallery-message" id="galleryMessage"></div>
 
 </section>
 
@@ -544,21 +579,23 @@ footer strong {
         <h2>About This Vehicle</h2>
 
         <p class="description">
-            This 2019 BMW M140i Shadow Edition is available now at
-            Gibson Motors Yorkshire.
+            This 2019 BMW M140i Shadow Edition is
+            available now at Gibson Motors Yorkshire.
         </p>
 
         <br>
 
         <p class="description">
-            The vehicle benefits from a 3.0 petrol engine, automatic
-            transmission and 56,000 miles.
+            The vehicle benefits from a powerful
+            3.0-litre petrol engine, automatic
+            transmission and just 56,000 miles.
         </p>
 
         <br>
 
         <p class="description">
-            The car comes with 12 months MOT and 3 months warranty.
+            Supplied with 12 months MOT and
+            3 months warranty.
         </p>
 
         <div class="buttons">
@@ -573,40 +610,62 @@ footer strong {
 
 </div>
 
-<!-- ENQUIRY -->
+<!-- ENQUIRY FORM -->
 
 <section class="card form-section" id="enquire">
 
     <h2>Enquire About This Vehicle</h2>
 
-    <form action="https://formspree.io/f/maeqbpqb" method="POST">
+    <form
+        action="https://formspree.io/f/maeqbpqb"
+        method="POST">
 
-        <input type="hidden" name="enquiry_type" value="Vehicle Enquiry">
+        <input
+            type="hidden"
+            name="enquiry_type"
+            value="Vehicle Enquiry">
 
-        <input type="hidden" name="_subject"
-               value="BMW M140i Enquiry - Gibson Motors Yorkshire">
+        <input
+            type="hidden"
+            name="_subject"
+            value="BMW M140i Enquiry - Gibson Motors Yorkshire">
 
-        <input type="hidden" name="vehicle"
-               value="2019 BMW M140i Shadow Edition - £21,995">
+        <input
+            type="hidden"
+            name="vehicle"
+            value="2019 BMW M140i Shadow Edition - £21,995">
 
         <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" name="name" required>
+            <label for="customerName">Your Name</label>
+            <input
+                id="customerName"
+                type="text"
+                name="name"
+                required>
         </div>
 
         <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" name="email" required>
+            <label for="customerEmail">Email Address</label>
+            <input
+                id="customerEmail"
+                type="email"
+                name="email"
+                required>
         </div>
 
         <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" name="phone">
+            <label for="customerPhone">Phone Number</label>
+            <input
+                id="customerPhone"
+                type="tel"
+                name="phone">
         </div>
 
         <div class="form-group">
-            <label>Message</label>
-            <textarea name="message">Hi, I'm interested in the 2019 BMW M140i Shadow Edition.</textarea>
+            <label for="customerMessage">Message</label>
+            <textarea
+                id="customerMessage"
+                name="message">Hi, I'm interested in the 2019 BMW M140i Shadow Edition.</textarea>
         </div>
 
         <button type="submit" class="submit-btn">
@@ -619,169 +678,234 @@ footer strong {
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-    <strong>Gibson Motors Yorkshire</strong><br><br>
-    Bulay Road, Huddersfield, HD1 3NH<br>
-    07394 403899<br>
-    GibsonMotorsYorkshire@gmail.com
+    <strong>Gibson Motors Yorkshire</strong>
+    <p>Bulay Road, Huddersfield, HD1 3NH</p>
+    <p>07394 403899</p>
+    <p>GibsonMotorsYorkshire@gmail.com</p>
 </footer>
 
-
-<!-- LIGHTBOX -->
+<!-- FULL SCREEN PHOTO VIEWER -->
 
 <div class="lightbox" id="lightbox">
 
-    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <button
+        class="lightbox-close"
+        type="button"
+        onclick="closeLightbox()"
+        aria-label="Close photo viewer">
+        ×
+    </button>
 
-    <button class="lightbox-arrow lightbox-prev" onclick="changeLightboxImage(-1)">
+    <button
+        class="lightbox-arrow lightbox-prev"
+        type="button"
+        onclick="changeLightboxImage(-1)"
+        aria-label="Previous photo">
         ‹
     </button>
 
-    <img id="lightboxImage" src="" alt="BMW M140i">
+    <img
+        id="lightboxImage"
+        src=""
+        alt="BMW M140i Shadow Edition">
 
-    <button class="lightbox-arrow lightbox-next" onclick="changeLightboxImage(1)">
+    <button
+        class="lightbox-arrow lightbox-next"
+        type="button"
+        onclick="changeLightboxImage(1)"
+        aria-label="Next photo">
         ›
     </button>
 
 </div>
 
-
 <script>
 
-const images = [
+/*
+ BMW M140i PHOTO GALLERY
 
-"003303bf-39d2-4a2f-8a4c-f513e7ff9fa5.jpeg",
-"0b5de0d7-def2-4798-99ab-2bea5592ac44.jpeg",
-"0bfe57e6-207b-4294-ba3f-8b23b9af3f0e.jpeg",
-"1598f92d-22df-4adc-b95a-ac9b23713d23.jpeg",
-"171261bc-819c-40c5-89b7-4209e4fb0ebe.jpeg",
-"1af13236-7e43-4e11-b866-482c00a5a971.jpeg",
-"1e86f75e-18ae-473f-8744-f7802e6841b4.jpeg",
-"26c92b93-87bb-44f6-ad28-7dab2b8f31ce.jpeg",
-"293fa761-1617-4067-ae47-4eed2c72c63b.jpeg",
-"329ede52-1457-4261-9b78-f971c1dc5e84.jpeg",
-"55a9c63b-dfe8-475c-955f-a1362bfd6c13.jpeg",
-"5e516635-392c-49d8-ba20-6aa45a3023b3.jpeg",
-"610a3f51-dd84-4b81-b0be-e9ded2498b51.jpeg",
-"6bab4e78-d6e3-4ac7-8f76-df3ca72fb328.jpeg",
-"723ad08a-d11c-4219-8efa-c74f7c71c3d7.jpeg",
-"87dd967b-2c41-4120-8ba5-3974e8d4360b.jpeg",
-"90550139-899e-4f2a-ac00-accface21d95.jpeg",
-"912f3c04-076f-45da-a674-f00a5e085f16.jpeg",
-"b39fba46-3aaf-48e5-8214-68b9ccf5e28b.jpeg",
-"c930dabf-b7ee-401c-9970-e735f65691fd.jpeg",
-"dd42a4d7-adc4-42c3-8ee4-6f81b20481a6.jpeg",
-"e875f895-3b19-42c1-87e2-94ca1f78fe2d.jpeg",
-"f46304b2-0a5f-4334-906b-54105456916e.jpeg"
-
-];
+ Filenames transcribed from the GitHub folder.
+ Each image is checked before being displayed.
+ Missing images are skipped automatically.
+*/
 
 const folder = "images/bmw-m140i-2019/";
 
-let currentIndex = 1;
+const imageFiles = [
+    "003303bf-39d2-4a2f-8a4c-f513e7ff9fa5.jpeg",
+    "0b5de0d7-def2-4798-99ab-2bea5592ac44.jpeg",
+    "0bfe57e6-207b-4294-ba3f-8b23b9af3f0e.jpeg",
+    "1598f92d-22df-4adc-b95a-ac9b23713d23.jpeg",
+    "171261bc-819c-40c5-89b7-4209e4fb0ebe.jpeg",
+    "1af13236-7e43-4e11-b866-482c00a5a971.jpeg",
+    "1e86f75e-18ae-473f-8744-f7802e6841b4.jpeg",
+    "26c92b93-87bb-44f6-ad28-7dab2b8f31ce.jpeg",
+    "293fa761-1617-4067-ae47-4eed2c72c63b.jpeg",
+    "329ede52-1457-4261-9b78-f971c1dc5e84.jpeg",
+    "55a9c63b-dfe8-475c-955f-a1362bfd6c13.jpeg",
+    "5e516635-392c-49d8-ba20-6aa45a3023b3.jpeg",
+    "610a3f51-dd84-4b81-b0be-e9ded2498b51.jpeg",
+    "6bab4e78-d6e3-4ac7-8f76-df3ca72fb328.jpeg",
+    "723ad08a-d11c-4219-8efa-c74f7c71c3d7.jpeg",
+    "87dd967b-2c41-4120-8ba5-3974e8d4360b.jpeg",
+    "90550139-899e-4f2a-ac00-accface21d95.jpeg",
+    "912f3c04-076f-45da-a674-f00a5e085f16.jpeg",
+    "b39fba46-3aaf-48e5-8214-68b9ccf5e28b.jpeg",
+    "c930dabf-b7ee-401c-9970-e735f65691fd.jpeg",
+    "dd42a4d7-adc4-42c3-8ee4-6f81b20481a6.jpeg",
+    "e875f895-3b19-42c1-87e2-94ca1f78fe2d.jpeg",
+    "f46304b2-0a5f-4334-906b-54105456916e.jpeg"
+];
+
+const images = [];
+let currentIndex = 0;
 
 const mainImage = document.getElementById("mainImage");
 const thumbnails = document.getElementById("thumbnails");
+const galleryMessage = document.getElementById("galleryMessage");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 
+function checkImage(filename) {
+    return new Promise(resolve => {
+        const image = new Image();
+        const url = folder + filename;
 
-function updateImage(index) {
+        image.onload = () => resolve(url);
+        image.onerror = () => resolve(null);
 
-    if (index < 0) {
-        index = images.length - 1;
-    }
-
-    if (index >= images.length) {
-        index = 0;
-    }
-
-    currentIndex = index;
-
-    mainImage.src = folder + images[currentIndex];
-
-    document.querySelectorAll(".thumbnails img").forEach((img, i) => {
-        img.classList.toggle("active", i === currentIndex);
+        image.src = url;
     });
 }
 
+function updateImage(index) {
+    if (images.length === 0) return;
+
+    currentIndex =
+        (index + images.length) % images.length;
+
+    mainImage.src = images[currentIndex];
+
+    if (lightbox.classList.contains("active")) {
+        lightboxImage.src = images[currentIndex];
+    }
+
+    thumbnails.querySelectorAll("img").forEach((img, i) => {
+        img.classList.toggle(
+            "active",
+            i === currentIndex
+        );
+    });
+}
 
 function changeImage(direction) {
     updateImage(currentIndex + direction);
 }
 
+function createThumbnails() {
+    thumbnails.innerHTML = "";
 
-images.forEach((image, index) => {
+    images.forEach((image, index) => {
+        const thumbnail = document.createElement("img");
 
-    const thumbnail = document.createElement("img");
+        thumbnail.src = image;
+        thumbnail.alt = "BMW M140i photo " + (index + 1);
+        thumbnail.loading = "lazy";
 
-    thumbnail.src = folder + image;
+        thumbnail.addEventListener("click", () => {
+            updateImage(index);
+        });
 
-    thumbnail.alt = "BMW M140i image " + (index + 1);
-
-    thumbnail.addEventListener("click", () => {
-        updateImage(index);
+        thumbnails.appendChild(thumbnail);
     });
 
-    thumbnails.appendChild(thumbnail);
+    if (images.length > 0) {
+        const preferredPhoto =
+            images.findIndex(url =>
+                url.includes(
+                    "0b5de0d7-def2-4798-99ab-2bea5592ac44"
+                )
+            );
 
-});
+        updateImage(
+            preferredPhoto >= 0 ? preferredPhoto : 0
+        );
+    }
+}
 
+async function loadGallery() {
+    galleryMessage.textContent =
+        "Loading vehicle photographs...";
 
-updateImage(currentIndex);
+    const results = await Promise.all(
+        imageFiles.map(checkImage)
+    );
 
+    const validImages = results.filter(Boolean);
+
+    images.push(...validImages);
+
+    createThumbnails();
+
+    const missingCount =
+        imageFiles.length - validImages.length;
+
+    if (images.length === 0) {
+        galleryMessage.textContent =
+            "Vehicle photographs are currently unavailable.";
+        mainImage.removeAttribute("src");
+    } else if (missingCount > 0) {
+        galleryMessage.textContent =
+            missingCount +
+            " photograph(s) could not be loaded.";
+    } else {
+        galleryMessage.textContent = "";
+    }
+}
 
 mainImage.addEventListener("click", () => {
+    if (images.length === 0) return;
 
     lightbox.classList.add("active");
-
-    lightboxImage.src = folder + images[currentIndex];
-
+    lightboxImage.src = images[currentIndex];
 });
-
 
 function closeLightbox() {
-
     lightbox.classList.remove("active");
-
 }
-
 
 function changeLightboxImage(direction) {
-
     updateImage(currentIndex + direction);
-
-    lightboxImage.src = folder + images[currentIndex];
-
 }
 
-
-lightbox.addEventListener("click", function(e) {
-
-    if (e.target === lightbox) {
+lightbox.addEventListener("click", function(event) {
+    if (event.target === lightbox) {
         closeLightbox();
     }
-
 });
 
+document.addEventListener("keydown", function(event) {
+    if (!lightbox.classList.contains("active")) {
+        return;
+    }
 
-document.addEventListener("keydown", function(e) {
-
-    if (!lightbox.classList.contains("active")) return;
-
-    if (e.key === "Escape") {
+    if (event.key === "Escape") {
         closeLightbox();
     }
 
-    if (e.key === "ArrowLeft") {
+    if (event.key === "ArrowLeft") {
         changeLightboxImage(-1);
     }
 
-    if (e.key === "ArrowRight") {
+    if (event.key === "ArrowRight") {
         changeLightboxImage(1);
     }
-
 });
+
+loadGallery();
 
 </script>
 
