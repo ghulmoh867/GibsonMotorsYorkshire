@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,963 +6,862 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>2015 BMW X5 M Sport | Gibson Motors Yorkshire</title>
+<meta name="description" content="2015 BMW X5 M Sport for sale at Gibson Motors Yorkshire. £17,775.">
 
 <style>
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #080808;
-    color: #fff;
+  margin: 0;
+  background: #080808;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* ================= HEADER ================= */
+button, input, textarea {
+  font: inherit;
+}
 
 header {
-    background: #050505;
-    border-bottom: 1px solid #c9a227;
-    padding: 18px 5%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: #050505;
+  border-bottom: 1px solid #c9a227;
+  padding: 18px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
 
 .logo {
-    width: 180px;
-    max-width: 45vw;
+  width: 180px;
+  max-width: 45vw;
 }
 
 .nav-links {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 .nav-links a {
-    font-weight: bold;
-    color: white;
+  font-weight: bold;
 }
 
 .nav-links a:hover {
-    color: #d4af37;
+  color: #d4af37;
 }
 
-/* ================= PAGE ================= */
-
 .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 35px 20px 70px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 35px 20px 70px;
 }
 
 .back {
-    color: #d4af37;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 25px;
+  display: inline-block;
+  color: #d4af37;
+  font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .title {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .title h1 {
-    font-size: 38px;
-    margin-bottom: 8px;
+  font-size: 38px;
+  margin: 0 0 8px;
 }
 
 .title p {
-    color: #aaa;
+  color: #aaa;
 }
 
-/* ================= GALLERY ================= */
+/* PHOTO GALLERY */
 
 .gallery {
-    background: #111;
-    border: 1px solid #292929;
-    border-radius: 14px;
-    padding: 15px;
-    margin-bottom: 35px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 14px;
+  padding: 15px;
+  margin-bottom: 35px;
 }
 
 .main-photo {
-    position: relative;
-    background: #000;
-    border-radius: 10px;
-    overflow: hidden;
+  position: relative;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .main-photo img {
-    width: 100%;
-    height: 600px;
-    object-fit: contain;
-    display: block;
-    cursor: zoom-in;
-    background: #000;
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+  display: block;
+  background: #000;
+  cursor: zoom-in;
 }
 
 .gallery-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    border: 1px solid #d4af37;
-    background: rgba(0,0,0,0.75);
-    color: #d4af37;
-    font-size: 32px;
-    cursor: pointer;
-    z-index: 5;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid #d4af37;
+  background: rgba(0,0,0,.8);
+  color: #d4af37;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .gallery-button:hover {
-    background: #d4af37;
-    color: #000;
+  background: #d4af37;
+  color: #000;
 }
 
 .previous {
-    left: 15px;
+  left: 15px;
 }
 
 .next {
-    right: 15px;
+  right: 15px;
+}
+
+.photo-counter {
+  text-align: center;
+  color: #d4af37;
+  font-size: 14px;
+  padding-top: 15px;
+  font-weight: bold;
 }
 
 .thumbnails {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding-top: 15px;
-    padding-bottom: 5px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 15px 0 5px;
 }
 
 .thumbnails img {
-    width: 105px;
-    height: 78px;
-    object-fit: cover;
-    flex-shrink: 0;
-    border-radius: 7px;
-    border: 2px solid transparent;
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-.thumbnails img:hover {
-    opacity: 1;
+  width: 105px;
+  height: 78px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 7px;
+  border: 2px solid transparent;
+  opacity: .65;
+  cursor: pointer;
 }
 
 .thumbnails img.active {
-    border-color: #d4af37;
-    opacity: 1;
+  border-color: #d4af37;
+  opacity: 1;
 }
 
-/* ================= INFORMATION ================= */
+.thumbnails img:hover {
+  opacity: 1;
+}
+
+/* DETAILS */
 
 .details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
 .card {
-    background: #111;
-    border: 1px solid #292929;
-    border-radius: 14px;
-    padding: 25px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 14px;
+  padding: 25px;
 }
 
 .card h2 {
-    color: #d4af37;
-    margin-bottom: 20px;
+  color: #d4af37;
+  margin: 0 0 20px;
 }
 
 .price {
-    color: #d4af37;
-    font-size: 38px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  color: #d4af37;
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .specs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 .spec {
-    background: #191919;
-    padding: 14px;
-    border-radius: 8px;
+  background: #191919;
+  padding: 14px;
+  border-radius: 8px;
 }
 
 .spec small {
-    display: block;
-    color: #888;
-    margin-bottom: 5px;
-}
-
-.spec strong {
-    color: white;
+  display: block;
+  color: #999;
+  margin-bottom: 5px;
 }
 
 .description {
-    color: #ccc;
-    line-height: 1.7;
+  color: #ccc;
+  line-height: 1.8;
 }
 
-/* ================= BUTTONS ================= */
-
 .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
 }
 
 .button {
-    padding: 14px 22px;
-    border-radius: 7px;
-    border: 1px solid #d4af37;
-    font-weight: bold;
-    cursor: pointer;
+  padding: 14px 22px;
+  border-radius: 7px;
+  border: 1px solid #d4af37;
+  font-weight: bold;
+  display: inline-block;
 }
 
 .gold {
-    background: #d4af37;
-    color: #000;
+  background: #d4af37;
+  color: #000;
 }
 
 .dark {
-    background: transparent;
-    color: white;
+  background: transparent;
+  color: #fff;
 }
 
 .button:hover {
-    opacity: 0.85;
+  opacity: .85;
 }
 
-/* ================= FORM ================= */
+/* ENQUIRY */
 
 .enquiry {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .form-row {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form-row label {
-    display: block;
-    margin-bottom: 7px;
-    color: #ddd;
+  display: block;
+  margin-bottom: 7px;
+  color: #ddd;
 }
 
 .form-row input,
 .form-row textarea {
-    width: 100%;
-    padding: 14px;
-    border-radius: 6px;
-    border: 1px solid #333;
-    background: #080808;
-    color: white;
-    font-size: 15px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #080808;
+  color: white;
+  font-size: 15px;
 }
 
 .form-row textarea {
-    min-height: 140px;
-    resize: vertical;
+  min-height: 140px;
+  resize: vertical;
 }
 
 .submit {
-    width: 100%;
-    border: none;
-    border-radius: 7px;
-    padding: 15px;
-    background: #d4af37;
-    color: #000;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  padding: 15px;
+  background: #d4af37;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* ================= LIGHTBOX ================= */
+/* FULLSCREEN GALLERY */
 
 .lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.97);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 5000;
-    padding: 20px;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.97);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  padding: 20px;
 }
 
 .lightbox.open {
-    display: flex;
+  display: flex;
 }
 
 .lightbox-image {
-    max-width: 92%;
-    max-height: 90vh;
-    object-fit: contain;
+  max-width: 92%;
+  max-height: 90vh;
+  object-fit: contain;
 }
 
 .close {
-    position: absolute;
-    top: 18px;
-    right: 30px;
-    color: white;
-    font-size: 45px;
-    cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 45px;
+  cursor: pointer;
 }
 
 .lightbox-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: 1px solid #d4af37;
-    background: rgba(0,0,0,0.8);
-    color: #d4af37;
-    font-size: 32px;
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid #d4af37;
+  background: rgba(0,0,0,.8);
+  color: #d4af37;
+  font-size: 32px;
+  cursor: pointer;
 }
 
 .lightbox-left {
-    left: 20px;
+  left: 15px;
 }
 
 .lightbox-right {
-    right: 20px;
+  right: 15px;
 }
 
-/* ================= FOOTER ================= */
-
 footer {
-    border-top: 1px solid #292929;
-    text-align: center;
-    padding: 30px 20px;
-    color: #888;
+  border-top: 1px solid #292929;
+  text-align: center;
+  padding: 30px 20px;
+  color: #999;
+  line-height: 1.9;
 }
 
 footer strong {
-    color: #d4af37;
+  color: #d4af37;
 }
 
-/* ================= MOBILE ================= */
+@media(max-width:800px) {
+  .navbar {
+    flex-direction: column;
+  }
 
-@media (max-width: 800px) {
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+    font-size: 14px;
+  }
 
-    .navbar {
-        flex-direction: column;
-    }
+  .title h1 {
+    font-size: 28px;
+  }
 
-    .nav-links {
-        justify-content: center;
-        gap: 14px;
-        font-size: 14px;
-    }
+  .main-photo img {
+    height: 350px;
+  }
 
-    .title h1 {
-        font-size: 28px;
-    }
+  .details {
+    grid-template-columns: 1fr;
+  }
 
-    .main-photo img {
-        height: 350px;
-    }
+  .gallery-button {
+    width: 43px;
+    height: 43px;
+    font-size: 25px;
+  }
+}
 
-    .details {
-        grid-template-columns: 1fr;
-    }
+@media(max-width:450px) {
+  .specs {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .gallery-button {
-        width: 43px;
-        height: 43px;
-        font-size: 25px;
-    }
+  .spec {
+    padding: 10px;
+    font-size: 14px;
+  }
 
-    .specs {
-        grid-template-columns: 1fr 1fr;
-    }
+  .lightbox-button {
+    width: 40px;
+    height: 40px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-    <div class="navbar">
+  <div class="navbar">
 
-        <a href="index.html">
-            <img src="logo.png" class="logo" alt="Gibson Motors Yorkshire">
-        </a>
+    <a href="index.html">
+      <img
+        src="logo.png"
+        class="logo"
+        alt="Gibson Motors Yorkshire"
+      >
+    </a>
 
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="cars.html">Stock</a>
-            <a href="finance.html">Finance</a>
-            <a href="part-exchange.html">Part Exchange</a>
-            <a href="sale-on-return.html">Sale on Return</a>
-        </nav>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cars.html">Stock</a>
+      <a href="finance.html">Finance</a>
+      <a href="part-exchange.html">Part Exchange</a>
+      <a href="sale-on-return.html">Sale on Return</a>
+    </nav>
 
-    </div>
+  </div>
 </header>
-
 
 <main class="container">
 
-    <a href="cars.html" class="back">← Back to Stock</a>
+  <a href="cars.html" class="back">
+    ← Back to Stock
+  </a>
 
-    <div class="title">
-        <h1>2015 BMW X5 M Sport</h1>
-        <p>Gibson Motors Yorkshire</p>
-    </div>
+  <div class="title">
+    <h1>2015 BMW X5 M Sport</h1>
+    <p>Gibson Motors Yorkshire</p>
+  </div>
 
+  <!-- PHOTO GALLERY -->
 
-    <!-- ================= GALLERY ================= -->
+  <section class="gallery">
 
-    <section class="gallery">
+    <div class="main-photo">
 
-        <div class="main-photo">
+      <button
+        type="button"
+        class="gallery-button previous"
+        onclick="changePhoto(-1)"
+        aria-label="Previous photo"
+      >‹</button>
 
-            <button
-                class="gallery-button previous"
-                onclick="changePhoto(-1)">
-                ‹
-            </button>
+      <img
+        id="mainImage"
+        src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
+        alt="2015 BMW X5 M Sport"
+      >
 
-            <img
-                id="mainImage"
-                src="images/bmw-x5/d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg"
-                alt="2015 BMW X5 M Sport">
-
-            <button
-                class="gallery-button next"
-                onclick="changePhoto(1)">
-                ›
-            </button>
-
-        </div>
-
-        <div
-            class="thumbnails"
-            id="thumbnails">
-        </div>
-
-    </section>
-
-
-    <!-- ================= VEHICLE DETAILS ================= -->
-
-    <div class="details">
-
-        <section class="card">
-
-            <h2>Vehicle Details</h2>
-
-            <div class="price">£17,775</div>
-
-            <div class="specs">
-
-                <div class="spec">
-                    <small>Year</small>
-                    <strong>2015</strong>
-                </div>
-
-                <div class="spec">
-                    <small>Mileage</small>
-                    <strong>99,331 miles</strong>
-                </div>
-
-                <div class="spec">
-                    <small>Engine</small>
-                    <strong>3.0 Diesel</strong>
-                </div>
-
-                <div class="spec">
-                    <small>Transmission</small>
-                    <strong>Automatic</strong>
-                </div>
-
-                <div class="spec">
-                    <small>Previous Owners</small>
-                    <strong>4</strong>
-                </div>
-
-                <div class="spec">
-                    <small>MOT</small>
-                    <strong>12 Months</strong>
-                </div>
-
-                <div class="spec">
-                    <small>Warranty</small>
-                    <strong>3 Months</strong>
-                </div>
-
-                <div class="spec">
-                    <small>Model</small>
-                    <strong>M Sport</strong>
-                </div>
-
-            </div>
-
-            <div class="buttons">
-
-                <a
-                    href="finance.html"
-                    class="button gold">
-                    Finance
-                </a>
-
-                <a
-                    href="part-exchange.html"
-                    class="button dark">
-                    Part Exchange
-                </a>
-
-                <a
-                    href="tel:07394403899"
-                    class="button dark">
-                    Call Us
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <section class="card">
-
-            <h2>About This Vehicle</h2>
-
-            <p class="description">
-                This 2015 BMW X5 M Sport is available now at
-                Gibson Motors Yorkshire.
-            </p>
-
-            <br>
-
-            <p class="description">
-                The vehicle has covered 99,331 miles and is
-                powered by a 3.0 diesel engine with automatic
-                transmission.
-            </p>
-
-            <br>
-
-            <p class="description">
-                The vehicle comes with 12 months MOT and
-                3 months warranty.
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    href="#enquire"
-                    class="button gold">
-                    Enquire About This Car
-                </a>
-
-            </div>
-
-        </section>
+      <button
+        type="button"
+        class="gallery-button next"
+        onclick="changePhoto(1)"
+        aria-label="Next photo"
+      >›</button>
 
     </div>
 
+    <div id="photoCounter" class="photo-counter">
+      Photo 1 of 16
+    </div>
 
-    <!-- ================= ENQUIRY FORM ================= -->
+    <div id="thumbnails" class="thumbnails"></div>
 
-    <section
-        class="card enquiry"
-        id="enquire">
+  </section>
 
-        <h2>Enquire About This Vehicle</h2>
+  <!-- VEHICLE DETAILS -->
 
-        <form
-            action="https://formspree.io/f/maeqbpqb"
-            method="POST">
+  <div class="details">
 
-            <input
-                type="hidden"
-                name="enquiry_type"
-                value="Vehicle Enquiry">
+    <section class="card">
 
-            <input
-                type="hidden"
-                name="_subject"
-                value="BMW X5 Enquiry - Gibson Motors Yorkshire">
+      <h2>Vehicle Details</h2>
 
-            <input
-                type="hidden"
-                name="vehicle"
-                value="2015 BMW X5 M Sport - £17,775">
+      <div class="price">£17,775</div>
 
+      <div class="specs">
 
-            <div class="form-row">
+        <div class="spec">
+          <small>Year</small>
+          <strong>2015</strong>
+        </div>
 
-                <label>Your Name</label>
+        <div class="spec">
+          <small>Mileage</small>
+          <strong>99,331 miles</strong>
+        </div>
 
-                <input
-                    type="text"
-                    name="name"
-                    required>
+        <div class="spec">
+          <small>Engine</small>
+          <strong>3.0 Diesel</strong>
+        </div>
 
-            </div>
+        <div class="spec">
+          <small>Transmission</small>
+          <strong>Automatic</strong>
+        </div>
 
+        <div class="spec">
+          <small>Previous Owners</small>
+          <strong>4</strong>
+        </div>
 
-            <div class="form-row">
+        <div class="spec">
+          <small>MOT</small>
+          <strong>12 Months</strong>
+        </div>
 
-                <label>Email Address</label>
+        <div class="spec">
+          <small>Warranty</small>
+          <strong>3 Months</strong>
+        </div>
 
-                <input
-                    type="email"
-                    name="email"
-                    required>
+        <div class="spec">
+          <small>Model</small>
+          <strong>M Sport</strong>
+        </div>
 
-            </div>
+      </div>
 
+      <div class="buttons">
 
-            <div class="form-row">
+        <a href="finance.html" class="button gold">
+          Finance
+        </a>
 
-                <label>Phone Number</label>
+        <a href="part-exchange.html" class="button dark">
+          Part Exchange
+        </a>
 
-                <input
-                    type="tel"
-                    name="phone">
+        <a href="tel:07394403899" class="button dark">
+          Call Us
+        </a>
 
-            </div>
-
-
-            <div class="form-row">
-
-                <label>Message</label>
-
-                <textarea
-                    name="message">Hi, I'm interested in the 2015 BMW X5 M Sport.</textarea>
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="submit">
-                Send Enquiry
-            </button>
-
-        </form>
+      </div>
 
     </section>
+
+    <section class="card">
+
+      <h2>About This Vehicle</h2>
+
+      <p class="description">
+        This 2015 BMW X5 M Sport is available at
+        Gibson Motors Yorkshire.
+      </p>
+
+      <p class="description">
+        The vehicle has covered 99,331 miles and is
+        powered by a 3.0-litre diesel engine paired
+        with an automatic transmission.
+      </p>
+
+      <p class="description">
+        Features include black leather seating,
+        a panoramic roof, reversing camera
+        and 360-degree camera system.
+      </p>
+
+      <p class="description">
+        Supplied with 12 months MOT and
+        3 months warranty.
+      </p>
+
+      <div class="buttons">
+        <a href="#enquire" class="button gold">
+          Enquire About This Car
+        </a>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- ENQUIRY FORM -->
+
+  <section class="card enquiry" id="enquire">
+
+    <h2>Enquire About This Vehicle</h2>
+
+    <form
+      action="https://formspree.io/f/maeqbpqb"
+      method="POST"
+    >
+
+      <input
+        type="hidden"
+        name="enquiry_type"
+        value="Vehicle Enquiry"
+      >
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="BMW X5 Enquiry - Gibson Motors Yorkshire"
+      >
+
+      <input
+        type="hidden"
+        name="vehicle"
+        value="2015 BMW X5 M Sport - £17,775"
+      >
+
+      <div class="form-row">
+        <label for="name">Your Name</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          required
+        >
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email Address</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          required
+        >
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone Number</label>
+        <input
+          id="phone"
+          type="tel"
+          name="phone"
+        >
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+        >Hi, I'm interested in the 2015 BMW X5 M Sport.</textarea>
+      </div>
+
+      <button type="submit" class="submit">
+        Send Enquiry
+      </button>
+
+    </form>
+
+  </section>
 
 </main>
 
-
-<!-- FOOTER -->
-
 <footer>
 
-    <strong>Gibson Motors Yorkshire</strong>
+  <strong>Gibson Motors Yorkshire</strong>
 
-    <br><br>
+  <div>Bulay Road, Huddersfield, HD1 3NH</div>
 
-    Bulay Road, Huddersfield, HD1 3NH
+  <div>
+    <a href="tel:07394403899">07394 403899</a>
+  </div>
 
-    <br>
-
-    07394 403899
-
-    <br>
-
-    GibsonMotorsYorkshire@gmail.com
+  <div>
+    <a href="mailto:GibsonMotorsYorkshire@gmail.com">
+      GibsonMotorsYorkshire@gmail.com
+    </a>
+  </div>
 
 </footer>
 
+<!-- FULLSCREEN PHOTO VIEWER -->
 
-<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox">
 
-<div
-    class="lightbox"
-    id="lightbox">
+  <button
+    type="button"
+    class="close"
+    onclick="closeLightbox()"
+    aria-label="Close photo viewer"
+  >×</button>
 
-    <span
-        class="close"
-        onclick="closeLightbox()">
-        ×
-    </span>
+  <button
+    type="button"
+    class="lightbox-button lightbox-left"
+    onclick="changeLightbox(-1)"
+    aria-label="Previous fullscreen photo"
+  >‹</button>
 
-    <button
-        class="lightbox-button lightbox-left"
-        onclick="changeLightbox(-1)">
-        ‹
-    </button>
+  <img
+    id="lightboxImage"
+    class="lightbox-image"
+    alt="BMW X5 enlarged photograph"
+  >
 
-    <img
-        id="lightboxImage"
-        class="lightbox-image"
-        alt="BMW X5">
-
-    <button
-        class="lightbox-button lightbox-right"
-        onclick="changeLightbox(1)">
-        ›
-    </button>
+  <button
+    type="button"
+    class="lightbox-button lightbox-right"
+    onclick="changeLightbox(1)"
+    aria-label="Next fullscreen photo"
+  >›</button>
 
 </div>
 
-
 <script>
 
-/* =====================================================
-   X5 IMAGES
-   ===================================================== */
+/*
+  BMW X5 PHOTO GALLERY
 
-const images = [
-
-    "0ebd0458-19ac-4145-8f50-e416f68c480b.jpeg",
-
-    "2adc55e0-69e4-4540-9b93-a805528df08d.jpeg",
-
-    "2e6201b2-ec08-4c9b-8115-33614b7677c2.jpeg",
-
-    "33a5dcad-1969-4b21-a34b-60956764716d.jpeg",
-
-    "40c3eac5-8c74-43f0-9ffd-9ce8790477f6.jpeg",
-
-    "48ae79f3-b059-4e74-882f-d4b4370f11dd.jpeg",
-
-    "748ff82b-2667-429e-9a5b-5ccbfc4569b7.jpeg",
-
-    "798a208b-8256-4a0f-9d23-8e5eded382dc.jpeg",
-
-    "717f6fb9-b4ad-4016-bcaf-c9a9c4c01b40.jpeg",
-
-    "8680a129-bc17-4c63-a0ff-599b5d884567.jpeg",
-
-    "a177bd74-8618-4241-bff4-5aebd813faf69.jpeg",
-
-    "ce5662c6-4915-47a9-8b5b-703315b0a88d.jpeg",
-
-    "d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg",
-
-    "da98e72c-fef9-4f93-9ad7-8d4243b78a49.jpeg",
-
-    "e6a96b73-efdb-47f7-8086-b632518591a3.jpeg"
-
-];
-
-
-/* =====================================================
-   SETTINGS
-   ===================================================== */
+  All 16 filenames from your GitHub screenshot.
+  Photos are stored inside images/bmw-x5/
+*/
 
 const folder = "images/bmw-x5/";
 
+const images = [
+  "0ebd0458-19ac-4145-8f50-e416f68c480b.jpeg",
+  "2adc55e0-69e4-4540-9b93-a805528df08d.jpeg",
+  "2e6201b2-ec08-4c9b-8115-33614b7b77c2.jpeg",
+  "33a5dcad-1969-4b21-a34b-60956764716d.jpeg",
+  "40c3eac5-8c74-43f0-9ffd-9ce8790477f6.jpeg",
+  "48ae79f3-b059-4e74-882f-d4b4370f11dd.jpeg",
+  "748ff82b-2667-429e-9a5b-5ccbfc4569b7.jpeg",
+  "798a208b-8256-4a0f-9d23-8e5eded382dc.jpeg",
+  "7f176fb9-b4ad-4016-bcaf-c9a9c4c01b40.jpeg",
+  "8680a129-bc17-4c63-a0ff-599b5d884567.jpeg",
+  "a177bd74-8618-4241-bff4-5aebd813af69.jpeg",
+  "ce5662c6-4915-47a9-8b5b-703315b0a88d.jpeg",
+  "d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg",
+  "da98e72c-fef9-4f93-9ad7-8d4243b78a49.jpeg",
+  "e6a96b73-efdb-47f7-8086-b632518591a3.jpeg",
+  "ebece904-f3f8-417b-898a-551a1b8c8913.jpeg"
+];
+
 let currentPhoto = 12;
 
-
-/* =====================================================
-   ELEMENTS
-   ===================================================== */
-
-const mainImage =
-    document.getElementById("mainImage");
-
-const thumbnails =
-    document.getElementById("thumbnails");
-
-const lightbox =
-    document.getElementById("lightbox");
-
-const lightboxImage =
-    document.getElementById("lightboxImage");
-
-
-/* =====================================================
-   UPDATE MAIN PHOTO
-   ===================================================== */
+const mainImage = document.getElementById("mainImage");
+const thumbnails = document.getElementById("thumbnails");
+const photoCounter = document.getElementById("photoCounter");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
 
 function updatePhoto(index) {
 
-    if (index < 0) {
-        index = images.length - 1;
-    }
+  currentPhoto = (
+    (index % images.length) + images.length
+  ) % images.length;
 
-    if (index >= images.length) {
-        index = 0;
-    }
+  const imagePath = folder + images[currentPhoto];
 
-    currentPhoto = index;
+  mainImage.src = imagePath;
 
-    mainImage.src =
-        folder + images[currentPhoto];
+  mainImage.alt =
+    "BMW X5 photograph " + (currentPhoto + 1);
 
-    const thumbs =
-        document.querySelectorAll(".thumbnails img");
+  lightboxImage.src = imagePath;
 
-    thumbs.forEach(function(thumb, i) {
+  photoCounter.textContent =
+    "Photo " + (currentPhoto + 1) +
+    " of " + images.length;
 
-        if (i === currentPhoto) {
-            thumb.classList.add("active");
-        } else {
-            thumb.classList.remove("active");
-        }
+  const allThumbnails =
+    thumbnails.querySelectorAll("img");
 
-    });
+  allThumbnails.forEach(function(thumb, i) {
 
-}
-
-
-/* =====================================================
-   ARROWS
-   ===================================================== */
-
-function changePhoto(direction) {
-
-    updatePhoto(
-        currentPhoto + direction
+    thumb.classList.toggle(
+      "active",
+      i === currentPhoto
     );
 
+  });
+
 }
 
+function changePhoto(direction) {
+  updatePhoto(currentPhoto + direction);
+}
 
-/* =====================================================
-   CREATE THUMBNAILS
-   ===================================================== */
+function changeLightbox(direction) {
+  updatePhoto(currentPhoto + direction);
+}
 
-images.forEach(function(image, index) {
+images.forEach(function(filename, index) {
 
-    const thumbnail =
-        document.createElement("img");
+  const thumbnail = document.createElement("img");
 
-    thumbnail.src =
-        folder + image;
+  thumbnail.src = folder + filename;
 
-    thumbnail.alt =
-        "BMW X5 photo " + (index + 1);
+  thumbnail.alt =
+    "BMW X5 photo " + (index + 1);
 
-    thumbnail.onclick = function() {
+  thumbnail.loading = "lazy";
 
-        updatePhoto(index);
+  thumbnail.addEventListener("click", function() {
+    updatePhoto(index);
+  });
 
-    };
-
-    thumbnails.appendChild(thumbnail);
+  thumbnails.appendChild(thumbnail);
 
 });
 
-
-/* =====================================================
-   INITIAL PHOTO
-   ===================================================== */
-
-updatePhoto(currentPhoto);
-
-
-/* =====================================================
-   OPEN LIGHTBOX
-   ===================================================== */
-
-mainImage.onclick = function() {
-
-    lightbox.classList.add("open");
-
-    lightboxImage.src =
-        folder + images[currentPhoto];
-
-};
-
-
-/* =====================================================
-   CLOSE LIGHTBOX
-   ===================================================== */
+mainImage.addEventListener("click", function() {
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+  lightboxImage.src = mainImage.src;
+});
 
 function closeLightbox() {
-
-    lightbox.classList.remove("open");
-
+  lightbox.classList.remove("open");
+  document.body.style.overflow = "";
 }
 
+lightbox.addEventListener("click", function(event) {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
+});
 
-/* =====================================================
-   LIGHTBOX ARROWS
-   ===================================================== */
+document.addEventListener("keydown", function(event) {
 
-function changeLightbox(direction) {
+  if (!lightbox.classList.contains("open")) {
+    return;
+  }
 
-    updatePhoto(
-        currentPhoto + direction
-    );
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
 
-    lightboxImage.src =
-        folder + images[currentPhoto];
+  if (event.key === "ArrowLeft") {
+    changeLightbox(-1);
+  }
 
-}
+  if (event.key === "ArrowRight") {
+    changeLightbox(1);
+  }
 
+});
 
-/* =====================================================
-   CLICK OUTSIDE TO CLOSE
-   ===================================================== */
-
-lightbox.onclick = function(event) {
-
-    if (event.target === lightbox) {
-
-        closeLightbox();
-
-    }
-
-};
-
-
-/* =====================================================
-   KEYBOARD CONTROLS
-   ===================================================== */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (!lightbox.classList.contains("open")) {
-            return;
-        }
-
-        if (event.key === "Escape") {
-            closeLightbox();
-        }
-
-        if (event.key === "ArrowLeft") {
-            changeLightbox(-1);
-        }
-
-        if (event.key === "ArrowRight") {
-            changeLightbox(1);
-        }
-
-    }
-);
+updatePhoto(currentPhoto);
 
 </script>
 
