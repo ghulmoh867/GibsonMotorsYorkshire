@@ -2,222 +2,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mercedes-Benz E250 CDI AMG Sport Estate | Gibson Motors Yorkshire</title>
+<title>Mercedes-Benz E250 CDI AMG Sport Estate | Gibson Motors Yorkshire</title>
 
-  <meta name="description"
-    content="2013 Mercedes-Benz E250 CDI AMG Sport Estate for sale at Gibson Motors Yorkshire. £5,995, 129,000 miles, main dealer service history, 12 months MOT and 1 month warranty.">
+<meta name="description" content="2013 Mercedes-Benz E250 CDI AMG Sport Estate for sale in Huddersfield. £5,995, 129,000 miles, main dealer service history, 12 months MOT and 1 month warranty.">
 
-  <link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=10">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    .vehicle-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+.vehicle-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
 
-    .vehicle-heading {
-      padding: 48px 0 28px;
-    }
+.vehicle-header {
+  padding: 45px 0 25px;
+}
 
-    .vehicle-heading h1 {
-      margin: 10px 0;
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.2;
-    }
+.vehicle-header h1 {
+  font-size: clamp(27px, 4vw, 43px);
+  line-height: 1.2;
+  margin: 12px 0;
+}
 
-    .vehicle-price {
-      color: #d4af37;
-      font-size: 36px;
-      font-weight: bold;
-      margin: 16px 0;
-    }
+.vehicle-subtitle {
+  color: #bbb;
+  line-height: 1.7;
+}
 
-    .vehicle-subtitle {
-      color: #aaa;
-      line-height: 1.7;
-    }
+.vehicle-price {
+  color: #d4af37;
+  font-size: 38px;
+  font-weight: bold;
+  margin: 20px 0;
+}
 
-    .vehicle-gallery {
-      margin-bottom: 45px;
-    }
+.back-link {
+  color: #d4af37;
+  text-decoration: none;
+}
 
-    .main-photo {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: contain;
-      background: #111;
-      border-radius: 12px;
-      border: 1px solid #333;
-      display: block;
-    }
+.gallery {
+  margin: 25px 0 50px;
+}
 
-    .photo-thumbnails {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 14px;
-    }
+.gallery-main {
+  position: relative;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
-    .photo-thumbnails button {
-      padding: 0;
-      border: 2px solid transparent;
-      border-radius: 8px;
-      overflow: hidden;
-      cursor: pointer;
-      background: #151515;
-    }
+.gallery-main img {
+  width: 100%;
+  height: min(65vw, 650px);
+  min-height: 260px;
+  object-fit: contain;
+  display: block;
+}
 
-    .photo-thumbnails button.selected {
-      border-color: #d4af37;
-    }
+.gallery-counter {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background: rgba(0,0,0,.8);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+}
 
-    .photo-thumbnails img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      display: block;
-    }
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,.75);
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 23px;
+  z-index: 2;
+}
 
-    .vehicle-section {
-      margin-bottom: 45px;
-    }
+.gallery-arrow.previous { left: 12px; }
+.gallery-arrow.next { right: 12px; }
 
-    .vehicle-section h2 {
-      font-size: 27px;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #444;
-    }
+.gallery-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
 
-    .vehicle-specs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
+.gallery-thumbnails button {
+  background: #111;
+  border: 2px solid transparent;
+  border-radius: 7px;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-    .spec-card {
-      padding: 22px;
-      background: #151515;
-      border: 1px solid #333;
-      border-radius: 10px;
-    }
+.gallery-thumbnails button.active {
+  border-color: #d4af37;
+}
 
-    .spec-card span {
-      display: block;
-      color: #aaa;
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
+.gallery-thumbnails img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
 
-    .spec-card strong {
-      color: #d4af37;
-      font-size: 17px;
-    }
+.vehicle-section {
+  margin-bottom: 48px;
+}
 
-    .vehicle-description {
-      color: #ddd;
-      line-height: 1.9;
-      font-size: 16px;
-    }
+.vehicle-section h2 {
+  font-size: 27px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #444;
+  margin-bottom: 22px;
+}
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
 
-    .feature {
-      background: #151515;
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 15px 18px;
-    }
+.spec-card {
+  background: #151515;
+  border: 1px solid #333;
+  border-radius: 9px;
+  padding: 22px;
+}
 
-    .vehicle-contact {
-      background: #151515;
-      border: 1px solid #d4af37;
-      border-radius: 12px;
-      padding: 35px;
-      margin-bottom: 60px;
-      text-align: center;
-    }
+.spec-card span {
+  display: block;
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
 
-    .vehicle-contact h2 {
-      margin-top: 0;
-    }
+.spec-card strong {
+  color: #d4af37;
+  font-size: 17px;
+}
 
-    .vehicle-contact p {
-      color: #ccc;
-      line-height: 1.7;
-    }
+.vehicle-description {
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.9;
+}
 
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-top: 25px;
-    }
+.vehicle-description p {
+  margin-bottom: 18px;
+}
 
-    .contact-actions a {
-      text-decoration: none;
-      padding: 14px 25px;
-      border-radius: 7px;
-      font-weight: bold;
-      text-align: center;
-    }
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
 
-    .gold-action {
-      background: #d4af37;
-      color: #000;
-    }
+.feature {
+  background: #151515;
+  border: 1px solid #333;
+  padding: 16px 18px;
+  border-radius: 8px;
+}
 
-    .outline-action {
-      border: 1px solid #d4af37;
-      color: #d4af37;
-    }
+.contact-panel {
+  background: #151515;
+  border: 1px solid #d4af37;
+  border-radius: 12px;
+  padding: 36px 25px;
+  text-align: center;
+  margin: 20px 0 60px;
+}
 
-    @media (max-width: 768px) {
-      .vehicle-heading {
-        padding-top: 30px;
-      }
+.contact-panel h2 {
+  margin: 0 0 15px;
+}
 
-      .vehicle-specs {
-        grid-template-columns: repeat(2, 1fr);
-      }
+.contact-panel p {
+  color: #ccc;
+  line-height: 1.7;
+}
 
-      .photo-thumbnails {
-        grid-template-columns: repeat(3, 1fr);
-      }
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
 
-      .vehicle-contact {
-        padding: 24px 18px;
-      }
+.contact-buttons a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 24px;
+  border-radius: 7px;
+  font-weight: bold;
+}
 
-      .contact-actions {
-        flex-direction: column;
-      }
-    }
+.btn-gold {
+  background: #d4af37;
+  color: #000;
+}
 
-    @media (max-width: 480px) {
-      .vehicle-specs,
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
+.btn-outline {
+  border: 1px solid #d4af37;
+  color: #d4af37;
+}
 
-      .photo-thumbnails {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  </style>
+@media (max-width: 768px) {
+  .spec-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .spec-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-thumbnails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-arrow {
+    padding: 8px 12px;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -245,292 +281,241 @@
 </header>
 
 <main>
+<div class="vehicle-container">
 
-  <div class="vehicle-container">
+  <section class="vehicle-header">
+    <p class="eyebrow">Gibson Motors Yorkshire</p>
 
-    <section class="vehicle-heading">
-      <p class="eyebrow">Gibson Motors Yorkshire</p>
+    <h1>Mercedes-Benz E250 CDI AMG Sport Estate</h1>
 
-      <h1>Mercedes-Benz E250 CDI AMG Sport Estate</h1>
+    <p class="vehicle-subtitle">
+      2013 (63 Plate) | 129,000 Miles | Diesel | Automatic
+    </p>
 
-      <p class="vehicle-subtitle">
-        2013 (63 Plate) | 129,000 Miles | Automatic | Diesel
-      </p>
+    <div class="vehicle-price">£5,995</div>
 
-      <div class="vehicle-price">£5,995</div>
-
-      <a href="cars.html" class="vehicle-subtitle">
-        &larr; Back to Current Stock
-      </a>
-    </section>
-
-
-    <!-- VEHICLE PHOTO GALLERY -->
-
-    <section class="vehicle-gallery">
-
-      <img
-        id="mainVehicleImage"
-        class="main-photo"
-        src="images/mercedes-e250-2013/01.jpeg"
-        alt="Mercedes-Benz E250 CDI AMG Sport Estate front view"
-      >
-
-      <div class="photo-thumbnails" id="vehicleThumbnails">
-
-        <button type="button" class="selected"
-          onclick="changePhoto(1, this)">
-          <img src="images/mercedes-e250-2013/01.jpeg"
-            alt="Mercedes front three-quarter" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(2, this)">
-          <img src="images/mercedes-e250-2013/02.jpeg"
-            alt="Mercedes opposite front three-quarter" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(3, this)">
-          <img src="images/mercedes-e250-2013/03.jpeg"
-            alt="Mercedes front view" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(4, this)">
-          <img src="images/mercedes-e250-2013/04.jpeg"
-            alt="Mercedes rear three-quarter" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(5, this)">
-          <img src="images/mercedes-e250-2013/05.jpeg"
-            alt="Mercedes opposite rear three-quarter" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(6, this)">
-          <img src="images/mercedes-e250-2013/06.jpeg"
-            alt="Mercedes rear view" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(7, this)">
-          <img src="images/mercedes-e250-2013/07.jpeg"
-            alt="Mercedes side profile" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(8, this)">
-          <img src="images/mercedes-e250-2013/08.jpeg"
-            alt="Mercedes opposite side profile" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(9, this)">
-          <img src="images/mercedes-e250-2013/09.jpeg"
-            alt="Mercedes steering wheel" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(10, this)">
-          <img src="images/mercedes-e250-2013/10.jpeg"
-            alt="Mercedes satellite navigation" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(11, this)">
-          <img src="images/mercedes-e250-2013/11.jpeg"
-            alt="Mercedes centre console" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(12, this)">
-          <img src="images/mercedes-e250-2013/12.jpeg"
-            alt="Mercedes headlight controls" loading="lazy">
-        </button>
-
-        <button type="button" onclick="changePhoto(13, this)">
-          <img src="images/mercedes-e250-2013/13.jpeg"
-            alt="Mercedes boot" loading="lazy">
-        </button>
-
-      </div>
-    </section>
+    <a href="cars.html" class="back-link">
+      &larr; Back to Current Stock
+    </a>
+  </section>
 
 
-    <!-- VEHICLE SPECIFICATIONS -->
+  <!-- PHOTO GALLERY -->
 
-    <section class="vehicle-section">
+  <section class="gallery" aria-label="Vehicle photographs">
 
-      <h2>Vehicle Specifications</h2>
+    <div class="gallery-main">
 
-      <div class="vehicle-specs">
+      <button class="gallery-arrow previous"
+        type="button"
+        onclick="previousPhoto()"
+        aria-label="Previous photograph">
+        &#10094;
+      </button>
 
-        <div class="spec-card">
-          <span>Make</span>
-          <strong>Mercedes-Benz</strong>
-        </div>
+      <img id="mainPhoto"
+        src=""
+        alt="Mercedes-Benz E250 CDI Estate photograph">
 
-        <div class="spec-card">
-          <span>Model</span>
-          <strong>E250 CDI Estate</strong>
-        </div>
+      <button class="gallery-arrow next"
+        type="button"
+        onclick="nextPhoto()"
+        aria-label="Next photograph">
+        &#10095;
+      </button>
 
-        <div class="spec-card">
-          <span>Trim</span>
-          <strong>AMG Sport</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Year</span>
-          <strong>2013</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Mileage</span>
-          <strong>129,000 Miles</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Transmission</span>
-          <strong>Automatic</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Fuel Type</span>
-          <strong>Diesel</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Colour</span>
-          <strong>Silver</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Body Type</span>
-          <strong>Estate</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Service History</span>
-          <strong>Main Dealer History</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>MOT</span>
-          <strong>12 Months</strong>
-        </div>
-
-        <div class="spec-card">
-          <span>Warranty</span>
-          <strong>1 Month</strong>
-        </div>
-
+      <div class="gallery-counter" id="photoCounter">
+        1 / 14
       </div>
 
-    </section>
+    </div>
+
+    <div class="gallery-thumbnails" id="thumbnails"></div>
+
+  </section>
 
 
-    <!-- VEHICLE DESCRIPTION -->
+  <!-- SPECIFICATIONS -->
 
-    <section class="vehicle-section">
+  <section class="vehicle-section">
 
-      <h2>Vehicle Description</h2>
+    <h2>Vehicle Specifications</h2>
 
-      <div class="vehicle-description">
+    <div class="spec-grid">
 
-        <p>
-          Gibson Motors Yorkshire is pleased to present
-          this 2013 Mercedes-Benz E250 CDI AMG Sport Estate,
-          finished in silver.
-        </p>
-
-        <p>
-          This stylish and practical estate combines
-          Mercedes-Benz comfort with AMG Sport styling,
-          offering generous luggage space and an
-          automatic transmission.
-        </p>
-
-        <p>
-          The vehicle has covered 129,000 miles and
-          benefits from main dealer service history.
-          It will be supplied with 12 months MOT and
-          a 1 month warranty.
-        </p>
-
-        <p>
-          Features include satellite navigation,
-          AMG-style alloy wheels, parking sensors,
-          multifunction steering wheel and a
-          spacious estate boot.
-        </p>
-
-        <p>
-          Priced at just £5,995.
-          Contact Gibson Motors Yorkshire for further
-          information or to arrange a viewing.
-        </p>
-
+      <div class="spec-card">
+        <span>Make</span>
+        <strong>Mercedes-Benz</strong>
       </div>
 
-    </section>
-
-
-    <!-- FEATURES -->
-
-    <section class="vehicle-section">
-
-      <h2>Vehicle Features</h2>
-
-      <div class="feature-grid">
-
-        <div class="feature">AMG Sport Styling</div>
-        <div class="feature">Automatic Transmission</div>
-        <div class="feature">Satellite Navigation</div>
-        <div class="feature">AMG-Style Alloy Wheels</div>
-        <div class="feature">Parking Sensors</div>
-        <div class="feature">Multifunction Steering Wheel</div>
-        <div class="feature">Cruise Control</div>
-        <div class="feature">Automatic Headlights</div>
-        <div class="feature">Roof Rails</div>
-        <div class="feature">Spacious Estate Boot</div>
-        <div class="feature">Main Dealer Service History</div>
-        <div class="feature">12 Months MOT</div>
-        <div class="feature">1 Month Warranty</div>
-
+      <div class="spec-card">
+        <span>Model</span>
+        <strong>E250 CDI</strong>
       </div>
 
-    </section>
+      <div class="spec-card">
+        <span>Trim</span>
+        <strong>AMG Sport</strong>
+      </div>
+
+      <div class="spec-card">
+        <span>Year</span>
+        <strong>2013</strong>
+      </div>
+
+      <div class="spec-card">
+        <span>Mileage</span>
+        <strong>129,000 Miles</strong>
+      </div>
+
+      <div class="spec-card">
+        <span>Transmission</span>
+        <strong>Automatic</strong>
+      </div>
+
+      <div class="spec-card">
+        <span>Fuel Type</span>
+        <strong>Diesel</strong>
+      </div>
+
+      <div class="spec-card">
+        <span>Colour</span>
+        <strong>Silver</strong>
+      </div>
+
+      <div class="spec-card">
+        <span>Body Style</span>
+        <strong>Estate</strong>
+      </div>
+
+      <div class="spec-card">
+        <span>Service History</span>
+        <strong>Main Dealer History</strong>
+      </div>
+
+      <div class="spec-card">
+        <span>MOT</span>
+        <strong>12 Months</strong>
+      </div>
+
+      <div class="spec-card">
+        <span>Warranty</span>
+        <strong>1 Month</strong>
+      </div>
+
+    </div>
+  </section>
 
 
-    <!-- CONTACT -->
+  <!-- DESCRIPTION -->
 
-    <section class="vehicle-contact">
+  <section class="vehicle-section">
 
-      <h2>Interested In This Mercedes-Benz?</h2>
+    <h2>Vehicle Description</h2>
+
+    <div class="vehicle-description">
 
       <p>
-        Contact Gibson Motors Yorkshire to discuss
-        availability, arrange a viewing or make an enquiry.
+        Gibson Motors Yorkshire is pleased to present
+        this 2013 Mercedes-Benz E250 CDI AMG Sport Estate,
+        finished in silver and priced at £5,995.
       </p>
 
-      <div class="contact-actions">
+      <p>
+        Combining stylish AMG Sport styling with
+        the comfort and practicality of an estate,
+        this Mercedes-Benz offers generous luggage
+        space and an automatic transmission.
+      </p>
 
-        <a class="gold-action" href="tel:07394403899">
-          Call 07394 403899
-        </a>
+      <p>
+        The vehicle has covered 129,000 miles and
+        benefits from main dealer service history.
+        It will be supplied with 12 months MOT
+        and a 1-month warranty.
+      </p>
 
-        <a class="outline-action"
-          href="https://wa.me/447394403899?text=Hi%2C%20I%27m%20interested%20in%20the%20Mercedes-Benz%20E250%20CDI%20Estate%20advertised%20for%20%C2%A35%2C995."
-          target="_blank" rel="noopener noreferrer">
-          Enquire on WhatsApp
-        </a>
+      <p>
+        Notable equipment includes satellite navigation,
+        alloy wheels, parking sensors, a multifunction
+        steering wheel and automatic headlights.
+      </p>
 
-        <a class="outline-action" href="finance.html">
-          Finance Enquiry
-        </a>
+      <p>
+        Contact Gibson Motors Yorkshire for more
+        information or to arrange a viewing.
+        Viewings are by appointment.
+      </p>
 
-        <a class="outline-action" href="part-exchange.html">
-          Part Exchange
-        </a>
+    </div>
 
-      </div>
+  </section>
 
-    </section>
 
-  </div>
+  <!-- FEATURES -->
 
+  <section class="vehicle-section">
+
+    <h2>Vehicle Features</h2>
+
+    <div class="feature-grid">
+
+      <div class="feature">AMG Sport Styling</div>
+      <div class="feature">Automatic Transmission</div>
+      <div class="feature">Satellite Navigation</div>
+      <div class="feature">Alloy Wheels</div>
+      <div class="feature">Front Parking Sensors</div>
+      <div class="feature">Rear Parking Sensors</div>
+      <div class="feature">Multifunction Steering Wheel</div>
+      <div class="feature">Automatic Headlights</div>
+      <div class="feature">Roof Rails</div>
+      <div class="feature">Estate Boot Space</div>
+      <div class="feature">Main Dealer Service History</div>
+      <div class="feature">12 Months MOT</div>
+      <div class="feature">1 Month Warranty</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ENQUIRIES -->
+
+  <section class="contact-panel">
+
+    <h2>Interested in This Mercedes-Benz?</h2>
+
+    <p>
+      Contact Gibson Motors Yorkshire to enquire
+      about this vehicle or arrange a viewing.
+    </p>
+
+    <div class="contact-buttons">
+
+      <a href="tel:07394403899" class="btn-gold">
+        Call 07394 403899
+      </a>
+
+      <a href="https://wa.me/447394403899?text=Hi%2C%20I%27m%20interested%20in%20the%20Mercedes%20E250%20CDI%20Estate%20for%20%C2%A35%2C995."
+        class="btn-outline"
+        target="_blank"
+        rel="noopener noreferrer">
+        WhatsApp Enquiry
+      </a>
+
+      <a href="finance.html" class="btn-outline">
+        Finance Enquiry
+      </a>
+
+      <a href="part-exchange.html" class="btn-outline">
+        Part Exchange
+      </a>
+
+    </div>
+
+  </section>
+
+</div>
 </main>
 
 
@@ -543,8 +528,8 @@
       <img src="logo.png" alt="Gibson Motors Yorkshire">
 
       <p>
-        Used vehicles, finance, part exchange and
-        Sale or Return services in Huddersfield.
+        Used vehicles, finance, part exchange
+        and Sale or Return services in Huddersfield.
       </p>
 
     </div>
@@ -564,9 +549,7 @@
 
       <h3>Contact</h3>
 
-      <a href="tel:07394403899">
-        07394 403899
-      </a>
+      <a href="tel:07394403899">07394 403899</a>
 
       <a href="mailto:GibsonMotorsYorkshire@gmail.com">
         Email Us
@@ -593,24 +576,86 @@
 </footer>
 
 
+<!-- ORIGINAL GITHUB PHOTO FILENAMES -->
+
 <script>
-  function changePhoto(number, button) {
-    const filename = String(number).padStart(2, "0") + ".jpeg";
 
-    const image = document.getElementById("mainVehicleImage");
+const photoFolder = "images/mercedes-e250-2013/";
 
-    image.src = "images/mercedes-e250-2013/" + filename;
+const photos = [
+  "1043256c-4814-472a-8d9b-2685067610a2.jpeg",
+  "1789f737-add6-47e7-a566-26eb999ecc24.jpeg",
+  "23a1f56b-41e5-4d0a-8169-8c4a50fbed05.jpeg",
+  "3868458f-b78e-4b1e-8f8b-8af86beba216.jpeg",
+  "4eb188a2-c589-477e-bf36-105e013fbf4d.jpeg",
+  "51c44297-0961-4086-9cc1-5bacf2df839c.jpeg",
+  "67fa844e-a1cc-4c47-b42a-6a8c02406caf.jpeg",
+  "6c6b6092-5aa3-45c1-9225-bc5b8fdbea1b.jpeg",
+  "9553e6a6-189d-42f2-9597-bed8430e4d5c.jpeg",
+  "acc1814c-caf0-420d-8e12-d5ec7ab8093e.jpeg",
+  "ad9a42da-d5b7-47d1-aae0-451b3e2bfa0a.jpeg",
+  "b3887b07-41dc-4f5c-a5bd-3d8ccdfde536.jpeg",
+  "b429bab9-e1a6-41e7-9cb4-b0b48aa1cf89.jpeg",
+  "bc59b5f5-6ecb-42c5-89fd-caa63ef6fe5e.jpeg"
+];
 
-    document.querySelectorAll(
-      "#vehicleThumbnails button"
-    ).forEach(function(item) {
-      item.classList.remove("selected");
-    });
+let currentPhoto = 0;
 
-    button.classList.add("selected");
-  }
+const mainPhoto = document.getElementById("mainPhoto");
+const thumbnails = document.getElementById("thumbnails");
+const counter = document.getElementById("photoCounter");
+
+function showPhoto(index) {
+  currentPhoto = (index + photos.length) % photos.length;
+
+  mainPhoto.src = photoFolder + photos[currentPhoto];
+  mainPhoto.alt =
+    "Mercedes-Benz E250 CDI Estate photograph " +
+    (currentPhoto + 1);
+
+  counter.textContent =
+    (currentPhoto + 1) + " / " + photos.length;
+
+  thumbnails.querySelectorAll("button").forEach(
+    (button, i) => {
+      button.classList.toggle("active", i === currentPhoto);
+    }
+  );
+}
+
+function nextPhoto() {
+  showPhoto(currentPhoto + 1);
+}
+
+function previousPhoto() {
+  showPhoto(currentPhoto - 1);
+}
+
+photos.forEach((filename, index) => {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.setAttribute(
+    "aria-label",
+    "View photograph " + (index + 1)
+  );
+
+  const img = document.createElement("img");
+  img.src = photoFolder + filename;
+  img.alt = "Mercedes photograph " + (index + 1);
+  img.loading = "lazy";
+
+  button.appendChild(img);
+
+  button.addEventListener("click", () => {
+    showPhoto(index);
+  });
+
+  thumbnails.appendChild(button);
+});
+
+showPhoto(0);
+
 </script>
 
 </body>
 </html>
-
