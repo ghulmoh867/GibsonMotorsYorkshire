@@ -6,11 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>2015 BMW X5 M Sport | Gibson Motors Yorkshire</title>
-<meta name="description" content="2015 BMW X5 M Sport for sale at Gibson Motors Yorkshire. £17,775.">
+<meta name="description" content="2015 BMW X5 M Sport for sale at Gibson Motors Yorkshire. 99,331 miles, automatic diesel, £17,775.">
 
 <style>
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,13 +25,15 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
 button, input, textarea {
   font: inherit;
 }
+
+/* HEADER */
 
 header {
   background: #050505;
@@ -35,15 +41,15 @@ header {
   padding: 18px 5%;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .navbar {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
 }
 
@@ -60,11 +66,14 @@ header {
 
 .nav-links a {
   font-weight: bold;
+  color: #fff;
 }
 
 .nav-links a:hover {
   color: #d4af37;
 }
+
+/* PAGE */
 
 .container {
   max-width: 1200px;
@@ -73,9 +82,9 @@ header {
 }
 
 .back {
-  display: inline-block;
   color: #d4af37;
   font-weight: bold;
+  display: inline-block;
   margin-bottom: 25px;
 }
 
@@ -90,9 +99,10 @@ header {
 
 .title p {
   color: #aaa;
+  margin: 0;
 }
 
-/* PHOTO GALLERY */
+/* GALLERY */
 
 .gallery {
   background: #111;
@@ -114,8 +124,8 @@ header {
   height: 600px;
   object-fit: contain;
   display: block;
-  background: #000;
   cursor: zoom-in;
+  background: #000;
 }
 
 .gallery-button {
@@ -126,11 +136,11 @@ header {
   height: 52px;
   border-radius: 50%;
   border: 1px solid #d4af37;
-  background: rgba(0,0,0,.8);
+  background: rgba(0,0,0,0.8);
   color: #d4af37;
   font-size: 32px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 5;
 }
 
 .gallery-button:hover {
@@ -147,11 +157,11 @@ header {
 }
 
 .photo-counter {
-  text-align: center;
   color: #d4af37;
-  font-size: 14px;
-  padding-top: 15px;
+  text-align: center;
   font-weight: bold;
+  font-size: 14px;
+  margin-top: 14px;
 }
 
 .thumbnails {
@@ -168,16 +178,16 @@ header {
   flex-shrink: 0;
   border-radius: 7px;
   border: 2px solid transparent;
-  opacity: .65;
+  opacity: 0.6;
   cursor: pointer;
+}
+
+.thumbnails img:hover {
+  opacity: 1;
 }
 
 .thumbnails img.active {
   border-color: #d4af37;
-  opacity: 1;
-}
-
-.thumbnails img:hover {
   opacity: 1;
 }
 
@@ -222,14 +232,20 @@ header {
 
 .spec small {
   display: block;
-  color: #999;
+  color: #888;
   margin-bottom: 5px;
+}
+
+.spec strong {
+  color: #fff;
 }
 
 .description {
   color: #ccc;
   line-height: 1.8;
 }
+
+/* BUTTONS */
 
 .buttons {
   display: flex;
@@ -239,11 +255,12 @@ header {
 }
 
 .button {
+  display: inline-block;
   padding: 14px 22px;
   border-radius: 7px;
   border: 1px solid #d4af37;
   font-weight: bold;
-  display: inline-block;
+  cursor: pointer;
 }
 
 .gold {
@@ -257,13 +274,14 @@ header {
 }
 
 .button:hover {
-  opacity: .85;
+  opacity: 0.85;
 }
 
-/* ENQUIRY */
+/* ENQUIRY FORM */
 
 .enquiry {
   margin-top: 25px;
+  scroll-margin-top: 120px;
 }
 
 .form-row {
@@ -283,7 +301,7 @@ header {
   border-radius: 6px;
   border: 1px solid #333;
   background: #080808;
-  color: white;
+  color: #fff;
   font-size: 15px;
 }
 
@@ -309,7 +327,7 @@ header {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.97);
+  background: rgba(0,0,0,0.97);
   display: none;
   align-items: center;
   justify-content: center;
@@ -329,11 +347,11 @@ header {
 
 .close {
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 18px;
+  right: 30px;
+  color: #fff;
   background: transparent;
   border: none;
-  color: #fff;
   font-size: 45px;
   cursor: pointer;
 }
@@ -346,33 +364,37 @@ header {
   height: 55px;
   border-radius: 50%;
   border: 1px solid #d4af37;
-  background: rgba(0,0,0,.8);
+  background: rgba(0,0,0,0.8);
   color: #d4af37;
   font-size: 32px;
   cursor: pointer;
 }
 
 .lightbox-left {
-  left: 15px;
+  left: 20px;
 }
 
 .lightbox-right {
-  right: 15px;
+  right: 20px;
 }
+
+/* FOOTER */
 
 footer {
   border-top: 1px solid #292929;
   text-align: center;
   padding: 30px 20px;
   color: #999;
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 footer strong {
   color: #d4af37;
 }
 
-@media(max-width:800px) {
+/* MOBILE */
+
+@media (max-width: 800px) {
   .navbar {
     flex-direction: column;
   }
@@ -400,27 +422,18 @@ footer strong {
     height: 43px;
     font-size: 25px;
   }
-}
-
-@media(max-width:450px) {
-  .specs {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .spec {
-    padding: 10px;
-    font-size: 14px;
-  }
 
   .lightbox-button {
-    width: 40px;
-    height: 40px;
+    width: 43px;
+    height: 43px;
   }
 }
 </style>
 </head>
 
 <body>
+
+<!-- HEADER -->
 
 <header>
   <div class="navbar">
@@ -483,11 +496,11 @@ footer strong {
 
     </div>
 
-    <div id="photoCounter" class="photo-counter">
-      Photo 1 of 16
+    <div class="photo-counter" id="photoCounter">
+      Photo 13 of 16
     </div>
 
-    <div id="thumbnails" class="thumbnails"></div>
+    <div class="thumbnails" id="thumbnails"></div>
 
   </section>
 
@@ -573,15 +586,15 @@ footer strong {
       </p>
 
       <p class="description">
-        The vehicle has covered 99,331 miles and is
-        powered by a 3.0-litre diesel engine paired
-        with an automatic transmission.
+        The vehicle has covered 99,331 miles
+        and is powered by a 3.0-litre diesel engine
+        with automatic transmission.
       </p>
 
       <p class="description">
-        Features include black leather seating,
-        a panoramic roof, reversing camera
-        and 360-degree camera system.
+        Features include black leather seats,
+        panoramic roof, reversing camera and
+        360-degree camera system.
       </p>
 
       <p class="description">
@@ -590,9 +603,11 @@ footer strong {
       </p>
 
       <div class="buttons">
+
         <a href="#enquire" class="button gold">
           Enquire About This Car
         </a>
+
       </div>
 
     </section>
@@ -631,8 +646,8 @@ footer strong {
       <div class="form-row">
         <label for="name">Your Name</label>
         <input
-          id="name"
           type="text"
+          id="name"
           name="name"
           required
         >
@@ -641,8 +656,8 @@ footer strong {
       <div class="form-row">
         <label for="email">Email Address</label>
         <input
-          id="email"
           type="email"
+          id="email"
           name="email"
           required
         >
@@ -651,8 +666,8 @@ footer strong {
       <div class="form-row">
         <label for="phone">Phone Number</label>
         <input
-          id="phone"
           type="tel"
+          id="phone"
           name="phone"
         >
       </div>
@@ -675,6 +690,8 @@ footer strong {
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
 
   <strong>Gibson Motors Yorkshire</strong>
@@ -682,7 +699,9 @@ footer strong {
   <div>Bulay Road, Huddersfield, HD1 3NH</div>
 
   <div>
-    <a href="tel:07394403899">07394 403899</a>
+    <a href="tel:07394403899">
+      07394 403899
+    </a>
   </div>
 
   <div>
@@ -693,7 +712,7 @@ footer strong {
 
 </footer>
 
-<!-- FULLSCREEN PHOTO VIEWER -->
+<!-- FULLSCREEN VIEWER -->
 
 <div class="lightbox" id="lightbox">
 
@@ -701,81 +720,105 @@ footer strong {
     type="button"
     class="close"
     onclick="closeLightbox()"
-    aria-label="Close photo viewer"
+    aria-label="Close viewer"
   >×</button>
 
   <button
     type="button"
     class="lightbox-button lightbox-left"
     onclick="changeLightbox(-1)"
-    aria-label="Previous fullscreen photo"
+    aria-label="Previous image"
   >‹</button>
 
   <img
     id="lightboxImage"
     class="lightbox-image"
-    alt="BMW X5 enlarged photograph"
+    alt="BMW X5 fullscreen photograph"
   >
 
   <button
     type="button"
     class="lightbox-button lightbox-right"
     onclick="changeLightbox(1)"
-    aria-label="Next fullscreen photo"
+    aria-label="Next image"
   >›</button>
 
 </div>
 
 <script>
 
-/*
-  BMW X5 PHOTO GALLERY
-
-  All 16 filenames from your GitHub screenshot.
-  Photos are stored inside images/bmw-x5/
-*/
+/* BMW X5 PHOTO FILES */
 
 const folder = "images/bmw-x5/";
 
 const images = [
+
   "0ebd0458-19ac-4145-8f50-e416f68c480b.jpeg",
+
   "2adc55e0-69e4-4540-9b93-a805528df08d.jpeg",
+
   "2e6201b2-ec08-4c9b-8115-33614b7b77c2.jpeg",
+
   "33a5dcad-1969-4b21-a34b-60956764716d.jpeg",
-  "40c3eac5-8c74-43f0-9ffd-9ce8790477f6.jpeg",
+
+  /* CORRECTED PHOTO 5 */
+  "40c3eac5-8c74-43f0-9ffd-9ce879047f76.jpeg",
+
   "48ae79f3-b059-4e74-882f-d4b4370f11dd.jpeg",
+
+  /* PHOTO 7 */
   "748ff82b-2667-429e-9a5b-5ccbfc4569b7.jpeg",
+
   "798a208b-8256-4a0f-9d23-8e5eded382dc.jpeg",
+
   "7f176fb9-b4ad-4016-bcaf-c9a9c4c01b40.jpeg",
+
   "8680a129-bc17-4c63-a0ff-599b5d884567.jpeg",
+
   "a177bd74-8618-4241-bff4-5aebd813af69.jpeg",
+
   "ce5662c6-4915-47a9-8b5b-703315b0a88d.jpeg",
+
   "d5795089-cdcf-4d2a-8871-e6c42cb275c7.jpeg",
+
   "da98e72c-fef9-4f93-9ad7-8d4243b78a49.jpeg",
+
   "e6a96b73-efdb-47f7-8086-b632518591a3.jpeg",
+
   "ebece904-f3f8-417b-898a-551a1b8c8913.jpeg"
+
 ];
+
+/* GALLERY SETTINGS */
 
 let currentPhoto = 12;
 
-const mainImage = document.getElementById("mainImage");
-const thumbnails = document.getElementById("thumbnails");
-const photoCounter = document.getElementById("photoCounter");
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
+const mainImage =
+  document.getElementById("mainImage");
+
+const thumbnails =
+  document.getElementById("thumbnails");
+
+const photoCounter =
+  document.getElementById("photoCounter");
+
+const lightbox =
+  document.getElementById("lightbox");
+
+const lightboxImage =
+  document.getElementById("lightboxImage");
+
+/* UPDATE PHOTO */
 
 function updatePhoto(index) {
 
-  currentPhoto = (
-    (index % images.length) + images.length
-  ) % images.length;
+  currentPhoto =
+    (index + images.length) % images.length;
 
-  const imagePath = folder + images[currentPhoto];
+  const imagePath =
+    folder + images[currentPhoto];
 
   mainImage.src = imagePath;
-
-  mainImage.alt =
-    "BMW X5 photograph " + (currentPhoto + 1);
 
   lightboxImage.src = imagePath;
 
@@ -783,10 +826,10 @@ function updatePhoto(index) {
     "Photo " + (currentPhoto + 1) +
     " of " + images.length;
 
-  const allThumbnails =
+  const thumbs =
     thumbnails.querySelectorAll("img");
 
-  allThumbnails.forEach(function(thumb, i) {
+  thumbs.forEach(function(thumb, i) {
 
     thumb.classList.toggle(
       "active",
@@ -797,49 +840,79 @@ function updatePhoto(index) {
 
 }
 
+/* GALLERY ARROWS */
+
 function changePhoto(direction) {
+
   updatePhoto(currentPhoto + direction);
+
 }
 
-function changeLightbox(direction) {
-  updatePhoto(currentPhoto + direction);
-}
+/* CREATE THUMBNAILS */
 
 images.forEach(function(filename, index) {
 
-  const thumbnail = document.createElement("img");
+  const thumbnail =
+    document.createElement("img");
 
-  thumbnail.src = folder + filename;
+  thumbnail.src =
+    folder + filename;
 
   thumbnail.alt =
     "BMW X5 photo " + (index + 1);
 
   thumbnail.loading = "lazy";
 
-  thumbnail.addEventListener("click", function() {
+  thumbnail.onclick = function() {
     updatePhoto(index);
-  });
+  };
 
   thumbnails.appendChild(thumbnail);
 
 });
 
-mainImage.addEventListener("click", function() {
+/* OPEN FULLSCREEN */
+
+mainImage.onclick = function() {
+
   lightbox.classList.add("open");
+
+  lightboxImage.src =
+    folder + images[currentPhoto];
+
   document.body.style.overflow = "hidden";
-  lightboxImage.src = mainImage.src;
-});
+
+};
+
+/* CLOSE FULLSCREEN */
 
 function closeLightbox() {
+
   lightbox.classList.remove("open");
+
   document.body.style.overflow = "";
+
 }
 
-lightbox.addEventListener("click", function(event) {
+/* FULLSCREEN ARROWS */
+
+function changeLightbox(direction) {
+
+  updatePhoto(currentPhoto + direction);
+
+}
+
+/* CLOSE BY CLICKING BACKGROUND */
+
+lightbox.onclick = function(event) {
+
   if (event.target === lightbox) {
     closeLightbox();
   }
-});
+
+};
+
+/* KEYBOARD CONTROLS */
 
 document.addEventListener("keydown", function(event) {
 
@@ -860,6 +933,8 @@ document.addEventListener("keydown", function(event) {
   }
 
 });
+
+/* START GALLERY */
 
 updatePhoto(currentPhoto);
 
